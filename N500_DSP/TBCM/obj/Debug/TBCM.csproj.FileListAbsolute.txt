@@ -1,0 +1,6 @@
+C:\Users\motm\source\repos\N500_DSP\TBCM\bin\Debug\Buchi.HWToolbox.Common.dll
+C:\Users\motm\source\repos\N500_DSP\TBCM\bin\Debug\Buchi.HWToolbox.Common.pdb
+C:\Users\motm\source\repos\N500_DSP\TBCM\obj\Debug\TBCM.csproj.AssemblyReference.cache
+C:\Users\motm\source\repos\N500_DSP\TBCM\obj\Debug\TBCM.csproj.CoreCompileInputs.cache
+C:\Users\motm\source\repos\N500_DSP\TBCM\obj\Debug\Buchi.HWToolbox.Common.dll
+C:\Users\motm\source\repos\N500_DSP\TBCM\obj\Debug\Buchi.HWToolbox.Common.pdb

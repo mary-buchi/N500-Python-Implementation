@@ -1,0 +1,6 @@
+C:\Users\motm\source\repos\N500_DSP\CORE\bin\Debug\Buchi.Core.dll
+C:\Users\motm\source\repos\N500_DSP\CORE\bin\Debug\Buchi.Core.pdb
+C:\Users\motm\source\repos\N500_DSP\CORE\obj\Debug\CORE.csproj.AssemblyReference.cache
+C:\Users\motm\source\repos\N500_DSP\CORE\obj\Debug\CORE.csproj.CoreCompileInputs.cache
+C:\Users\motm\source\repos\N500_DSP\CORE\obj\Debug\Buchi.Core.dll
+C:\Users\motm\source\repos\N500_DSP\CORE\obj\Debug\Buchi.Core.pdb

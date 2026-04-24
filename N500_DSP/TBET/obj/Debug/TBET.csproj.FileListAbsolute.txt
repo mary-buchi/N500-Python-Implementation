@@ -1,0 +1,9 @@
+C:\Users\motm\source\repos\N500_DSP\TBET\bin\Debug\Buchi.DeviceInterface.Ethernet.dll
+C:\Users\motm\source\repos\N500_DSP\TBET\bin\Debug\Buchi.DeviceInterface.Ethernet.pdb
+C:\Users\motm\source\repos\N500_DSP\TBET\bin\Debug\Buchi.HWToolbox.Common.dll
+C:\Users\motm\source\repos\N500_DSP\TBET\bin\Debug\Buchi.HWToolbox.Common.pdb
+C:\Users\motm\source\repos\N500_DSP\TBET\obj\Debug\TBET.csproj.AssemblyReference.cache
+C:\Users\motm\source\repos\N500_DSP\TBET\obj\Debug\TBET.csproj.CoreCompileInputs.cache
+C:\Users\motm\source\repos\N500_DSP\TBET\obj\Debug\Buchi.DeviceInterface.Ethernet.dll
+C:\Users\motm\source\repos\N500_DSP\TBET\obj\Debug\Buchi.DeviceInterface.Ethernet.pdb
+C:\Users\motm\source\repos\N500_DSP\TBET\obj\Debug\TBET.csproj.Up2Date

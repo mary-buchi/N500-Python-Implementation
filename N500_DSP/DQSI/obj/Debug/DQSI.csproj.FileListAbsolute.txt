@@ -1,0 +1,17 @@
+C:\Users\motm\source\repos\N500_DSP\DQSI\bin\Debug\Buchi.DataAcquisition.dll
+C:\Users\motm\source\repos\N500_DSP\DQSI\bin\Debug\Buchi.DataAcquisition.pdb
+C:\Users\motm\source\repos\N500_DSP\DQSI\bin\Debug\Buchi.HWToolbox.Common.dll
+C:\Users\motm\source\repos\N500_DSP\DQSI\bin\Debug\Buchi.HWToolbox.Common.pdb
+C:\Users\motm\source\repos\N500_DSP\DQSI\obj\Debug\DQSI.csproj.AssemblyReference.cache
+C:\Users\motm\source\repos\N500_DSP\DQSI\obj\Debug\DQSI.csproj.CoreCompileInputs.cache
+C:\Users\motm\source\repos\N500_DSP\DQSI\obj\Debug\Buchi.DataAcquisition.dll
+C:\Users\motm\source\repos\N500_DSP\DQSI\obj\Debug\Buchi.DataAcquisition.pdb
+C:\Users\motm\source\repos\N500_DSP\DQSI\bin\Debug\Buchi.Core.dll
+C:\Users\motm\source\repos\N500_DSP\DQSI\bin\Debug\Buchi.Core.Math.dll
+C:\Users\motm\source\repos\N500_DSP\DQSI\bin\Debug\Buchi.DataAcquisition.Common.dll
+C:\Users\motm\source\repos\N500_DSP\DQSI\bin\Debug\Buchi.DeviceInterface.Ethernet.dll
+C:\Users\motm\source\repos\N500_DSP\DQSI\bin\Debug\Buchi.Core.Math.pdb
+C:\Users\motm\source\repos\N500_DSP\DQSI\bin\Debug\Buchi.Core.pdb
+C:\Users\motm\source\repos\N500_DSP\DQSI\bin\Debug\Buchi.DataAcquisition.Common.pdb
+C:\Users\motm\source\repos\N500_DSP\DQSI\bin\Debug\Buchi.DeviceInterface.Ethernet.pdb
+C:\Users\motm\source\repos\N500_DSP\DQSI\obj\Debug\DQSI.csproj.Up2Date

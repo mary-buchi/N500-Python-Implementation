@@ -1,0 +1,9 @@
+C:\Users\motm\source\repos\N500_DSP\COMT\bin\Debug\Buchi.Core.Math.dll
+C:\Users\motm\source\repos\N500_DSP\COMT\bin\Debug\Buchi.Core.Math.pdb
+C:\Users\motm\source\repos\N500_DSP\COMT\obj\Debug\COMT.csproj.AssemblyReference.cache
+C:\Users\motm\source\repos\N500_DSP\COMT\obj\Debug\COMT.csproj.CoreCompileInputs.cache
+C:\Users\motm\source\repos\N500_DSP\COMT\obj\Debug\Buchi.Core.Math.dll
+C:\Users\motm\source\repos\N500_DSP\COMT\obj\Debug\Buchi.Core.Math.pdb
+C:\Users\motm\source\repos\N500_DSP\COMT\bin\Debug\Buchi.Core.dll
+C:\Users\motm\source\repos\N500_DSP\COMT\bin\Debug\Buchi.Core.pdb
+C:\Users\motm\source\repos\N500_DSP\COMT\obj\Debug\COMT.csproj.Up2Date

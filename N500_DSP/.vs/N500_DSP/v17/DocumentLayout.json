@@ -1,0 +1,386 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\motm\\source\\repos\\N500_DSP\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{942F67AA-589A-49DE-B3E9-0BE2FD4F944C}|Sputnik_DSP\\Sputnik_DSP.csproj|c:\\users\\motm\\source\\repos\\n500_dsp\\sputnik_dsp\\dsp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{942F67AA-589A-49DE-B3E9-0BE2FD4F944C}|Sputnik_DSP\\Sputnik_DSP.csproj|solutionrelative:sputnik_dsp\\dsp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B240014-ACEC-40AF-9BA5-C05216C0F381}|N500_DSP\\N500_DSP.csproj|C:\\Users\\motm\\source\\repos\\N500_DSP\\n500_dsp\\dsp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7B240014-ACEC-40AF-9BA5-C05216C0F381}|N500_DSP\\N500_DSP.csproj|solutionrelative:n500_dsp\\dsp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8F8A77BF-8DAA-46B7-929C-89B6CB3B185F}|DQSI\\DQSI.csproj|c:\\users\\motm\\source\\repos\\n500_dsp\\dqsi\\dqsiproc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8F8A77BF-8DAA-46B7-929C-89B6CB3B185F}|DQSI\\DQSI.csproj|solutionrelative:dqsi\\dqsiproc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6763DDE0-4906-4AD0-9A8D-2F14A0C3D67C}|COMT\\COMT.csproj|C:\\Users\\motm\\source\\repos\\N500_DSP\\comt\\comtvect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6763DDE0-4906-4AD0-9A8D-2F14A0C3D67C}|COMT\\COMT.csproj|solutionrelative:comt\\comtvect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8F8A77BF-8DAA-46B7-929C-89B6CB3B185F}|DQSI\\DQSI.csproj|C:\\Users\\motm\\source\\repos\\N500_DSP\\dqsi\\dqsicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8F8A77BF-8DAA-46B7-929C-89B6CB3B185F}|DQSI\\DQSI.csproj|solutionrelative:dqsi\\dqsicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|TBCM||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9DD1F6F3-7360-4D6D-8B0D-B36D99ECCC1A}|DQCM\\DQCM.csproj|C:\\Users\\motm\\source\\repos\\N500_DSP\\dqcm\\dqcmtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9DD1F6F3-7360-4D6D-8B0D-B36D99ECCC1A}|DQCM\\DQCM.csproj|solutionrelative:dqcm\\dqcmtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B240014-ACEC-40AF-9BA5-C05216C0F381}|N500_DSP\\N500_DSP.csproj|C:\\Users\\motm\\source\\repos\\N500_DSP\\n500_dsp\\dspconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7B240014-ACEC-40AF-9BA5-C05216C0F381}|N500_DSP\\N500_DSP.csproj|solutionrelative:n500_dsp\\dspconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4BA0765F-7A27-4FD6-A6C8-FACA836F6FCA}|CORE\\CORE.csproj|C:\\Users\\motm\\source\\repos\\N500_DSP\\core\\corevers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4BA0765F-7A27-4FD6-A6C8-FACA836F6FCA}|CORE\\CORE.csproj|solutionrelative:core\\corevers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6763DDE0-4906-4AD0-9A8D-2F14A0C3D67C}|COMT\\COMT.csproj|C:\\Users\\motm\\source\\repos\\N500_DSP\\comt\\comtifer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6763DDE0-4906-4AD0-9A8D-2F14A0C3D67C}|COMT\\COMT.csproj|solutionrelative:comt\\comtifer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8F8A77BF-8DAA-46B7-929C-89B6CB3B185F}|DQSI\\DQSI.csproj|C:\\Users\\motm\\source\\repos\\N500_DSP\\dqsi\\dqsiscanlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8F8A77BF-8DAA-46B7-929C-89B6CB3B185F}|DQSI\\DQSI.csproj|solutionrelative:dqsi\\dqsiscanlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8F8A77BF-8DAA-46B7-929C-89B6CB3B185F}|DQSI\\DQSI.csproj|C:\\Users\\motm\\source\\repos\\N500_DSP\\dqsi\\dqsidataarraylist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8F8A77BF-8DAA-46B7-929C-89B6CB3B185F}|DQSI\\DQSI.csproj|solutionrelative:dqsi\\dqsidataarraylist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6763DDE0-4906-4AD0-9A8D-2F14A0C3D67C}|COMT\\COMT.csproj|C:\\Users\\motm\\source\\repos\\N500_DSP\\comt\\comtmtrx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6763DDE0-4906-4AD0-9A8D-2F14A0C3D67C}|COMT\\COMT.csproj|solutionrelative:comt\\comtmtrx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6763DDE0-4906-4AD0-9A8D-2F14A0C3D67C}|COMT\\COMT.csproj|C:\\Users\\motm\\source\\repos\\N500_DSP\\comt\\comtcvct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6763DDE0-4906-4AD0-9A8D-2F14A0C3D67C}|COMT\\COMT.csproj|solutionrelative:comt\\comtcvct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6763DDE0-4906-4AD0-9A8D-2F14A0C3D67C}|COMT\\COMT.csproj|C:\\Users\\motm\\source\\repos\\N500_DSP\\comt\\comtcfft.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6763DDE0-4906-4AD0-9A8D-2F14A0C3D67C}|COMT\\COMT.csproj|solutionrelative:comt\\comtcfft.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF099782-1D6B-4DC6-ADED-7D30DD9F1EDC}|TBET\\TBET.csproj|C:\\Users\\motm\\source\\repos\\N500_DSP\\tbet\\tbetmesg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF099782-1D6B-4DC6-ADED-7D30DD9F1EDC}|TBET\\TBET.csproj|solutionrelative:tbet\\tbetmesg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF099782-1D6B-4DC6-ADED-7D30DD9F1EDC}|TBET\\TBET.csproj|C:\\Users\\motm\\source\\repos\\N500_DSP\\tbet\\tbetchmc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF099782-1D6B-4DC6-ADED-7D30DD9F1EDC}|TBET\\TBET.csproj|solutionrelative:tbet\\tbetchmc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19DD35A0-852F-4288-89DD-0ED0C12DE7AF}|TBCM\\TBCM.csproj|C:\\Users\\motm\\source\\repos\\N500_DSP\\tbcm\\tbcmmeas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19DD35A0-852F-4288-89DD-0ED0C12DE7AF}|TBCM\\TBCM.csproj|solutionrelative:tbcm\\tbcmmeas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6763DDE0-4906-4AD0-9A8D-2F14A0C3D67C}|COMT\\COMT.csproj|C:\\Users\\motm\\source\\repos\\N500_DSP\\comt\\comtspec.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6763DDE0-4906-4AD0-9A8D-2F14A0C3D67C}|COMT\\COMT.csproj|solutionrelative:comt\\comtspec.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4BA0765F-7A27-4FD6-A6C8-FACA836F6FCA}|CORE\\CORE.csproj|C:\\Users\\motm\\source\\repos\\N500_DSP\\core\\coreartn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4BA0765F-7A27-4FD6-A6C8-FACA836F6FCA}|CORE\\CORE.csproj|solutionrelative:core\\coreartn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B240014-ACEC-40AF-9BA5-C05216C0F381}|N500_DSP\\N500_DSP.csproj|C:\\Users\\motm\\source\\repos\\N500_DSP\\n500_dsp\\greeting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7B240014-ACEC-40AF-9BA5-C05216C0F381}|N500_DSP\\N500_DSP.csproj|solutionrelative:n500_dsp\\greeting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19DD35A0-852F-4288-89DD-0ED0C12DE7AF}|TBCM\\TBCM.csproj|c:\\users\\motm\\source\\repos\\n500_dsp\\tbcm\\||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|5e9a8ac2-4f34-4521-858f-4c248ba31532"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:11:0:{2456bd12-ecf7-4988-a4a6-67d49173f565}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DSP.cs",
+              "DocumentMoniker": "C:\\Users\\motm\\source\\repos\\N500_DSP\\Sputnik_DSP\\DSP.cs",
+              "RelativeDocumentMoniker": "Sputnik_DSP\\DSP.cs",
+              "ToolTip": "C:\\Users\\motm\\source\\repos\\N500_DSP\\Sputnik_DSP\\DSP.cs",
+              "RelativeToolTip": "Sputnik_DSP\\DSP.cs",
+              "ViewState": "AQIAALsAAAAAAAAAAAAkwMwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-18T14:38:04.12Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DQSIproc.cs",
+              "DocumentMoniker": "C:\\Users\\motm\\source\\repos\\N500_DSP\\DQSI\\DQSIproc.cs",
+              "RelativeDocumentMoniker": "DQSI\\DQSIproc.cs",
+              "ToolTip": "C:\\Users\\motm\\source\\repos\\N500_DSP\\DQSI\\DQSIproc.cs",
+              "RelativeToolTip": "DQSI\\DQSIproc.cs",
+              "ViewState": "AQIAAAMHAAAAAAAAAAAkwDoHAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-27T07:00:11.79Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "COMTcfft.cs",
+              "DocumentMoniker": "C:\\Users\\motm\\source\\repos\\N500_DSP\\COMT\\COMTcfft.cs",
+              "RelativeDocumentMoniker": "COMT\\COMTcfft.cs",
+              "ToolTip": "C:\\Users\\motm\\source\\repos\\N500_DSP\\COMT\\COMTcfft.cs",
+              "RelativeToolTip": "COMT\\COMTcfft.cs",
+              "ViewState": "AQIAAE0CAAAAAAAAAAAYwGcCAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-21T06:58:46.443Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "COMTvect.cs",
+              "DocumentMoniker": "C:\\Users\\motm\\source\\repos\\N500_DSP\\COMT\\COMTvect.cs",
+              "RelativeDocumentMoniker": "COMT\\COMTvect.cs",
+              "ToolTip": "C:\\Users\\motm\\source\\repos\\N500_DSP\\COMT\\COMTvect.cs",
+              "RelativeToolTip": "COMT\\COMTvect.cs",
+              "ViewState": "AQIAAE4FAAAAAAAAAAAcwFsFAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-20T16:55:58.966Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "COMTcvct.cs",
+              "DocumentMoniker": "C:\\Users\\motm\\source\\repos\\N500_DSP\\COMT\\COMTcvct.cs",
+              "RelativeDocumentMoniker": "COMT\\COMTcvct.cs",
+              "ToolTip": "C:\\Users\\motm\\source\\repos\\N500_DSP\\COMT\\COMTcvct.cs",
+              "RelativeToolTip": "COMT\\COMTcvct.cs",
+              "ViewState": "AQIAAOoAAAAAAAAAAAAzwAQBAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-21T06:59:55.673Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "COMTmtrx.cs",
+              "DocumentMoniker": "C:\\Users\\motm\\source\\repos\\N500_DSP\\COMT\\COMTmtrx.cs",
+              "RelativeDocumentMoniker": "COMT\\COMTmtrx.cs",
+              "ToolTip": "C:\\Users\\motm\\source\\repos\\N500_DSP\\COMT\\COMTmtrx.cs",
+              "RelativeToolTip": "COMT\\COMTmtrx.cs",
+              "ViewState": "AQIAAC4GAAAAAAAAAAAzwDoGAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-21T07:01:33.394Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DQSIController.cs",
+              "DocumentMoniker": "C:\\Users\\motm\\source\\repos\\N500_DSP\\DQSI\\DQSIController.cs",
+              "RelativeDocumentMoniker": "DQSI\\DQSIController.cs",
+              "ToolTip": "C:\\Users\\motm\\source\\repos\\N500_DSP\\DQSI\\DQSIController.cs",
+              "RelativeToolTip": "DQSI\\DQSIController.cs",
+              "ViewState": "AQIAAD8AAAAAAAAAAAAywCoAAABKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-27T07:17:43.83Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "DQSIScanList.cs",
+              "DocumentMoniker": "C:\\Users\\motm\\source\\repos\\N500_DSP\\DQSI\\DQSIScanList.cs",
+              "RelativeDocumentMoniker": "DQSI\\DQSIScanList.cs",
+              "ToolTip": "C:\\Users\\motm\\source\\repos\\N500_DSP\\DQSI\\DQSIScanList.cs",
+              "RelativeToolTip": "DQSI\\DQSIScanList.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-16T09:39:43.354Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "COMTifer.cs",
+              "DocumentMoniker": "C:\\Users\\motm\\source\\repos\\N500_DSP\\COMT\\COMTifer.cs",
+              "RelativeDocumentMoniker": "COMT\\COMTifer.cs",
+              "ToolTip": "C:\\Users\\motm\\source\\repos\\N500_DSP\\COMT\\COMTifer.cs",
+              "RelativeToolTip": "COMT\\COMTifer.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAhwCYAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-26T10:14:18.456Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "COREvers.cs",
+              "DocumentMoniker": "C:\\Users\\motm\\source\\repos\\N500_DSP\\CORE\\COREvers.cs",
+              "RelativeDocumentMoniker": "CORE\\COREvers.cs",
+              "ToolTip": "C:\\Users\\motm\\source\\repos\\N500_DSP\\CORE\\COREvers.cs",
+              "RelativeToolTip": "CORE\\COREvers.cs",
+              "ViewState": "AQIAADACAAAAAAAAAAAQwEICAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-28T10:20:04.641Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "DSPConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\motm\\source\\repos\\N500_DSP\\N500_DSP\\DSPConfiguration.cs",
+              "RelativeDocumentMoniker": "N500_DSP\\DSPConfiguration.cs",
+              "ToolTip": "C:\\Users\\motm\\source\\repos\\N500_DSP\\N500_DSP\\DSPConfiguration.cs",
+              "RelativeToolTip": "N500_DSP\\DSPConfiguration.cs",
+              "ViewState": "AQIAAFYAAAAAAAAAAAAwwGgAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-16T09:56:55.967Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DSP.cs",
+              "DocumentMoniker": "C:\\Users\\motm\\source\\repos\\N500_DSP\\N500_DSP\\DSP.cs",
+              "RelativeDocumentMoniker": "N500_DSP\\DSP.cs",
+              "ToolTip": "C:\\Users\\motm\\source\\repos\\N500_DSP\\N500_DSP\\DSP.cs",
+              "RelativeToolTip": "N500_DSP\\DSP.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-09T09:50:21.066Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "TBETchmc.cs",
+              "DocumentMoniker": "C:\\Users\\motm\\source\\repos\\N500_DSP\\TBET\\TBETchmc.cs",
+              "RelativeDocumentMoniker": "TBET\\TBETchmc.cs",
+              "ToolTip": "C:\\Users\\motm\\source\\repos\\N500_DSP\\TBET\\TBETchmc.cs",
+              "RelativeToolTip": "TBET\\TBETchmc.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABYAAABCAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-09T10:37:13.055Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DQCMtype.cs",
+              "DocumentMoniker": "C:\\Users\\motm\\source\\repos\\N500_DSP\\DQCM\\DQCMtype.cs",
+              "RelativeDocumentMoniker": "DQCM\\DQCMtype.cs",
+              "ToolTip": "C:\\Users\\motm\\source\\repos\\N500_DSP\\DQCM\\DQCMtype.cs",
+              "RelativeToolTip": "DQCM\\DQCMtype.cs",
+              "ViewState": "AQIAAAcBAAAAAAAAAAD4vxoBAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-23T15:40:13.428Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "DQSIDataArrayList.cs",
+              "DocumentMoniker": "C:\\Users\\motm\\source\\repos\\N500_DSP\\DQSI\\DQSIDataArrayList.cs",
+              "RelativeDocumentMoniker": "DQSI\\DQSIDataArrayList.cs",
+              "ToolTip": "C:\\Users\\motm\\source\\repos\\N500_DSP\\DQSI\\DQSIDataArrayList.cs",
+              "RelativeToolTip": "DQSI\\DQSIDataArrayList.cs",
+              "ViewState": "AQIAAJoAAAAAAAAAAAAIwKEAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-16T09:33:06.225Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "TBETmesg.cs",
+              "DocumentMoniker": "C:\\Users\\motm\\source\\repos\\N500_DSP\\TBET\\TBETmesg.cs",
+              "RelativeDocumentMoniker": "TBET\\TBETmesg.cs",
+              "ToolTip": "C:\\Users\\motm\\source\\repos\\N500_DSP\\TBET\\TBETmesg.cs",
+              "RelativeToolTip": "TBET\\TBETmesg.cs",
+              "ViewState": "AQIAAPAAAAAAAAAAAAAwwP8AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-09T09:58:08.606Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "TBCMmeas.cs",
+              "DocumentMoniker": "C:\\Users\\motm\\source\\repos\\N500_DSP\\TBCM\\TBCMmeas.cs",
+              "RelativeDocumentMoniker": "TBCM\\TBCMmeas.cs",
+              "ToolTip": "C:\\Users\\motm\\source\\repos\\N500_DSP\\TBCM\\TBCMmeas.cs",
+              "RelativeToolTip": "TBCM\\TBCMmeas.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAAAqwDgAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-09T09:31:37.562Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "COREartn.cs",
+              "DocumentMoniker": "C:\\Users\\motm\\source\\repos\\N500_DSP\\CORE\\COREartn.cs",
+              "RelativeDocumentMoniker": "CORE\\COREartn.cs",
+              "ToolTip": "C:\\Users\\motm\\source\\repos\\N500_DSP\\CORE\\COREartn.cs",
+              "RelativeToolTip": "CORE\\COREartn.cs",
+              "ViewState": "AQIAAFEAAAAAAAAAAAAzwG8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-28T09:37:09.362Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "COMTspec.cs",
+              "DocumentMoniker": "C:\\Users\\motm\\source\\repos\\N500_DSP\\COMT\\COMTspec.cs",
+              "RelativeDocumentMoniker": "COMT\\COMTspec.cs",
+              "ToolTip": "C:\\Users\\motm\\source\\repos\\N500_DSP\\COMT\\COMTspec.cs",
+              "RelativeToolTip": "COMT\\COMTspec.cs",
+              "ViewState": "AQIAAEADAAAAAAAAAAAzwCoDAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-28T09:30:11.056Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TBCM",
+              "DocumentMoniker": "C:\\Users\\motm\\source\\repos\\N500_DSP\\TBCM\\TBCM.csproj",
+              "RelativeDocumentMoniker": "TBCM\\TBCM.csproj",
+              "ToolTip": "C:\\Users\\motm\\source\\repos\\N500_DSP\\TBCM\\TBCM.csproj",
+              "RelativeToolTip": "TBCM\\TBCM.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-02-09T09:33:27.514Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Greeting.cs",
+              "DocumentMoniker": "C:\\Users\\motm\\source\\repos\\N500_DSP\\N500_DSP\\Greeting.cs",
+              "RelativeDocumentMoniker": "N500_DSP\\Greeting.cs",
+              "ToolTip": "C:\\Users\\motm\\source\\repos\\N500_DSP\\N500_DSP\\Greeting.cs",
+              "RelativeToolTip": "N500_DSP\\Greeting.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-09T09:02:17.544Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
