@@ -1,0 +1,4417 @@
+
+(object Petal
+    version    	42
+    _written   	"Rose 4.5.8163.3"
+    charSet    	0)
+
+(object Class_Category "EBISR (Interrupt Service Routine)"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    quid       	"3E40DF26004E"
+    visible_categories 	(list visibility_relationship_list
+	(object Visibility_Relationship
+	    quid       	"3E425F8D0261"
+	    supplier   	"Logical View::EBHIT (Hardware Interface Types)"
+	    quidu      	"3E425F410109"))
+    exportControl 	"Public"
+    subsystem  	"EBISR (Interrupt Service Routine)"
+    quidu      	"3E40DF6A00CB"
+    logical_models 	(list unit_reference_list
+	(object Class "CISRWCPIDControl"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"GenerateStorageMgmtOperations"
+		    value      	TRUE))
+	    quid       	"3E40E116000F"
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"IncludeInHeader"))
+		    quid       	"3E4228300186"
+		    supplier   	"Logical View::EBISR (Interrupt Service Routine)::EISRWCPosState"
+		    quidu      	"3E4215A202BF")
+		(object Uses_Relationship
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"IncludeInHeader"))
+		    quid       	"3E42284502BF"
+		    supplier   	"Logical View::EBHIT (Hardware Interface Types)::CHIIOCSetWCConfiguration"
+		    quidu      	"3F94C3BB01D4")
+		(object Uses_Relationship
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"IncludeInHeader"))
+		    quid       	"3E422A8500AB"
+		    supplier   	"Logical View::EBHIT (Hardware Interface Types)::CHIIOCSetWCProfile"
+		    quidu      	"3F93FCF600DA")
+		(object Uses_Relationship
+		    quid       	"3EC88CD30196"
+		    supplier   	"Logical View::EBHIT (Hardware Interface Types)::CHITReservedSharedMemory"
+		    quidu      	"3E54992F0148")
+		(object Uses_Relationship
+		    quid       	"4004143F0203"
+		    supplier   	"Logical View::EBISR (Interrupt Service Routine)::ISR_IDENTIFIERS"
+		    quidu      	"400410F001D4"))
+	    operations 	(list Operations
+		(object Operation "WCPIDControlHandler"
+		    quid       	"3E420E4302FD"
+		    stereotype 	"void"
+		    parameters 	(list Parameters
+			(object Parameter "p_dwWCCmd"
+			    type       	"DWORD")
+			(object Parameter "p_pInBufWC"
+			    type       	"LPVOID"
+			    initv      	"NULL")
+			(object Parameter "p_dwInBufSizeWC"
+			    type       	"DWORD"
+			    initv      	"0")
+			(object Parameter "p_pOutBufWC"
+			    type       	"LPVOID"
+			    initv      	"NULL")
+			(object Parameter "p_dwOutBufSizeWC"
+			    type       	"DWORD"
+			    initv      	"0"))
+		    result     	"DWORD"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1044516520)
+		(object Operation "WCPIDController"
+		    quid       	"3E50FC1F038A"
+		    stereotype 	"void"
+		    result     	"void"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1045489184)
+		(object Operation "WCPIDControllerAlgorithm"
+		    quid       	"3E50E5830213"
+		    documentation 	
+|DESCRIPTION:
+|PID Controller algorithm
+|
+|INPUT:
+|x_nom:      Regler Sollwert
+|x_act:       aktueller Istwert
+|Kp:            P-Faktor
+|Ki:             I-Faktor
+|Kd:            D-Faktor
+|LimitUp:     oberes Limit - Stellwert Begrenzung DAC
+|LimitDown: unteres Limit - Stellwert Begrenzung DAC
+|LimitSlr:       Slew Rate Limit - d y_k / Ts
+|Ts:              Reglertakt
+|DACConvFactor: Computation conversion factor
+|y_DAC_Os  DAC Offset Korrektur
+|
+|OUTPUT:
+|y_k:           Stellsignal (begrenzt)
+|
+|RETURN VALUES:
+|0:    ok
+|1:    Stellsignal am oberen Limit
+|2:    Stellsignal am unteren Limit
+|
+|
+		    
+		    stereotype 	"void"
+		    parameters 	(list Parameters
+			(object Parameter "p_x_nom"
+			    type       	"ControllerType&")
+			(object Parameter "p_x_act"
+			    type       	"ControllerType&")
+			(object Parameter "p_Kp"
+			    type       	"const ControllerType&")
+			(object Parameter "p_Ki"
+			    type       	"const ControllerType&")
+			(object Parameter "p_Kd"
+			    type       	"const ControllerType&")
+			(object Parameter "p_LimitUp"
+			    type       	"const ControllerType&")
+			(object Parameter "p_LimitDown"
+			    type       	"const ControllerType&")
+			(object Parameter "p_LimitSlr"
+			    type       	"const ControllerType&")
+			(object Parameter "p_Ts"
+			    type       	"const ControllerType&")
+			(object Parameter "p_DAC_ConvFactor"
+			    type       	"const ControllerType&")
+			(object Parameter "p_y_DAC_Os"
+			    type       	"const ControllerType&")
+			(object Parameter "p_y_k"
+			    type       	"ControllerType&"))
+		    result     	"DWORD"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1045489183)
+		(object Operation "WCGetNomValue"
+		    quid       	"3E421260000F"
+		    stereotype 	"void"
+		    result     	"int"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1044516521)
+		(object Operation "WCGetLastVelocityCounts"
+		    quid       	"3E477F64038A"
+		    documentation 	
+|DESCRIPTION:
+|Reads the T-Register (Last full laser cycle duration)
+|
+|INPUT:
+|-
+|
+|OUTPUT:
+|last full laser cycle duration counts (Wdg_Last_Vlc -> wedge last velocity)
+		    
+		    stereotype 	"void"
+		    result     	"DWORD"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1044873119)
+		(object Operation "WCGetActVelocityCounts"
+		    quid       	"3E47803100CB"
+		    documentation 	
+|DESCRIPTION:
+|Reads the t-Register (time after last positiv zero cross)
+|
+|INPUT:
+|-
+|
+|OUTPUT:
+|last positiv zero cross counts
+		    
+		    stereotype 	"void"
+		    result     	"DWORD"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1044873120)
+		(object Operation "WCGetActPositionCounter"
+		    quid       	"3E47803C037A"
+		    documentation 	
+|DESCRIPTION:
+|Reads the wedge position (number of positiv zero crosses)
+|
+|OUTPUT:
+|wedge position (number of positiv zero crosses)
+		    
+		    stereotype 	"void"
+		    result     	"int"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1044873121)
+		(object Operation "WCSetDACValue"
+		    quid       	"3E51EF620261"
+		    stereotype 	"void"
+		    parameters 	(list Parameters
+			(object Parameter "p_dwDACValue"
+			    type       	"DWORD"
+			    initv      	"0"))
+		    result     	"void"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1045557184)
+		(object Operation "WCSetDirection"
+		    quid       	"3E47804B005D"
+		    documentation 	
+|DESCRIPTION:
+|Sets the direction of the wedge control in the Control Register (d-Counter Register)
+|
+|INPUT:
+|wedge control direction l_dwPosition
+|  0: indicates FORWARD direction
+|  1: indicates BACKWARD direction
+|
+|OUTPUT:
+|-
+		    
+		    stereotype 	"void"
+		    parameters 	(list Parameters
+			(object Parameter "p_bDirection"
+			    type       	"bool"
+			    initv      	"true"))
+		    result     	"void"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1044873122)
+		(object Operation "WCSetEventRegister"
+		    quid       	"3EC87FB402FD"
+		    documentation 	
+|DESCRIPTION:
+|Sets the events of the wedge control in the Event Register
+|Events: Initialized, Referenced, Parked, Stopped, etc.
+|
+|INPUT:
+|event bit mask
+|
+|OUTPUT:
+|-
+		    
+		    stereotype 	"void"
+		    parameters 	(list Parameters
+			(object Parameter "p_dwEventMask"
+			    type       	"DWORD"
+			    initv      	"0"))
+		    result     	"void"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1053327437)
+		(object Operation "WCClearEventRegister"
+		    quid       	"3EC8987E035B"
+		    documentation 	
+|DESCRIPTION:
+|Clear the events of the wedge control in the Event Register
+|Events: Initialized, Referenced, Parked, Stopped, etc.
+|
+|INPUT:
+|event bit mask
+|
+|OUTPUT:
+|-
+		    
+		    stereotype 	"void"
+		    parameters 	(list Parameters
+			(object Parameter "p_dwEventMask"
+			    type       	"DWORD"
+			    initv      	"0xFFFFFFFF"))
+		    result     	"void"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1053327438)
+		(object Operation "WCGetDirection"
+		    quid       	"3E4A74570148"
+		    documentation 	
+|DESCRIPTION:
+|Gets the direction of the wedge control from the Control Register (d-Counter Register)
+|
+|INPUT:
+|-
+|
+|OUTPUT:
+|wedge control direction l_dwPosition
+|  0: indicates FORWARD direction
+|  1: indicates BACKWARD direction
+|
+		    
+		    stereotype 	"void"
+		    result     	"DWORD"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1045031044)
+		(object Operation "WCGetLightBarrierState"
+		    quid       	"3E478058008C"
+		    documentation 	
+|DESCRIPTION:
+|Reads the state of the wedge control light barrier
+|
+|INPUT:
+|-
+|
+|OUTPUT:
+| 0: light barrier free
+| 1: light barrier occupied
+		    
+		    stereotype 	"void"
+		    result     	"DWORD"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1044873123)
+		(object Operation "WCGetActValue"
+		    quid       	"3E4780750196"
+		    documentation 	
+|DESCRIPTION:
+|calculate the actual "velocity" counts
+|
+|INPUT:
+|-
+|
+|OUTPUT:
+|actual value counts at lacht time
+		    
+		    stereotype 	"void"
+		    result     	"int"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1044873126)
+		(object Operation "NomValueIdleState"
+		    quid       	"3FB3200F030D"
+		    stereotype 	"void"
+		    result     	"void"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Private"
+		    uid        	1068703781)
+		(object Operation "NomValueInit"
+		    quid       	"3FA76AA30177"
+		    stereotype 	"void"
+		    result     	"void"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Private"
+		    uid        	1067936068)
+		(object Operation "NomValueStartPosition"
+		    quid       	"3FA7729E0119"
+		    stereotype 	"void"
+		    result     	"void"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Private"
+		    uid        	1067936069)
+		(object Operation "NomValueForwardAcc"
+		    quid       	"3FA7691502DE"
+		    stereotype 	"void"
+		    result     	"void"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Private"
+		    uid        	1067936066)
+		(object Operation "NomValueForwardMeasuring"
+		    quid       	"3FA7692F0148"
+		    stereotype 	"void"
+		    result     	"void"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Private"
+		    uid        	1067936067)
+		(object Operation "NomValueForwardDec"
+		    quid       	"3FA775A8009C"
+		    stereotype 	"void"
+		    result     	"void"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Private"
+		    uid        	1067936070)
+		(object Operation "NomValueReversePosition"
+		    quid       	"3FA775B00203"
+		    stereotype 	"void"
+		    result     	"void"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Private"
+		    uid        	1067936071)
+		(object Operation "NomValueBackwardAcc"
+		    quid       	"3FA775BE0242"
+		    stereotype 	"void"
+		    result     	"void"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Private"
+		    uid        	1067936072)
+		(object Operation "NomValueBackwardMeasuring"
+		    quid       	"3FA775BE0261"
+		    stereotype 	"void"
+		    result     	"void"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Private"
+		    uid        	1067936073)
+		(object Operation "NomValueBackwardDec"
+		    quid       	"3FA775BE0280"
+		    stereotype 	"void"
+		    result     	"void"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Private"
+		    uid        	1067936074)
+		(object Operation "WCLightBarrierLeft"
+		    quid       	"3FA7BB0701D4"
+		    documentation 	
+|DESCRIPTION:
+|the wedge coil has left the light barrier
+|(only one IRQ sample high!!!)
+|
+|INPUT:
+|-
+|OUTPUT:
+| 0: light barrier not left
+| 1: light barrier was left
+		    
+		    stereotype 	"void"
+		    result     	"DWORD"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1067936075)
+		(object Operation "WCLightBarrierAchieved"
+		    quid       	"3FA7BB0701F4"
+		    documentation 	
+|DESCRIPTION:
+|the wedge coil has achieved the light barrier
+|(only one IRQ sample high!!!)
+|
+|INPUT:
+|-
+|OUTPUT:
+| 0: light barrier not achieved
+| 1: light barrier was achieved
+		    
+		    stereotype 	"void"
+		    result     	"DWORD"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1067936076)
+		(object Operation "WCSetEnable"
+		    quid       	"3FA8A7F400AB"
+		    documentation 	
+|DESCRIPTION:
+|wedge controlloop factor (1 factor normal, 0 factor low (off))
+|
+|INPUT:
+|0   factor loww (off)
+|1   factor normal
+|
+|
+		    
+		    stereotype 	"void"
+		    parameters 	(list Parameters
+			(object Parameter "p_bValue"
+			    type       	"bool"))
+		    result     	"void"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1068014454)
+		(object Operation "WCSetPositionReset"
+		    quid       	"3FA8A86B0186"
+		    documentation 	
+|DESCRIPTION:
+|wedge position reset counter
+|
+|INPUT:
+|0   position will be count
+|1   position will be set to 0
+|
+|
+		    
+		    stereotype 	"void"
+		    parameters 	(list Parameters
+			(object Parameter "p_bValue"
+			    type       	"bool"))
+		    result     	"void"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1068014455)
+		(object Operation "TEST_WCGetActValue"
+		    quid       	"3F9672BD034B"
+		    documentation 	
+|DESCRIPTION:
+|TEST_WCGetActValue calculates the state of a voice coil drive in the next time interval if an electrical current Ia is applied to the coil and the direction of movement is dfa (1=fw, -1=rv). The state of the vc in the last time interval is passed as a paramter.
+|
+|INPUT:
+|p_Wdg_Volt: DAC Value [Digit]
+|p_dfa: direction of movement (1=fw, -1=rv)
+		    
+		    stereotype 	"void"
+		    parameters 	(list Parameters
+			(object Parameter "p_Wdg_Volt"
+			    type       	"int")
+			(object Parameter "p_dfa"
+			    type       	"int")
+			(object Parameter "p_clast"
+			    type       	"DWORD&")
+			(object Parameter "p_cdiff"
+			    type       	"DWORD&")
+			(object Parameter "p_cp"
+			    type       	"int&"))
+		    result     	"int"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1066825080)
+		(object Operation "WCCalculateStaticFriction"
+		    quid       	"3FAB4B74032C"
+		    documentation 	
+|DESCRIPTION:
+|calculate the static average friction
+|
+		    
+		    stereotype 	"void"
+		    result     	"void"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Private"
+		    uid        	1068189083)
+		(object Operation "WCEmergencyStop"
+		    quid       	"3FAF4D240177"
+		    documentation 	
+|DESCRIPTION:
+|stops the wedge drive immediately
+		    
+		    stereotype 	"void"
+		    result     	"void"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1068453036)
+		(object Operation "WCSetDigOutput"
+		    quid       	"3FB347AB00AB"
+		    stereotype 	"void"
+		    parameters 	(list Parameters
+			(object Parameter "p_dwValue"
+			    type       	"DWORD"))
+		    result     	"void"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1068703783)
+		(object Operation "WCClearDigOutput"
+		    quid       	"3FB3481E006D"
+		    stereotype 	"void"
+		    parameters 	(list Parameters
+			(object Parameter "p_dwValue"
+			    type       	"DWORD"))
+		    result     	"void"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1068703784)
+		(object Operation "WCIncScanCounter"
+		    quid       	"40025CEC01E4"
+		    documentation 	
+|DESCRIPTION:
+|Increments the Number of Scan register counter
+|
+		    
+		    stereotype 	"void"
+		    result     	"void"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1073896760)
+		(object Operation "WCCheckLaserDetection"
+		    quid       	"40040BEC035B"
+		    documentation 	
+|DESCRIPTION:
+|checks the laser detection
+|
+|RETURN:
+|true:  laser detection OK
+|false: laser detection NOK
+		    
+		    stereotype 	"void"
+		    result     	"bool"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1073998356)
+		(object Operation "WCSetException"
+		    quid       	"400412FC037A"
+		    documentation 	
+|DESCRIPTION:
+|set a spec. exception in the WC exception register
+|
+|PARAMETER:
+|exception bit mask
+		    
+		    stereotype 	"void"
+		    parameters 	(list Parameters
+			(object Parameter "p_dwExceptionBitMask"
+			    type       	"DWORD"))
+		    result     	"void"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1073998357)
+		(object Operation "WCClearException"
+		    quid       	"4029F6990000"
+		    documentation 	
+|DESCRIPTION:
+|clear WC exception register
+|
+|
+		    
+		    stereotype 	"void"
+		    result     	"void"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1076491968))
+	    class_attributes 	(list class_attribute_list
+		(object ClassAttribute "cMemorySize"
+		    quid       	"3E47646A009C"
+		    type       	"char[256]"
+		    static     	TRUE)
+		(object ClassAttribute "cdwFactor"
+		    quid       	"3F827E9C0157"
+		    documentation 	
+|DESCRIPTION:
+|calculation  factor for INTEGER multiplication and division operation
+		    
+		    type       	"DWORD"
+		    initv      	"10000"
+		    static     	TRUE)
+		(object ClassAttribute "cnIniAvStaticFriction"
+		    quid       	"3FAB909500BB"
+		    documentation 	
+|DESCRIPTION:
+|standard ini. static friction of the wedge drive
+		    
+		    type       	"int"
+		    initv      	"130"
+		    static     	TRUE)
+		(object ClassAttribute "nNumberOfScan"
+		    attributes 	(list Attribute_Set)
+		    quid       	"3F865198030D"
+		    documentation 	
+|DESCRIPTION:
+|number of scans (scans means one forward AND one bachward movement)
+		    
+		    type       	"int"
+		    initv      	"0")
+		(object ClassAttribute "bWCStart"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateGetOperation"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	TRUE))
+		    quid       	"3E491C5D004E"
+		    type       	"bool"
+		    initv      	"false")
+		(object ClassAttribute "bOsciOn"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateGetOperation"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	TRUE))
+		    quid       	"3FABBAFA02BF"
+		    type       	"bool"
+		    initv      	"false")
+		(object ClassAttribute "dwActLightBarrierState"
+		    attributes 	(list Attribute_Set)
+		    quid       	"3FA7BE4000BB"
+		    documentation 	
+|DESCRIPTION:
+|actual light barrier state
+|  1 light barrier occupied
+|  0 light barrier free
+		    
+		    type       	"DWORD"
+		    initv      	"0")
+		(object ClassAttribute "dwLastLightBarrierState"
+		    attributes 	(list Attribute_Set)
+		    quid       	"3F8D087D0186"
+		    documentation 	
+|DESCRIPTION:
+|last light barrier state
+|  1 light barrier was occupied
+|  0 light barrier was free
+		    
+		    type       	"DWORD"
+		    initv      	"0")
+		(object ClassAttribute "TEST_ACT_DIR"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateGetOperation"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	TRUE))
+		    quid       	"3E4A749E0138"
+		    type       	"DWORD"
+		    initv      	"0"
+		    exportControl 	"Public")
+		(object ClassAttribute "TEST_X_NOM"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateGetOperation"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	TRUE))
+		    quid       	"3E523C8A0290"
+		    type       	"DWORD"
+		    exportControl 	"Public")
+		(object ClassAttribute "TEST_X_ACT"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateGetOperation"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	TRUE))
+		    quid       	"3E523CB0001F"
+		    type       	"DWORD"
+		    exportControl 	"Public")
+		(object ClassAttribute "TEST_Y_K"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateGetOperation"
+			    value      	TRUE))
+		    quid       	"3E523CC002CE"
+		    type       	"DWORD"
+		    exportControl 	"Public")
+		(object ClassAttribute "TEST_INDEX"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateGetOperation"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	TRUE))
+		    quid       	"3E524A55002E"
+		    type       	"DWORD"
+		    exportControl 	"Public")
+		(object ClassAttribute "TEST_POS_FORWARD"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateGetOperation"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	TRUE))
+		    quid       	"3F8A4D6801C5"
+		    type       	"DWORD"
+		    exportControl 	"Public")
+		(object ClassAttribute "TEST_POS_BACKWARD"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateGetOperation"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	TRUE))
+		    quid       	"3F8A4D69005D"
+		    type       	"DWORD"
+		    exportControl 	"Public")
+		(object ClassAttribute "TEST_LAST_VELOCITY"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateGetOperation"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	TRUE))
+		    quid       	"3F979FD10148"
+		    type       	"DWORD"
+		    initv      	"0"
+		    exportControl 	"Public")
+		(object ClassAttribute "TEST_ACT_VELOCITY"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateGetOperation"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	TRUE))
+		    quid       	"3F979FD102DE"
+		    type       	"DWORD"
+		    initv      	"0"
+		    exportControl 	"Public")
+		(object ClassAttribute "TEST_POSITION"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateGetOperation"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	TRUE))
+		    quid       	"3F979FD201E4"
+		    type       	"int"
+		    initv      	"0"
+		    exportControl 	"Public")
+		(object ClassAttribute "TEST_DAC"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateGetOperation"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	TRUE))
+		    quid       	"3FA6556E01E4"
+		    type       	"DWORD"
+		    initv      	"0"
+		    exportControl 	"Public")
+		(object ClassAttribute "TEST_LB_LEFT"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateGetOperation"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	TRUE))
+		    quid       	"3FA91D6B0157"
+		    type       	"DWORD"
+		    initv      	"0"
+		    exportControl 	"Public")
+		(object ClassAttribute "TEST_LB_ACHIEVED"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateGetOperation"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	TRUE))
+		    quid       	"3FA91D7B01E4"
+		    type       	"DWORD"
+		    initv      	"0"
+		    exportControl 	"Public")
+		(object ClassAttribute "nAccMovementDistance"
+		    quid       	"3FA89AB902BF"
+		    type       	"int"
+		    initv      	"0")
+		(object ClassAttribute "nDecMovementDistance"
+		    quid       	"3FA89B5101D4"
+		    type       	"int"
+		    initv      	"0")
+		(object ClassAttribute "nForwardMovementDistance"
+		    quid       	"3FA76B8D01A5"
+		    type       	"int"
+		    initv      	"0")
+		(object ClassAttribute "nBackwardMovementDistance"
+		    quid       	"3FA76BA90148"
+		    type       	"int"
+		    initv      	"0")
+		(object ClassAttribute "nAccCounter"
+		    quid       	"3FA76E8F02AF"
+		    type       	"int"
+		    initv      	"0")
+		(object ClassAttribute "nDecCounter"
+		    quid       	"3FA76EA40196"
+		    type       	"int"
+		    initv      	"0")
+		(object ClassAttribute "cnMaxMovementDistance"
+		    quid       	"3FAA17EE0251"
+		    documentation 	
+|DESCRIPTION:
+|max wedge movement distance, which the wedge may drive 
+|
+|UNIT:
+|number of laser zero cross counts
+|  max movement distance [mm] / laser zero cross distance
+|  -> 30mm / 12.1um
+		    
+		    type       	"int"
+		    initv      	"2480"
+		    static     	TRUE)
+		(object ClassAttribute "nAvForwardFriction"
+		    quid       	"3FAB441501D4"
+		    documentation 	
+|DESCRIPTION:
+|static friction forward direction
+|
+|UNIT:
+|DAC count average value
+		    
+		    type       	"int"
+		    initv      	"0")
+		(object ClassAttribute "nAvBackwardFriction"
+		    quid       	"3FAB444A01D4"
+		    documentation 	
+|DESCRIPTION:
+|static friction backward direction
+|
+|UNIT:
+|DAC count average value
+		    
+		    type       	"int"
+		    initv      	"0")
+		(object ClassAttribute "nAvStaticFriction"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 45))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateGetOperation"
+			    value      	TRUE))
+		    quid       	"3FAB445A00BB"
+		    documentation 	
+|DESCRIPTION:
+|static average friction 
+|Fr = (Fr_Forward - Fr_Backward) / 2;
+|=> Static Average Friction = 2*Fr
+|
+|UNIT:
+|DAC count average value
+		    
+		    type       	"int"
+		    initv      	"m_cnIniAvStaticFriction"
+		    exportControl 	"Public")
+		(object ClassAttribute "cnDACEmergencyStopValue"
+		    quid       	"3FAF4BD701E4"
+		    documentation 	
+|DESCRIPTION:
+|the wedge drive releases an emergency stop 
+|
+		    
+		    type       	"int"
+		    initv      	"0x97000000"
+		    static     	TRUE)
+		(object ClassAttribute "bWCControllerOn"
+		    attributes 	(list Attribute_Set)
+		    quid       	"3FAF939B031C"
+		    type       	"BOOL"
+		    initv      	"false")
+		(object ClassAttribute "dwWCWriteRegValue"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 45))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateGetOperation"
+			    value      	TRUE))
+		    quid       	"3FB3830F006D"
+		    documentation 	
+|DESCRIPTION:
+|write value to wedge control write register
+|
+		    
+		    type       	"DWORD"
+		    initv      	"0"
+		    exportControl 	"Public")
+		(object ClassAttribute "nWCCnt"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 45))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateGetOperation"
+			    value      	TRUE))
+		    quid       	"3FB3A7BF029F"
+		    documentation 	
+|DESCRIPTION:
+|loop counter
+|
+		    
+		    type       	"int"
+		    initv      	"0"
+		    exportControl 	"Public")
+		(object ClassAttribute "bFirstStateInitialization"
+		    attributes 	(list Attribute_Set)
+		    quid       	"3FB8C4E00242"
+		    type       	"bool"
+		    initv      	"false")
+		(object ClassAttribute "bFirstControllerIni"
+		    attributes 	(list Attribute_Set)
+		    quid       	"3FD081A600DA"
+		    type       	"bool"
+		    initv      	"false")
+		(object ClassAttribute "bFirstAcc"
+		    attributes 	(list Attribute_Set)
+		    quid       	"4028CC6C005D"
+		    type       	"bool"
+		    initv      	"false")
+		(object ClassAttribute "nWCMaxCurCounter"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 45))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateGetOperation"
+			    value      	TRUE))
+		    quid       	"4028F6D70186"
+		    documentation 	
+|DESCRIPTION:
+|Current time counter
+|if this counter more than this value, an emergency stop will occurs.
+|
+		    
+		    type       	"int"
+		    initv      	"0"
+		    exportControl 	"Public"))
+	    statemachine 	(object State_Machine
+		quid       	"3E40E1F801D4"
+		states     	(list States
+		    (object State "NomValueForwardAcceleration"
+			quid       	"3E40E20A0128"
+			transitions 	(list transition_list
+			    (object State_Transition
+				quid       	"3E41126F008C"
+				label      	""
+				supplier   	"NomValueAtFStartPos"
+				quidu      	"3E411255032C"
+				condition  	"PositionCounter == F_START_POS"
+				sendEvent  	(object sendEvent
+				    quid       	"3E41126F008F")))
+			type       	"Normal")
+		    (object State "NomValueToFStartMeasuringPos"
+			quid       	"3E40E29F0196"
+			transitions 	(list transition_list
+			    (object State_Transition
+				quid       	"3E40E2EA0157"
+				label      	""
+				supplier   	"NomValueAtFStartMeasuringPos"
+				quidu      	"3E40E2CC01C5"
+				condition  	"PositionCounter == F_START_MEASURING_POS"
+				sendEvent  	(object sendEvent
+				    quid       	"3E40E2EA0167"))
+			    (object State_Transition
+				quid       	"3E40E9F3035B"
+				label      	""
+				supplier   	"NomValueAtFStartMeasuringPos"
+				quidu      	"3E40E2CC01C5"
+				Event      	(object Event "NomValueToBStartMeasuringPos"
+				    quid       	"3E40E9F3035C")
+				sendEvent  	(object sendEvent
+				    quid       	"3E40E9F3035E"))
+			    (object State_Transition
+				quid       	"3E412AF1007D"
+				label      	""
+				supplier   	"NomValueToFEndPos"
+				quidu      	"3E40E4EE03A9"
+				condition  	"FalingEdgeLBDetected && RefMode"
+				sendEvent  	(object sendEvent
+				    quid       	"3E412AF10080")))
+			type       	"Normal")
+		    (object State "NomValueAtFStartMeasuringPos"
+			quid       	"3E40E2CC01C5"
+			transitions 	(list transition_list
+			    (object State_Transition
+				quid       	"3E40E44F0232"
+				label      	""
+				supplier   	"NomValueFMeasuring"
+				quidu      	"3E40E366000F"
+				condition  	"PositionCounter < F_END_MEASURING_POS"
+				sendEvent  	(object sendEvent
+				    quid       	"3E40E44F0235"))
+			    (object State_Transition
+				quid       	"3E412610035B"
+				label      	""
+				supplier   	"NomValueToFEndPos"
+				quidu      	"3E40E4EE03A9"
+				condition  	"FalingEdgeLBDetected && RefMode"
+				sendEvent  	(object sendEvent
+				    quid       	"3E412610035E")))
+			type       	"Normal")
+		    (object State "NomValueFMeasuring"
+			quid       	"3E40E366000F"
+			transitions 	(list transition_list
+			    (object State_Transition
+				quid       	"3E40E4BA00BB"
+				label      	""
+				supplier   	"NomValueAtFEndMeasuringPos"
+				quidu      	"3E40E4A8008C"
+				condition  	"PositionCounter == F_END_MEASURING_POS"
+				sendEvent  	(object sendEvent
+				    quid       	"3E40E4BA00BE"))
+			    (object State_Transition
+				quid       	"3E4125F203D8"
+				label      	""
+				supplier   	"NomValueToFEndPos"
+				quidu      	"3E40E4EE03A9"
+				condition  	"FalingEdgeLBDetected && RefMode"
+				sendEvent  	(object sendEvent
+				    quid       	"3E4125F203DB")))
+			type       	"Normal")
+		    (object State "NomValueAtFEndMeasuringPos"
+			quid       	"3E40E4A8008C"
+			transitions 	(list transition_list
+			    (object State_Transition
+				quid       	"3E40E4FF03D8"
+				label      	""
+				supplier   	"NomValueToFEndPos"
+				quidu      	"3E40E4EE03A9"
+				condition  	"PositionCounter < F_END_POS"
+				sendEvent  	(object sendEvent
+				    quid       	"3E40E4FF03DB"))
+			    (object State_Transition
+				quid       	"3E4125C7029F"
+				label      	""
+				supplier   	"NomValueToFEndPos"
+				quidu      	"3E40E4EE03A9"
+				condition  	"FalingEdgeLBDetected && RefMode"
+				sendEvent  	(object sendEvent
+				    quid       	"3E4125C702A2")))
+			type       	"Normal")
+		    (object State "NomValueToFEndPos"
+			quid       	"3E40E4EE03A9"
+			transitions 	(list transition_list
+			    (object State_Transition
+				quid       	"3E40E5520280"
+				label      	""
+				supplier   	"NomValueAtFEndPos"
+				quidu      	"3E40E52D00CB"
+				Event      	(object Event "PositionCounter == F_END_POS"
+				    quid       	"3E40E5520281")
+				sendEvent  	(object sendEvent
+				    quid       	"3E40E5520283")))
+			type       	"Normal")
+		    (object State "NomValueAtFEndPos"
+			quid       	"3E40E52D00CB"
+			transitions 	(list transition_list
+			    (object State_Transition
+				quid       	"3E40E59201F4"
+				label      	""
+				supplier   	"NomValueForwardDeceleration"
+				quidu      	"3E40E57F01B5"
+				condition  	"PositionCounter < REVERSE_POS"
+				sendEvent  	(object sendEvent
+				    quid       	"3E40E59201F7")))
+			type       	"Normal")
+		    (object State "NomValueForwardDeceleration"
+			quid       	"3E40E57F01B5"
+			transitions 	(list transition_list
+			    (object State_Transition
+				quid       	"3E40E608030D"
+				label      	""
+				supplier   	"NomValueAtReversePos"
+				quidu      	"3E40E5CB0128"
+				condition  	"PositionCounter == REVERSE_POS"
+				sendEvent  	(object sendEvent
+				    quid       	"3E40E6080310")))
+			type       	"Normal")
+		    (object State "NomValueAtReversePos"
+			quid       	"3E40E5CB0128"
+			transitions 	(list transition_list
+			    (object State_Transition
+				quid       	"3E40E60E0186"
+				label      	""
+				supplier   	"NomValueBackwardAcceleration"
+				quidu      	"3E40E5FA01E4"
+				condition  	"PositionCounter > B_START_POS"
+				sendEvent  	(object sendEvent
+				    quid       	"3E40E60E0189")))
+			type       	"Normal")
+		    (object State "NomValueAtBEndPos"
+			quid       	"3E410C58001F"
+			transitions 	(list transition_list
+			    (object State_Transition
+				quid       	"3E410D2A01A5"
+				label      	""
+				supplier   	"NomValueBackwardDeceleration"
+				quidu      	"3E410D2100CB"
+				condition  	"PositionCounter > END_POS"
+				sendEvent  	(object sendEvent
+				    quid       	"3E410D2A01A8")))
+			type       	"Normal")
+		    (object State "$UNNAMED$0"
+			quid       	"3E410CBC00DA"
+			transitions 	(list transition_list
+			    (object State_Transition
+				quid       	"3E410CBF00BB"
+				label      	""
+				supplier   	"NomValueInitialization"
+				quidu      	"3E4A5E130271"
+				Event      	(object Event "WCStart, WCReferencing, WCInitialize"
+				    quid       	"3E49E6E8026F")
+				sendEvent  	(object sendEvent
+				    quid       	"3E410CBF00BE")))
+			type       	"StartState")
+		    (object State "NomValueBackwardDeceleration"
+			quid       	"3E410D2100CB"
+			transitions 	(list transition_list
+			    (object State_Transition
+				quid       	"3E410D6400BB"
+				label      	""
+				supplier   	"NomValueAtEndPos"
+				quidu      	"3E410D4E0290"
+				condition  	"PositionCounter == END_POS"
+				sendEvent  	(object sendEvent
+				    quid       	"3E410D6400BE")))
+			type       	"Normal")
+		    (object State "NomValueAtEndPos"
+			quid       	"3E410D4E0290"
+			transitions 	(list transition_list
+			    (object State_Transition
+				quid       	"3E410DFA0399"
+				label      	""
+				supplier   	"NomValueHomePos"
+				quidu      	"3E4378C8037A"
+				condition  	"(NumberOfScan != 0) || WC_START"
+				sendEvent  	(object sendEvent
+				    quid       	"3E410DFA039C"))
+			    (object State_Transition
+				quid       	"3E4A598101D4"
+				supplier   	"NomValueIdleState"
+				quidu      	"3E4A59590203"
+				sendEvent  	(object sendEvent
+				    quid       	"3E4A598101D7")))
+			type       	"Normal")
+		    (object State "NomValueAtFStartPos"
+			quid       	"3E411255032C"
+			transitions 	(list transition_list
+			    (object State_Transition
+				quid       	"3E4112FF02DE"
+				label      	""
+				supplier   	"NomValueToFStartMeasuringPos"
+				quidu      	"3E40E29F0196"
+				condition  	"PositionCounter < F_START_MEASURING_POS"
+				sendEvent  	(object sendEvent
+				    quid       	"3E4112FF02E1"))
+			    (object State_Transition
+				quid       	"3E412B1D0196"
+				label      	""
+				supplier   	"NomValueToFEndPos"
+				quidu      	"3E40E4EE03A9"
+				condition  	"FalingEdgeLBDetected && RefMode"
+				sendEvent  	(object sendEvent
+				    quid       	"3E412B1D0199")))
+			type       	"Normal")
+		    (object State "NomValueToBEndPos"
+			quid       	"3E410C4B0109"
+			transitions 	(list transition_list
+			    (object State_Transition
+				quid       	"3E410C5E0000"
+				label      	""
+				supplier   	"NomValueAtBEndPos"
+				quidu      	"3E410C58001F"
+				Event      	(object Event "PositionCounter == B_END_POS"
+				    quid       	"3E410C5E0001")
+				sendEvent  	(object sendEvent
+				    quid       	"3E410C5E0003")))
+			type       	"Normal")
+		    (object State "NomValueBackwardAcceleration"
+			quid       	"3E40E5FA01E4"
+			transitions 	(list transition_list
+			    (object State_Transition
+				quid       	"3E410AF001C5"
+				label      	""
+				supplier   	"NomValueAtBStartPos"
+				quidu      	"3E41098D0213"
+				condition  	"PositionCounter == B_START_POS"
+				sendEvent  	(object sendEvent
+				    quid       	"3E410AF001C8")))
+			type       	"Normal")
+		    (object State "NomValueAtBStartPos"
+			quid       	"3E41098D0213"
+			transitions 	(list transition_list
+			    (object State_Transition
+				quid       	"3E410B2C037A"
+				label      	""
+				supplier   	"NomValueToBStartMeasuringPos"
+				quidu      	"3E410B1A0177"
+				condition  	"PositionCounter > B_START_MEASURING_POS"
+				sendEvent  	(object sendEvent
+				    quid       	"3E410B2C037D"))
+			    (object State_Transition
+				quid       	"3E4124D801F4"
+				label      	""
+				supplier   	"NomValueToBEndPos"
+				quidu      	"3E410C4B0109"
+				condition  	"RisingEdgeLBDetected"
+				sendEvent  	(object sendEvent
+				    quid       	"3E4124D801F7"))
+			    (object State_Transition
+				quid       	"3E4912D9006D"
+				label      	""
+				supplier   	"NomValueToBEndPos"
+				quidu      	"3E410C4B0109"
+				condition  	"bLightBarrierDuringAccDetected && nRemainingDistance>1"
+				sendEvent  	(object sendEvent
+				    quid       	"3E4912D90070"))
+			    (object State_Transition
+				quid       	"3E49130F03C8"
+				label      	""
+				supplier   	"NomValueAtBEndPos"
+				quidu      	"3E410C58001F"
+				condition  	"bLightBarrierDuringAccDetected && nRemainingDistance=1"
+				sendEvent  	(object sendEvent
+				    quid       	"3E49130F03CB"))
+			    (object State_Transition
+				quid       	"3E49142B00FA"
+				label      	""
+				supplier   	"NomValueBackwardDeceleration"
+				quidu      	"3E410D2100CB"
+				condition  	"bLightBarrierDuringAccDetected && nRemainingDistance=0"
+				sendEvent  	(object sendEvent
+				    quid       	"3E49142B00FD"))
+			    (object State_Transition
+				quid       	"3E4911910148"
+				label      	""
+				supplier   	"NomValueAtBEndPos"
+				quidu      	"3E410C58001F"
+				condition  	"bLightBarrierDuringAccDetected && nRemainingDistance<0"
+				sendEvent  	(object sendEvent
+				    quid       	"3E491191014B"))
+			    (object State_Transition
+				quid       	"3E4911E600CB"
+				label      	""
+				supplier   	"NomValueBackwardDeceleration"
+				quidu      	"3E410D2100CB"
+				condition  	"bLightBarrierDuringAccDetected && nRemainingDistance<0"
+				sendEvent  	(object sendEvent
+				    quid       	"3E4911E600CE")))
+			type       	"Normal")
+		    (object State "NomValueToBStartMeasuringPos"
+			quid       	"3E410B1A0177"
+			transitions 	(list transition_list
+			    (object State_Transition
+				quid       	"3E410B6C0109"
+				label      	""
+				supplier   	"NomValueAtBStartMeasuringPos"
+				quidu      	"3E410B4B033C"
+				condition  	"PositionCounter == B_START_MEASURING_POS"
+				sendEvent  	(object sendEvent
+				    quid       	"3E410B6C010C"))
+			    (object State_Transition
+				quid       	"3E4124C000FA"
+				label      	""
+				supplier   	"NomValueToBEndPos"
+				quidu      	"3E410C4B0109"
+				condition  	"RisingEdgeLBDetected"
+				sendEvent  	(object sendEvent
+				    quid       	"3E4124C000FD")))
+			type       	"Normal")
+		    (object State "NomValueAtBStartMeasuringPos"
+			quid       	"3E410B4B033C"
+			transitions 	(list transition_list
+			    (object State_Transition
+				quid       	"3E410BC50271"
+				label      	""
+				supplier   	"NomValueBMeasuring"
+				quidu      	"3E410B9A00BB"
+				condition  	"PositionCounter > B_END_MEASURING_POS"
+				sendEvent  	(object sendEvent
+				    quid       	"3E410BC50274"))
+			    (object State_Transition
+				quid       	"3E41249600CB"
+				label      	""
+				supplier   	"NomValueToBEndPos"
+				quidu      	"3E410C4B0109"
+				condition  	"RisingEdgeLBDetected"
+				sendEvent  	(object sendEvent
+				    quid       	"3E41249600CE")))
+			type       	"Normal")
+		    (object State "NomValueBMeasuring"
+			quid       	"3E410B9A00BB"
+			transitions 	(list transition_list
+			    (object State_Transition
+				quid       	"3E410BF60232"
+				label      	""
+				supplier   	"NomValueAtBEndMeasuringPos"
+				quidu      	"3E410BB6032C"
+				condition  	"PositionCounter == B_END_MEASURING_POS"
+				sendEvent  	(object sendEvent
+				    quid       	"3E410BF60235"))
+			    (object State_Transition
+				quid       	"3E4124600186"
+				label      	""
+				supplier   	"NomValueToBEndPos"
+				quidu      	"3E410C4B0109"
+				condition  	"RisingEdgeLBDetected"
+				sendEvent  	(object sendEvent
+				    quid       	"3E4124600189")))
+			type       	"Normal")
+		    (object State "NomValueAtBEndMeasuringPos"
+			quid       	"3E410BB6032C"
+			transitions 	(list transition_list
+			    (object State_Transition
+				quid       	"3E410C5302BF"
+				label      	""
+				supplier   	"NomValueToBEndPos"
+				quidu      	"3E410C4B0109"
+				condition  	"PositionCounter > B_END_POS"
+				sendEvent  	(object sendEvent
+				    quid       	"3E410C5302C2"))
+			    (object State_Transition
+				quid       	"3E4124300242"
+				label      	""
+				supplier   	"NomValueToBEndPos"
+				quidu      	"3E410C4B0109"
+				condition  	"RisingEdgeLBDetected"
+				sendEvent  	(object sendEvent
+				    quid       	"3E4124300245")))
+			type       	"Normal")
+		    (object State "NomValueHomePos"
+			quid       	"3E4378C8037A"
+			transitions 	(list transition_list
+			    (object State_Transition
+				quid       	"3E4378E402CE"
+				supplier   	"NomValueForwardAcceleration"
+				quidu      	"3E40E20A0128"
+				sendEvent  	(object sendEvent
+				    quid       	"3E4378E402D1")))
+			type       	"Normal")
+		    (object State "NomValueIdleState"
+			quid       	"3E4A59590203"
+			type       	"Normal")
+		    (object State "NomValueInitialization"
+			quid       	"3E4A5E130271"
+			transitions 	(list transition_list
+			    (object State_Transition
+				quid       	"3E4A5E3300AB"
+				supplier   	"NomValueHomePos"
+				quidu      	"3E4378C8037A"
+				sendEvent  	(object sendEvent
+				    quid       	"3E4A5E3300AE")))
+			type       	"Normal")))
+	    statediagram 	(object State_Diagram ""
+		quid       	"3E40E1F801D5"
+		title      	""
+		zoom       	65
+		max_height 	28350
+		max_width  	21600
+		origin_x   	130
+		origin_y   	0
+		items      	(list diagram_item_list
+		    (object StateView "Normal" "NomValueForwardAcceleration" @1
+			location   	(1365, 1108)
+			label      	(object ItemLabel
+			    Parent_View 	@1
+			    location   	(1365, 1086)
+			    fill_color 	13434879
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	554
+			    justify    	0
+			    label      	"NomValueForwardAcceleration")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"3E40E20A0128"
+			width      	566
+			height     	134
+			autoResize 	TRUE)
+		    (object StateView "Normal" "NomValueToFStartMeasuringPos" @2
+			location   	(1365, 1864)
+			label      	(object ItemLabel
+			    Parent_View 	@2
+			    location   	(1365, 1842)
+			    fill_color 	13434879
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	590
+			    justify    	0
+			    label      	"NomValueToFStartMeasuringPos")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"3E40E29F0196"
+			width      	602
+			height     	134
+			autoResize 	TRUE)
+		    (object StateView "Normal" "NomValueAtFStartMeasuringPos" @3
+			location   	(1362, 2262)
+			label      	(object ItemLabel
+			    Parent_View 	@3
+			    location   	(1362, 2242)
+			    fill_color 	13434879
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	688
+			    justify    	0
+			    label      	"NomValueAtFStartMeasuringPos")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"3E40E2CC01C5"
+			width      	700
+			height     	131
+			autoResize 	TRUE)
+		    (object StateView "Normal" "NomValueFMeasuring" @4
+			location   	(1362, 2641)
+			label      	(object ItemLabel
+			    Parent_View 	@4
+			    location   	(1362, 2617)
+			    fill_color 	13434879
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	719
+			    justify    	0
+			    label      	"NomValueFMeasuring")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"3E40E366000F"
+			width      	731
+			height     	138
+			autoResize 	TRUE)
+		    (object StateView "Normal" "NomValueAtFEndMeasuringPos" @5
+			location   	(1362, 2975)
+			label      	(object ItemLabel
+			    Parent_View 	@5
+			    location   	(1362, 2955)
+			    fill_color 	13434879
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	582
+			    justify    	0
+			    label      	"NomValueAtFEndMeasuringPos")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"3E40E4A8008C"
+			width      	594
+			height     	130
+			autoResize 	TRUE)
+		    (object StateView "Normal" "NomValueToFEndPos" @6
+			location   	(1362, 3319)
+			label      	(object ItemLabel
+			    Parent_View 	@6
+			    location   	(1362, 3298)
+			    fill_color 	13434879
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	644
+			    justify    	0
+			    label      	"NomValueToFEndPos")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"3E40E4EE03A9"
+			width      	656
+			height     	132
+			autoResize 	TRUE)
+		    (object StateView "Normal" "NomValueAtFEndPos" @7
+			location   	(1362, 3632)
+			label      	(object ItemLabel
+			    Parent_View 	@7
+			    location   	(1362, 3608)
+			    fill_color 	13434879
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	550
+			    justify    	0
+			    label      	"NomValueAtFEndPos")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"3E40E52D00CB"
+			width      	562
+			height     	138
+			autoResize 	TRUE)
+		    (object TransView "" @8
+			label      	(object SegLabel @9
+			    Parent_View 	@8
+			    location   	(1406, 3473)
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	812
+			    justify    	0
+			    label      	"PositionCounter == F_END_POS"
+			    pctDist    	0.495044
+			    height     	44
+			    orientation 	0)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"3E40E5520280"
+			client     	@6
+			supplier   	@7
+			line_style 	0
+			x_offset   	FALSE)
+		    (object StateView "Normal" "NomValueForwardDeceleration" @10
+			location   	(1362, 3941)
+			label      	(object ItemLabel
+			    Parent_View 	@10
+			    location   	(1362, 3914)
+			    fill_color 	13434879
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	556
+			    justify    	0
+			    label      	"NomValueForwardDeceleration")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"3E40E57F01B5"
+			width      	568
+			height     	144
+			autoResize 	TRUE)
+		    (object TransView "" @11
+			label      	(object SegLabel @12
+			    Parent_View 	@11
+			    location   	(1407, 3785)
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	916
+			    justify    	0
+			    label      	"[ PositionCounter < REVERSE_POS ]"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"3E40E59201F4"
+			client     	@7
+			supplier   	@10
+			line_style 	0
+			x_offset   	FALSE)
+		    (object StateView "Normal" "NomValueAtReversePos" @13
+			location   	(1355, 4225)
+			label      	(object ItemLabel
+			    Parent_View 	@13
+			    location   	(1355, 4203)
+			    fill_color 	13434879
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	516
+			    justify    	0
+			    label      	"NomValueAtReversePos")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"3E40E5CB0128"
+			width      	528
+			height     	134
+			autoResize 	TRUE)
+		    (object TransView "" @14
+			label      	(object SegLabel @15
+			    Parent_View 	@14
+			    location   	(1403, 4086)
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	947
+			    justify    	0
+			    label      	"[ PositionCounter == REVERSE_POS ]"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"3E40E608030D"
+			client     	@10
+			supplier   	@13
+			line_style 	0
+			x_offset   	FALSE)
+		    (object StateView "Normal" "NomValueAtBEndPos" @16
+			location   	(1377, 6790)
+			label      	(object ItemLabel
+			    Parent_View 	@16
+			    location   	(1377, 6760)
+			    fill_color 	13434879
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	575
+			    justify    	0
+			    label      	"NomValueAtBEndPos")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"3E410C58001F"
+			width      	587
+			height     	150
+			autoResize 	TRUE)
+		    (object StateView "StartState" "$UNNAMED$0" @17
+			location   	(1359, 163)
+			label      	(object ItemLabel
+			    Parent_View 	@17
+			    location   	(1401, 133)
+			    nlines     	1
+			    max_width  	600
+			    label      	"")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"3E410CBC00DA"
+			autoResize 	TRUE)
+		    (object StateView "Normal" "NomValueBackwardDeceleration" @18
+			location   	(1378, 7093)
+			label      	(object ItemLabel
+			    Parent_View 	@18
+			    location   	(1378, 7066)
+			    fill_color 	13434879
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	590
+			    justify    	0
+			    label      	"NomValueBackwardDeceleration")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"3E410D2100CB"
+			width      	602
+			height     	144
+			autoResize 	TRUE)
+		    (object TransView "" @19
+			label      	(object SegLabel @20
+			    Parent_View 	@19
+			    location   	(1422, 6943)
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	781
+			    justify    	0
+			    label      	"[ PositionCounter > END_POS ]"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"3E410D2A01A5"
+			client     	@16
+			supplier   	@18
+			line_style 	0
+			x_offset   	FALSE)
+		    (object StateView "Normal" "NomValueAtEndPos" @21
+			location   	(1380, 7489)
+			label      	(object ItemLabel
+			    Parent_View 	@21
+			    location   	(1380, 7469)
+			    fill_color 	13434879
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	563
+			    justify    	0
+			    label      	"NomValueAtEndPos")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"3E410D4E0290"
+			width      	575
+			height     	131
+			autoResize 	TRUE)
+		    (object StateView "Normal" "NomValueAtFStartPos" @22
+			location   	(1364, 1445)
+			label      	(object ItemLabel
+			    Parent_View 	@22
+			    location   	(1364, 1423)
+			    fill_color 	13434879
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	410
+			    justify    	0
+			    label      	"NomValueAtFStartPos")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"3E411255032C"
+			width      	422
+			height     	134
+			autoResize 	TRUE)
+		    (object TransView "" @23
+			label      	(object SegLabel @24
+			    Parent_View 	@23
+			    location   	(1409, 1276)
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	1350
+			    justify    	0
+			    label      	"[ PositionCounter == F_START_POS ]"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"3E41126F008C"
+			client     	@1
+			supplier   	@22
+			line_style 	0
+			x_offset   	FALSE)
+		    (object TransView "" @25
+			label      	(object SegLabel @26
+			    Parent_View 	@25
+			    location   	(1425, 7295)
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	812
+			    justify    	0
+			    label      	"[ PositionCounter == END_POS ]"
+			    pctDist    	0.507463
+			    height     	46
+			    orientation 	0)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"3E410D6400BB"
+			client     	@18
+			supplier   	@21
+			line_style 	0
+			x_offset   	FALSE)
+		    (object StateView "Normal" "NomValueBackwardAcceleration" @27
+			location   	(1362, 4509)
+			label      	(object ItemLabel
+			    Parent_View 	@27
+			    location   	(1362, 4479)
+			    fill_color 	13434879
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	588
+			    justify    	0
+			    label      	"NomValueBackwardAcceleration")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"3E40E5FA01E4"
+			width      	600
+			height     	150
+			autoResize 	TRUE)
+		    (object TransView "" @28
+			label      	(object SegLabel @29
+			    Parent_View 	@28
+			    location   	(1376, 4349)
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	904
+			    justify    	0
+			    label      	"[ PositionCounter > B_START_POS ]"
+			    pctDist    	0.406480
+			    height     	18
+			    orientation 	0)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"3E40E60E0186"
+			client     	@13
+			supplier   	@27
+			line_style 	0
+			x_offset   	FALSE)
+		    (object StateView "Normal" "NomValueAtBStartPos" @30
+			location   	(1362, 4849)
+			label      	(object ItemLabel
+			    Parent_View 	@30
+			    location   	(1362, 4822)
+			    fill_color 	13434879
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	419
+			    justify    	0
+			    label      	"NomValueAtBStartPos")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"3E41098D0213"
+			width      	431
+			height     	144
+			autoResize 	TRUE)
+		    (object StateView "Normal" "NomValueToBStartMeasuringPos" @31
+			location   	(1372, 5133)
+			label      	(object ItemLabel
+			    Parent_View 	@31
+			    location   	(1372, 5113)
+			    fill_color 	13434879
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	596
+			    justify    	0
+			    label      	"NomValueToBStartMeasuringPos")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"3E410B1A0177"
+			width      	608
+			height     	130
+			autoResize 	TRUE)
+		    (object StateView "Normal" "NomValueAtBStartMeasuringPos" @32
+			location   	(1372, 5408)
+			label      	(object ItemLabel
+			    Parent_View 	@32
+			    location   	(1372, 5388)
+			    fill_color 	13434879
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	675
+			    justify    	0
+			    label      	"NomValueAtBStartMeasuringPos")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"3E410B4B033C"
+			width      	687
+			height     	131
+			autoResize 	TRUE)
+		    (object StateView "Normal" "NomValueBMeasuring" @33
+			location   	(1372, 5705)
+			label      	(object ItemLabel
+			    Parent_View 	@33
+			    location   	(1372, 5681)
+			    fill_color 	13434879
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	651
+			    justify    	0
+			    label      	"NomValueBMeasuring")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"3E410B9A00BB"
+			width      	663
+			height     	138
+			autoResize 	TRUE)
+		    (object StateView "Normal" "NomValueAtBEndMeasuringPos" @34
+			location   	(1375, 6005)
+			label      	(object ItemLabel
+			    Parent_View 	@34
+			    location   	(1375, 5984)
+			    fill_color 	13434879
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	606
+			    justify    	0
+			    label      	"NomValueAtBEndMeasuringPos")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"3E410BB6032C"
+			width      	618
+			height     	132
+			autoResize 	TRUE)
+		    (object StateView "Normal" "NomValueToBEndPos" @35
+			location   	(1375, 6447)
+			label      	(object ItemLabel
+			    Parent_View 	@35
+			    location   	(1375, 6417)
+			    fill_color 	13434879
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	557
+			    justify    	0
+			    label      	"NomValueToBEndPos")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"3E410C4B0109"
+			width      	569
+			height     	150
+			autoResize 	TRUE)
+		    (object TransView "" @36
+			label      	(object SegLabel @37
+			    Parent_View 	@36
+			    location   	(1420, 6618)
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	820
+			    justify    	0
+			    label      	"PositionCounter == B_END_POS"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"3E410C5E0000"
+			client     	@35
+			supplier   	@16
+			line_style 	0
+			x_offset   	FALSE)
+		    (object TransView "" @38
+			label      	(object SegLabel @39
+			    Parent_View 	@38
+			    location   	(1420, 6271)
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	850
+			    justify    	0
+			    label      	"[ PositionCounter > B_END_POS ]"
+			    pctDist    	0.669328
+			    height     	45
+			    orientation 	0)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"3E410C5302BF"
+			client     	@34
+			supplier   	@35
+			line_style 	0
+			x_offset   	FALSE)
+		    (object TransView "" @40
+			label      	(object SegLabel @41
+			    Parent_View 	@40
+			    location   	(1974, 6197)
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	650
+			    justify    	0
+			    label      	"[ RisingEdgeLBDetected ]"
+			    pctDist    	0.459354
+			    height     	12
+			    orientation 	0)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"3E4124300242"
+			client     	@34
+			supplier   	@35
+			vertices   	(list Points
+			    (1684, 6005)
+			    (1962, 6005)
+			    (1962, 6447)
+			    (1659, 6447))
+			line_style 	3
+			origin_attachment 	(1684, 6005)
+			terminal_attachment 	(1659, 6447)
+			x_offset   	FALSE)
+		    (object TransView "" @42
+			label      	(object SegLabel @43
+			    Parent_View 	@42
+			    location   	(1413, 5840)
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	1227
+			    justify    	0
+			    label      	"[ PositionCounter == B_END_MEASURING_POS ]"
+			    pctDist    	0.398176
+			    height     	40
+			    orientation 	0)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"3E410BF60232"
+			client     	@33
+			supplier   	@34
+			line_style 	0
+			x_offset   	FALSE)
+		    (object TransView "" @44
+			label      	(object SegLabel @45
+			    Parent_View 	@44
+			    location   	(2339, 6054)
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	650
+			    justify    	0
+			    label      	"[ RisingEdgeLBDetected ]"
+			    pctDist    	0.479197
+			    height     	5
+			    orientation 	0)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"3E4124600186"
+			client     	@33
+			supplier   	@35
+			vertices   	(list Points
+			    (1703, 5705)
+			    (2334, 5705)
+			    (2334, 6447)
+			    (1659, 6447))
+			line_style 	3
+			origin_attachment 	(1703, 5705)
+			terminal_attachment 	(1659, 6447)
+			x_offset   	FALSE)
+		    (object TransView "" @46
+			label      	(object SegLabel @47
+			    Parent_View 	@46
+			    location   	(1417, 5555)
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	1548
+			    justify    	0
+			    label      	"[ PositionCounter > B_END_MEASURING_POS ]"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"3E410BC50271"
+			client     	@32
+			supplier   	@33
+			line_style 	0
+			x_offset   	FALSE)
+		    (object TransView "" @48
+			label      	(object SegLabel @49
+			    Parent_View 	@48
+			    location   	(2639, 5875)
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	650
+			    justify    	0
+			    label      	"[ RisingEdgeLBDetected ]"
+			    pctDist    	0.472386
+			    height     	33
+			    orientation 	0)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"3E41249600CB"
+			client     	@32
+			supplier   	@35
+			vertices   	(list Points
+			    (1715, 5408)
+			    (2606, 5408)
+			    (2606, 6447)
+			    (1659, 6447))
+			line_style 	3
+			origin_attachment 	(1715, 5408)
+			terminal_attachment 	(1659, 6447)
+			x_offset   	FALSE)
+		    (object TransView "" @50
+			label      	(object SegLabel @51
+			    Parent_View 	@50
+			    location   	(1410, 5255)
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	1281
+			    justify    	0
+			    label      	"[ PositionCounter == B_START_MEASURING_POS ]"
+			    pctDist    	0.390382
+			    height     	38
+			    orientation 	0)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"3E410B6C0109"
+			client     	@31
+			supplier   	@32
+			line_style 	0
+			x_offset   	FALSE)
+		    (object TransView "" @52
+			label      	(object SegLabel @53
+			    Parent_View 	@52
+			    location   	(3020, 5582)
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	650
+			    justify    	0
+			    label      	"[ RisingEdgeLBDetected ]"
+			    pctDist    	0.446935
+			    height     	31
+			    orientation 	1)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"3E4124C000FA"
+			client     	@31
+			supplier   	@35
+			vertices   	(list Points
+			    (1676, 5133)
+			    (3050, 5133)
+			    (3050, 6447)
+			    (1659, 6447))
+			line_style 	3
+			origin_attachment 	(1676, 5133)
+			terminal_attachment 	(1659, 6447)
+			x_offset   	FALSE)
+		    (object TransView "" @54
+			label      	(object SegLabel @55
+			    Parent_View 	@54
+			    location   	(1407, 2809)
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	1220
+			    justify    	0
+			    label      	"[ PositionCounter == F_END_MEASURING_POS ]"
+			    pctDist    	0.496552
+			    height     	45
+			    orientation 	0)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"3E40E4BA00BB"
+			client     	@4
+			supplier   	@5
+			line_style 	0
+			x_offset   	FALSE)
+		    (object TransView "" @56
+			label      	(object SegLabel @57
+			    Parent_View 	@56
+			    location   	(2433, 2789)
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	966
+			    justify    	0
+			    label      	"[ FalingEdgeLBDetected && RefMode ]"
+			    pctDist    	0.407095
+			    height     	65
+			    orientation 	1)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"3E4125F203D8"
+			client     	@4
+			supplier   	@6
+			vertices   	(list Points
+			    (1727, 2641)
+			    (2497, 2641)
+			    (2497, 3319)
+			    (1690, 3319))
+			line_style 	3
+			origin_attachment 	(1727, 2641)
+			terminal_attachment 	(1690, 3319)
+			x_offset   	FALSE)
+		    (object TransView "" @58
+			label      	(object SegLabel @59
+			    Parent_View 	@58
+			    location   	(1408, 2061)
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	1274
+			    justify    	0
+			    label      	"[ PositionCounter == F_START_MEASURING_POS ]"
+			    pctDist    	0.494253
+			    height     	45
+			    orientation 	0)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"3E40E2EA0157"
+			client     	@2
+			supplier   	@3
+			line_style 	0
+			x_offset   	FALSE)
+		    (object TransView "" @60
+			label      	(object SegLabel @61
+			    Parent_View 	@60
+			    location   	(3031, 2057)
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	1122
+			    justify    	0
+			    label      	"[ FalingEdgeLBDetected && RefMode ]"
+			    pctDist    	0.380746
+			    height     	110
+			    orientation 	1)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"3E412AF1007D"
+			client     	@2
+			supplier   	@6
+			vertices   	(list Points
+			    (1666, 1864)
+			    (3140, 1864)
+			    (3140, 3319)
+			    (1690, 3319))
+			line_style 	3
+			origin_attachment 	(1666, 1864)
+			terminal_attachment 	(1690, 3319)
+			x_offset   	FALSE)
+		    (object TransView "" @62
+			label      	(object SegLabel @63
+			    Parent_View 	@62
+			    location   	(1409, 1655)
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	1243
+			    justify    	0
+			    label      	"[ PositionCounter < F_START_MEASURING_POS ]"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"3E4112FF02DE"
+			client     	@22
+			supplier   	@2
+			line_style 	0
+			x_offset   	FALSE)
+		    (object TransView "" @64
+			label      	(object SegLabel @65
+			    Parent_View 	@64
+			    location   	(3376, 1625)
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	966
+			    justify    	0
+			    label      	"[ FalingEdgeLBDetected && RefMode ]"
+			    pctDist    	0.375658
+			    height     	134
+			    orientation 	1)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"3E412B1D0196"
+			client     	@22
+			supplier   	@6
+			vertices   	(list Points
+			    (1575, 1445)
+			    (3509, 1445)
+			    (3509, 3319)
+			    (1690, 3319))
+			line_style 	3
+			origin_attachment 	(1575, 1445)
+			terminal_attachment 	(1690, 3319)
+			x_offset   	FALSE)
+		    (object StateView "Normal" "NomValueHomePos" @66
+			location   	(1364, 811)
+			label      	(object ItemLabel
+			    Parent_View 	@66
+			    location   	(1364, 789)
+			    fill_color 	13434879
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	364
+			    justify    	0
+			    label      	"NomValueHomePos")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"3E4378C8037A"
+			width      	376
+			height     	134
+			autoResize 	TRUE)
+		    (object TransView "" @67
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"3E4378E402CE"
+			client     	@66
+			supplier   	@1
+			line_style 	0
+			x_offset   	FALSE)
+		    (object TransView "" @68
+			label      	(object SegLabel @69
+			    Parent_View 	@68
+			    location   	(508, 4109)
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	931
+			    justify    	0
+			    label      	"[ (NumberOfScan != 0) || WC_START ]"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"3E410DFA0399"
+			client     	@21
+			supplier   	@66
+			vertices   	(list Points
+			    (1093, 7489)
+			    (552, 7489)
+			    (552, 811)
+			    (1176, 811))
+			line_style 	3
+			origin_attachment 	(1093, 7489)
+			terminal_attachment 	(1176, 811)
+			x_offset   	FALSE)
+		    (object TransView "" @70
+			label      	(object SegLabel @71
+			    Parent_View 	@70
+			    location   	(1407, 2449)
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	1189
+			    justify    	0
+			    label      	"[ PositionCounter < F_END_MEASURING_POS ]"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"3E40E44F0232"
+			client     	@3
+			supplier   	@4
+			line_style 	0
+			x_offset   	FALSE)
+		    (object TransView "" @72
+			label      	(object SegLabel @73
+			    Parent_View 	@72
+			    location   	(2710, 2396)
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	966
+			    justify    	0
+			    label      	"[ FalingEdgeLBDetected && RefMode ]"
+			    pctDist    	0.378275
+			    height     	130
+			    orientation 	1)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"3E412610035B"
+			client     	@3
+			supplier   	@6
+			vertices   	(list Points
+			    (1712, 2262)
+			    (2839, 2262)
+			    (2839, 3319)
+			    (1690, 3319))
+			line_style 	3
+			origin_attachment 	(1712, 2262)
+			terminal_attachment 	(1690, 3319)
+			x_offset   	FALSE)
+		    (object TransView "" @74
+			label      	(object SegLabel @75
+			    Parent_View 	@74
+			    location   	(1407, 3146)
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	843
+			    justify    	0
+			    label      	"[ PositionCounter < F_END_POS ]"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"3E40E4FF03D8"
+			client     	@5
+			supplier   	@6
+			line_style 	0
+			x_offset   	FALSE)
+		    (object TransView "" @76
+			label      	(object SegLabel @77
+			    Parent_View 	@76
+			    location   	(2109, 3080)
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	966
+			    justify    	0
+			    label      	"[ FalingEdgeLBDetected && RefMode ]"
+			    pctDist    	0.462260
+			    height     	63
+			    orientation 	1)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"3E4125C7029F"
+			client     	@5
+			supplier   	@6
+			vertices   	(list Points
+			    (1659, 2975)
+			    (2171, 2975)
+			    (2171, 3319)
+			    (1690, 3319))
+			line_style 	3
+			origin_attachment 	(1659, 2975)
+			terminal_attachment 	(1690, 3319)
+			x_offset   	FALSE)
+		    (object TransView "" @78
+			label      	(object SegLabel @79
+			    Parent_View 	@78
+			    location   	(1398, 4653)
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	935
+			    justify    	0
+			    label      	"[ PositionCounter == B_START_POS ]"
+			    pctDist    	0.360557
+			    height     	36
+			    orientation 	0)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"3E410AF001C5"
+			client     	@27
+			supplier   	@30
+			line_style 	0
+			x_offset   	FALSE)
+		    (object StateView "Normal" "NomValueIdleState" @80
+			location   	(1378, 7798)
+			label      	(object ItemLabel
+			    Parent_View 	@80
+			    location   	(1378, 7776)
+			    fill_color 	13434879
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	488
+			    justify    	0
+			    label      	"NomValueIdleState")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"3E4A59590203"
+			width      	500
+			autoResize 	TRUE)
+		    (object TransView "" @81
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"3E4A598101D4"
+			client     	@21
+			supplier   	@80
+			line_style 	0
+			x_offset   	FALSE)
+		    (object StateView "Normal" "NomValueInitialization" @82
+			location   	(1364, 495)
+			label      	(object ItemLabel
+			    Parent_View 	@82
+			    location   	(1364, 468)
+			    fill_color 	13434879
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	430
+			    justify    	0
+			    label      	"NomValueInitialization")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"3E4A5E130271"
+			width      	442
+			height     	144
+			autoResize 	TRUE)
+		    (object TransView "" @83
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"3E4A5E3300AB"
+			client     	@82
+			supplier   	@66
+			line_style 	0
+			x_offset   	FALSE)
+		    (object TransView "" @84
+			label      	(object SegLabel @85
+			    Parent_View 	@84
+			    location   	(5288, 6762)
+			    anchor_loc 	1
+			    nlines     	6
+			    max_width  	1542
+			    justify    	0
+			    label      	"[ bLightBarrierDuringAccDetected && nRemainingDistance<0 ]"
+			    pctDist    	0.589912
+			    height     	101
+			    orientation 	0)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"3E4911E600CB"
+			client     	@30
+			supplier   	@18
+			vertices   	(list Points
+			    (1577, 4850)
+			    (5187, 4850)
+			    (5187, 7095)
+			    (1679, 7095))
+			line_style 	3
+			origin_attachment 	(1577, 4850)
+			terminal_attachment 	(1679, 7095)
+			x_offset   	FALSE)
+		    (object TransView "" @86
+			label      	(object SegLabel @87
+			    Parent_View 	@86
+			    location   	(4456, 5840)
+			    anchor_loc 	1
+			    nlines     	4
+			    max_width  	1548
+			    justify    	0
+			    label      	"[ bLightBarrierDuringAccDetected && nRemainingDistance<0 ]"
+			    pctDist    	0.508697
+			    height     	38
+			    orientation 	0)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"3E4911910148"
+			client     	@30
+			supplier   	@16
+			vertices   	(list Points
+			    (1577, 4850)
+			    (4418, 4850)
+			    (4418, 6792)
+			    (1670, 6792))
+			line_style 	3
+			origin_attachment 	(1577, 4850)
+			terminal_attachment 	(1670, 6792)
+			x_offset   	FALSE)
+		    (object TransView "" @88
+			label      	(object SegLabel @89
+			    Parent_View 	@88
+			    location   	(1413, 4974)
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	1250
+			    justify    	0
+			    label      	"[ PositionCounter > B_START_MEASURING_POS ]"
+			    pctDist    	0.375887
+			    height     	47
+			    orientation 	0)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"3E410B2C037A"
+			client     	@30
+			supplier   	@31
+			line_style 	0
+			x_offset   	FALSE)
+		    (object TransView "" @90
+			label      	(object SegLabel @91
+			    Parent_View 	@90
+			    location   	(3251, 4997)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	649
+			    justify    	0
+			    label      	"[ RisingEdgeLBDetected ]"
+			    pctDist    	0.376820
+			    height     	41
+			    orientation 	1)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"3E4124D801F4"
+			client     	@30
+			supplier   	@35
+			vertices   	(list Points
+			    (1577, 4849)
+			    (3291, 4849)
+			    (3291, 6447)
+			    (1659, 6447))
+			line_style 	0
+			x_offset   	FALSE)
+		    (object TransView "" @92
+			label      	(object SegLabel @93
+			    Parent_View 	@92
+			    location   	(3694, 5234)
+			    anchor_loc 	1
+			    nlines     	4
+			    max_width  	1542
+			    justify    	0
+			    label      	"[ bLightBarrierDuringAccDetected && nRemainingDistance>1 ]"
+			    pctDist    	0.435372
+			    height     	4
+			    orientation 	1)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"3E4912D9006D"
+			client     	@30
+			supplier   	@35
+			vertices   	(list Points
+			    (1577, 4849)
+			    (3697, 4849)
+			    (3697, 6447)
+			    (1659, 6447))
+			line_style 	3
+			origin_attachment 	(1577, 4849)
+			terminal_attachment 	(1659, 6447)
+			x_offset   	FALSE)
+		    (object TransView "" @94
+			label      	(object SegLabel @95
+			    Parent_View 	@94
+			    location   	(4065, 5527)
+			    anchor_loc 	1
+			    nlines     	3
+			    max_width  	1547
+			    justify    	0
+			    label      	"[ bLightBarrierDuringAccDetected && nRemainingDistance=1 ]"
+			    pctDist    	0.463646
+			    height     	36
+			    orientation 	0)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"3E49130F03C8"
+			client     	@30
+			supplier   	@16
+			vertices   	(list Points
+			    (1577, 4849)
+			    (4029, 4849)
+			    (4029, 6791)
+			    (1670, 6790))
+			line_style 	0
+			x_offset   	FALSE)
+		    (object TransView "" @96
+			label      	(object SegLabel @97
+			    Parent_View 	@96
+			    location   	(4810, 6128)
+			    anchor_loc 	1
+			    nlines     	3
+			    max_width  	1547
+			    justify    	0
+			    label      	"[ bLightBarrierDuringAccDetected && nRemainingDistance=0 ]"
+			    pctDist    	0.524376
+			    height     	17
+			    orientation 	0)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"3E49142B00FA"
+			client     	@30
+			supplier   	@18
+			vertices   	(list Points
+			    (1577, 4849)
+			    (4793, 4849)
+			    (4793, 7093)
+			    (1679, 7093))
+			line_style 	3
+			origin_attachment 	(1577, 4849)
+			terminal_attachment 	(1679, 7093)
+			x_offset   	FALSE)
+		    (object TransView "" @98
+			label      	(object SegLabel @99
+			    Parent_View 	@98
+			    location   	(1371, 292)
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	1126
+			    justify    	0
+			    label      	"WCStart, WCReferencing, WCInitialize"
+			    pctDist    	0.433333
+			    height     	11
+			    orientation 	0)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"3E410CBF00BB"
+			client     	@17
+			supplier   	@82
+			line_style 	0
+			x_offset   	FALSE)))
+	    module     	"Component View::EBISR (Interrupt Service Routine)::EBISRcont (module body)"
+	    quidu      	"3E4131920119"
+	    module     	"Component View::EBISR (Interrupt Service Routine)::EBISRcont (module spec)"
+	    quidu      	"3E41319D034B"
+	    language   	"C++"
+	    nestedClasses 	(list nestedClasses
+		(object Class "ISRWCNomValue"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"void (CISRWCPIDControl::*)(void)")
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeFile"
+			    value      	"$ROOT\\Embedded\\src\\EBISR\\EBISRcont.h"))
+		    quid       	"3E4207660128")
+		(object Class "ControllerType"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"ImplementationType"
+			    value      	"int")
+			(object Attribute
+			    tool       	"Traversal"
+			    name       	"CodeFile"
+			    value      	"$ROOT\\Embedded\\src\\EBISR\\EBISRcont.h"))
+		    quid       	"3E50E65A0232")))
+	(object Class "EISRWCPosState"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"ImplementationType"
+		    value      	(value Text 
+|enum{
+|eWCIdle,
+|eWCIniPos, 
+|eWCStartPos,
+|eWCAccForward,
+|eWCNomVelocityForward,
+|eWCForwardMeasuring,
+|eWCDecForward,
+|eWCReversePos,
+|eWCAccBackward,
+|eWCNomVelocityBackward,
+|eWCBackwardMeasuring,
+|eWCDecBackward,
+|eWCEnd}
+		    ))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"PutBodiesInSpec"
+		    value      	TRUE))
+	    quid       	"3E4215A202BF"
+	    module     	"Component View::EBISR (Interrupt Service Routine)::EBISRtype (module spec)"
+	    quidu      	"3E4216FE0280"
+	    language   	"C++")
+	(object Class "EISRWCState"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"ImplementationType"
+		    value      	(value Text 
+|enum{
+|eWCNotIni,
+|eWCNoConfig,
+|eWCConfig,
+|eWCProfile,
+|eWCInitialize,
+|eWCInitialized,
+|eWCNotReferenced,
+|eWCReferencing,
+|eWCReferenced,
+|eWCMeasuring,
+|eWCEndMeasuring,
+|eWCParking,
+|eWCParked,
+|eWCStopping,
+|eWCStopped}
+		    ))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"PutBodiesInSpec"
+		    value      	TRUE))
+	    quid       	"3E4A5F9800DA"
+	    module     	"Component View::EBISR (Interrupt Service Routine)::EBISRtype (module spec)"
+	    quidu      	"3E4216FE0280"
+	    language   	"C++")
+	(object Class "int"
+	    quid       	"3FAB5B3A036B"
+	    language   	"C++")
+	(object Class_Utility "ISR_IDENTIFIERS"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"cg_style"
+		    value      	"Dummy Class"))
+	    quid       	"400410F001D4"
+	    module     	"Component View::EBISR (Interrupt Service Routine)::EBISRident (module spec)"
+	    quidu      	"4004111C0399"
+	    language   	"C++")
+	(object Association "$UNNAMED$1"
+	    quid       	"3E4209F20242"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$2"
+		    quid       	"3E4209F301C5"
+		    supplier   	"Logical View::EBISR (Interrupt Service Routine)::CISRWCPIDControl"
+		    quidu      	"3E40E116000F"
+		    client_cardinality 	(value cardinality "1..1")
+		    is_aggregate 	TRUE)
+		(object Role "fnPtrNomValue"
+		    attributes 	(list Attribute_Set)
+		    quid       	"3E4209F301C6"
+		    label      	"fnPtrNomValue"
+		    supplier   	"Logical View::EBISR (Interrupt Service Routine)::CISRWCPIDControl::ISRWCNomValue"
+		    quidu      	"3E4207660128"
+		    client_cardinality 	(value cardinality "1..1")
+		    Containment 	"By Value"
+		    is_navigable 	TRUE)))
+	(object Association "$UNNAMED$3"
+	    quid       	"3E4223AF0399"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$4"
+		    quid       	"3E4223B00222"
+		    supplier   	"Logical View::EBISR (Interrupt Service Routine)::CISRWCPIDControl"
+		    quidu      	"3E40E116000F"
+		    client_cardinality 	(value cardinality "1..1")
+		    is_aggregate 	TRUE)
+		(object Role "eWCPosState"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"InitialValue"
+			    value      	(value Text "eWCIdle"))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateGetOperation"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 45)))
+		    quid       	"3E4223B00223"
+		    label      	"eWCPosState"
+		    supplier   	"Logical View::EBISR (Interrupt Service Routine)::EISRWCPosState"
+		    quidu      	"3E4215A202BF"
+		    client_cardinality 	(value cardinality "1..1")
+		    Containment 	"By Value"
+		    is_navigable 	TRUE)))
+	(object Association "$UNNAMED$5"
+	    quid       	"3E4226AA02BF"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$6"
+		    quid       	"3E4226AB0157"
+		    supplier   	"Logical View::EBISR (Interrupt Service Routine)::CISRWCPIDControl"
+		    quidu      	"3E40E116000F"
+		    client_cardinality 	(value cardinality "1..1")
+		    is_aggregate 	TRUE)
+		(object Role "pWCConfig"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"InitialValue"
+			    value      	(value Text "NULL")))
+		    quid       	"3E4226AB0158"
+		    label      	"pWCConfig"
+		    supplier   	"Logical View::EBHIT (Hardware Interface Types)::CHIIOCSetWCConfiguration"
+		    quidu      	"3F94C3BB01D4"
+		    client_cardinality 	(value cardinality "1..1")
+		    Containment 	"By Reference"
+		    is_navigable 	TRUE)))
+	(object Association "$UNNAMED$7"
+	    quid       	"3E422AAC03C8"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$8"
+		    quid       	"3E422AAD037A"
+		    supplier   	"Logical View::EBISR (Interrupt Service Routine)::CISRWCPIDControl"
+		    quidu      	"3E40E116000F"
+		    client_cardinality 	(value cardinality "1..1")
+		    is_aggregate 	TRUE)
+		(object Role "pWCProfile"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"InitialValue"
+			    value      	(value Text "NULL")))
+		    quid       	"3E422AAD038A"
+		    label      	"pWCProfile"
+		    supplier   	"Logical View::EBHIT (Hardware Interface Types)::CHIIOCSetWCProfile"
+		    quidu      	"3F93FCF600DA"
+		    client_cardinality 	(value cardinality "1..1")
+		    Containment 	"By Reference"
+		    is_navigable 	TRUE)))
+	(object Association "$UNNAMED$9"
+	    quid       	"3E422F0B004E"
+	    documentation 	
+|DESCRIPTION:
+|actual velocity of the wedge drive
+|
+|UNIT:
+|[1/s]
+	    
+	    roles      	(list role_list
+		(object Role "$UNNAMED$10"
+		    quid       	"3E422F0B029F"
+		    supplier   	"Logical View::EBISR (Interrupt Service Routine)::CISRWCPIDControl"
+		    quidu      	"3E40E116000F"
+		    client_cardinality 	(value cardinality "1..1")
+		    is_aggregate 	TRUE)
+		(object Role "nActValue"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"InitialValue"
+			    value      	(value Text "0"))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateGetOperation"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetIsConst"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 45)))
+		    quid       	"3E422F0B02A0"
+		    label      	"nActValue"
+		    supplier   	"Logical View::EBISR (Interrupt Service Routine)::CISRWCPIDControl::ControllerType"
+		    quidu      	"3E50E65A0232"
+		    client_cardinality 	(value cardinality "1..1")
+		    Containment 	"By Value"
+		    is_navigable 	TRUE)))
+	(object Association "$UNNAMED$11"
+	    quid       	"3E435B2800AB"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$12"
+		    quid       	"3E435B290000"
+		    supplier   	"Logical View::EBISR (Interrupt Service Routine)::CISRWCPIDControl"
+		    quidu      	"3E40E116000F"
+		    client_cardinality 	(value cardinality "1..1")
+		    is_aggregate 	TRUE)
+		(object Role "dwActPosCounterForward"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"InitialValue"
+			    value      	(value Text "0"))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateGetOperation"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetIsConst"
+			    value      	TRUE))
+		    quid       	"3E435B290001"
+		    label      	"dwActPosCounterForward"
+		    supplier   	"Logical View::IMWINS (Microsoft Windows)::DWORD"
+		    quidu      	"369DEA1A039E"
+		    client_cardinality 	(value cardinality "1..1")
+		    Containment 	"By Value"
+		    is_navigable 	TRUE)))
+	(object Association "$UNNAMED$13"
+	    quid       	"3E47B89B02AF"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$14"
+		    quid       	"3E47B89C0251"
+		    supplier   	"Logical View::EBISR (Interrupt Service Routine)::CISRWCPIDControl"
+		    quidu      	"3E40E116000F"
+		    client_cardinality 	(value cardinality "1..1")
+		    is_aggregate 	TRUE)
+		(object Role "dwActPosCounterBackward"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"InitialValue"
+			    value      	(value Text "0"))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateGetOperation"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetIsConst"
+			    value      	TRUE))
+		    quid       	"3E47B89C0252"
+		    label      	"dwActPosCounterBackward"
+		    supplier   	"Logical View::IMWINS (Microsoft Windows)::DWORD"
+		    quidu      	"369DEA1A039E"
+		    client_cardinality 	(value cardinality "1..1")
+		    Containment 	"By Value"
+		    is_navigable 	TRUE)))
+	(object Association "$UNNAMED$15"
+	    quid       	"3E4A6099032C"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$16"
+		    quid       	"3E4A609A0222"
+		    supplier   	"Logical View::EBISR (Interrupt Service Routine)::CISRWCPIDControl"
+		    quidu      	"3E40E116000F"
+		    client_cardinality 	(value cardinality "1..1")
+		    is_aggregate 	TRUE)
+		(object Role "eWCState"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"InitialValue"
+			    value      	(value Text "eWCNoConfig")))
+		    quid       	"3E4A609A0232"
+		    label      	"eWCState"
+		    supplier   	"Logical View::EBISR (Interrupt Service Routine)::EISRWCState"
+		    quidu      	"3E4A5F9800DA"
+		    client_cardinality 	(value cardinality "1..1")
+		    Containment 	"By Value"
+		    is_navigable 	TRUE)))
+	(object Association "$UNNAMED$17"
+	    quid       	"3E50E91D035B"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$18"
+		    quid       	"3E50E91F003E"
+		    supplier   	"Logical View::EBISR (Interrupt Service Routine)::CISRWCPIDControl"
+		    quidu      	"3E40E116000F"
+		    client_cardinality 	(value cardinality "1..1")
+		    is_aggregate 	TRUE)
+		(object Role "HWDef"
+		    quid       	"3E50E91F003F"
+		    label      	"HWDef"
+		    supplier   	"Logical View::EBHIT (Hardware Interface Types)::CHITDefinitions"
+		    quidu      	"3E4BB85401C5"
+		    client_cardinality 	(value cardinality "1..1")
+		    Containment 	"By Value"
+		    is_navigable 	TRUE)))
+	(object Association "$UNNAMED$19"
+	    quid       	"3FAB65DC038A"
+	    documentation 	
+|DESCRIPTION:
+|output signal PID controller
+|
+|UNIT:
+|DAC counts
+	    
+	    roles      	(list role_list
+		(object Role "$UNNAMED$20"
+		    quid       	"3FAB65DD02DE"
+		    supplier   	"Logical View::EBISR (Interrupt Service Routine)::CISRWCPIDControl"
+		    quidu      	"3E40E116000F"
+		    client_cardinality 	(value cardinality "1..1")
+		    is_aggregate 	TRUE)
+		(object Role "nControllOutputValue"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"InitialValue"
+			    value      	(value Text "0"))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 45))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateGetOperation"
+			    value      	TRUE))
+		    quid       	"3FAB65DD02DF"
+		    label      	"nControllOutputValue"
+		    supplier   	"Logical View::EBISR (Interrupt Service Routine)::CISRWCPIDControl::ControllerType"
+		    quidu      	"3E50E65A0232"
+		    client_cardinality 	(value cardinality "1..1")
+		    Containment 	"By Value"
+		    is_navigable 	TRUE)))
+	(object Association "$UNNAMED$21"
+	    quid       	"3FAB78A702DE"
+	    documentation 	
+|DESCRIPTION:
+|nominal velocity of the wedge drive
+|
+|UNIT:
+|[1/s]
+	    
+	    roles      	(list role_list
+		(object Role "$UNNAMED$22"
+		    quid       	"3FAB78A800FA"
+		    supplier   	"Logical View::EBISR (Interrupt Service Routine)::CISRWCPIDControl"
+		    quidu      	"3E40E116000F"
+		    client_cardinality 	(value cardinality "1..1")
+		    is_aggregate 	TRUE)
+		(object Role "nNomValue"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"InitialValue"
+			    value      	(value Text "0"))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 45))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateGetOperation"
+			    value      	TRUE))
+		    quid       	"3FAB78A800FB"
+		    label      	"nNomValue"
+		    supplier   	"Logical View::EBISR (Interrupt Service Routine)::CISRWCPIDControl::ControllerType"
+		    quidu      	"3E50E65A0232"
+		    client_cardinality 	(value cardinality "1..1")
+		    Containment 	"By Value"
+		    is_navigable 	TRUE)))
+	(object Association "$UNNAMED$23"
+	    quid       	"402386DA01F4"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$24"
+		    quid       	"402386DB00EA"
+		    supplier   	"Logical View::EBISR (Interrupt Service Routine)::CISRWCPIDControl"
+		    quidu      	"3E40E116000F"
+		    client_cardinality 	(value cardinality "1..1")
+		    is_aggregate 	TRUE)
+		(object Role "bDirection"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"InitialValue"
+			    value      	(value Text "false")))
+		    quid       	"402386DB00FA"
+		    label      	"bDirection"
+		    supplier   	"Logical View::IMWINS (Microsoft Windows)::bool"
+		    quidu      	"369DEAA80005"
+		    client_cardinality 	(value cardinality "1..1")
+		    Containment 	"By Value"
+		    is_navigable 	TRUE)))
+	(object Association "$UNNAMED$25"
+	    quid       	"456EF73F0256"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$26"
+		    quid       	"456EF7400153"
+		    supplier   	"Logical View::EBISR (Interrupt Service Routine)::CISRWCPIDControl"
+		    quidu      	"3E40E116000F"
+		    client_cardinality 	(value cardinality "1..1")
+		    is_aggregate 	TRUE)
+		(object Role "bLBFoundInBackwardMovement"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"InitialValue"
+			    value      	(value Text "FALSE")))
+		    quid       	"456EF740015D"
+		    label      	"bLBFoundInBackwardMovement"
+		    supplier   	"Logical View::IMWINS (Microsoft Windows)::bool"
+		    quidu      	"369DEAA80005"
+		    client_cardinality 	(value cardinality "1..1")
+		    Containment 	"By Value"
+		    is_navigable 	TRUE))))
+    logical_presentations 	(list unit_reference_list
+	(object ClassDiagram "1.0 WC PID Controller"
+	    quid       	"3E40E10101A5"
+	    title      	"1.0 WC PID Controller"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object ClassView "Class" "Logical View::EBISR (Interrupt Service Routine)::CISRWCPIDControl::ISRWCNomValue" @100
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(368, 1765)
+		    label      	(object ItemLabel
+			Parent_View 	@100
+			location   	(189, 1714)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	358
+			justify    	0
+			label      	"ISRWCNomValue")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E4207660128"
+		    width      	376
+		    height     	126
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBISR (Interrupt Service Routine)::EISRWCPosState" @101
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(389, 2390)
+		    label      	(object ItemLabel
+			Parent_View 	@101
+			location   	(210, 2339)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	358
+			justify    	0
+			label      	"EISRWCPosState")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E4215A202BF"
+		    width      	376
+		    height     	126
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBISR (Interrupt Service Routine)::CISRWCPIDControl::ControllerType" @102
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(2435, 2493)
+		    label      	(object ItemLabel
+			Parent_View 	@102
+			location   	(2289, 2442)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	292
+			justify    	0
+			label      	"ControllerType")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E50E65A0232"
+		    width      	310
+		    height     	126
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::IMWINS (Microsoft Windows)::DWORD" @103
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(2631, 1027)
+		    label      	(object ItemLabel
+			Parent_View 	@103
+			location   	(2535, 976)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	192
+			justify    	0
+			label      	"DWORD")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"369DEA1A039E"
+		    width      	210
+		    height     	126
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::IMWINS (Microsoft Windows)::DWORD" @104
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(2578, 606)
+		    label      	(object ItemLabel
+			Parent_View 	@104
+			location   	(2482, 555)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	192
+			justify    	0
+			label      	"DWORD")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"369DEA1A039E"
+		    width      	210
+		    height     	126
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBISR (Interrupt Service Routine)::EISRWCState" @105
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(401, 1318)
+		    label      	(object ItemLabel
+			Parent_View 	@105
+			location   	(252, 1267)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	298
+			justify    	0
+			label      	"EISRWCState")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E4A5F9800DA"
+		    width      	316
+		    height     	126
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBHIT (Hardware Interface Types)::CHITDefinitions" @106
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(2228, 374)
+		    label      	(object ItemLabel
+			Parent_View 	@106
+			location   	(2072, 323)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	312
+			justify    	0
+			label      	"CHITDefinitions")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E4BB85401C5"
+		    width      	330
+		    height     	126
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBHIT (Hardware Interface Types)::CHIIOCSetWCProfile" @107
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(2768, 1619)
+		    label      	(object ItemLabel
+			Parent_View 	@107
+			location   	(2561, 1568)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	414
+			justify    	0
+			label      	"CHIIOCSetWCProfile")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F93FCF600DA"
+		    width      	432
+		    height     	126
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBHIT (Hardware Interface Types)::CHIIOCSetWCConfiguration" @108
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(306, 959)
+		    label      	(object ItemLabel
+			Parent_View 	@108
+			location   	(41, 908)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	530
+			justify    	0
+			label      	"CHIIOCSetWCConfiguration")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F94C3BB01D4"
+		    width      	548
+		    height     	126
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBISR (Interrupt Service Routine)::CISRWCPIDControl::ControllerType" @109
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1829, 2605)
+		    label      	(object ItemLabel
+			Parent_View 	@109
+			location   	(1683, 2554)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	292
+			justify    	0
+			label      	"ControllerType")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E50E65A0232"
+		    width      	310
+		    height     	126
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBISR (Interrupt Service Routine)::CISRWCPIDControl::ControllerType" @110
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1471, 2693)
+		    label      	(object ItemLabel
+			Parent_View 	@110
+			location   	(1325, 2642)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	292
+			justify    	0
+			label      	"ControllerType")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E50E65A0232"
+		    width      	310
+		    height     	126
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::IMWINS (Microsoft Windows)::bool" @111
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(2555, 1859)
+		    label      	(object ItemLabel
+			Parent_View 	@111
+			location   	(2474, 1808)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	162
+			justify    	0
+			label      	"bool")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"369DEAA80005"
+		    height     	126
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBISR (Interrupt Service Routine)::CISRWCPIDControl" @112
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(1320, 1134)
+		    label      	(object ItemLabel
+			Parent_View 	@112
+			location   	(914, 153)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	812
+			justify    	0
+			label      	"CISRWCPIDControl")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E40E116000F"
+		    compartment 	(object Compartment
+			Parent_View 	@112
+			location   	(914, 213)
+			icon_style 	"Icon"
+			fill_color 	16777215
+			anchor     	2
+			nlines     	38
+			max_width  	818)
+		    width      	830
+		    height     	1986
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object AssociationViewNew "$UNNAMED$1" @113
+		    location   	(682, 1554)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3E4209F20242"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$2" @114
+			    Parent_View 	@113
+			    location   	(100, 411)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3E4209F301C5"
+			    client     	@113
+			    supplier   	@112
+			    line_style 	0
+			    label      	(object SegLabel @115
+				Parent_View 	@114
+				location   	(912, 1466)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	1))
+			(object RoleView "fnPtrNomValue" @116
+			    Parent_View 	@113
+			    location   	(100, 411)
+			    label      	(object SegLabel @117
+				Parent_View 	@116
+				location   	(662, 1553)
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	432
+				justify    	0
+				label      	"+fnPtrNomValue"
+				pctDist    	0.066571
+				height     	13
+				orientation 	1)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3E4209F301C6"
+			    client     	@113
+			    supplier   	@100
+			    line_style 	0
+			    label      	(object SegLabel @118
+				Parent_View 	@116
+				location   	(532, 1709)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.793963
+				height     	47
+				orientation 	0))))
+		(object AssociationViewNew "$UNNAMED$3" @119
+		    location   	(669, 2008)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3E4223AF0399"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$4" @120
+			    Parent_View 	@119
+			    location   	(-630, 896)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3E4223B00222"
+			    client     	@119
+			    supplier   	@112
+			    line_style 	0
+			    label      	(object SegLabel @121
+				Parent_View 	@120
+				location   	(886, 1809)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.726752
+				height     	57
+				orientation 	1))
+			(object RoleView "eWCPosState" @122
+			    Parent_View 	@119
+			    location   	(-630, 896)
+			    label      	(object SegLabel @123
+				Parent_View 	@122
+				location   	(630, 2091)
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	288
+				justify    	0
+				label      	"+eWCPosState"
+				pctDist    	0.227421
+				height     	18
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3E4223B00223"
+			    client     	@119
+			    supplier   	@101
+			    line_style 	0
+			    label      	(object SegLabel @124
+				Parent_View 	@122
+				location   	(517, 2296)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.815398
+				height     	49
+				orientation 	0))))
+		(object AssociationViewNew "$UNNAMED$9" @125
+		    location   	(2058, 2035)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3E422F0B004E"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$10" @126
+			    Parent_View 	@125
+			    location   	(-118, 1248)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3E422F0B029F"
+			    client     	@125
+			    supplier   	@112
+			    line_style 	0
+			    label      	(object SegLabel @127
+				Parent_View 	@126
+				location   	(1727, 1714)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	0))
+			(object RoleView "nActValue" @128
+			    Parent_View 	@125
+			    location   	(-118, 1248)
+			    label      	(object SegLabel @129
+				Parent_View 	@128
+				location   	(2137, 2124)
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	372
+				justify    	0
+				label      	"+nActValue"
+				pctDist    	0.231419
+				height     	5
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3E422F0B02A0"
+			    client     	@125
+			    supplier   	@102
+			    line_style 	0
+			    label      	(object SegLabel @130
+				Parent_View 	@128
+				location   	(2308, 2423)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	1))))
+		(object AssociationViewNew "$UNNAMED$11" @131
+		    location   	(2130, 1066)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3E435B2800AB"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$12" @132
+			    Parent_View 	@131
+			    location   	(-45, 388)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3E435B290000"
+			    client     	@131
+			    supplier   	@112
+			    line_style 	0
+			    label      	(object SegLabel @133
+				Parent_View 	@132
+				location   	(1779, 1149)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	0))
+			(object RoleView "dwActPosCounterForward" @134
+			    Parent_View 	@131
+			    location   	(-45, 388)
+			    label      	(object SegLabel @135
+				Parent_View 	@134
+				location   	(2187, 1056)
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	492
+				justify    	0
+				label      	"+dwActPosCounterForward"
+				pctDist    	0.146349
+				height     	6
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3E435B290001"
+			    client     	@131
+			    supplier   	@103
+			    line_style 	0
+			    label      	(object SegLabel @136
+				Parent_View 	@134
+				location   	(2489, 1090)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	1))))
+		(object AssociationViewNew "$UNNAMED$13" @137
+		    location   	(2103, 803)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3E47B89B02AF"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$14" @138
+			    Parent_View 	@137
+			    location   	(-50, 319)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3E47B89C0251"
+			    client     	@137
+			    supplier   	@112
+			    line_style 	0
+			    label      	(object SegLabel @139
+				Parent_View 	@138
+				location   	(1793, 992)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	0))
+			(object RoleView "dwActPosCounterBackward" @140
+			    Parent_View 	@137
+			    location   	(-50, 319)
+			    label      	(object SegLabel @141
+				Parent_View 	@140
+				location   	(2150, 774)
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	528
+				justify    	0
+				label      	"+dwActPosCounterBackward"
+				pctDist    	0.134190
+				height     	10
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3E47B89C0252"
+			    client     	@137
+			    supplier   	@104
+			    line_style 	0
+			    label      	(object SegLabel @142
+				Parent_View 	@140
+				location   	(2455, 714)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	1))))
+		(object AssociationViewNew "$UNNAMED$15" @143
+		    location   	(731, 1250)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3E4A6099032C"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$16" @144
+			    Parent_View 	@143
+			    location   	(498, 457)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3E4A609A0222"
+			    client     	@143
+			    supplier   	@112
+			    line_style 	0
+			    label      	(object SegLabel @145
+				Parent_View 	@144
+				location   	(897, 1272)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	1))
+			(object RoleView "eWCState" @146
+			    Parent_View 	@143
+			    location   	(498, 457)
+			    label      	(object SegLabel @147
+				Parent_View 	@146
+				location   	(586, 1238)
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	216
+				justify    	0
+				label      	"+eWCState"
+				pctDist    	0.800000
+				height     	42
+				orientation 	1)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3E4A609A0232"
+			    client     	@143
+			    supplier   	@105
+			    line_style 	0
+			    label      	(object SegLabel @148
+				Parent_View 	@146
+				location   	(588, 1334)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	0))))
+		(object AssociationViewNew "$UNNAMED$17" @149
+		    location   	(1942, 611)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3E50E91D035B"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$18" @150
+			    Parent_View 	@149
+			    location   	(236, 417)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3E50E91F003E"
+			    client     	@149
+			    supplier   	@112
+			    line_style 	0
+			    label      	(object SegLabel @151
+				Parent_View 	@150
+				location   	(1791, 806)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	0))
+			(object RoleView "HWDef" @152
+			    Parent_View 	@149
+			    location   	(236, 417)
+			    label      	(object SegLabel @153
+				Parent_View 	@152
+				location   	(1963, 578)
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	156
+				justify    	0
+				label      	"+HWDef"
+				pctDist    	0.138136
+				height     	13
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3E50E91F003F"
+			    client     	@149
+			    supplier   	@106
+			    line_style 	0
+			    label      	(object SegLabel @154
+				Parent_View 	@152
+				location   	(2163, 496)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	1))))
+		(object AssociationViewNew "$UNNAMED$7" @155
+		    location   	(2157, 1413)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3E422AAC03C8"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$8" @156
+			    Parent_View 	@155
+			    location   	(-255, 517)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3E422AAD037A"
+			    client     	@155
+			    supplier   	@112
+			    line_style 	0
+			    label      	(object SegLabel @157
+				Parent_View 	@156
+				location   	(1762, 1336)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	0))
+			(object RoleView "pWCProfile" @158
+			    Parent_View 	@155
+			    location   	(-255, 517)
+			    label      	(object SegLabel @159
+				Parent_View 	@158
+				location   	(2509, 1488)
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	228
+				justify    	0
+				label      	"+pWCProfile"
+				pctDist    	0.800000
+				height     	42
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3E422AAD038A"
+			    client     	@155
+			    supplier   	@107
+			    line_style 	0
+			    label      	(object SegLabel @160
+				Parent_View 	@158
+				location   	(2522, 1592)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	1))))
+		(object AssociationViewNew "$UNNAMED$5" @161
+		    location   	(742, 1032)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3E4226AA02BF"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$6" @162
+			    Parent_View 	@161
+			    location   	(-1114, -5)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3E4226AB0157"
+			    client     	@161
+			    supplier   	@112
+			    line_style 	0
+			    label      	(object SegLabel @163
+				Parent_View 	@162
+				location   	(896, 1005)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	0))
+			(object RoleView "pWCConfig" @164
+			    Parent_View 	@161
+			    location   	(-1114, -5)
+			    label      	(object SegLabel @165
+				Parent_View 	@164
+				location   	(711, 1050)
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	228
+				justify    	0
+				label      	"+pWCConfig"
+				pctDist    	0.174531
+				height     	23
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3E4226AB0158"
+			    client     	@161
+			    supplier   	@108
+			    line_style 	0
+			    label      	(object SegLabel @166
+				Parent_View 	@164
+				location   	(623, 978)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.779200
+				height     	33
+				orientation 	1))))
+		(object AssociationViewNew "$UNNAMED$19" @167
+		    location   	(1735, 2334)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3FAB65DC038A"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$20" @168
+			    Parent_View 	@167
+			    location   	(-94, -271)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3FAB65DD02DE"
+			    client     	@167
+			    supplier   	@112
+			    line_style 	0
+			    label      	(object SegLabel @169
+				Parent_View 	@168
+				location   	(1721, 2131)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	1))
+			(object RoleView "nControllOutputValue" @170
+			    Parent_View 	@167
+			    location   	(-94, -271)
+			    label      	(object SegLabel @171
+				Parent_View 	@170
+				location   	(1729, 2339)
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	408
+				justify    	0
+				label      	"+nControllOutputValue"
+				pctDist    	0.014995
+				height     	8
+				orientation 	1)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3FAB65DD02DF"
+			    client     	@167
+			    supplier   	@109
+			    line_style 	0
+			    label      	(object SegLabel @172
+				Parent_View 	@170
+				location   	(1850, 2503)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	0))))
+		(object AssociationViewNew "$UNNAMED$21" @173
+		    location   	(1439, 2378)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3FAB78A702DE"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$22" @174
+			    Parent_View 	@173
+			    location   	(-32, -315)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3FAB78A800FA"
+			    client     	@173
+			    supplier   	@112
+			    line_style 	0
+			    label      	(object SegLabel @175
+				Parent_View 	@174
+				location   	(1471, 2148)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	1))
+			(object RoleView "nNomValue" @176
+			    Parent_View 	@173
+			    location   	(-32, -315)
+			    label      	(object SegLabel @177
+				Parent_View 	@176
+				location   	(1433, 2461)
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	240
+				justify    	0
+				label      	"+nNomValue"
+				pctDist    	0.323597
+				height     	15
+				orientation 	1)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3FAB78A800FB"
+			    client     	@173
+			    supplier   	@110
+			    line_style 	0
+			    label      	(object SegLabel @178
+				Parent_View 	@176
+				location   	(1515, 2600)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	0))))
+		(object AssociationViewNew "$UNNAMED$23" @179
+		    location   	(2099, 1591)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"402386DA01F4"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$24" @180
+			    Parent_View 	@179
+			    location   	(-309, -293)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"402386DB00EA"
+			    client     	@179
+			    supplier   	@112
+			    line_style 	0
+			    label      	(object SegLabel @181
+				Parent_View 	@180
+				location   	(1745, 1445)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	0))
+			(object RoleView "bDirection" @182
+			    Parent_View 	@179
+			    location   	(-309, -293)
+			    label      	(object SegLabel @183
+				Parent_View 	@182
+				location   	(2180, 1617)
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	204
+				justify    	0
+				label      	"+bDirection"
+				pctDist    	0.196767
+				height     	19
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"402386DB00FA"
+			    client     	@179
+			    supplier   	@111
+			    line_style 	0
+			    label      	(object SegLabel @184
+				Parent_View 	@182
+				location   	(2401, 1830)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	1))))
+		(object AssociationViewNew "$UNNAMED$25" @185
+		    location   	(2067, 1721)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"456EF73F0256"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$26" @186
+			    Parent_View 	@185
+			    location   	(-488, -138)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"456EF7400153"
+			    client     	@185
+			    supplier   	@112
+			    vertices   	(list Points
+				(2067, 1721)
+				(1981, 1697)
+				(1735, 1488))
+			    line_style 	0
+			    label      	(object SegLabel @187
+				Parent_View 	@186
+				location   	(1733, 1556)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	0))
+			(object RoleView "bLBFoundInBackwardMovement" @188
+			    Parent_View 	@185
+			    location   	(-488, -138)
+			    label      	(object SegLabel @189
+				Parent_View 	@188
+				location   	(2395, 1771)
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	600
+				justify    	0
+				label      	"+bLBFoundInBackwardMovement"
+				pctDist    	0.800000
+				height     	42
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"456EF740015D"
+			    client     	@185
+			    supplier   	@111
+			    line_style 	0
+			    label      	(object SegLabel @190
+				Parent_View 	@188
+				location   	(2410, 1873)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	1))))))
+	(object ClassDiagram "1.1 WC PID Control Types"
+	    quid       	"3E42159001C5"
+	    title      	"1.1 WC PID Control Types"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object ClassView "Class" "Logical View::EBISR (Interrupt Service Routine)::EISRWCPosState" @191
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(400, 862)
+		    label      	(object ItemLabel
+			Parent_View 	@191
+			location   	(221, 811)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	358
+			justify    	0
+			label      	"EISRWCPosState")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E4215A202BF"
+		    width      	376
+		    height     	126
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBISR (Interrupt Service Routine)::EISRWCState" @192
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1186, 559)
+		    label      	(object ItemLabel
+			Parent_View 	@192
+			location   	(1037, 508)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	298
+			justify    	0
+			label      	"EISRWCState")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E4A5F9800DA"
+		    width      	316
+		    height     	126
+		    autoResize 	TRUE)))
+	(object ClassDiagram "1.2 WC PID Control Uses"
+	    quid       	"3E42229800FA"
+	    title      	"1.2 WC PID Control Uses"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object ClassView "Class" "Logical View::EBISR (Interrupt Service Routine)::CISRWCPIDControl" @193
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(618, 803)
+		    label      	(object ItemLabel
+			Parent_View 	@193
+			location   	(423, 752)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	390
+			justify    	0
+			label      	"CISRWCPIDControl")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E40E116000F"
+		    width      	408
+		    height     	126
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBISR (Interrupt Service Routine)::EISRWCPosState" @194
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(993, 312)
+		    label      	(object ItemLabel
+			Parent_View 	@194
+			location   	(814, 261)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	358
+			justify    	0
+			label      	"EISRWCPosState")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E4215A202BF"
+		    width      	376
+		    height     	126
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBHIT (Hardware Interface Types)::CHITReservedSharedMemory" @195
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1565, 1259)
+		    label      	(object ItemLabel
+			Parent_View 	@195
+			location   	(1282, 1208)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	566
+			justify    	0
+			label      	"CHITReservedSharedMemory")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E54992F0148"
+		    width      	584
+		    height     	126
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBHIT (Hardware Interface Types)::CHIIOCSetWCProfile" @196
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1612, 874)
+		    label      	(object ItemLabel
+			Parent_View 	@196
+			location   	(1405, 823)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	414
+			justify    	0
+			label      	"CHIIOCSetWCProfile")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F93FCF600DA"
+		    width      	432
+		    height     	126
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBHIT (Hardware Interface Types)::CHIIOCSetWCConfiguration" @197
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1534, 406)
+		    label      	(object ItemLabel
+			Parent_View 	@197
+			location   	(1269, 355)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	530
+			justify    	0
+			label      	"CHIIOCSetWCConfiguration")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F94C3BB01D4"
+		    width      	548
+		    height     	126
+		    autoResize 	TRUE)
+		(object UsesView "" @198
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3E4228300186"
+		    client     	@193
+		    supplier   	@194
+		    line_style 	0)
+		(object UsesView "" @199
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3E42284502BF"
+		    client     	@193
+		    supplier   	@197
+		    line_style 	0)
+		(object UsesView "" @200
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3E422A8500AB"
+		    client     	@193
+		    supplier   	@196
+		    line_style 	0)
+		(object UsesView "" @201
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3EC88CD30196"
+		    client     	@193
+		    supplier   	@195
+		    line_style 	0)
+		(object ClassView "ClassUtility" "Logical View::EBISR (Interrupt Service Routine)::ISR_IDENTIFIERS" @202
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(734, 1606)
+		    label      	(object ItemLabel
+			Parent_View 	@202
+			location   	(553, 1555)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	362
+			justify    	0
+			label      	"ISR_IDENTIFIERS")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"400410F001D4"
+		    width      	380
+		    height     	126
+		    autoResize 	TRUE)
+		(object UsesView "" @203
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"4004143F0203"
+		    client     	@193
+		    supplier   	@202
+		    line_style 	0)))
+	(object ClassDiagram "0.0 Globals"
+	    quid       	"400410DE031C"
+	    title      	"0.0 Globals"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object ClassView "ClassUtility" "Logical View::EBISR (Interrupt Service Routine)::ISR_IDENTIFIERS" @204
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(578, 337)
+		    label      	(object ItemLabel
+			Parent_View 	@204
+			location   	(397, 286)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	362
+			justify    	0
+			label      	"ISR_IDENTIFIERS")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"400410F001D4"
+		    width      	380
+		    height     	126
+		    autoResize 	TRUE)))))

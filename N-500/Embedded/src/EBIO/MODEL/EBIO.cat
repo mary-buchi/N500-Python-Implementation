@@ -1,0 +1,3508 @@
+
+(object Petal
+    version    	42
+    _written   	"Rose 4.5.8163.3"
+    charSet    	0)
+
+(object Class_Category "EBIO (Analog- / Digital- In-/Output)"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    quid       	"3DF5A45203B9"
+    visible_categories 	(list visibility_relationship_list
+	(object Visibility_Relationship
+	    quid       	"3E1C2BB6009B"
+	    supplier   	"Logical View::EBPI (PC Interface)"
+	    quidu      	"3DA488100179")
+	(object Visibility_Relationship
+	    quid       	"3E1C2CB300BA"
+	    supplier   	"Logical View::EBCO (Core Classes)"
+	    quidu      	"3B86CD280273")
+	(object Visibility_Relationship
+	    quid       	"3E477802007D"
+	    supplier   	"Logical View::EBHI (Hardware Interface)"
+	    quidu      	"3E22670202FA"))
+    exportControl 	"Public"
+    subsystem  	"EBIO (Analog- / Digital- In-/Output)"
+    quidu      	"3DF5A4B6036B"
+    logical_models 	(list unit_reference_list
+	(object Class_Utility "IOAO_IDENTIFIERS"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"cg_style"
+		    value      	"Dummy Class")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"PutBodiesInSpec"
+		    value      	TRUE))
+	    quid       	"3DF5B18301B5"
+	    module     	"Component View::EBIO (Analog- / Digital- In-/Output)::EBIOident (module spec)"
+	    quidu      	"3DF5AF3B03D8"
+	    language   	"C++")
+	(object Class_Utility "IOAI_IDENTIFIERS"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"cg_style"
+		    value      	"Dummy Class")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"PutBodiesInSpec"
+		    value      	TRUE))
+	    quid       	"3DF5B1B40138"
+	    module     	"Component View::EBIO (Analog- / Digital- In-/Output)::EBIOident (module spec)"
+	    quidu      	"3DF5AF3B03D8"
+	    language   	"C++")
+	(object Class_Utility "IODO_IDENTIFIERS"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"cg_style"
+		    value      	"Dummy Class")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"PutBodiesInSpec"
+		    value      	TRUE))
+	    quid       	"3DF5B1E20290"
+	    module     	"Component View::EBIO (Analog- / Digital- In-/Output)::EBIOident (module spec)"
+	    quidu      	"3DF5AF3B03D8"
+	    language   	"C++")
+	(object Class_Utility "IODI_IDENTIFIERS"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"cg_style"
+		    value      	"Dummy Class")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"PutBodiesInSpec"
+		    value      	TRUE))
+	    quid       	"3DF5B1FA03C9"
+	    module     	"Component View::EBIO (Analog- / Digital- In-/Output)::EBIOident (module spec)"
+	    quidu      	"3DF5AF3B03D8"
+	    language   	"C++")
+	(object Class "CIOOutputAnalogCreatorV0"
+	    attributes 	(list Attribute_Set)
+	    quid       	"3DF5B6DF0196"
+	    superclasses 	(list inheritance_relationship_list
+		(object Inheritance_Relationship
+		    quid       	"3DF5B702006D"
+		    supplier   	"Logical View::EBPI (PC Interface)::CPIObjCreatorOutputAnalog"
+		    quidu      	"3DD0A56700B0"))
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    quid       	"3DF5F1390109"
+		    supplier   	"Logical View::EBIO (Analog- / Digital- In-/Output)::CIOOutputAnalogInterface"
+		    quidu      	"3DF5BE8B0148"))
+	    operations 	(list Operations
+		(object Operation "Create"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3DF5B72D000F"
+		    stereotype 	"virtual"
+		    parameters 	(list Parameters
+			(object Parameter "p_uiID"
+			    type       	"UINT"))
+		    result     	"IPIOutputAnalogInterface*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1039513438))
+	    module     	"Component View::EBIO (Analog- / Digital- In-/Output)::EBIOcrea (module body)"
+	    quidu      	"3DF5AF72034B"
+	    module     	"Component View::EBIO (Analog- / Digital- In-/Output)::EBIOcrea (module spec)"
+	    quidu      	"3DF5AFA5008C"
+	    language   	"C++")
+	(object Class "CIOInterfaceRegistry"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"cg_style"
+		    value      	"ExtraLean")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"GenerateDefaultConstructor"
+		    value      	("GenerateSet" 206))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"GenerateDestructor"
+		    value      	FALSE)
+		(object Attribute
+		    tool       	"MSVC"
+		    name       	"DeclSpec"
+		    value      	"EBIO_DLL_DECL"))
+	    quid       	"3DF5B9C201B5"
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    quid       	"3DF5BA85038A"
+		    supplier   	"Logical View::EBIO (Analog- / Digital- In-/Output)::CIOOutputAnalogCreatorV0"
+		    quidu      	"3DF5B6DF0196")
+		(object Uses_Relationship
+		    quid       	"3DF5BC5E0109"
+		    supplier   	"Logical View::EBIO (Analog- / Digital- In-/Output)::CIOSensorAnalogCreatorV0"
+		    quidu      	"3DF5BAE10148")
+		(object Uses_Relationship
+		    quid       	"3DF5BC6101C5"
+		    supplier   	"Logical View::EBIO (Analog- / Digital- In-/Output)::CIOOutputDigitalCreatorV0"
+		    quidu      	"3DF5BB14038A")
+		(object Uses_Relationship
+		    quid       	"3DF5BC640223"
+		    supplier   	"Logical View::EBIO (Analog- / Digital- In-/Output)::CIOSensorDigitalCreatorV0"
+		    quidu      	"3DF5BAFE0196")
+		(object Uses_Relationship
+		    quid       	"3DF5FF5C0129"
+		    supplier   	"Logical View::EBPI (PC Interface)::CPIObjectFactory"
+		    quidu      	"3DA52FD80189"))
+	    operations 	(list Operations
+		(object Operation "RegisterInterfaces"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 203))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Static"))
+		    quid       	"3DF5B9DC00FA"
+		    stereotype 	"static"
+		    result     	"void"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1039513439))
+	    module     	"Component View::EBIO (Analog- / Digital- In-/Output)::EBIOregy (module body)"
+	    quidu      	"3DF5AF54009C"
+	    module     	"Component View::EBIO (Analog- / Digital- In-/Output)::EBIOregy (module spec)"
+	    quidu      	"3DF5AF9E01B5"
+	    language   	"C++")
+	(object Class "CIOSensorAnalogCreatorV0"
+	    attributes 	(list Attribute_Set)
+	    quid       	"3DF5BAE10148"
+	    superclasses 	(list inheritance_relationship_list
+		(object Inheritance_Relationship
+		    quid       	"3DF5BB2C02A0"
+		    supplier   	"Logical View::EBPI (PC Interface)::CPIObjCreatorSensorAnalog"
+		    quidu      	"3DD0A3CA0227"))
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    quid       	"3DF5F14F0232"
+		    supplier   	"Logical View::EBIO (Analog- / Digital- In-/Output)::CIOSensorAnalogInterface"
+		    quidu      	"3DF5BE9E037A"))
+	    operations 	(list Operations
+		(object Operation "Create"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3DF5BB6C0280"
+		    stereotype 	"virtual"
+		    parameters 	(list Parameters
+			(object Parameter "p_uiID"
+			    type       	"UINT"))
+		    result     	"IPISensorAnalogInterface*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1039513440))
+	    module     	"Component View::EBIO (Analog- / Digital- In-/Output)::EBIOcrea (module body)"
+	    quidu      	"3DF5AF72034B"
+	    module     	"Component View::EBIO (Analog- / Digital- In-/Output)::EBIOcrea (module spec)"
+	    quidu      	"3DF5AFA5008C"
+	    language   	"C++")
+	(object Class "CIOSensorDigitalCreatorV0"
+	    attributes 	(list Attribute_Set)
+	    quid       	"3DF5BAFE0196"
+	    superclasses 	(list inheritance_relationship_list
+		(object Inheritance_Relationship
+		    quid       	"3DF5BB2F01A6"
+		    supplier   	"Logical View::EBPI (PC Interface)::CPIObjCreatorSensorDigital"
+		    quidu      	"3DD0A55B0227"))
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    quid       	"3DF5F2060148"
+		    supplier   	"Logical View::EBIO (Analog- / Digital- In-/Output)::CIOSensorDigitalInterface"
+		    quidu      	"3DF5BECD030D"))
+	    operations 	(list Operations
+		(object Operation "Create"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3DF5BC3803C9"
+		    stereotype 	"virtual"
+		    parameters 	(list Parameters
+			(object Parameter "p_uiID"
+			    type       	"UINT"))
+		    result     	"IPISensorDigitalInterface*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1039513442))
+	    module     	"Component View::EBIO (Analog- / Digital- In-/Output)::EBIOcrea (module body)"
+	    quidu      	"3DF5AF72034B"
+	    module     	"Component View::EBIO (Analog- / Digital- In-/Output)::EBIOcrea (module spec)"
+	    quidu      	"3DF5AFA5008C"
+	    language   	"C++")
+	(object Class "CIOOutputDigitalCreatorV0"
+	    attributes 	(list Attribute_Set)
+	    quid       	"3DF5BB14038A"
+	    superclasses 	(list inheritance_relationship_list
+		(object Inheritance_Relationship
+		    quid       	"3DF5BB37034C"
+		    supplier   	"Logical View::EBPI (PC Interface)::CPIObjCreatorOutputDigital"
+		    quidu      	"3DD0A5720062"))
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    quid       	"3DF5F1F801C5"
+		    supplier   	"Logical View::EBIO (Analog- / Digital- In-/Output)::CIOOutputDigitalInterface"
+		    quidu      	"3DF5BEB603B9"))
+	    operations 	(list Operations
+		(object Operation "Create"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3DF5BBEF01F4"
+		    stereotype 	"virtual"
+		    parameters 	(list Parameters
+			(object Parameter "p_uiID"
+			    type       	"UINT"))
+		    result     	"IPIOutputDigitalInterface*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1039513441))
+	    module     	"Component View::EBIO (Analog- / Digital- In-/Output)::EBIOcrea (module body)"
+	    quidu      	"3DF5AF72034B"
+	    module     	"Component View::EBIO (Analog- / Digital- In-/Output)::EBIOcrea (module spec)"
+	    quidu      	"3DF5AFA5008C"
+	    language   	"C++")
+	(object Class "CIOOutputAnalogInterface"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"cg_style"
+		    value      	"NoDefContr")
+		(object Attribute
+		    tool       	"MSVC"
+		    name       	"DeclSpec"
+		    value      	"EBIO_DLL_DECL"))
+	    quid       	"3DF5BE8B0148"
+	    superclasses 	(list inheritance_relationship_list
+		(object Inheritance_Relationship
+		    quid       	"3DF5BEDF02FD"
+		    supplier   	"Logical View::EBPI (PC Interface)::IPIOutputAnalogInterface"
+		    quidu      	"3DB92AB900C4"))
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    quid       	"3DF5DEE502BF"
+		    supplier   	"Logical View::EBIO (Analog- / Digital- In-/Output)::IOAO_IDENTIFIERS"
+		    quidu      	"3DF5B18301B5")
+		(object Uses_Relationship
+		    quid       	"3F4B8D630167"
+		    supplier   	"Logical View::EBPI (PC Interface)::CPIComponentsState"
+		    quidu      	"3F4235EA0005")
+		(object Uses_Relationship
+		    quid       	"3F4B91DC007D"
+		    supplier   	"Logical View::EBHI (Hardware Interface)::IHIInterface"
+		    quidu      	"3E2271C40106"))
+	    operations 	(list Operations
+		(object Operation "CIOOutputAnalogInterface"
+		    quid       	"3DF5BF4800DB"
+		    parameters 	(list Parameters
+			(object Parameter "p_uiID"
+			    type       	"UINT"))
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1039513443)
+		(object Operation "Startup"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3F4B86DE0324"
+		    documentation 	
+|DESCRIPTION
+|Links the object to the hardware
+|
+|RETURNS
+|async void
+		    
+		    stereotype 	"virtual"
+		    result     	"CCOSyncObject*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1061910451)
+		(object Operation "Shutdown"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3F4B86DE0334"
+		    documentation 	
+|DESCRIPTION
+|Detaches the object from the hardware
+|
+|RETURNS
+|async void
+		    
+		    stereotype 	"virtual"
+		    result     	"CCOSyncObject*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1061910452)
+		(object Operation "ConnectionLost"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3F4B86DE0353"
+		    documentation 	
+|DESCRIPTION
+|The connection to the PC has been lost
+|
+|RETURNS
+|async void
+		    
+		    stereotype 	"virtual"
+		    result     	"CCOSyncObject*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1061910454)
+		(object Operation "ConnectionEstablished"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3F4B86DE0343"
+		    documentation 	
+|DESCRIPTION
+|The connection to the PC has been established
+|
+|RETURNS
+|async void
+		    
+		    stereotype 	"virtual"
+		    result     	"CCOSyncObject*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1061910453)
+		(object Operation "GetuiID"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3DF5BF340158"
+		    stereotype 	"virtual"
+		    result     	"UINT"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1039513446)
+		(object Operation "SetValue"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3DF5BF340167"
+		    documentation 	
+|DESCRIPTION
+|writes the given value to the analog output
+|
+|PARAMETERS
+|value to write
+|
+|RETURNS
+|async void
+		    
+		    stereotype 	"virtual"
+		    parameters 	(list Parameters
+			(object Parameter "p_iValue"
+			    type       	"INT"))
+		    result     	"CCOSyncObject*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1039513447)
+		(object Operation "GetValue"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3DF5BF340186"
+		    documentation 	
+|DESCRIPTION
+|Returns the current value of the analog output
+|
+|RETURNS
+|async integer
+		    
+		    stereotype 	"virtual"
+		    result     	"CCOSyncObjectInt*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1039513448))
+	    module     	"Component View::EBIO (Analog- / Digital- In-/Output)::EBIOintf (module body)"
+	    quidu      	"3DF5AF6101F4"
+	    module     	"Component View::EBIO (Analog- / Digital- In-/Output)::EBIOintf (module spec)"
+	    quidu      	"3DF5AFAF0232"
+	    language   	"C++")
+	(object Class "CIOSensorAnalogInterface"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"cg_style"
+		    value      	"NoDefContr")
+		(object Attribute
+		    tool       	"MSVC"
+		    name       	"DeclSpec"
+		    value      	"EBIO_DLL_DECL"))
+	    quid       	"3DF5BE9E037A"
+	    superclasses 	(list inheritance_relationship_list
+		(object Inheritance_Relationship
+		    quid       	"3DF5BEE30290"
+		    supplier   	"Logical View::EBPI (PC Interface)::IPISensorAnalogInterface"
+		    quidu      	"3DB9120A021B"))
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    quid       	"3DF5DEE9038A"
+		    supplier   	"Logical View::EBIO (Analog- / Digital- In-/Output)::IOAI_IDENTIFIERS"
+		    quidu      	"3DF5B1B40138")
+		(object Uses_Relationship
+		    quid       	"3F4B8D6C0186"
+		    supplier   	"Logical View::EBPI (PC Interface)::CPIComponentsState"
+		    quidu      	"3F4235EA0005")
+		(object Uses_Relationship
+		    quid       	"3F4B91E50109"
+		    supplier   	"Logical View::EBHI (Hardware Interface)::IHIInterface"
+		    quidu      	"3E2271C40106"))
+	    operations 	(list Operations
+		(object Operation "CIOSensorAnalogInterface"
+		    quid       	"3DF5C3DE0109"
+		    parameters 	(list Parameters
+			(object Parameter "p_uiID"
+			    type       	"UINT"))
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1039513449)
+		(object Operation "Startup"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3DF5C3DE0119"
+		    documentation 	
+|DESCRIPTION
+|Links the object to the hardware
+|
+|RETURNS
+|async void
+		    
+		    stereotype 	"virtual"
+		    result     	"CCOSyncObject*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1039513450)
+		(object Operation "Shutdown"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3DF5C3DE0129"
+		    documentation 	
+|DESCRIPTION
+|Detaches the object from the hardware
+|
+|RETURNS
+|async void
+		    
+		    stereotype 	"virtual"
+		    result     	"CCOSyncObject*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1039513451)
+		(object Operation "ConnectionEstablished"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3EED69FB03B0"
+		    documentation 	
+|DESCRIPTION
+|The connection to the PC has been established
+|
+|RETURNS
+|async void
+		    
+		    stereotype 	"virtual"
+		    result     	"CCOSyncObject*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1055744810)
+		(object Operation "ConnectionLost"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3EED69FB03BF"
+		    documentation 	
+|DESCRIPTION
+|The connection to the PC has been lost
+|
+|RETURNS
+|async void
+		    
+		    stereotype 	"virtual"
+		    result     	"CCOSyncObject*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1055744811)
+		(object Operation "GetuiID"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3DF5C3DE0148"
+		    stereotype 	"virtual"
+		    result     	"UINT"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1039513452)
+		(object Operation "GetValue"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3DF5C3DE0167"
+		    documentation 	
+|DESCRIPTION
+|Returns the current value of the analog input
+|
+|RETURNS
+|async integer
+		    
+		    stereotype 	"virtual"
+		    result     	"CCOSyncObjectInt*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1039513453))
+	    module     	"Component View::EBIO (Analog- / Digital- In-/Output)::EBIOintf (module body)"
+	    quidu      	"3DF5AF6101F4"
+	    module     	"Component View::EBIO (Analog- / Digital- In-/Output)::EBIOintf (module spec)"
+	    quidu      	"3DF5AFAF0232"
+	    language   	"C++")
+	(object Class "CIOOutputDigitalInterface"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"cg_style"
+		    value      	"NoDefContr")
+		(object Attribute
+		    tool       	"MSVC"
+		    name       	"DeclSpec"
+		    value      	"EBIO_DLL_DECL"))
+	    quid       	"3DF5BEB603B9"
+	    superclasses 	(list inheritance_relationship_list
+		(object Inheritance_Relationship
+		    quid       	"3DF5BEE60203"
+		    supplier   	"Logical View::EBPI (PC Interface)::IPIOutputDigitalInterface"
+		    quidu      	"3DB92BE30121"))
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    quid       	"3DF5DEE7031D"
+		    supplier   	"Logical View::EBIO (Analog- / Digital- In-/Output)::IODO_IDENTIFIERS"
+		    quidu      	"3DF5B1E20290")
+		(object Uses_Relationship
+		    quid       	"3F4B8D660138"
+		    supplier   	"Logical View::EBPI (PC Interface)::CPIComponentsState"
+		    quidu      	"3F4235EA0005")
+		(object Uses_Relationship
+		    quid       	"3F4B91DF0000"
+		    supplier   	"Logical View::EBHI (Hardware Interface)::IHIInterface"
+		    quidu      	"3E2271C40106")
+		(object Uses_Relationship
+		    quid       	"3FA119D1038A"
+		    supplier   	"Logical View::EBIO (Analog- / Digital- In-/Output)::CIODigitalState"
+		    quidu      	"3FA115AC032C"))
+	    operations 	(list Operations
+		(object Operation "CIOOutputDigitalInterface"
+		    quid       	"3DF5C515000F"
+		    parameters 	(list Parameters
+			(object Parameter "p_uiID"
+			    type       	"UINT"))
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1039513454)
+		(object Operation "Startup"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3DF5C515001F"
+		    documentation 	
+|DESCRIPTION
+|Links the object to the hardware
+|
+|RETURNS
+|async void
+		    
+		    stereotype 	"virtual"
+		    result     	"CCOSyncObject*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1039513455)
+		(object Operation "Shutdown"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3DF5C515003E"
+		    documentation 	
+|DESCRIPTION
+|Detaches the object from the hardware
+|
+|RETURNS
+|async void
+		    
+		    stereotype 	"virtual"
+		    result     	"CCOSyncObject*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1039513456)
+		(object Operation "ConnectionEstablished"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3EED6A0800C2"
+		    documentation 	
+|DESCRIPTION
+|The connection to the PC has been established
+|
+|RETURNS
+|async void
+		    
+		    stereotype 	"virtual"
+		    result     	"CCOSyncObject*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1055744812)
+		(object Operation "ConnectionLost"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3EED6A0800E1"
+		    documentation 	
+|DESCRIPTION
+|The connection to the PC has been lost
+|
+|RETURNS
+|async void
+		    
+		    stereotype 	"virtual"
+		    result     	"CCOSyncObject*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1055744813)
+		(object Operation "GetuiID"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3DF5C515005E"
+		    stereotype 	"virtual"
+		    result     	"UINT"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1039513457)
+		(object Operation "Set"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3DF5C530006D"
+		    documentation 	
+|DESCRIPTIONS
+|Activates the current output
+|
+|RETURNS
+|async void
+		    
+		    stereotype 	"virtual"
+		    result     	"CCOSyncObject*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1039513458)
+		(object Operation "Clear"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3DF5C530008C"
+		    documentation 	
+|DESCRIPTIONS
+|Releases the current output
+|
+|RETURNS
+|async void
+		    
+		    stereotype 	"virtual"
+		    result     	"CCOSyncObject*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1039513459)
+		(object Operation "IsActive"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3DF5C530009C"
+		    documentation 	
+|DESCRIPTIONS
+|Checks, whether the current output is set
+|
+|RETURNS
+|async bool
+		    
+		    stereotype 	"virtual"
+		    result     	"CCOSyncObjectBool*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1039513460)
+		(object Operation "SetPolarity"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3DF5C53000AC"
+		    documentation 	
+|DESCRIPTION
+|Sets the output's polarity
+|
+|PARAMETERS
+|polarity of the output, either high or low
+|
+|RETURNS
+|async void
+		    
+		    stereotype 	"virtual"
+		    parameters 	(list Parameters
+			(object Parameter "p_ePolarity"
+			    type       	"EPIPolarity"))
+		    result     	"CCOSyncObject*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1039513461)
+		(object Operation "CheckPolarity"
+		    quid       	"3FE06C4F02C0"
+		    stereotype 	"virtual"
+		    parameters 	(list Parameters
+			(object Parameter "p_bIsActive"
+			    type       	"const bool"))
+		    result     	"bool"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Private"
+		    uid        	1071671742))
+	    module     	"Component View::EBIO (Analog- / Digital- In-/Output)::EBIOintf (module body)"
+	    quidu      	"3DF5AF6101F4"
+	    module     	"Component View::EBIO (Analog- / Digital- In-/Output)::EBIOintf (module spec)"
+	    quidu      	"3DF5AFAF0232"
+	    language   	"C++")
+	(object Class "CIOSensorDigitalInterface"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"cg_style"
+		    value      	"NoDefContr")
+		(object Attribute
+		    tool       	"MSVC"
+		    name       	"DeclSpec"
+		    value      	"EBIO_DLL_DECL"))
+	    quid       	"3DF5BECD030D"
+	    superclasses 	(list inheritance_relationship_list
+		(object Inheritance_Relationship
+		    quid       	"3DF5BEE9007D"
+		    supplier   	"Logical View::EBPI (PC Interface)::IPISensorDigitalInterface"
+		    quidu      	"3DB928DC0121"))
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    quid       	"3DF5DEEB038A"
+		    supplier   	"Logical View::EBIO (Analog- / Digital- In-/Output)::IODI_IDENTIFIERS"
+		    quidu      	"3DF5B1FA03C9")
+		(object Uses_Relationship
+		    quid       	"3F4B8D69006D"
+		    supplier   	"Logical View::EBPI (PC Interface)::CPIComponentsState"
+		    quidu      	"3F4235EA0005")
+		(object Uses_Relationship
+		    quid       	"3F4B91E100BB"
+		    supplier   	"Logical View::EBHI (Hardware Interface)::IHIInterface"
+		    quidu      	"3E2271C40106")
+		(object Uses_Relationship
+		    quid       	"3FA119E402AF"
+		    supplier   	"Logical View::EBIO (Analog- / Digital- In-/Output)::CIODigitalState"
+		    quidu      	"3FA115AC032C"))
+	    operations 	(list Operations
+		(object Operation "CIOSensorDigitalInterface"
+		    quid       	"3DF5C4AA03C9"
+		    parameters 	(list Parameters
+			(object Parameter "p_uiID"
+			    type       	"UINT"))
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1039513462)
+		(object Operation "Startup"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3DF5C4AA03D8"
+		    documentation 	
+|DESCRIPTION
+|Links the object to the hardware
+|
+|RETURNS
+|async void
+		    
+		    stereotype 	"virtual"
+		    result     	"CCOSyncObject*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1039513463)
+		(object Operation "Shutdown"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3DF5C4AB0000"
+		    documentation 	
+|DESCRIPTION
+|Detaches the object from the hardware
+|
+|RETURNS
+|async void
+		    
+		    stereotype 	"virtual"
+		    result     	"CCOSyncObject*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1039513464)
+		(object Operation "ConnectionEstablished"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3EED6A1B02B6"
+		    documentation 	
+|DESCRIPTION
+|The connection to the PC has been established
+|
+|RETURNS
+|async void
+		    
+		    stereotype 	"virtual"
+		    result     	"CCOSyncObject*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1055744814)
+		(object Operation "ConnectionLost"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3EED6A1B02C5"
+		    documentation 	
+|DESCRIPTION
+|The connection to the PC has been lost
+|
+|RETURNS
+|async void
+		    
+		    stereotype 	"virtual"
+		    result     	"CCOSyncObject*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1055744815)
+		(object Operation "GetuiID"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3DF5C4D90167"
+		    stereotype 	"virtual"
+		    result     	"UINT"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1039513465)
+		(object Operation "IsActive"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3DF5C4E4005E"
+		    documentation 	
+|DESCRIPTION
+|returns the digital value from the sensor.
+|
+|RETURNS
+|async true, if the sensor is active
+		    
+		    stereotype 	"virtual"
+		    result     	"CCOSyncObjectBool*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1039513466)
+		(object Operation "SetPolarity"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3DF5C4E4007D"
+		    documentation 	
+|DESCRIPTION
+|Sets the sensor's polarity
+|
+|PARAMETERS
+|polarity of the sensor, either high or low
+|
+|RETURNS
+|async void
+		    
+		    stereotype 	"virtual"
+		    parameters 	(list Parameters
+			(object Parameter "p_ePolarity"
+			    type       	"EPIPolarity"))
+		    result     	"CCOSyncObject*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1039513467)
+		(object Operation "CheckPolarity"
+		    quid       	"3FE06AD603B5"
+		    stereotype 	"virtual"
+		    parameters 	(list Parameters
+			(object Parameter "p_bIsActive"
+			    type       	"const bool"))
+		    result     	"bool"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Private"
+		    uid        	1071671741))
+	    module     	"Component View::EBIO (Analog- / Digital- In-/Output)::EBIOintf (module body)"
+	    quidu      	"3DF5AF6101F4"
+	    module     	"Component View::EBIO (Analog- / Digital- In-/Output)::EBIOintf (module spec)"
+	    quidu      	"3DF5AFAF0232"
+	    language   	"C++")
+	(object Class_Utility "IO_MAIN"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"cg_style"
+		    value      	"Dummy Class"))
+	    quid       	"3EF051E703A9"
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    quid       	"3EF053AC02BE"
+		    supplier   	"Logical View::EBIO (Analog- / Digital- In-/Output)::CIOInterfaceRegistry"
+		    quidu      	"3DF5B9C201B5"))
+	    module     	"Component View::EBIO (Analog- / Digital- In-/Output)::EBIOmain (module body)"
+	    quidu      	"3EF0546A0251"
+	    module     	"Component View::EBIO (Analog- / Digital- In-/Output)::EBIOmain (module spec)"
+	    quidu      	"3EF054710119"
+	    language   	"C++")
+	(object Class "CIODigitalState"
+	    quid       	"3FA115AC032C"
+	    operations 	(list Operations
+		(object Operation "SetState"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Static"))
+		    quid       	"3FA1182D002E"
+		    stereotype 	"static"
+		    parameters 	(list Parameters
+			(object Parameter "p_dwID"
+			    type       	"DWORD")
+			(object Parameter "p_bState"
+			    type       	"bool"))
+		    result     	"void"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1067518839)
+		(object Operation "GetState"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Static"))
+		    quid       	"3FA118790222"
+		    stereotype 	"static"
+		    parameters 	(list Parameters
+			(object Parameter "p_dwID"
+			    type       	"DWORD"))
+		    result     	"bool"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1067518840))
+	    module     	"Component View::EBIO (Analog- / Digital- In-/Output)::EBIOstat (module spec)"
+	    quidu      	"3FA1170C0242"
+	    module     	"Component View::EBIO (Analog- / Digital- In-/Output)::EBIOstat (module body)"
+	    quidu      	"3FA117230177"
+	    language   	"C++")
+	(object Association "$UNNAMED$0"
+	    quid       	"3DF5BFE601B5"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$1"
+		    quid       	"3DF5BFE603A9"
+		    supplier   	"Logical View::EBIO (Analog- / Digital- In-/Output)::CIOOutputAnalogInterface"
+		    quidu      	"3DF5BE8B0148"
+		    client_cardinality 	(value cardinality "1..1")
+		    is_aggregate 	TRUE)
+		(object Role "uiID"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"InitialValue"
+			    value      	(value Text "p_uiID")))
+		    quid       	"3DF5BFE603AA"
+		    label      	"uiID"
+		    supplier   	"Logical View::IMWINS (Microsoft Windows)::UINT"
+		    quidu      	"369DEAA80004"
+		    client_cardinality 	(value cardinality "1..1")
+		    Containment 	"By Value"
+		    is_navigable 	TRUE)))
+	(object Association "$UNNAMED$2"
+	    quid       	"3DF5C57501A6"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$3"
+		    quid       	"3DF5C57503B9"
+		    supplier   	"Logical View::EBIO (Analog- / Digital- In-/Output)::CIOSensorAnalogInterface"
+		    quidu      	"3DF5BE9E037A"
+		    client_cardinality 	(value cardinality "1..1")
+		    is_aggregate 	TRUE)
+		(object Role "uiID"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"InitialValue"
+			    value      	(value Text "p_uiID")))
+		    quid       	"3DF5C57503BA"
+		    label      	"uiID"
+		    supplier   	"Logical View::IMWINS (Microsoft Windows)::UINT"
+		    quidu      	"369DEAA80004"
+		    client_cardinality 	(value cardinality "1..1")
+		    Containment 	"By Value"
+		    is_navigable 	TRUE)))
+	(object Association "$UNNAMED$4"
+	    quid       	"3DF5C57800DB"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$5"
+		    quid       	"3DF5C57802BF"
+		    supplier   	"Logical View::EBIO (Analog- / Digital- In-/Output)::CIOOutputDigitalInterface"
+		    quidu      	"3DF5BEB603B9"
+		    client_cardinality 	(value cardinality "1..1")
+		    is_aggregate 	TRUE)
+		(object Role "uiID"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"InitialValue"
+			    value      	(value Text "p_uiID")))
+		    quid       	"3DF5C57802C0"
+		    label      	"uiID"
+		    supplier   	"Logical View::IMWINS (Microsoft Windows)::UINT"
+		    quidu      	"369DEAA80004"
+		    client_cardinality 	(value cardinality "1..1")
+		    Containment 	"By Value"
+		    is_navigable 	TRUE)))
+	(object Association "$UNNAMED$6"
+	    quid       	"3DF5C57B00FA"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$7"
+		    quid       	"3DF5C57B02CF"
+		    supplier   	"Logical View::EBIO (Analog- / Digital- In-/Output)::CIOSensorDigitalInterface"
+		    quidu      	"3DF5BECD030D"
+		    client_cardinality 	(value cardinality "1..1")
+		    is_aggregate 	TRUE)
+		(object Role "uiID"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"InitialValue"
+			    value      	(value Text "p_uiID")))
+		    quid       	"3DF5C57B02D0"
+		    label      	"uiID"
+		    supplier   	"Logical View::IMWINS (Microsoft Windows)::UINT"
+		    quidu      	"369DEAA80004"
+		    client_cardinality 	(value cardinality "1..1")
+		    Containment 	"By Value"
+		    is_navigable 	TRUE)))
+	(object Association "$UNNAMED$8"
+	    quid       	"3F4B8BA703B9"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$9"
+		    quid       	"3F4B8BA80186"
+		    supplier   	"Logical View::EBIO (Analog- / Digital- In-/Output)::CIOOutputAnalogInterface"
+		    quidu      	"3DF5BE8B0148"
+		    client_cardinality 	(value cardinality "1..1")
+		    is_aggregate 	TRUE)
+		(object Role "bHardwarePresent"
+		    quid       	"3F4B8BA80187"
+		    label      	"bHardwarePresent"
+		    supplier   	"Logical View::IMWINS (Microsoft Windows)::bool"
+		    quidu      	"369DEAA80005"
+		    client_cardinality 	(value cardinality "1..1")
+		    Containment 	"By Value"
+		    is_navigable 	TRUE)))
+	(object Association "$UNNAMED$10"
+	    quid       	"3F4B8C1E033C"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$11"
+		    quid       	"3F4B8C1F01F4"
+		    supplier   	"Logical View::EBIO (Analog- / Digital- In-/Output)::CIOSensorAnalogInterface"
+		    quidu      	"3DF5BE9E037A"
+		    client_cardinality 	(value cardinality "1..1")
+		    is_aggregate 	TRUE)
+		(object Role "bHardwarePresent"
+		    quid       	"3F4B8C1F0203"
+		    label      	"bHardwarePresent"
+		    supplier   	"Logical View::IMWINS (Microsoft Windows)::bool"
+		    quidu      	"369DEAA80005"
+		    client_cardinality 	(value cardinality "1..1")
+		    Containment 	"By Value"
+		    is_navigable 	TRUE)))
+	(object Association "$UNNAMED$12"
+	    quid       	"3F4B8C220399"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$13"
+		    quid       	"3F4B8C230138"
+		    supplier   	"Logical View::EBIO (Analog- / Digital- In-/Output)::CIOOutputDigitalInterface"
+		    quidu      	"3DF5BEB603B9"
+		    client_cardinality 	(value cardinality "1..1")
+		    is_aggregate 	TRUE)
+		(object Role "bHardwarePresent"
+		    quid       	"3F4B8C230139"
+		    label      	"bHardwarePresent"
+		    supplier   	"Logical View::IMWINS (Microsoft Windows)::bool"
+		    quidu      	"369DEAA80005"
+		    client_cardinality 	(value cardinality "1..1")
+		    Containment 	"By Value"
+		    is_navigable 	TRUE)))
+	(object Association "$UNNAMED$14"
+	    quid       	"3F4B8C270167"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$15"
+		    quid       	"3F4B8C27033C"
+		    supplier   	"Logical View::EBIO (Analog- / Digital- In-/Output)::CIOSensorDigitalInterface"
+		    quidu      	"3DF5BECD030D"
+		    client_cardinality 	(value cardinality "1..1")
+		    is_aggregate 	TRUE)
+		(object Role "bHardwarePresent"
+		    quid       	"3F4B8C27033D"
+		    label      	"bHardwarePresent"
+		    supplier   	"Logical View::IMWINS (Microsoft Windows)::bool"
+		    quidu      	"369DEAA80005"
+		    client_cardinality 	(value cardinality "1..1")
+		    Containment 	"By Value"
+		    is_navigable 	TRUE)))
+	(object Association "$UNNAMED$16"
+	    quid       	"3FA1175C03B9"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$17"
+		    quid       	"3FA1175D0232"
+		    supplier   	"Logical View::EBIO (Analog- / Digital- In-/Output)::CIODigitalState"
+		    quidu      	"3FA115AC032C"
+		    Constraints 	"ordered"
+		    Containment 	"By Value"
+		    is_aggregate 	TRUE)
+		(object Role "Map"
+		    quid       	"3FA1175D0233"
+		    label      	"Map"
+		    supplier   	"Logical View::IMWINS (Microsoft Windows)::bool"
+		    quidu      	"369DEAA80005"
+		    keys       	(list class_attribute_list
+			(object ClassAttribute "class"
+			    quid       	"3FA1178C0261"
+			    type       	"DWORD"))
+		    client_cardinality 	(value cardinality "1")
+		    Constraints 	"ordered"
+		    Containment 	"By Value"
+		    is_navigable 	TRUE
+		    static     	TRUE)))
+	(object Association "$UNNAMED$18"
+	    quid       	"40221B52009B"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$19"
+		    quid       	"40221B52031C"
+		    supplier   	"Logical View::EBIO (Analog- / Digital- In-/Output)::CIOOutputDigitalInterface"
+		    quidu      	"3DF5BEB603B9"
+		    client_cardinality 	(value cardinality "1..1")
+		    is_aggregate 	TRUE)
+		(object Role "bNomialState"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"InitialValue"
+			    value      	(value Text "false")))
+		    quid       	"40221B52032B"
+		    label      	"bNomialState"
+		    supplier   	"Logical View::IMWINS (Microsoft Windows)::bool"
+		    quidu      	"369DEAA80005"
+		    client_cardinality 	(value cardinality "1..1")
+		    Containment 	"By Value"
+		    is_navigable 	TRUE)))
+	(object Association "$UNNAMED$20"
+	    quid       	"40221BAB01E3"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$21"
+		    quid       	"40221BAC003D"
+		    supplier   	"Logical View::EBIO (Analog- / Digital- In-/Output)::CIOOutputDigitalInterface"
+		    quidu      	"3DF5BEB603B9"
+		    client_cardinality 	(value cardinality "1..1")
+		    is_aggregate 	TRUE)
+		(object Role "ePolarity"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"InitialValue"
+			    value      	(value Text "eSensorActiveHigh")))
+		    quid       	"40221BAC003E"
+		    label      	"ePolarity"
+		    supplier   	"Logical View::EBPI (PC Interface)::EPIPolarity"
+		    quidu      	"3DB9299300B4"
+		    client_cardinality 	(value cardinality "1..1")
+		    Containment 	"By Value"
+		    is_navigable 	TRUE)))
+	(object Association "$UNNAMED$22"
+	    quid       	"40221D1D009B"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$23"
+		    quid       	"40221D1D02ED"
+		    supplier   	"Logical View::EBIO (Analog- / Digital- In-/Output)::CIOSensorDigitalInterface"
+		    quidu      	"3DF5BECD030D"
+		    client_cardinality 	(value cardinality "1..1")
+		    is_aggregate 	TRUE)
+		(object Role "ePolarity"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"InitialValue"
+			    value      	(value Text "eSensorActiveHigh")))
+		    quid       	"40221D1D02FC"
+		    label      	"ePolarity"
+		    supplier   	"Logical View::EBPI (PC Interface)::EPIPolarity"
+		    quidu      	"3DB9299300B4"
+		    client_cardinality 	(value cardinality "1..1")
+		    Containment 	"By Value"
+		    is_navigable 	TRUE)))
+	(object Association "$UNNAMED$24"
+	    quid       	"40222CF6009B"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$25"
+		    quid       	"40222CF6035A"
+		    supplier   	"Logical View::EBIO (Analog- / Digital- In-/Output)::CIOOutputAnalogInterface"
+		    quidu      	"3DF5BE8B0148"
+		    client_cardinality 	(value cardinality "1..1")
+		    is_aggregate 	TRUE)
+		(object Role "dwNominalValue"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"InitialValue"
+			    value      	(value Text "0")))
+		    quid       	"40222CF6035B"
+		    label      	"dwNominalValue"
+		    supplier   	"Logical View::IMWINS (Microsoft Windows)::DWORD"
+		    quidu      	"369DEA1A039E"
+		    client_cardinality 	(value cardinality "1..1")
+		    Containment 	"By Value"
+		    is_navigable 	TRUE))))
+    logical_presentations 	(list unit_reference_list
+	(object ClassDiagram "0.0 Globals"
+	    quid       	"3DF5B173008C"
+	    title      	"0.0 Globals"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object ClassView "ClassUtility" "Logical View::EBIO (Analog- / Digital- In-/Output)::IOAO_IDENTIFIERS" @1
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(365, 159)
+		    label      	(object ItemLabel
+			Parent_View 	@1
+			location   	(168, 108)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	394
+			justify    	0
+			label      	"IOAO_IDENTIFIERS")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DF5B18301B5"
+		    width      	412
+		    height     	126
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "ClassUtility" "Logical View::EBIO (Analog- / Digital- In-/Output)::IOAI_IDENTIFIERS" @2
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(900, 165)
+		    label      	(object ItemLabel
+			Parent_View 	@2
+			location   	(712, 114)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	376
+			justify    	0
+			label      	"IOAI_IDENTIFIERS")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DF5B1B40138"
+		    width      	394
+		    height     	126
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "ClassUtility" "Logical View::EBIO (Analog- / Digital- In-/Output)::IODO_IDENTIFIERS" @3
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(1431, 162)
+		    label      	(object ItemLabel
+			Parent_View 	@3
+			location   	(1233, 111)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	396
+			justify    	0
+			label      	"IODO_IDENTIFIERS")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DF5B1E20290"
+		    width      	414
+		    height     	126
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "ClassUtility" "Logical View::EBIO (Analog- / Digital- In-/Output)::IODI_IDENTIFIERS" @4
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(1937, 159)
+		    label      	(object ItemLabel
+			Parent_View 	@4
+			location   	(1748, 108)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	378
+			justify    	0
+			label      	"IODI_IDENTIFIERS")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DF5B1FA03C9"
+		    width      	396
+		    height     	126
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "ClassUtility" "Logical View::EBIO (Analog- / Digital- In-/Output)::IO_MAIN" @5
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(300, 642)
+		    label      	(object ItemLabel
+			Parent_View 	@5
+			location   	(203, 591)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	194
+			justify    	0
+			label      	"IO_MAIN")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EF051E703A9"
+		    width      	212
+		    height     	126
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBIO (Analog- / Digital- In-/Output)::CIOInterfaceRegistry" @6
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(917, 642)
+		    label      	(object ItemLabel
+			Parent_View 	@6
+			location   	(715, 590)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	404
+			justify    	0
+			label      	"CIOInterfaceRegistry")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DF5B9C201B5"
+		    width      	422
+		    height     	128
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object UsesView "" @7
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3EF053AC02BE"
+		    client     	@5
+		    supplier   	@6
+		    line_style 	0)))
+	(object ClassDiagram "0.1 Creators / Registry"
+	    quid       	"3DF5B5FD01E4"
+	    title      	"0.1 Creators / Registry"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object ClassView "InstantiatedClass" "Logical View::EBPI (PC Interface)::CPIObjCreatorOutputAnalog" @8
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(422, 381)
+		    label      	(object ItemLabel
+			Parent_View 	@8
+			location   	(151, 306)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	542
+			justify    	0
+			label      	"CPIObjCreatorOutputAnalog")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DD0A56700B0"
+		    width      	560
+		    height     	174
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBIO (Analog- / Digital- In-/Output)::CIOOutputAnalogCreatorV0" @9
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(421, 1093)
+		    label      	(object ItemLabel
+			Parent_View 	@9
+			location   	(158, 1012)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	526
+			justify    	0
+			label      	"CIOOutputAnalogCreatorV0")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DF5B6DF0196"
+		    width      	544
+		    height     	186
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object InheritView "" @10
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DF5B702006D"
+		    client     	@9
+		    supplier   	@8
+		    line_style 	0)
+		(object ClassView "Class" "Logical View::EBIO (Analog- / Digital- In-/Output)::CIOInterfaceRegistry" @11
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(1536, 2134)
+		    label      	(object ItemLabel
+			Parent_View 	@11
+			location   	(1229, 2053)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	614
+			justify    	0
+			label      	"CIOInterfaceRegistry")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DF5B9C201B5"
+		    width      	632
+		    height     	186
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "InstantiatedClass" "Logical View::EBPI (PC Interface)::CPIObjCreatorSensorAnalog" @12
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(1103, 381)
+		    label      	(object ItemLabel
+			Parent_View 	@12
+			location   	(830, 306)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	546
+			justify    	0
+			label      	"CPIObjCreatorSensorAnalog")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DD0A3CA0227"
+		    width      	564
+		    height     	174
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "InstantiatedClass" "Logical View::EBPI (PC Interface)::CPIObjCreatorSensorDigital" @13
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(2541, 397)
+		    label      	(object ItemLabel
+			Parent_View 	@13
+			location   	(2275, 322)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	532
+			justify    	0
+			label      	"CPIObjCreatorSensorDigital")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DD0A55B0227"
+		    width      	550
+		    height     	174
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "InstantiatedClass" "Logical View::EBPI (PC Interface)::CPIObjCreatorOutputDigital" @14
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(1814, 381)
+		    label      	(object ItemLabel
+			Parent_View 	@14
+			location   	(1550, 306)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	528
+			justify    	0
+			label      	"CPIObjCreatorOutputDigital")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DD0A5720062"
+		    width      	546
+		    height     	174
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBIO (Analog- / Digital- In-/Output)::CIOSensorAnalogCreatorV0" @15
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(1103, 1100)
+		    label      	(object ItemLabel
+			Parent_View 	@15
+			location   	(838, 1019)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	530
+			justify    	0
+			label      	"CIOSensorAnalogCreatorV0")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DF5BAE10148"
+		    width      	548
+		    height     	186
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBIO (Analog- / Digital- In-/Output)::CIOSensorDigitalCreatorV0" @16
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(2541, 1109)
+		    label      	(object ItemLabel
+			Parent_View 	@16
+			location   	(2277, 1028)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	528
+			justify    	0
+			label      	"CIOSensorDigitalCreatorV0")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DF5BAFE0196"
+		    width      	546
+		    height     	186
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBIO (Analog- / Digital- In-/Output)::CIOOutputDigitalCreatorV0" @17
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(1813, 1106)
+		    label      	(object ItemLabel
+			Parent_View 	@17
+			location   	(1557, 1025)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	512
+			justify    	0
+			label      	"CIOOutputDigitalCreatorV0")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DF5BB14038A"
+		    width      	530
+		    height     	186
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object InheritView "" @18
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DF5BB2C02A0"
+		    client     	@15
+		    supplier   	@12
+		    line_style 	0)
+		(object InheritView "" @19
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DF5BB2F01A6"
+		    client     	@16
+		    supplier   	@13
+		    line_style 	0)
+		(object InheritView "" @20
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DF5BB37034C"
+		    client     	@17
+		    supplier   	@14
+		    line_style 	0)
+		(object UsesView "" @21
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DF5BA85038A"
+		    client     	@11
+		    supplier   	@9
+		    line_style 	0)
+		(object UsesView "" @22
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DF5BC5E0109"
+		    client     	@11
+		    supplier   	@15
+		    line_style 	0)
+		(object UsesView "" @23
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DF5BC6101C5"
+		    client     	@11
+		    supplier   	@17
+		    line_style 	0)
+		(object UsesView "" @24
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DF5BC640223"
+		    client     	@11
+		    supplier   	@16
+		    line_style 	0)
+		(object ClassView "Class" "Logical View::EBPI (PC Interface)::CPIObjectFactory" @25
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(2593, 1890)
+		    label      	(object ItemLabel
+			Parent_View 	@25
+			location   	(2402, 1815)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	382
+			justify    	0
+			label      	"CPIObjectFactory")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DA52FD80189"
+		    width      	400
+		    height     	174
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object UsesView "" @26
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DF5FF5C0129"
+		    client     	@11
+		    supplier   	@25
+		    line_style 	0)))
+	(object ClassDiagram "1.0 Sync Interface"
+	    quid       	"3DF5BDAA0129"
+	    title      	"1.0 Sync Interface"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	485
+	    items      	(list diagram_item_list
+		(object ClassView "Class" "Logical View::EBPI (PC Interface)::IPIOutputAnalogInterface" @27
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(376, 321)
+		    label      	(object ItemLabel
+			Parent_View 	@27
+			location   	(137, 246)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	478
+			justify    	0
+			label      	"IPIOutputAnalogInterface")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DB92AB900C4"
+		    width      	496
+		    height     	174
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBPI (PC Interface)::IPIOutputDigitalInterface" @28
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1946, 290)
+		    label      	(object ItemLabel
+			Parent_View 	@28
+			location   	(1714, 215)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	464
+			justify    	0
+			label      	"IPIOutputDigitalInterface")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DB92BE30121"
+		    width      	482
+		    height     	174
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBPI (PC Interface)::IPISensorAnalogInterface" @29
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1165, 299)
+		    label      	(object ItemLabel
+			Parent_View 	@29
+			location   	(924, 224)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	482
+			justify    	0
+			label      	"IPISensorAnalogInterface")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DB9120A021B"
+		    width      	500
+		    height     	174
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBPI (PC Interface)::IPISensorDigitalInterface" @30
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(4246, 293)
+		    label      	(object ItemLabel
+			Parent_View 	@30
+			location   	(4006, 218)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	480
+			justify    	0
+			label      	"IPISensorDigitalInterface")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DB928DC0121"
+		    width      	498
+		    height     	174
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::IMWINS (Microsoft Windows)::UINT" @31
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(128, 1661)
+		    label      	(object ItemLabel
+			Parent_View 	@31
+			location   	(47, 1609)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	162
+			justify    	0
+			label      	"UINT")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"369DEAA80004"
+		    height     	128
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::IMWINS (Microsoft Windows)::bool" @32
+		    location   	(418, 1827)
+		    label      	(object ItemLabel
+			Parent_View 	@32
+			location   	(337, 1775)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	162
+			justify    	0
+			label      	"bool")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"369DEAA80005"
+		    height     	128
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::IMWINS (Microsoft Windows)::UINT" @33
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(1048, 1614)
+		    label      	(object ItemLabel
+			Parent_View 	@33
+			location   	(967, 1562)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	162
+			justify    	0
+			label      	"UINT")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"369DEAA80004"
+		    height     	128
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBIO (Analog- / Digital- In-/Output)::CIOSensorAnalogInterface" @34
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(1168, 971)
+		    label      	(object ItemLabel
+			Parent_View 	@34
+			location   	(814, 740)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	708
+			justify    	0
+			label      	"CIOSensorAnalogInterface")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DF5BE9E037A"
+		    compartment 	(object Compartment
+			Parent_View 	@34
+			location   	(814, 800)
+			icon_style 	"Icon"
+			fill_color 	16777215
+			anchor     	2
+			nlines     	8
+			max_width  	715)
+		    width      	726
+		    height     	486
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object InheritView "" @35
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DF5BEE30290"
+		    client     	@34
+		    supplier   	@29
+		    line_style 	0)
+		(object AssociationViewNew "$UNNAMED$2" @36
+		    location   	(1090, 1381)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DF5C57501A6"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$3" @37
+			    Parent_View 	@36
+			    location   	(25, -302)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3DF5C57503B9"
+			    client     	@36
+			    supplier   	@34
+			    line_style 	0
+			    label      	(object SegLabel @38
+				Parent_View 	@37
+				location   	(1177, 1261)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.794615
+				height     	64
+				orientation 	1))
+			(object RoleView "uiID" @39
+			    Parent_View 	@36
+			    location   	(25, -302)
+			    label      	(object SegLabel @40
+				Parent_View 	@39
+				location   	(1066, 1418)
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	96
+				justify    	0
+				label      	"+uiID"
+				pctDist    	0.240388
+				height     	18
+				orientation 	1)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3DF5C57503BA"
+			    client     	@36
+			    supplier   	@33
+			    line_style 	0
+			    label      	(object SegLabel @41
+				Parent_View 	@39
+				location   	(1118, 1522)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.778751
+				height     	54
+				orientation 	0))))
+		(object ClassView "Class" "Logical View::IMWINS (Microsoft Windows)::bool" @42
+		    location   	(1376, 1639)
+		    label      	(object ItemLabel
+			Parent_View 	@42
+			location   	(1295, 1587)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	162
+			justify    	0
+			label      	"bool")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"369DEAA80005"
+		    height     	128
+		    autoResize 	TRUE)
+		(object AssociationViewNew "$UNNAMED$10" @43
+		    location   	(1299, 1394)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3F4B8C1E033C"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$11" @44
+			    Parent_View 	@43
+			    location   	(-77, -245)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3F4B8C1F01F4"
+			    client     	@43
+			    supplier   	@34
+			    line_style 	0
+			    label      	(object SegLabel @45
+				Parent_View 	@44
+				location   	(1300, 1217)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	1))
+			(object RoleView "bHardwarePresent" @46
+			    Parent_View 	@43
+			    location   	(-77, -245)
+			    label      	(object SegLabel @47
+				Parent_View 	@46
+				location   	(1358, 1426)
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	360
+				justify    	0
+				label      	"+bHardwarePresent"
+				pctDist    	0.250000
+				height     	47
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3F4B8C1F0203"
+			    client     	@43
+			    supplier   	@42
+			    line_style 	0
+			    label      	(object SegLabel @48
+				Parent_View 	@46
+				location   	(1400, 1540)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	0))))
+		(object ClassView "Class" "Logical View::EBIO (Analog- / Digital- In-/Output)::CIODigitalState" @49
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(3235, 2305)
+		    label      	(object ItemLabel
+			Parent_View 	@49
+			location   	(3081, 2254)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	308
+			justify    	0
+			label      	"CIODigitalState")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3FA115AC032C"
+		    width      	326
+		    height     	126
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::IMWINS (Microsoft Windows)::bool" @50
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(2545, 2885)
+		    label      	(object ItemLabel
+			Parent_View 	@50
+			location   	(2464, 2834)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	162
+			justify    	0
+			label      	"bool")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"369DEAA80005"
+		    height     	126
+		    autoResize 	TRUE)
+		(object AssociationViewNew "$UNNAMED$16" @51
+		    location   	(2888, 2594)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3FA1175C03B9"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$17" @52
+			    Parent_View 	@51
+			    location   	(2260, 69)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3FA1175D0232"
+			    client     	@51
+			    supplier   	@49
+			    line_style 	0
+			    label      	(object SegLabel @53
+				Parent_View 	@52
+				location   	(3200, 2474)
+				anchor     	3
+				anchor_loc 	1
+				nlines     	1
+				max_width  	159
+				justify    	0
+				label      	"{ordered}"
+				pctDist    	0.900000
+				height     	108
+				orientation 	1)
+			    label      	(object SegLabel @54
+				Parent_View 	@52
+				location   	(3158, 2406)
+				anchor     	5
+				anchor_loc 	1
+				nlines     	1
+				max_width  	291
+				justify    	0
+				label      	"class : DWORD"
+				pctDist    	0.930729
+				height     	29
+				orientation 	1))
+			(object RoleView "Map" @55
+			    Parent_View 	@51
+			    location   	(2260, 69)
+			    label      	(object SegLabel @56
+				Parent_View 	@55
+				location   	(2711, 2564)
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	225
+				justify    	0
+				label      	"+$Map"
+				pctDist    	0.327869
+				height     	139
+				orientation 	1)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3FA1175D0233"
+			    client     	@51
+			    supplier   	@50
+			    line_style 	0
+			    label      	(object SegLabel @57
+				Parent_View 	@55
+				location   	(2680, 2840)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	0)
+			    label      	(object SegLabel @58
+				Parent_View 	@55
+				location   	(2715, 2882)
+				anchor     	3
+				anchor_loc 	1
+				nlines     	1
+				max_width  	159
+				justify    	0
+				label      	"{ordered}"
+				pctDist    	0.900000
+				height     	108
+				orientation 	0))))
+		(object ClassView "Class" "Logical View::IMWINS (Microsoft Windows)::UINT" @59
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(4197, 2136)
+		    label      	(object ItemLabel
+			Parent_View 	@59
+			location   	(4116, 2084)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	162
+			justify    	0
+			label      	"UINT")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"369DEAA80004"
+		    height     	128
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::IMWINS (Microsoft Windows)::bool" @60
+		    location   	(4512, 1920)
+		    label      	(object ItemLabel
+			Parent_View 	@60
+			location   	(4431, 1868)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	162
+			justify    	0
+			label      	"bool")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"369DEAA80005"
+		    height     	128
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::IMWINS (Microsoft Windows)::UINT" @61
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(1798, 1823)
+		    label      	(object ItemLabel
+			Parent_View 	@61
+			location   	(1717, 1771)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	162
+			justify    	0
+			label      	"UINT")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"369DEAA80004"
+		    height     	128
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::IMWINS (Microsoft Windows)::bool" @62
+		    location   	(2207, 1817)
+		    label      	(object ItemLabel
+			Parent_View 	@62
+			location   	(2126, 1765)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	162
+			justify    	0
+			label      	"bool")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"369DEAA80005"
+		    height     	128
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::IMWINS (Microsoft Windows)::bool" @63
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(3059, 1746)
+		    label      	(object ItemLabel
+			Parent_View 	@63
+			location   	(2803, 1671)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	512
+			justify    	0
+			label      	"bool")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"369DEAA80005"
+		    width      	530
+		    height     	174
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBIO (Analog- / Digital- In-/Output)::CIOOutputDigitalInterface" @64
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(1952, 1046)
+		    label      	(object ItemLabel
+			Parent_View 	@64
+			location   	(1598, 715)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	708
+			justify    	0
+			label      	"CIOOutputDigitalInterface")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DF5BEB603B9"
+		    compartment 	(object Compartment
+			Parent_View 	@64
+			location   	(1598, 775)
+			icon_style 	"Icon"
+			fill_color 	16777215
+			anchor     	2
+			nlines     	12
+			max_width  	715)
+		    width      	726
+		    height     	686
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object InheritView "" @65
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DF5BEE60203"
+		    client     	@64
+		    supplier   	@28
+		    line_style 	0)
+		(object AssociationViewNew "$UNNAMED$4" @66
+		    location   	(1845, 1573)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DF5C57800DB"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$5" @67
+			    Parent_View 	@66
+			    location   	(96, -122)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3DF5C57802BF"
+			    client     	@66
+			    supplier   	@64
+			    line_style 	0
+			    label      	(object SegLabel @68
+				Parent_View 	@67
+				location   	(1935, 1460)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.684097
+				height     	66
+				orientation 	1))
+			(object RoleView "uiID" @69
+			    Parent_View 	@66
+			    location   	(96, -122)
+			    label      	(object SegLabel @70
+				Parent_View 	@69
+				location   	(1801, 1594)
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	96
+				justify    	0
+				label      	"+uiID"
+				pctDist    	0.161478
+				height     	40
+				orientation 	1)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3DF5C57802C0"
+			    client     	@66
+			    supplier   	@61
+			    line_style 	0
+			    label      	(object SegLabel @71
+				Parent_View 	@69
+				location   	(1872, 1722)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.749894
+				height     	55
+				orientation 	0))))
+		(object AssociationViewNew "$UNNAMED$12" @72
+		    location   	(2125, 1570)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3F4B8C220399"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$13" @73
+			    Parent_View 	@72
+			    location   	(-64, -113)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3F4B8C230138"
+			    client     	@72
+			    supplier   	@64
+			    line_style 	0
+			    label      	(object SegLabel @74
+				Parent_View 	@73
+				location   	(2122, 1392)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	1))
+			(object RoleView "bHardwarePresent" @75
+			    Parent_View 	@72
+			    location   	(-64, -113)
+			    label      	(object SegLabel @76
+				Parent_View 	@75
+				location   	(2146, 1615)
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	360
+				justify    	0
+				label      	"+bHardwarePresent"
+				pctDist    	0.247742
+				height     	6
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3F4B8C230139"
+			    client     	@72
+			    supplier   	@62
+			    line_style 	0
+			    label      	(object SegLabel @77
+				Parent_View 	@75
+				location   	(2230, 1718)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	0))))
+		(object UsesView "" @78
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3FA119D1038A"
+		    client     	@64
+		    supplier   	@49
+		    vertices   	(list Points
+			(2236, 1389)
+			(2513, 1722)
+			(3155, 2241))
+		    line_style 	0)
+		(object AssociationViewNew "$UNNAMED$18" @79
+		    location   	(2618, 1466)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"40221B52009B"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$19" @80
+			    Parent_View 	@79
+			    location   	(-441, -280)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"40221B52031C"
+			    client     	@79
+			    supplier   	@64
+			    line_style 	0
+			    label      	(object SegLabel @81
+				Parent_View 	@80
+				location   	(2318, 1340)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	0))
+			(object RoleView "bNomialState" @82
+			    Parent_View 	@79
+			    location   	(-441, -280)
+			    label      	(object SegLabel @83
+				Parent_View 	@82
+				location   	(2871, 1494)
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	276
+				justify    	0
+				label      	"+bNomialState"
+				pctDist    	0.637546
+				height     	112
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"40221B52032B"
+			    client     	@79
+			    supplier   	@63
+			    line_style 	0
+			    label      	(object SegLabel @84
+				Parent_View 	@82
+				location   	(2749, 1619)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.536779
+				height     	59
+				orientation 	1))))
+		(object ClassView "Class" "Logical View::EBPI (PC Interface)::EPIPolarity" @85
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(3108, 1049)
+		    label      	(object ItemLabel
+			Parent_View 	@85
+			location   	(2918, 974)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	380
+			justify    	0
+			label      	"EPIPolarity")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DB9299300B4"
+		    width      	398
+		    height     	174
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object AssociationViewNew "$UNNAMED$20" @86
+		    location   	(2611, 1047)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"40221BAB01E3"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$21" @87
+			    Parent_View 	@86
+			    location   	(-498, 23)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"40221BAC003D"
+			    client     	@86
+			    supplier   	@64
+			    line_style 	0
+			    label      	(object SegLabel @88
+				Parent_View 	@87
+				location   	(2346, 1100)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	0))
+			(object RoleView "ePolarity" @89
+			    Parent_View 	@86
+			    location   	(-498, 23)
+			    label      	(object SegLabel @90
+				Parent_View 	@89
+				location   	(2744, 1005)
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	240
+				justify    	0
+				label      	"+ePolarity"
+				pctDist    	0.447319
+				height     	43
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"40221BAC003E"
+			    client     	@86
+			    supplier   	@85
+			    line_style 	0
+			    label      	(object SegLabel @91
+				Parent_View 	@89
+				location   	(2878, 1102)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	1))))
+		(object ClassView "Class" "Logical View::EBIO (Analog- / Digital- In-/Output)::CIOSensorDigitalInterface" @92
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(4249, 1049)
+		    label      	(object ItemLabel
+			Parent_View 	@92
+			location   	(3895, 768)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	708
+			justify    	0
+			label      	"CIOSensorDigitalInterface")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DF5BECD030D"
+		    compartment 	(object Compartment
+			Parent_View 	@92
+			location   	(3895, 828)
+			icon_style 	"Icon"
+			fill_color 	16777215
+			anchor     	2
+			nlines     	10
+			max_width  	715)
+		    width      	726
+		    height     	586
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object InheritView "" @93
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DF5BEE9007D"
+		    client     	@92
+		    supplier   	@30
+		    line_style 	0)
+		(object AssociationViewNew "$UNNAMED$6" @94
+		    location   	(4216, 1706)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DF5C57B00FA"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$7" @95
+			    Parent_View 	@94
+			    location   	(1842, 14)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3DF5C57B02CF"
+			    client     	@94
+			    supplier   	@92
+			    line_style 	0
+			    label      	(object SegLabel @96
+				Parent_View 	@95
+				location   	(4291, 1443)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.732292
+				height     	62
+				orientation 	1))
+			(object RoleView "uiID" @97
+			    Parent_View 	@94
+			    location   	(1842, 14)
+			    label      	(object SegLabel @98
+				Parent_View 	@97
+				location   	(4170, 1748)
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	96
+				justify    	0
+				label      	"+uiID"
+				pctDist    	0.119798
+				height     	45
+				orientation 	1)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3DF5C57B02D0"
+			    client     	@94
+			    supplier   	@59
+			    line_style 	0
+			    label      	(object SegLabel @99
+				Parent_View 	@97
+				location   	(4262, 1987)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.763806
+				height     	59
+				orientation 	0))))
+		(object AssociationViewNew "$UNNAMED$14" @100
+		    location   	(4414, 1598)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3F4B8C270167"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$15" @101
+			    Parent_View 	@100
+			    location   	(1421, -106)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3F4B8C27033C"
+			    client     	@100
+			    supplier   	@92
+			    line_style 	0
+			    label      	(object SegLabel @102
+				Parent_View 	@101
+				location   	(4396, 1353)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	1))
+			(object RoleView "bHardwarePresent" @103
+			    Parent_View 	@100
+			    location   	(1421, -106)
+			    label      	(object SegLabel @104
+				Parent_View 	@103
+				location   	(4491, 1640)
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	360
+				justify    	0
+				label      	"+bHardwarePresent"
+				pctDist    	0.231312
+				height     	62
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3F4B8C27033D"
+			    client     	@100
+			    supplier   	@60
+			    line_style 	0
+			    label      	(object SegLabel @105
+				Parent_View 	@103
+				location   	(4536, 1815)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	0))))
+		(object UsesView "" @106
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3FA119E402AF"
+		    client     	@92
+		    supplier   	@49
+		    vertices   	(list Points
+			(4144, 1342)
+			(4035, 1654)
+			(3311, 2241))
+		    line_style 	0)
+		(object AssociationViewNew "$UNNAMED$22" @107
+		    location   	(3596, 1049)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"40221D1D009B"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$23" @108
+			    Parent_View 	@107
+			    location   	(488, 0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"40221D1D02ED"
+			    client     	@107
+			    supplier   	@92
+			    line_style 	0
+			    label      	(object SegLabel @109
+				Parent_View 	@108
+				location   	(3855, 1103)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	1))
+			(object RoleView "ePolarity" @110
+			    Parent_View 	@107
+			    location   	(488, 0)
+			    label      	(object SegLabel @111
+				Parent_View 	@110
+				location   	(3500, 997)
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	192
+				justify    	0
+				label      	"+ePolarity"
+				pctDist    	0.332180
+				height     	52
+				orientation 	1)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"40221D1D02FC"
+			    client     	@107
+			    supplier   	@85
+			    line_style 	0
+			    label      	(object SegLabel @112
+				Parent_View 	@110
+				location   	(3337, 1103)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	0))))
+		(object ClassView "Class" "Logical View::IMWINS (Microsoft Windows)::DWORD" @113
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(784, 2144)
+		    label      	(object ItemLabel
+			Parent_View 	@113
+			location   	(528, 2069)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	512
+			justify    	0
+			label      	"DWORD")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"369DEA1A039E"
+		    width      	530
+		    height     	174
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBIO (Analog- / Digital- In-/Output)::CIOOutputAnalogInterface" @114
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(407, 996)
+		    label      	(object ItemLabel
+			Parent_View 	@114
+			location   	(54, 740)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	706
+			justify    	0
+			label      	"CIOOutputAnalogInterface")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DF5BE8B0148"
+		    compartment 	(object Compartment
+			Parent_View 	@114
+			location   	(54, 800)
+			icon_style 	"Icon"
+			fill_color 	16777215
+			anchor     	2
+			nlines     	9
+			max_width  	715)
+		    width      	724
+		    height     	536
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object InheritView "" @115
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DF5BEDF02FD"
+		    client     	@114
+		    supplier   	@27
+		    line_style 	0)
+		(object AssociationViewNew "$UNNAMED$0" @116
+		    location   	(223, 1430)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DF5BFE601B5"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$1" @117
+			    Parent_View 	@116
+			    location   	(-161, -239)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3DF5BFE603A9"
+			    client     	@116
+			    supplier   	@114
+			    line_style 	0
+			    label      	(object SegLabel @118
+				Parent_View 	@117
+				location   	(336, 1328)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.771574
+				height     	64
+				orientation 	1))
+			(object RoleView "uiID" @119
+			    Parent_View 	@116
+			    location   	(-161, -239)
+			    label      	(object SegLabel @120
+				Parent_View 	@119
+				location   	(181, 1452)
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	96
+				justify    	0
+				label      	"+uiID"
+				pctDist    	0.197970
+				height     	31
+				orientation 	1)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3DF5BFE603AA"
+			    client     	@116
+			    supplier   	@31
+			    line_style 	0
+			    label      	(object SegLabel @121
+				Parent_View 	@119
+				location   	(224, 1584)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.781726
+				height     	61
+				orientation 	0))))
+		(object AssociationViewNew "$UNNAMED$8" @122
+		    location   	(412, 1513)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3F4B8BA703B9"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$9" @123
+			    Parent_View 	@122
+			    location   	(-159, -346)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3F4B8BA80186"
+			    client     	@122
+			    supplier   	@114
+			    line_style 	0
+			    label      	(object SegLabel @124
+				Parent_View 	@123
+				location   	(463, 1289)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	1))
+			(object RoleView "bHardwarePresent" @125
+			    Parent_View 	@122
+			    location   	(-159, -346)
+			    label      	(object SegLabel @126
+				Parent_View 	@125
+				location   	(440, 1563)
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	360
+				justify    	0
+				label      	"+bHardwarePresent"
+				pctDist    	0.203499
+				height     	27
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3F4B8BA80187"
+			    client     	@122
+			    supplier   	@32
+			    line_style 	0
+			    label      	(object SegLabel @127
+				Parent_View 	@125
+				location   	(470, 1737)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	0))))
+		(object AssociationViewNew "$UNNAMED$24" @128
+		    location   	(624, 1660)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"40222CF6009B"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$25" @129
+			    Parent_View 	@128
+			    location   	(-210, -322)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"40222CF6035A"
+			    client     	@128
+			    supplier   	@114
+			    line_style 	0
+			    label      	(object SegLabel @130
+				Parent_View 	@129
+				location   	(558, 1289)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	1))
+			(object RoleView "dwNominalValue" @131
+			    Parent_View 	@128
+			    location   	(-210, -322)
+			    label      	(object SegLabel @132
+				Parent_View 	@131
+				location   	(714, 1929)
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	324
+				justify    	0
+				label      	"+dwNominalValue"
+				pctDist    	0.680559
+				height     	2
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"40222CF6035B"
+			    client     	@128
+			    supplier   	@113
+			    line_style 	0
+			    label      	(object SegLabel @133
+				Parent_View 	@131
+				location   	(792, 1999)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	0))))))
+	(object ClassDiagram "1.1 Sync Interface Uses"
+	    quid       	"3DF5DE6300DB"
+	    title      	"1.1 Sync Interface Uses"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object ClassView "Class" "Logical View::EBIO (Analog- / Digital- In-/Output)::CIOOutputAnalogInterface" @134
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(331, 183)
+		    label      	(object ItemLabel
+			Parent_View 	@134
+			location   	(77, 131)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	508
+			justify    	0
+			label      	"CIOOutputAnalogInterface")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DF5BE8B0148"
+		    width      	526
+		    height     	128
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBIO (Analog- / Digital- In-/Output)::CIOOutputDigitalInterface" @135
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(993, 180)
+		    label      	(object ItemLabel
+			Parent_View 	@135
+			location   	(746, 128)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	494
+			justify    	0
+			label      	"CIOOutputDigitalInterface")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DF5BEB603B9"
+		    width      	512
+		    height     	128
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBIO (Analog- / Digital- In-/Output)::CIOSensorAnalogInterface" @136
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(2149, 161)
+		    label      	(object ItemLabel
+			Parent_View 	@136
+			location   	(1893, 109)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	512
+			justify    	0
+			label      	"CIOSensorAnalogInterface")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DF5BE9E037A"
+		    width      	530
+		    height     	128
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBIO (Analog- / Digital- In-/Output)::CIOSensorDigitalInterface" @137
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1591, 180)
+		    label      	(object ItemLabel
+			Parent_View 	@137
+			location   	(1342, 128)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	498
+			justify    	0
+			label      	"CIOSensorDigitalInterface")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DF5BECD030D"
+		    width      	516
+		    height     	128
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "ClassUtility" "Logical View::EBIO (Analog- / Digital- In-/Output)::IOAI_IDENTIFIERS" @138
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(2190, 553)
+		    label      	(object ItemLabel
+			Parent_View 	@138
+			location   	(2002, 502)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	376
+			justify    	0
+			label      	"IOAI_IDENTIFIERS")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DF5B1B40138"
+		    width      	394
+		    height     	126
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "ClassUtility" "Logical View::EBIO (Analog- / Digital- In-/Output)::IOAO_IDENTIFIERS" @139
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(259, 581)
+		    label      	(object ItemLabel
+			Parent_View 	@139
+			location   	(62, 530)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	394
+			justify    	0
+			label      	"IOAO_IDENTIFIERS")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DF5B18301B5"
+		    width      	412
+		    height     	126
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "ClassUtility" "Logical View::EBIO (Analog- / Digital- In-/Output)::IODI_IDENTIFIERS" @140
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(1635, 562)
+		    label      	(object ItemLabel
+			Parent_View 	@140
+			location   	(1446, 511)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	378
+			justify    	0
+			label      	"IODI_IDENTIFIERS")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DF5B1FA03C9"
+		    width      	396
+		    height     	126
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "ClassUtility" "Logical View::EBIO (Analog- / Digital- In-/Output)::IODO_IDENTIFIERS" @141
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(1000, 578)
+		    label      	(object ItemLabel
+			Parent_View 	@141
+			location   	(802, 527)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	396
+			justify    	0
+			label      	"IODO_IDENTIFIERS")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DF5B1E20290"
+		    width      	414
+		    height     	126
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object UsesView "" @142
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DF5DEE502BF"
+		    client     	@134
+		    supplier   	@139
+		    line_style 	0)
+		(object UsesView "" @143
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DF5DEE7031D"
+		    client     	@135
+		    supplier   	@141
+		    line_style 	0)
+		(object UsesView "" @144
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DF5DEE9038A"
+		    client     	@136
+		    supplier   	@138
+		    line_style 	0)
+		(object UsesView "" @145
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DF5DEEB038A"
+		    client     	@137
+		    supplier   	@140
+		    line_style 	0)
+		(object ClassView "Class" "Logical View::EBPI (PC Interface)::CPIComponentsState" @146
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1265, 1231)
+		    label      	(object ItemLabel
+			Parent_View 	@146
+			location   	(1056, 1156)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	418
+			justify    	0
+			label      	"CPIComponentsState")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F4235EA0005"
+		    width      	436
+		    height     	174
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object UsesView "" @147
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3F4B8D630167"
+		    client     	@134
+		    supplier   	@146
+		    line_style 	0)
+		(object UsesView "" @148
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3F4B8D660138"
+		    client     	@135
+		    supplier   	@146
+		    line_style 	0)
+		(object UsesView "" @149
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3F4B8D69006D"
+		    client     	@137
+		    supplier   	@146
+		    line_style 	0)
+		(object UsesView "" @150
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3F4B8D6C0186"
+		    client     	@136
+		    supplier   	@146
+		    line_style 	0)
+		(object ClassView "Class" "Logical View::EBHI (Hardware Interface)::IHIInterface" @151
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1273, 1593)
+		    label      	(object ItemLabel
+			Parent_View 	@151
+			location   	(1037, 1518)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	472
+			justify    	0
+			label      	"IHIInterface")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E2271C40106"
+		    width      	490
+		    height     	174
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object UsesView "" @152
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3F4B91DC007D"
+		    client     	@134
+		    supplier   	@151
+		    line_style 	0)
+		(object UsesView "" @153
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3F4B91DF0000"
+		    client     	@135
+		    supplier   	@151
+		    line_style 	0)
+		(object UsesView "" @154
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3F4B91E100BB"
+		    client     	@137
+		    supplier   	@151
+		    line_style 	0)
+		(object UsesView "" @155
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3F4B91E50109"
+		    client     	@136
+		    supplier   	@151
+		    line_style 	0)))
+	(object ClassDiagram "0.2 Creators Uses"
+	    quid       	"3DF5F1860290"
+	    title      	"0.2 Creators Uses"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	394
+	    items      	(list diagram_item_list
+		(object ClassView "Class" "Logical View::EBIO (Analog- / Digital- In-/Output)::CIOOutputAnalogCreatorV0" @156
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(484, 830)
+		    label      	(object ItemLabel
+			Parent_View 	@156
+			location   	(221, 778)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	526
+			justify    	0
+			label      	"CIOOutputAnalogCreatorV0")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DF5B6DF0196"
+		    width      	544
+		    height     	128
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBIO (Analog- / Digital- In-/Output)::CIOOutputDigitalCreatorV0" @157
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(553, 2586)
+		    label      	(object ItemLabel
+			Parent_View 	@157
+			location   	(297, 2534)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	512
+			justify    	0
+			label      	"CIOOutputDigitalCreatorV0")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DF5BB14038A"
+		    width      	530
+		    height     	128
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBIO (Analog- / Digital- In-/Output)::CIOSensorAnalogCreatorV0" @158
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1812, 826)
+		    label      	(object ItemLabel
+			Parent_View 	@158
+			location   	(1547, 774)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	530
+			justify    	0
+			label      	"CIOSensorAnalogCreatorV0")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DF5BAE10148"
+		    width      	548
+		    height     	128
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBIO (Analog- / Digital- In-/Output)::CIOSensorDigitalCreatorV0" @159
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1885, 2548)
+		    label      	(object ItemLabel
+			Parent_View 	@159
+			location   	(1621, 2496)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	528
+			justify    	0
+			label      	"CIOSensorDigitalCreatorV0")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DF5BAFE0196"
+		    width      	546
+		    height     	128
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBIO (Analog- / Digital- In-/Output)::CIOOutputAnalogInterface" @160
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(528, 1226)
+		    label      	(object ItemLabel
+			Parent_View 	@160
+			location   	(274, 1174)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	508
+			justify    	0
+			label      	"CIOOutputAnalogInterface")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DF5BE8B0148"
+		    width      	526
+		    height     	128
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object UsesView "" @161
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DF5F1390109"
+		    client     	@156
+		    supplier   	@160
+		    line_style 	0)
+		(object ClassView "Class" "Logical View::EBIO (Analog- / Digital- In-/Output)::CIOSensorAnalogInterface" @162
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1806, 1261)
+		    label      	(object ItemLabel
+			Parent_View 	@162
+			location   	(1550, 1209)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	512
+			justify    	0
+			label      	"CIOSensorAnalogInterface")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DF5BE9E037A"
+		    width      	530
+		    height     	128
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object UsesView "" @163
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DF5F14F0232"
+		    client     	@158
+		    supplier   	@162
+		    line_style 	0)
+		(object ClassView "Class" "Logical View::EBIO (Analog- / Digital- In-/Output)::CIOOutputDigitalInterface" @164
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(640, 2054)
+		    label      	(object ItemLabel
+			Parent_View 	@164
+			location   	(393, 2002)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	494
+			justify    	0
+			label      	"CIOOutputDigitalInterface")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DF5BEB603B9"
+		    width      	512
+		    height     	128
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object UsesView "" @165
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DF5F1F801C5"
+		    client     	@157
+		    supplier   	@164
+		    line_style 	0)
+		(object ClassView "Class" "Logical View::EBIO (Analog- / Digital- In-/Output)::CIOSensorDigitalInterface" @166
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1854, 2161)
+		    label      	(object ItemLabel
+			Parent_View 	@166
+			location   	(1605, 2109)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	498
+			justify    	0
+			label      	"CIOSensorDigitalInterface")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DF5BECD030D"
+		    width      	516
+		    height     	128
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object UsesView "" @167
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DF5F2060148"
+		    client     	@159
+		    supplier   	@166
+		    line_style 	0)))))

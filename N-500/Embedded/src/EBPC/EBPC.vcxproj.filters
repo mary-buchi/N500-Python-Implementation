@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{554db03e-655a-454c-a69b-acfc1ef7a4d5}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{7fa93c71-d170-47d8-9291-1dc5757c3e4f}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{0a03707a-381b-4bdd-87e6-10fe5ee938c2}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="EBPCcomd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EBPCconfig.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EBPCconn.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EBPCcrea.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EBPCexcp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EBPCidle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EBPCimpl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EBPCintf.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EBPClogic.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EBPCmain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EBPCpid.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EBPCproc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EBPCregy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EBPCstat.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EBPCsten.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="dllie.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EBPC_res.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EBPCcomd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EBPCconfig.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EBPCconn.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EBPCcrea.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EBPCexcp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EBPCident.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EBPCidle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EBPCimpl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EBPCintf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EBPClogic.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EBPCmain.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EBPCpid.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EBPCproc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EBPCregy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EBPCstat.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EBPCsten.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="EBPC.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

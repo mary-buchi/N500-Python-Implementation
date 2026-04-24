@@ -1,0 +1,442 @@
+
+(object Petal
+    version    	42
+    _written   	"Rose 4.5.8163.3"
+    charSet    	0)
+
+(object SubSystem "EBI2CDP (I2C Digital Potentiometer)"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    attributes 	(list Attribute_Set
+	(object Attribute
+	    tool       	"cg"
+	    name       	"Directory"
+	    value      	"Embedded\\src\\EBI2CDP"))
+    quid       	"3F4B4D0A007D"
+    physical_models 	(list unit_reference_list
+	(object module "EBI2CDPident" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBI2CDP\\EBI2CDPident.h"))
+	    quid       	"3F4B4E6B0000"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBI2CDPintf" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBI2CDP\\EBI2CDPintf.cpp"))
+	    quid       	"3F4B4E7A036B"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3F4B4ED101F4"
+		    supplier   	"Component View::EBI2CDP (I2C Digital Potentiometer)::EBI2CDPintf"
+		    quidu      	"3F4B4E8502CE"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBI2CDPintf" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBI2CDP\\EBI2CDPintf.h"))
+	    quid       	"3F4B4E8502CE"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBI2CDPexcp" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBI2CDP\\EBI2CDPexcp.cpp"))
+	    quid       	"3F4B4E900261"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3F4B4ED400BB"
+		    supplier   	"Component View::EBI2CDP (I2C Digital Potentiometer)::EBI2CDPexcp"
+		    quidu      	"3F4B4E97031C"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBI2CDPexcp" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBI2CDP\\EBI2CDPexcp.h"))
+	    quid       	"3F4B4E97031C"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBI2CDPmain" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBI2CDP\\EBI2CDPmain.cpp"))
+	    quid       	"3F4B4EA10128"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3F4B4ED60148"
+		    supplier   	"Component View::EBI2CDP (I2C Digital Potentiometer)::EBI2CDPmain"
+		    quidu      	"3F4B4EA9002E"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBI2CDPmain" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBI2CDP\\EBI2CDPmain.h"))
+	    quid       	"3F4B4EA9002E"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBI2CDPregy" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBI2CDP\\EBI2CDPregy.cpp"))
+	    quid       	"3F4B4EAF00EA"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3F4B4ED80128"
+		    supplier   	"Component View::EBI2CDP (I2C Digital Potentiometer)::EBI2CDPregy"
+		    quidu      	"3F4B4EB6003E"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBI2CDPregy" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBI2CDP\\EBI2CDPregy.h"))
+	    quid       	"3F4B4EB6003E"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBI2CDPcrea" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBI2CDP\\EBI2CDPcrea.cpp"))
+	    quid       	"3F4B4EBF0119"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3F4B4EDA0138"
+		    supplier   	"Component View::EBI2CDP (I2C Digital Potentiometer)::EBI2CDPcrea"
+		    quidu      	"3F4B4EC70148"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBI2CDPcrea" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBI2CDP\\EBI2CDPcrea.h"))
+	    quid       	"3F4B4EC70148"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBI2CDPcomd" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBI2CDP\\EBI2CDPcomd.cpp"))
+	    quid       	"3FFBC9D902CE"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3FFBC9F7031C"
+		    supplier   	"Component View::EBI2CDP (I2C Digital Potentiometer)::EBI2CDPcomd"
+		    quidu      	"3FFBC9EB037A"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBI2CDPcomd" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBI2CDP\\EBI2CDPcomd.h"))
+	    quid       	"3FFBC9EB037A"
+	    stereotype 	"Package Specification"
+	    language   	"C++"))
+    physical_presentations 	(list unit_reference_list
+	(object Module_Diagram "main"
+	    quid       	"3F4B4E3F0000"
+	    title      	"main"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object ModView "Component View::EBI2CDP (I2C Digital Potentiometer)::EBI2CDPident" "PackageType" "Specification" @1
+		    location   	(376, 800)
+		    label      	(object ItemLabel
+			Parent_View 	@1
+			location   	(314, 604)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBI2CDPident")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F4B4E6B0000"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBI2CDP (I2C Digital Potentiometer)::EBI2CDPintf" "PackageType" "Body" @2
+		    location   	(1193, 487)
+		    label      	(object ItemLabel
+			Parent_View 	@2
+			location   	(1131, 291)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBI2CDPintf")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F4B4E7A036B"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBI2CDP (I2C Digital Potentiometer)::EBI2CDPintf" "PackageType" "Specification" @3
+		    location   	(1220, 1031)
+		    label      	(object ItemLabel
+			Parent_View 	@3
+			location   	(1158, 835)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBI2CDPintf")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F4B4E8502CE"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBI2CDP (I2C Digital Potentiometer)::EBI2CDPexcp" "PackageType" "Body" @4
+		    location   	(1800, 478)
+		    label      	(object ItemLabel
+			Parent_View 	@4
+			location   	(1738, 282)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBI2CDPexcp")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F4B4E900261"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBI2CDP (I2C Digital Potentiometer)::EBI2CDPexcp" "PackageType" "Specification" @5
+		    location   	(1815, 1012)
+		    label      	(object ItemLabel
+			Parent_View 	@5
+			location   	(1753, 816)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBI2CDPexcp")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F4B4E97031C"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBI2CDP (I2C Digital Potentiometer)::EBI2CDPmain" "PackageType" "Body" @6
+		    location   	(365, 1553)
+		    label      	(object ItemLabel
+			Parent_View 	@6
+			location   	(303, 1357)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBI2CDPmain")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F4B4EA10128"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBI2CDP (I2C Digital Potentiometer)::EBI2CDPmain" "PackageType" "Specification" @7
+		    location   	(382, 2090)
+		    label      	(object ItemLabel
+			Parent_View 	@7
+			location   	(320, 1894)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBI2CDPmain")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F4B4EA9002E"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBI2CDP (I2C Digital Potentiometer)::EBI2CDPregy" "PackageType" "Body" @8
+		    location   	(1036, 1549)
+		    label      	(object ItemLabel
+			Parent_View 	@8
+			location   	(974, 1353)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBI2CDPregy")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F4B4EAF00EA"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBI2CDP (I2C Digital Potentiometer)::EBI2CDPregy" "PackageType" "Specification" @9
+		    location   	(1040, 2102)
+		    label      	(object ItemLabel
+			Parent_View 	@9
+			location   	(978, 1906)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBI2CDPregy")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F4B4EB6003E"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBI2CDP (I2C Digital Potentiometer)::EBI2CDPcrea" "PackageType" "Body" @10
+		    location   	(1695, 1509)
+		    label      	(object ItemLabel
+			Parent_View 	@10
+			location   	(1633, 1313)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBI2CDPcrea")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F4B4EBF0119"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBI2CDP (I2C Digital Potentiometer)::EBI2CDPcrea" "PackageType" "Specification" @11
+		    location   	(1696, 2115)
+		    label      	(object ItemLabel
+			Parent_View 	@11
+			location   	(1634, 1919)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBI2CDPcrea")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F4B4EC70148"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @12
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3F4B4ED101F4"
+		    client     	@2
+		    supplier   	@3
+		    line_style 	0)
+		(object ModVisView "" @13
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3F4B4ED400BB"
+		    client     	@4
+		    supplier   	@5
+		    line_style 	0)
+		(object ModVisView "" @14
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3F4B4ED60148"
+		    client     	@6
+		    supplier   	@7
+		    line_style 	0)
+		(object ModVisView "" @15
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3F4B4ED80128"
+		    client     	@8
+		    supplier   	@9
+		    line_style 	0)
+		(object ModVisView "" @16
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3F4B4EDA0138"
+		    client     	@10
+		    supplier   	@11
+		    line_style 	0)
+		(object ModView "Component View::EBI2CDP (I2C Digital Potentiometer)::EBI2CDPcomd" "PackageType" "Body" @17
+		    location   	(2179, 1546)
+		    label      	(object ItemLabel
+			Parent_View 	@17
+			location   	(2117, 1350)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	543
+			label      	"EBI2CDPcomd")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3FFBC9D902CE"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBI2CDP (I2C Digital Potentiometer)::EBI2CDPcomd" "PackageType" "Specification" @18
+		    location   	(2199, 2103)
+		    label      	(object ItemLabel
+			Parent_View 	@18
+			location   	(2137, 1907)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	543
+			label      	"EBI2CDPcomd")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3FFBC9EB037A"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @19
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3FFBC9F7031C"
+		    client     	@17
+		    supplier   	@18
+		    line_style 	0)))))

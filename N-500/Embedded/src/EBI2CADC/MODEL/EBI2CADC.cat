@@ -1,0 +1,1700 @@
+
+(object Petal
+    version    	42
+    _written   	"Rose 4.5.8163.3"
+    charSet    	0)
+
+(object Class_Category "EBI2CADC (I2C ADC)"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    quid       	"3F49CFE2030D"
+    exportControl 	"Public"
+    subsystem  	"EBI2CADC (I2C ADC)"
+    quidu      	"3F49CFF0033C"
+    logical_models 	(list unit_reference_list
+	(object Class_Utility "I2CADC_IDENTIFIERS"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"cg_style"
+		    value      	"Dummy Class"))
+	    quid       	"3F49FA8A0290"
+	    module     	"Component View::EBI2CADC (I2C ADC)::EBI2CADCident (module spec)"
+	    quidu      	"3F49F7CF008C"
+	    language   	"C++")
+	(object Class "I2CADC_MAIN"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"cg_style"
+		    value      	"Dummy Class"))
+	    quid       	"3F49FACC0203"
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    quid       	"3F4A11160196"
+		    supplier   	"Logical View::EBI2CADC (I2C ADC)::CI2CADCInterfaceRegistry"
+		    quidu      	"3F4A1046035B"))
+	    module     	"Component View::EBI2CADC (I2C ADC)::EBI2CADCmain (module body)"
+	    quidu      	"3F49F9DE0196"
+	    module     	"Component View::EBI2CADC (I2C ADC)::EBI2CADCmain (module spec)"
+	    quidu      	"3F49F9EF0196"
+	    language   	"C++")
+	(object Class "CI2CADCMAX1037CreatorV0s"
+	    quid       	"3F4A070A007D"
+	    superclasses 	(list inheritance_relationship_list
+		(object Inheritance_Relationship
+		    quid       	"3F4A07260203"
+		    supplier   	"Logical View::EBPI (PC Interface)::CPIObjCreatorI2CADCMAX1037"
+		    quidu      	"3F49FB490119"))
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    quid       	"3F4A18BE0203"
+		    supplier   	"Logical View::EBI2CADC (I2C ADC)::CI2CADCMAX1037"
+		    quidu      	"3F4A122E0232"))
+	    operations 	(list Operations
+		(object Operation "Create"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3F4A07490261"
+		    stereotype 	"virtual"
+		    parameters 	(list Parameters
+			(object Parameter "p_uiID"
+			    type       	"UINT"))
+		    result     	"IPII2CADCMAX1037*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1061804156))
+	    module     	"Component View::EBI2CADC (I2C ADC)::EBI2CADCcrea (module body)"
+	    quidu      	"3F49FA1F03C8"
+	    module     	"Component View::EBI2CADC (I2C ADC)::EBI2CADCcrea (module spec)"
+	    quidu      	"3F49FA5003A9"
+	    language   	"C++")
+	(object Class "CI2CADCInterfaceRegistry"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"cg_style"
+		    value      	"ExtraLean")
+		(object Attribute
+		    tool       	"MSVC"
+		    name       	"DeclSpec"
+		    value      	"EBI2CADC_DLL_DECL")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"GenerateDefaultConstructor"
+		    value      	("GenerateSet" 206))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"GenerateDestructor"
+		    value      	FALSE))
+	    quid       	"3F4A1046035B"
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    quid       	"3F4A18B0009C"
+		    supplier   	"Logical View::EBI2CADC (I2C ADC)::CI2CADCMAX1037CreatorV0s"
+		    quidu      	"3F4A070A007D")
+		(object Uses_Relationship
+		    quid       	"3F4A1BD00177"
+		    supplier   	"Logical View::EBPI (PC Interface)::CPIObjectFactory"
+		    quidu      	"3DA52FD80189"))
+	    operations 	(list Operations
+		(object Operation "RegisterInterfaces"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 203))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Static"))
+		    quid       	"3F4A110B01E4"
+		    stereotype 	"static"
+		    result     	"void"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1061804157))
+	    module     	"Component View::EBI2CADC (I2C ADC)::EBI2CADCregy (module body)"
+	    quidu      	"3F49FA0000BB"
+	    module     	"Component View::EBI2CADC (I2C ADC)::EBI2CADCregy (module spec)"
+	    quidu      	"3F49FA0C007D"
+	    language   	"C++")
+	(object Class "CI2CADCMAX1037"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"cg_style"
+		    value      	"NoDefContr")
+		(object Attribute
+		    tool       	"MSVC"
+		    name       	"DeclSpec"
+		    value      	"EBI2CADC_DLL_DECL"))
+	    quid       	"3F4A122E0232"
+	    superclasses 	(list inheritance_relationship_list
+		(object Inheritance_Relationship
+		    quid       	"3F4A124900AB"
+		    supplier   	"Logical View::EBPI (PC Interface)::IPII2CADCMAX1037"
+		    quidu      	"3F49C9660290"))
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    quid       	"3F4A185E002E"
+		    supplier   	"Logical View::EBI2CADC (I2C ADC)::I2CADC_IDENTIFIERS"
+		    quidu      	"3F49FA8A0290")
+		(object Uses_Relationship
+		    quid       	"3F4A188C0186"
+		    supplier   	"Logical View::EBI2CSTDLIB (I2C Standard Library)::CI2CSTDLIBCmd"
+		    quidu      	"3EE891A00157")
+		(object Uses_Relationship
+		    quid       	"3F4A188E0109"
+		    supplier   	"Logical View::EBI2CSTDLIB (I2C Standard Library)::CI2CSTDLIBConvert"
+		    quidu      	"3EE5975C0138")
+		(object Uses_Relationship
+		    quid       	"3F5D79FA0290"
+		    supplier   	"Logical View::EBHI (Hardware Interface)::CHIProcessImageParameter"
+		    quidu      	"3EBA10D00128")
+		(object Uses_Relationship
+		    quid       	"3FFC18640119"
+		    supplier   	"Logical View::EBPI (PC Interface)::CPIComponentsState"
+		    quidu      	"3F4235EA0005")
+		(object Uses_Relationship
+		    quid       	"3FFC186700BB"
+		    supplier   	"Logical View::EBPI (PC Interface)::CPISyncObjI2CDataStream"
+		    quidu      	"3FD82B6701B5")
+		(object Uses_Relationship
+		    quid       	"3FFC186A0186"
+		    supplier   	"Logical View::EBHI (Hardware Interface)::CHII2CWorkerThread"
+		    quidu      	"3E227BB3027B")
+		(object Uses_Relationship
+		    quid       	"3FFC186D0138"
+		    supplier   	"Logical View::EBHI (Hardware Interface)::IHIInterface"
+		    quidu      	"3E2271C40106")
+		(object Uses_Relationship
+		    quid       	"3FFC186F02EE"
+		    supplier   	"Logical View::EBI2CADC (I2C ADC)::XI2CADCExceptionError"
+		    quidu      	"3F4A1D06002E")
+		(object Uses_Relationship
+		    quid       	"3FFC1872009C"
+		    supplier   	"Logical View::EBI2CADC (I2C ADC)::CI2CADCMAX1037Command"
+		    quidu      	"3FFC0E700261"))
+	    operations 	(list Operations
+		(object Operation "CI2CADCMAX1037"
+		    quid       	"3F4A17A70148"
+		    parameters 	(list Parameters
+			(object Parameter "p_uiID"
+			    type       	"UINT"))
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1061804165)
+		(object Operation "GetuiID"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3F4A1263000F"
+		    stereotype 	"virtual"
+		    result     	"UINT"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1061804158)
+		(object Operation "Startup"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3F4A1263001F"
+		    documentation 	
+|DESCRIPTION
+|Links the object to the hardware
+|
+|RETURNS
+|async void
+		    
+		    stereotype 	"virtual"
+		    result     	"CCOSyncObject*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1061804159)
+		(object Operation "Shutdown"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3F4A1263002E"
+		    documentation 	
+|DESCRIPTION
+|Detaches the object from the hardware
+|
+|RETURNS
+|async void
+		    
+		    stereotype 	"virtual"
+		    result     	"CCOSyncObject*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1061804160)
+		(object Operation "ConnectionEstablished"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3F4A1263003E"
+		    documentation 	
+|DESCRIPTION
+|The connection to the PC has been established
+|
+|RETURNS
+|async void
+		    
+		    stereotype 	"virtual"
+		    result     	"CCOSyncObject*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1061804161)
+		(object Operation "ConnectionLost"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3F4A1263004E"
+		    documentation 	
+|DESCRIPTION
+|The connection to the PC has been lost
+|
+|RETURNS
+|async void
+		    
+		    stereotype 	"virtual"
+		    result     	"CCOSyncObject*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1061804162)
+		(object Operation "GetData"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3F4A1263005D"
+		    documentation 	
+|DESCRIPTION
+|gets the actual temperature
+|
+|RETURNS
+|async int
+		    
+		    stereotype 	"virtual"
+		    result     	"CPISyncObjDataADCMAX1037*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1061804163)
+		(object Operation "Initialize"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3F4A1263006D"
+		    documentation 	
+|DESCRIPTION
+|intializes the ADC
+|
+|RETURNS
+|async void
+		    
+		    stereotype 	"virtual"
+		    result     	"CCOSyncObject*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1061804164)
+		(object Operation "Setup"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3FFC252D0000"
+		    documentation 	
+|DESCRIPTION
+|setup ADC
+|
+|RETURNS
+|async void
+		    
+		    stereotype 	"virtual"
+		    result     	"CCOSyncObject*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Private"
+		    uid        	1073545769)
+		(object Operation "Configure"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3FFC252E006D"
+		    documentation 	
+|DESCRIPTION
+|configure ADC
+|
+|RETURNS
+|async void
+		    
+		    stereotype 	"virtual"
+		    result     	"CCOSyncObject*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Private"
+		    uid        	1073545770))
+	    class_attributes 	(list class_attribute_list
+		(object ClassAttribute "cSetup"
+		    quid       	"3F4A12C301F4"
+		    documentation 	
+|DESCRIPTION:
+|Setup Byte:
+| - Internal Reference/AIN3=Analog Input / Ref. Always ON
+| - External Clock (no clock streching!!!)
+| - Unipolar range
+| - no configuration register reset
+		    
+		    type       	"BYTE"
+		    initv      	"0xDA")
+		(object ClassAttribute "cConfiguration"
+		    quid       	"3F4A12D801A5"
+		    documentation 	
+|DESCRIPTION:
+|Configuration Byte:
+| - Scan from AIN0 to AINx
+| - AIN3 Channel Select
+| - Single ended
+		    
+		    type       	"BYTE"
+		    initv      	"0x07")
+		(object ClassAttribute "cAdrWrite"
+		    quid       	"3F4A13030271"
+		    type       	"BYTE"
+		    initv      	"0xC8")
+		(object ClassAttribute "cAdrRead"
+		    quid       	"3F4A131B0271"
+		    type       	"BYTE"
+		    initv      	"0xC9")
+		(object ClassAttribute "cI2CDeviceAdr"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateGetOperation"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetIsConst"
+			    value      	TRUE))
+		    quid       	"3F5D79E90167"
+		    type       	"BYTE")
+		(object ClassAttribute "cI2CBusNumber"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateGetOperation"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetIsConst"
+			    value      	TRUE))
+		    quid       	"3F5D79E90186"
+		    type       	"BYTE")
+		(object ClassAttribute "cI2CTransferSpeed"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateGetOperation"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetIsConst"
+			    value      	TRUE))
+		    quid       	"3F5D79E90196"
+		    type       	"BYTE")
+		(object ClassAttribute "cI2CDevice"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateGetOperation"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetIsConst"
+			    value      	TRUE))
+		    quid       	"3F5D79E901A5"
+		    type       	"BYTE")
+		(object ClassAttribute "cMaskWriteAccess"
+		    quid       	"3FFD0D720251"
+		    type       	"BYTE"
+		    initv      	"0xFE")
+		(object ClassAttribute "cMaskReadAccess"
+		    quid       	"3FFD0D720280"
+		    type       	"BYTE"
+		    initv      	"0x01")
+		(object ClassAttribute "cMaskADCMAX1037"
+		    quid       	"3FFD0E870203"
+		    type       	"BYTE"
+		    initv      	"0x1"))
+	    module     	"Component View::EBI2CADC (I2C ADC)::EBI2CADCintf (module body)"
+	    quidu      	"3F49F7E900BB"
+	    module     	"Component View::EBI2CADC (I2C ADC)::EBI2CADCintf (module spec)"
+	    quidu      	"3F49F814007D"
+	    language   	"C++")
+	(object Class "XI2CADCExceptionError"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"cg_style"
+		    value      	"NoDefContr"))
+	    quid       	"3F4A1D06002E"
+	    superclasses 	(list inheritance_relationship_list
+		(object Inheritance_Relationship
+		    quid       	"3F4A1D180213"
+		    supplier   	"Logical View::EBCO (Core Classes)::XCOExceptionError"
+		    quidu      	"3BA649E20099"))
+	    operations 	(list Operations
+		(object Operation "XI2CADCExceptionError"
+		    quid       	"3F4A1EAC0109"
+		    parameters 	(list Parameters
+			(object Parameter "p_sUnitID"
+			    type       	"const CString&")
+			(object Parameter "p_uiExceptionID"
+			    type       	"const UINT")
+			(object Parameter "p_sModuleName"
+			    type       	"const CString&")
+			(object Parameter "p_uiModuleLine"
+			    type       	"const UINT")
+			(object Parameter "p_dwErrorCode"
+			    type       	"const DWORD"))
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1061804167)
+		(object Operation "XI2CADCExceptionError"
+		    quid       	"3F4A1EAC0186"
+		    parameters 	(list Parameters
+			(object Parameter "p_pOrigException"
+			    type       	"XCOExceptionError*"))
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1061804168)
+		(object Operation "Throw"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3F4A1EAC01C5"
+		    documentation 	
+|DESCRIPTION
+|Re-throws an exception without losing type information.
+|
+		    
+		    stereotype 	"virtual"
+		    result     	"void"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1061804169)
+		(object Operation "Clone"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3F4A1EAC01D4"
+		    documentation 	
+|DESCRIPTION
+|Clones the current exception.
+|
+|RETURNS
+|Pointer to clone
+|
+		    
+		    stereotype 	"virtual"
+		    result     	"XCOException*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1061804170))
+	    module     	"Component View::EBI2CADC (I2C ADC)::EBI2CADCexcp (module body)"
+	    quidu      	"3F49F8270290"
+	    module     	"Component View::EBI2CADC (I2C ADC)::EBI2CADCexcp (module spec)"
+	    quidu      	"3F49F8340177"
+	    language   	"C++")
+	(object Class "CI2CADCMAX1037Command"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"cg_style"
+		    value      	"NoDefContr"))
+	    quid       	"3FFC0E700261"
+	    superclasses 	(list inheritance_relationship_list
+		(object Inheritance_Relationship
+		    quid       	"3FFC0E8C03B9"
+		    supplier   	"Logical View::EBHI (Hardware Interface)::CHII2CCommand"
+		    quidu      	"3E22999502B9"))
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    quid       	"3FFC104902BF"
+		    supplier   	"Logical View::EBI2CADC (I2C ADC)::XI2CADCExceptionError"
+		    quidu      	"3F4A1D06002E")
+		(object Uses_Relationship
+		    quid       	"3FFC104C004E"
+		    supplier   	"Logical View::EBI2CADC (I2C ADC)::I2CADC_IDENTIFIERS"
+		    quidu      	"3F49FA8A0290")
+		(object Uses_Relationship
+		    quid       	"3FFC104E0222"
+		    supplier   	"Logical View::EBHI (Hardware Interface)::CHII2CParameter"
+		    quidu      	"3FD9C47E033C")
+		(object Uses_Relationship
+		    quid       	"3FFC10500261"
+		    supplier   	"Logical View::EBHI (Hardware Interface)::IHIInterface"
+		    quidu      	"3E2271C40106"))
+	    operations 	(list Operations
+		(object Operation "CI2CADCMAX1037Command"
+		    quid       	"3FFC0EA80222"
+		    parameters 	(list Parameters
+			(object Parameter "p_pcI2CStream"
+			    type       	"BYTE*")
+			(object Parameter "p_nLength"
+			    type       	"int")
+			(object Parameter "p_dwI2CBusNumber"
+			    type       	"DWORD")
+			(object Parameter "p_dwI2CTransferSpeed"
+			    type       	"DWORD"))
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1073465618)
+		(object Operation "Execute"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3FFC0EA80232"
+		    documentation 	
+|DESCRIPTION
+|Executes the current command.
+|
+|PARAMETERS
+|-
+|
+|RETURNS
+|true, if the command is finished and the clients sync object may be signalled
+		    
+		    stereotype 	"virtual"
+		    result     	"bool"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1073465619))
+	    class_attributes 	(list class_attribute_list
+		(object ClassAttribute "dwI2CBusNumber"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateGetOperation"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetIsConst"
+			    value      	TRUE))
+		    quid       	"3FFD5F5D004E"
+		    type       	"DWORD"
+		    initv      	"p_dwI2CBusNumber")
+		(object ClassAttribute "dwI2CTransferSpeed"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateGetOperation"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetIsConst"
+			    value      	TRUE))
+		    quid       	"3FFD5F5D007D"
+		    type       	"DWORD"
+		    initv      	"p_dwI2CTransferSpeed"))
+	    module     	"Component View::EBI2CADC (I2C ADC)::EBI2CADCcomd (module body)"
+	    quidu      	"3FFC0DFC034B"
+	    module     	"Component View::EBI2CADC (I2C ADC)::EBI2CADCcomd (module spec)"
+	    quidu      	"3FFC0E0A004E"
+	    language   	"C++")
+	(object Association "$UNNAMED$0"
+	    quid       	"3F4A161E0186"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$1"
+		    quid       	"3F4A161E034B"
+		    supplier   	"Logical View::EBI2CADC (I2C ADC)::CI2CADCMAX1037"
+		    quidu      	"3F4A122E0232"
+		    client_cardinality 	(value cardinality "1..1")
+		    is_aggregate 	TRUE)
+		(object Role "uiID"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"InitialValue"
+			    value      	(value Text "p_uiID")))
+		    quid       	"3F4A161E038A"
+		    label      	"uiID"
+		    supplier   	"Logical View::IMWINS (Microsoft Windows)::UINT"
+		    quidu      	"369DEAA80004"
+		    client_cardinality 	(value cardinality "1..1")
+		    Containment 	"By Value"
+		    is_navigable 	TRUE)))
+	(object Association "$UNNAMED$2"
+	    quid       	"3FFC0ECC031C"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$3"
+		    quid       	"3FFC0ECD0138"
+		    supplier   	"Logical View::EBI2CADC (I2C ADC)::CI2CADCMAX1037Command"
+		    quidu      	"3FFC0E700261"
+		    client_cardinality 	(value cardinality "1..1")
+		    is_aggregate 	TRUE)
+		(object Role "pI2CDataStream"
+		    quid       	"3FFC0ECD0139"
+		    label      	"pI2CDataStream"
+		    supplier   	"Logical View::EBPI (PC Interface)::CPII2CDataStream"
+		    quidu      	"3FD8310603B9"
+		    client_cardinality 	(value cardinality "1..1")
+		    Containment 	"By Reference"
+		    is_navigable 	TRUE)))
+	(object Association "$UNNAMED$4"
+	    quid       	"3FFC17EB01F4"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$5"
+		    quid       	"3FFC17EC008C"
+		    supplier   	"Logical View::EBI2CADC (I2C ADC)::CI2CADCMAX1037"
+		    quidu      	"3F4A122E0232"
+		    client_cardinality 	(value cardinality "1..1")
+		    is_aggregate 	TRUE)
+		(object Role "bHWPresent"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"InitialValue"
+			    value      	(value Text "false")))
+		    quid       	"3FFC17EC008D"
+		    label      	"bHWPresent"
+		    supplier   	"Logical View::IMWINS (Microsoft Windows)::bool"
+		    quidu      	"369DEAA80005"
+		    client_cardinality 	(value cardinality "1..1")
+		    Containment 	"By Value"
+		    is_navigable 	TRUE))))
+    logical_presentations 	(list unit_reference_list
+	(object ClassDiagram "0.0 Globals"
+	    quid       	"3F49FA700119"
+	    title      	"0.0 Globals"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object ClassView "ClassUtility" "Logical View::EBI2CADC (I2C ADC)::I2CADC_IDENTIFIERS" @1
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(525, 518)
+		    label      	(object ItemLabel
+			Parent_View 	@1
+			location   	(302, 467)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	446
+			justify    	0
+			label      	"I2CADC_IDENTIFIERS")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F49FA8A0290"
+		    width      	464
+		    height     	126
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBI2CADC (I2C ADC)::I2CADC_MAIN" @2
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1203, 524)
+		    label      	(object ItemLabel
+			Parent_View 	@2
+			location   	(1053, 473)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	300
+			justify    	0
+			label      	"I2CADC_MAIN")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F49FACC0203"
+		    width      	318
+		    height     	126
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBI2CADC (I2C ADC)::CI2CADCInterfaceRegistry" @3
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1461, 1152)
+		    label      	(object ItemLabel
+			Parent_View 	@3
+			location   	(1206, 1101)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	510
+			justify    	0
+			label      	"CI2CADCInterfaceRegistry")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F4A1046035B"
+		    width      	528
+		    height     	126
+		    autoResize 	TRUE)
+		(object UsesView "" @4
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3F4A11160196"
+		    client     	@2
+		    supplier   	@3
+		    line_style 	0)
+		(object ClassView "Class" "Logical View::EBPI (PC Interface)::CPIObjectFactory" @5
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1940, 1631)
+		    label      	(object ItemLabel
+			Parent_View 	@5
+			location   	(1750, 1556)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	380
+			justify    	0
+			label      	"CPIObjectFactory")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DA52FD80189"
+		    width      	398
+		    height     	174
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object UsesView "" @6
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3F4A1BD00177"
+		    client     	@3
+		    supplier   	@5
+		    line_style 	0)))
+	(object ClassDiagram "0.1 Creators / Registry"
+	    quid       	"3F49FB05006D"
+	    title      	"0.1 Creators / Registry"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object ClassView "InstantiatedClass" "Logical View::EBPI (PC Interface)::CPIObjCreatorI2CADCMAX1037" @7
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(687, 371)
+		    label      	(object ItemLabel
+			Parent_View 	@7
+			location   	(386, 296)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	602
+			justify    	0
+			label      	"CPIObjCreatorI2CADCMAX1037")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F49FB490119"
+		    width      	620
+		    height     	174
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBI2CADC (I2C ADC)::CI2CADCMAX1037CreatorV0s" @8
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(687, 1109)
+		    label      	(object ItemLabel
+			Parent_View 	@8
+			location   	(398, 1028)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	578
+			justify    	0
+			label      	"CI2CADCMAX1037CreatorV0s")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F4A070A007D"
+		    width      	596
+		    height     	186
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object InheritView "" @9
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3F4A07260203"
+		    client     	@8
+		    supplier   	@7
+		    line_style 	0)
+		(object ClassView "Class" "Logical View::EBI2CADC (I2C ADC)::CI2CADCInterfaceRegistry" @10
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(1542, 637)
+		    label      	(object ItemLabel
+			Parent_View 	@10
+			location   	(1235, 556)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	614
+			justify    	0
+			label      	"CI2CADCInterfaceRegistry")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F4A1046035B"
+		    width      	632
+		    height     	186
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object UsesView "" @11
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3F4A18B0009C"
+		    client     	@10
+		    supplier   	@8
+		    line_style 	0)
+		(object ClassView "Class" "Logical View::EBI2CADC (I2C ADC)::CI2CADCMAX1037" @12
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1778, 1131)
+		    label      	(object ItemLabel
+			Parent_View 	@12
+			location   	(1590, 1080)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	376
+			justify    	0
+			label      	"CI2CADCMAX1037")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F4A122E0232"
+		    width      	394
+		    height     	126
+		    autoResize 	TRUE)
+		(object UsesView "" @13
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3F4A18BE0203"
+		    client     	@8
+		    supplier   	@12
+		    line_style 	0)))
+	(object ClassDiagram "1.0 Sync Interface"
+	    quid       	"3F4A120C0271"
+	    title      	"1.0 Sync Interface"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object ClassView "Class" "Logical View::EBPI (PC Interface)::IPII2CADCMAX1037" @14
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(762, 406)
+		    label      	(object ItemLabel
+			Parent_View 	@14
+			location   	(564, 331)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	396
+			justify    	0
+			label      	"IPII2CADCMAX1037")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F49C9660290"
+		    width      	414
+		    height     	174
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::IMWINS (Microsoft Windows)::UINT" @15
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1081, 1877)
+		    label      	(object ItemLabel
+			Parent_View 	@15
+			location   	(1000, 1826)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	162
+			justify    	0
+			label      	"UINT")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"369DEAA80004"
+		    height     	126
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBI2CADC (I2C ADC)::CI2CADCMAX1037" @16
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(762, 1278)
+		    label      	(object ItemLabel
+			Parent_View 	@16
+			location   	(408, 972)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	708
+			justify    	0
+			label      	"CI2CADCMAX1037")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F4A122E0232"
+		    compartment 	(object Compartment
+			Parent_View 	@16
+			location   	(408, 1032)
+			icon_style 	"Icon"
+			fill_color 	16777215
+			anchor     	2
+			nlines     	11
+			max_width  	706)
+		    width      	726
+		    height     	636
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object InheritView "" @17
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3F4A124900AB"
+		    client     	@16
+		    supplier   	@14
+		    line_style 	0)
+		(object AssociationViewNew "$UNNAMED$0" @18
+		    location   	(989, 1704)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3F4A161E0186"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$1" @19
+			    Parent_View 	@18
+			    location   	(-92, -173)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3F4A161E034B"
+			    client     	@18
+			    supplier   	@16
+			    line_style 	0
+			    label      	(object SegLabel @20
+				Parent_View 	@19
+				location   	(1013, 1615)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.551606
+				height     	64
+				orientation 	1))
+			(object RoleView "uiID" @21
+			    Parent_View 	@18
+			    location   	(-92, -173)
+			    label      	(object SegLabel @22
+				Parent_View 	@21
+				location   	(992, 1706)
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	96
+				justify    	0
+				label      	"+uiID"
+				pctDist    	0.022044
+				height     	2
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3F4A161E038A"
+			    client     	@18
+			    supplier   	@15
+			    line_style 	0
+			    label      	(object SegLabel @23
+				Parent_View 	@21
+				location   	(1096, 1779)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.934161
+				height     	60
+				orientation 	0))))
+		(object ClassView "Class" "Logical View::IMWINS (Microsoft Windows)::bool" @24
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1968, 1322)
+		    label      	(object ItemLabel
+			Parent_View 	@24
+			location   	(1887, 1271)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	162
+			justify    	0
+			label      	"bool")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"369DEAA80005"
+		    height     	126
+		    autoResize 	TRUE)
+		(object AssociationViewNew "$UNNAMED$4" @25
+		    location   	(1501, 1304)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3FFC17EB01F4"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$5" @26
+			    Parent_View 	@25
+			    location   	(-467, -18)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3FFC17EC008C"
+			    client     	@25
+			    supplier   	@16
+			    line_style 	0
+			    label      	(object SegLabel @27
+				Parent_View 	@26
+				location   	(1163, 1345)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	0))
+			(object RoleView "bHWPresent" @28
+			    Parent_View 	@25
+			    location   	(-467, -18)
+			    label      	(object SegLabel @29
+				Parent_View 	@28
+				location   	(1588, 1276)
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	264
+				justify    	0
+				label      	"+bHWPresent"
+				pctDist    	0.228195
+				height     	32
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3FFC17EC008D"
+			    client     	@25
+			    supplier   	@24
+			    line_style 	0
+			    label      	(object SegLabel @30
+				Parent_View 	@28
+				location   	(1837, 1371)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	1))))))
+	(object ClassDiagram "1.1 Sync Interface Uses"
+	    quid       	"3F4A18380222"
+	    title      	"1.1 Sync Interface Uses"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object ClassView "Class" "Logical View::EBI2CADC (I2C ADC)::CI2CADCMAX1037" @31
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(640, 771)
+		    label      	(object ItemLabel
+			Parent_View 	@31
+			location   	(452, 720)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	376
+			justify    	0
+			label      	"CI2CADCMAX1037")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F4A122E0232"
+		    width      	394
+		    height     	126
+		    autoResize 	TRUE)
+		(object ClassView "ClassUtility" "Logical View::EBI2CADC (I2C ADC)::I2CADC_IDENTIFIERS" @32
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1815, 521)
+		    label      	(object ItemLabel
+			Parent_View 	@32
+			location   	(1592, 470)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	446
+			justify    	0
+			label      	"I2CADC_IDENTIFIERS")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F49FA8A0290"
+		    width      	464
+		    height     	126
+		    autoResize 	TRUE)
+		(object UsesView "" @33
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3F4A185E002E"
+		    client     	@31
+		    supplier   	@32
+		    line_style 	0)
+		(object ClassView "Class" "Logical View::EBI2CSTDLIB (I2C Standard Library)::CI2CSTDLIBCmd" @34
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(770, 2068)
+		    label      	(object ItemLabel
+			Parent_View 	@34
+			location   	(599, 2017)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	342
+			justify    	0
+			label      	"CI2CSTDLIBCmd")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EE891A00157"
+		    width      	360
+		    height     	126
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBI2CSTDLIB (I2C Standard Library)::CI2CSTDLIBConvert" @35
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(344, 1771)
+		    label      	(object ItemLabel
+			Parent_View 	@35
+			location   	(150, 1720)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	388
+			justify    	0
+			label      	"CI2CSTDLIBConvert")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EE5975C0138"
+		    width      	406
+		    height     	126
+		    autoResize 	TRUE)
+		(object UsesView "" @36
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3F4A188C0186"
+		    client     	@31
+		    supplier   	@34
+		    line_style 	0)
+		(object UsesView "" @37
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3F4A188E0109"
+		    client     	@31
+		    supplier   	@35
+		    line_style 	0)
+		(object ClassView "Class" "Logical View::EBHI (Hardware Interface)::CHIProcessImageParameter" @38
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1395, 2087)
+		    label      	(object ItemLabel
+			Parent_View 	@38
+			location   	(1121, 2036)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	548
+			justify    	0
+			label      	"CHIProcessImageParameter")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EBA10D00128"
+		    width      	566
+		    height     	126
+		    autoResize 	TRUE)
+		(object UsesView "" @39
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3F5D79FA0290"
+		    client     	@31
+		    supplier   	@38
+		    line_style 	0)
+		(object ClassView "Class" "Logical View::EBI2CADC (I2C ADC)::CI2CADCMAX1037Command" @40
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1586, 234)
+		    label      	(object ItemLabel
+			Parent_View 	@40
+			location   	(1306, 183)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	560
+			justify    	0
+			label      	"CI2CADCMAX1037Command")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3FFC0E700261"
+		    width      	578
+		    height     	126
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBI2CADC (I2C ADC)::XI2CADCExceptionError" @41
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(2259, 749)
+		    label      	(object ItemLabel
+			Parent_View 	@41
+			location   	(2024, 698)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	470
+			justify    	0
+			label      	"XI2CADCExceptionError")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F4A1D06002E"
+		    width      	488
+		    height     	126
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBHI (Hardware Interface)::IHIInterface" @42
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(2193, 1169)
+		    label      	(object ItemLabel
+			Parent_View 	@42
+			location   	(2075, 1118)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	236
+			justify    	0
+			label      	"IHIInterface")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E2271C40106"
+		    width      	254
+		    height     	126
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBHI (Hardware Interface)::CHII2CWorkerThread" @43
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(2062, 1409)
+		    label      	(object ItemLabel
+			Parent_View 	@43
+			location   	(1859, 1358)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	406
+			justify    	0
+			label      	"CHII2CWorkerThread")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E227BB3027B"
+		    width      	424
+		    height     	126
+		    autoResize 	TRUE)
+		(object ClassView "InstantiatedClass" "Logical View::EBPI (PC Interface)::CPISyncObjI2CDataStream" @44
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1987, 1718)
+		    label      	(object ItemLabel
+			Parent_View 	@44
+			location   	(1724, 1667)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	526
+			justify    	0
+			label      	"CPISyncObjI2CDataStream")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3FD82B6701B5"
+		    width      	544
+		    height     	126
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBPI (PC Interface)::CPIComponentsState" @45
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1834, 1903)
+		    label      	(object ItemLabel
+			Parent_View 	@45
+			location   	(1625, 1852)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	418
+			justify    	0
+			label      	"CPIComponentsState")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F4235EA0005"
+		    width      	436
+		    height     	126
+		    autoResize 	TRUE)
+		(object UsesView "" @46
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3FFC18640119"
+		    client     	@31
+		    supplier   	@45
+		    line_style 	0)
+		(object UsesView "" @47
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3FFC186700BB"
+		    client     	@31
+		    supplier   	@44
+		    line_style 	0)
+		(object UsesView "" @48
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3FFC186A0186"
+		    client     	@31
+		    supplier   	@43
+		    line_style 	0)
+		(object UsesView "" @49
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3FFC186D0138"
+		    client     	@31
+		    supplier   	@42
+		    line_style 	0)
+		(object UsesView "" @50
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3FFC186F02EE"
+		    client     	@31
+		    supplier   	@41
+		    line_style 	0)
+		(object UsesView "" @51
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3FFC1872009C"
+		    client     	@31
+		    supplier   	@40
+		    line_style 	0)))
+	(object ClassDiagram "5.0 Exceptions"
+	    quid       	"3F4A1CE702EE"
+	    title      	"5.0 Exceptions"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object ClassView "Class" "Logical View::EBCO (Core Classes)::XCOExceptionError" @52
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(803, 666)
+		    label      	(object ItemLabel
+			Parent_View 	@52
+			location   	(612, 615)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	382
+			justify    	0
+			label      	"XCOExceptionError")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3BA649E20099"
+		    width      	400
+		    height     	126
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBI2CADC (I2C ADC)::XI2CADCExceptionError" @53
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(803, 1143)
+		    label      	(object ItemLabel
+			Parent_View 	@53
+			location   	(547, 987)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	512
+			justify    	0
+			label      	"XI2CADCExceptionError")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F4A1D06002E"
+		    width      	530
+		    height     	336
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object InheritView "" @54
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3F4A1D180213"
+		    client     	@53
+		    supplier   	@52
+		    line_style 	0)))
+	(object ClassDiagram "2.0 Async I2C Commands"
+	    quid       	"3FFC0E2402DE"
+	    title      	"2.0 Async I2C Commands"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object ClassView "Class" "Logical View::EBHI (Hardware Interface)::CHII2CCommand" @55
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(706, 709)
+		    label      	(object ItemLabel
+			Parent_View 	@55
+			location   	(535, 658)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	342
+			justify    	0
+			label      	"CHII2CCommand")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E22999502B9"
+		    width      	360
+		    height     	126
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBI2CADC (I2C ADC)::CI2CADCMAX1037Command" @56
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(708, 1143)
+		    label      	(object ItemLabel
+			Parent_View 	@56
+			location   	(405, 1037)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	606
+			justify    	0
+			label      	"CI2CADCMAX1037Command")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3FFC0E700261"
+		    width      	624
+		    height     	236
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object InheritView "" @57
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3FFC0E8C03B9"
+		    client     	@56
+		    supplier   	@55
+		    line_style 	0)
+		(object ClassView "Class" "Logical View::EBPI (PC Interface)::CPII2CDataStream" @58
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1225, 1674)
+		    label      	(object ItemLabel
+			Parent_View 	@58
+			location   	(1037, 1623)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	376
+			justify    	0
+			label      	"CPII2CDataStream")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3FD8310603B9"
+		    width      	394
+		    height     	126
+		    autoResize 	TRUE)
+		(object AssociationViewNew "$UNNAMED$2" @59
+		    location   	(993, 1435)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3FFC0ECC031C"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$3" @60
+			    Parent_View 	@59
+			    location   	(-475, -80)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3FFC0ECD0138"
+			    client     	@59
+			    supplier   	@56
+			    line_style 	0
+			    label      	(object SegLabel @61
+				Parent_View 	@60
+				location   	(912, 1279)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.697208
+				height     	52
+				orientation 	1))
+			(object RoleView "pI2CDataStream" @62
+			    Parent_View 	@59
+			    location   	(-475, -80)
+			    label      	(object SegLabel @63
+				Parent_View 	@62
+				location   	(1062, 1423)
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	324
+				justify    	0
+				label      	"+pI2CDataStream"
+				pctDist    	0.158841
+				height     	59
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3FFC0ECD0139"
+			    client     	@59
+			    supplier   	@58
+			    line_style 	0
+			    label      	(object SegLabel @64
+				Parent_View 	@62
+				location   	(1225, 1576)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	1.077026
+				height     	69
+				orientation 	0))))))
+	(object ClassDiagram "2.1 Async I2C Commands Uses"
+	    quid       	"3FFC0E300242"
+	    title      	"2.1 Async I2C Commands Uses"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object ClassView "Class" "Logical View::EBI2CADC (I2C ADC)::CI2CADCMAX1037Command" @65
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(726, 803)
+		    label      	(object ItemLabel
+			Parent_View 	@65
+			location   	(446, 752)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	560
+			justify    	0
+			label      	"CI2CADCMAX1037Command")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3FFC0E700261"
+		    width      	578
+		    height     	126
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBHI (Hardware Interface)::IHIInterface" @66
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(528, 1403)
+		    label      	(object ItemLabel
+			Parent_View 	@66
+			location   	(410, 1352)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	236
+			justify    	0
+			label      	"IHIInterface")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E2271C40106"
+		    width      	254
+		    height     	126
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBHI (Hardware Interface)::CHII2CParameter" @67
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1281, 1459)
+		    label      	(object ItemLabel
+			Parent_View 	@67
+			location   	(1109, 1408)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	344
+			justify    	0
+			label      	"CHII2CParameter")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3FD9C47E033C"
+		    width      	362
+		    height     	126
+		    autoResize 	TRUE)
+		(object ClassView "ClassUtility" "Logical View::EBI2CADC (I2C ADC)::I2CADC_IDENTIFIERS" @68
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1815, 1128)
+		    label      	(object ItemLabel
+			Parent_View 	@68
+			location   	(1592, 1077)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	446
+			justify    	0
+			label      	"I2CADC_IDENTIFIERS")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F49FA8A0290"
+		    width      	464
+		    height     	126
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBI2CADC (I2C ADC)::XI2CADCExceptionError" @69
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1818, 671)
+		    label      	(object ItemLabel
+			Parent_View 	@69
+			location   	(1583, 620)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	470
+			justify    	0
+			label      	"XI2CADCExceptionError")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F4A1D06002E"
+		    width      	488
+		    height     	126
+		    autoResize 	TRUE)
+		(object UsesView "" @70
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3FFC104902BF"
+		    client     	@65
+		    supplier   	@69
+		    line_style 	0)
+		(object UsesView "" @71
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3FFC104C004E"
+		    client     	@65
+		    supplier   	@68
+		    line_style 	0)
+		(object UsesView "" @72
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3FFC104E0222"
+		    client     	@65
+		    supplier   	@67
+		    line_style 	0)
+		(object UsesView "" @73
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3FFC10500261"
+		    client     	@65
+		    supplier   	@66
+		    line_style 	0)))))

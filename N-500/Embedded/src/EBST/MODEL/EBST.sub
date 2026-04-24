@@ -1,0 +1,1417 @@
+
+(object Petal
+    version    	42
+    _written   	"Rose 4.5.8163.3"
+    charSet    	0)
+
+(object SubSystem "EBST (Stepper Motor)"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    attributes 	(list Attribute_Set
+	(object Attribute
+	    tool       	"cg"
+	    name       	"Directory"
+	    value      	"Embedded\\Src\\EBST"))
+    quid       	"3DA5BC6C0264"
+    physical_models 	(list unit_reference_list
+	(object module "EBSTintf" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBST\\EBSTintf.h"))
+	    quid       	"3DA5BCC70034"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBSTintf" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBST\\EBSTintf.cpp"))
+	    quid       	"3DA5BCCD006F"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3DA5BCD3023A"
+		    supplier   	"Component View::EBST (Stepper Motor)::EBSTintf"
+		    quidu      	"3DA5BCC70034"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBSTcrea" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBST\\EBSTcrea.h"))
+	    quid       	"3DA5C60D024B"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBSTcrea" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBST\\EBSTcrea.cpp"))
+	    quid       	"3DA5C6130326"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3DA5C619014E"
+		    supplier   	"Component View::EBST (Stepper Motor)::EBSTcrea"
+		    quidu      	"3DA5C60D024B"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBSTregy" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBST\\EBSTregy.h"))
+	    quid       	"3DA5C915023D"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBSTregy" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBST\\EBSTregy.cpp"))
+	    quid       	"3DA5C91E025E"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3DA5C92400FE"
+		    supplier   	"Component View::EBST (Stepper Motor)::EBSTregy"
+		    quidu      	"3DA5C915023D"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBSTimpl" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBST\\EBSTimpl.h"))
+	    quid       	"3DA5DDF202FB"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBSTimpl" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBST\\EBSTimpl.cpp"))
+	    quid       	"3DA5DDFB00C3"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3DA5DE0102DE"
+		    supplier   	"Component View::EBST (Stepper Motor)::EBSTimpl"
+		    quidu      	"3DA5DDF202FB"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBSTidnt" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBST\\EBSTidnt.h"))
+	    quid       	"3DA6BE7B0210"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBSTsten" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBST\\EBSTsten.h"))
+	    quid       	"3DA6C17A03E5"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBSTsten" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBST\\EBSTsten.cpp"))
+	    quid       	"3DA6C18701B3"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3DA6C18E004B"
+		    supplier   	"Component View::EBST (Stepper Motor)::EBSTsten"
+		    quidu      	"3DA6C17A03E5"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBSTstat" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBST\\EBSTstat.h"))
+	    quid       	"3DA6C2490378"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBSTstat" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBST\\EBSTstat.cpp"))
+	    quid       	"3DA6C2500099"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3DA6C256000D"
+		    supplier   	"Component View::EBST (Stepper Motor)::EBSTstat"
+		    quidu      	"3DA6C2490378"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBSTidle" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBST\\EBSTidle.h"))
+	    quid       	"3DA6C26303D5"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBSTidle" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBST\\EBSTidle.cpp"))
+	    quid       	"3DA6C2660107"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3DA6C274025E"
+		    supplier   	"Component View::EBST (Stepper Motor)::EBSTidle"
+		    quidu      	"3DA6C26303D5"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBSTcomd" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBST\\EBSTcomd.h"))
+	    quid       	"3DAA5DCF00FC"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBSTcomd" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBST\\EBSTcomd.cpp"))
+	    quid       	"3DAA5DD403AB"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3DAA5DD9039C"
+		    supplier   	"Component View::EBST (Stepper Motor)::EBSTcomd"
+		    quidu      	"3DAA5DCF00FC"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBSTmoving" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBST\\EBSTmoving.h"))
+	    quid       	"3E71A71301F3"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBSTmoving" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBST\\EBSTmoving.cpp"))
+	    quid       	"3E71A71501D4"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3E71A739001E"
+		    supplier   	"Component View::EBST (Stepper Motor)::EBSTmoving"
+		    quidu      	"3E71A71301F3"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBSTconfig" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBST\\EBSTconfig.h"))
+	    quid       	"3E71A7470251"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBSTconfig" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBST\\EBSTconfig.cpp"))
+	    quid       	"3E71A74A028F"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3E75E270011D"
+		    supplier   	"Component View::EBST (Stepper Motor)::EBSTconfig"
+		    quidu      	"3E71A7470251"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBSThoming" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBST\\EBSThoming.h"))
+	    quid       	"3E71A7780251"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBSThoming" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBST\\EBSThoming.cpp"))
+	    quid       	"3E71A77A03E7"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3E71A79B0222"
+		    supplier   	"Component View::EBST (Stepper Motor)::EBSThoming"
+		    quidu      	"3E71A7780251"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBSTlogic" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBST\\EBSTlogic.h"))
+	    quid       	"3E75E2660360"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBSTlogic" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBST\\EBSTlogic.cpp"))
+	    quid       	"3E75E2740294"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3E75E287036F"
+		    supplier   	"Component View::EBST (Stepper Motor)::EBSTlogic"
+		    quidu      	"3E75E2660360"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBSTdebug" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBST\\EBSTdebug.h"))
+	    quid       	"3E75E7800246"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBSTdebug" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBST\\EBSTdebug.cpp"))
+	    quid       	"3E75E78D0302"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3E75E7940311"
+		    supplier   	"Component View::EBST (Stepper Motor)::EBSTdebug"
+		    quidu      	"3E75E7800246"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBSTlimit" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBST\\EBSTlimit.cpp"))
+	    quid       	"3E797F3D0267"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3E797F560005"
+		    supplier   	"Component View::EBST (Stepper Motor)::EBSTlimit"
+		    quidu      	"3E797F3F03BF"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBSTlimit" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBST\\EBSTlimit.h"))
+	    quid       	"3E797F3F03BF"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBSTlmwk" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBST\\EBSTlmwk.h"))
+	    quid       	"3E7AD31C004B"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBSTlmwk" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBST\\EBSTlmwk.cpp"))
+	    quid       	"3E7AD325003B"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3E7AD3300126"
+		    supplier   	"Component View::EBST (Stepper Motor)::EBSTlmwk"
+		    quidu      	"3E7AD31C004B"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBSTexcp" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBST\\EBSTexcp.cpp"))
+	    quid       	"3ECA3CA101C9"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3ECA3D46010E"
+		    supplier   	"Component View::EBST (Stepper Motor)::EBSTexcp"
+		    quidu      	"3ECA3D3F0208"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBSTexcp" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBST\\EBSTexcp.h"))
+	    quid       	"3ECA3D3F0208"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBSTconn" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBST\\EBSTconn.h"))
+	    quid       	"3EE5C9AF012E"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBSTconn" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBST\\EBSTconn.cpp"))
+	    quid       	"3EE5C9C50380"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3EE5C9CF0295"
+		    supplier   	"Component View::EBST (Stepper Motor)::EBSTconn"
+		    quidu      	"3EE5C9AF012E"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBSTmain" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBST\\EBSTmain.h"))
+	    quid       	"3EF063BB02B9"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBSTmain" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBST\\EBSTmain.cpp"))
+	    quid       	"3EF063BD0123"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3EF063D100E7"
+		    supplier   	"Component View::EBST (Stepper Motor)::EBSTmain"
+		    quidu      	"3EF063BB02B9"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBSThwconn" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBST\\EBSThwconn.cpp"))
+	    quid       	"3F3234310266"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3F32343902B4"
+		    supplier   	"Component View::EBST (Stepper Motor)::EBSThwconn"
+		    quidu      	"3F3234340208"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBSThwconn" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBST\\EBSThwconn.h"))
+	    quid       	"3F3234340208"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBSTactn" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBST\\EBSTactn.h"))
+	    quid       	"3FBA3851035F"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBSTactn" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBST\\EBSTactn.cpp"))
+	    quid       	"3FBA385B018B"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3FBA38620302"
+		    supplier   	"Component View::EBST (Stepper Motor)::EBSTactn"
+		    quidu      	"3FBA3851035F"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBSThome" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBST\\EBSThome.cpp"))
+	    quid       	"4341377602C0"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"434137B90136"
+		    supplier   	"Component View::EBST (Stepper Motor)::EBSThome"
+		    quidu      	"434137B002D8"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBSThome" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBST\\EBSThome.h"))
+	    quid       	"434137B002D8"
+	    stereotype 	"Package Specification"
+	    language   	"C++"))
+    physical_presentations 	(list unit_reference_list
+	(object Module_Diagram "1.0 Main"
+	    quid       	"3DA5BCC0014D"
+	    title      	"1.0 Main"
+	    zoom       	87
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	4018
+	    items      	(list diagram_item_list
+		(object ModView "Component View::EBST (Stepper Motor)::EBSTintf" "PackageType" "Specification" @1
+		    location   	(680, 260)
+		    label      	(object ItemLabel
+			Parent_View 	@1
+			location   	(618, 64)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBSTintf")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DA5BCC70034"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBST (Stepper Motor)::EBSTintf" "PackageType" "Body" @2
+		    location   	(682, 741)
+		    label      	(object ItemLabel
+			Parent_View 	@2
+			location   	(620, 545)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBSTintf")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DA5BCCD006F"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @3
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DA5BCD3023A"
+		    client     	@2
+		    supplier   	@1
+		    line_style 	0)
+		(object ModView "Component View::EBST (Stepper Motor)::EBSTcrea" "PackageType" "Specification" @4
+		    location   	(1223, 250)
+		    label      	(object ItemLabel
+			Parent_View 	@4
+			location   	(1161, 54)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBSTcrea")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DA5C60D024B"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBST (Stepper Motor)::EBSTcrea" "PackageType" "Body" @5
+		    location   	(1237, 749)
+		    label      	(object ItemLabel
+			Parent_View 	@5
+			location   	(1175, 553)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBSTcrea")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DA5C6130326"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @6
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DA5C619014E"
+		    client     	@5
+		    supplier   	@4
+		    line_style 	0)
+		(object ModView "Component View::EBST (Stepper Motor)::EBSTregy" "PackageType" "Specification" @7
+		    location   	(1786, 266)
+		    label      	(object ItemLabel
+			Parent_View 	@7
+			location   	(1724, 70)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBSTregy")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DA5C915023D"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBST (Stepper Motor)::EBSTregy" "PackageType" "Body" @8
+		    location   	(1793, 763)
+		    label      	(object ItemLabel
+			Parent_View 	@8
+			location   	(1731, 567)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBSTregy")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DA5C91E025E"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @9
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DA5C92400FE"
+		    client     	@8
+		    supplier   	@7
+		    line_style 	0)
+		(object ModView "Component View::EBST (Stepper Motor)::EBSTimpl" "PackageType" "Specification" @10
+		    location   	(686, 1312)
+		    label      	(object ItemLabel
+			Parent_View 	@10
+			location   	(624, 1116)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBSTimpl")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DA5DDF202FB"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBST (Stepper Motor)::EBSTimpl" "PackageType" "Body" @11
+		    location   	(689, 1794)
+		    label      	(object ItemLabel
+			Parent_View 	@11
+			location   	(627, 1598)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBSTimpl")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DA5DDFB00C3"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @12
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DA5DE0102DE"
+		    client     	@11
+		    supplier   	@10
+		    line_style 	0)
+		(object ModView "Component View::EBST (Stepper Motor)::EBSTidnt" "PackageType" "Specification" @13
+		    location   	(260, 260)
+		    label      	(object ItemLabel
+			Parent_View 	@13
+			location   	(198, 64)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBSTidnt")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DA6BE7B0210"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBST (Stepper Motor)::EBSTsten" "PackageType" "Specification" @14
+		    location   	(684, 2340)
+		    label      	(object ItemLabel
+			Parent_View 	@14
+			location   	(622, 2144)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBSTsten")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DA6C17A03E5"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBST (Stepper Motor)::EBSTsten" "PackageType" "Body" @15
+		    location   	(680, 2832)
+		    label      	(object ItemLabel
+			Parent_View 	@15
+			location   	(618, 2636)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBSTsten")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DA6C18701B3"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @16
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DA6C18E004B"
+		    client     	@15
+		    supplier   	@14
+		    line_style 	0)
+		(object ModView "Component View::EBST (Stepper Motor)::EBSTstat" "PackageType" "Specification" @17
+		    location   	(1845, 1269)
+		    label      	(object ItemLabel
+			Parent_View 	@17
+			location   	(1783, 1073)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBSTstat")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DA6C2490378"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBST (Stepper Motor)::EBSTstat" "PackageType" "Body" @18
+		    location   	(1847, 1810)
+		    label      	(object ItemLabel
+			Parent_View 	@18
+			location   	(1785, 1614)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBSTstat")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DA6C2500099"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @19
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DA6C256000D"
+		    client     	@18
+		    supplier   	@17
+		    line_style 	0)
+		(object ModView "Component View::EBST (Stepper Motor)::EBSTidle" "PackageType" "Specification" @20
+		    location   	(1845, 2303)
+		    label      	(object ItemLabel
+			Parent_View 	@20
+			location   	(1783, 2107)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBSTidle")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DA6C26303D5"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBST (Stepper Motor)::EBSTidle" "PackageType" "Body" @21
+		    location   	(1848, 2828)
+		    label      	(object ItemLabel
+			Parent_View 	@21
+			location   	(1786, 2632)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBSTidle")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DA6C2660107"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @22
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DA6C274025E"
+		    client     	@21
+		    supplier   	@20
+		    line_style 	0)
+		(object ModView "Component View::EBST (Stepper Motor)::EBSTcomd" "PackageType" "Specification" @23
+		    location   	(1294, 1305)
+		    label      	(object ItemLabel
+			Parent_View 	@23
+			location   	(1232, 1109)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBSTcomd")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DAA5DCF00FC"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBST (Stepper Motor)::EBSTcomd" "PackageType" "Body" @24
+		    location   	(1298, 1794)
+		    label      	(object ItemLabel
+			Parent_View 	@24
+			location   	(1236, 1598)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBSTcomd")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DAA5DD403AB"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @25
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DAA5DD9039C"
+		    client     	@24
+		    supplier   	@23
+		    line_style 	0)
+		(object ModView "Component View::EBST (Stepper Motor)::EBSTmoving" "PackageType" "Specification" @26
+		    location   	(721, 3313)
+		    label      	(object ItemLabel
+			Parent_View 	@26
+			location   	(659, 3117)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBSTmoving")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E71A71301F3"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBST (Stepper Motor)::EBSTmoving" "PackageType" "Body" @27
+		    location   	(723, 3775)
+		    label      	(object ItemLabel
+			Parent_View 	@27
+			location   	(661, 3579)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBSTmoving")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E71A71501D4"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @28
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3E71A739001E"
+		    client     	@27
+		    supplier   	@26
+		    line_style 	0)
+		(object ModView "Component View::EBST (Stepper Motor)::EBSTconfig" "PackageType" "Specification" @29
+		    location   	(1280, 2319)
+		    label      	(object ItemLabel
+			Parent_View 	@29
+			location   	(1218, 2123)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBSTconfig")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E71A7470251"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBST (Stepper Motor)::EBSTconfig" "PackageType" "Body" @30
+		    location   	(1302, 2816)
+		    label      	(object ItemLabel
+			Parent_View 	@30
+			location   	(1240, 2620)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBSTconfig")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E71A74A028F"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBST (Stepper Motor)::EBSThoming" "PackageType" "Specification" @31
+		    location   	(1296, 3301)
+		    label      	(object ItemLabel
+			Parent_View 	@31
+			location   	(1234, 3105)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBSThoming")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E71A7780251"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBST (Stepper Motor)::EBSThoming" "PackageType" "Body" @32
+		    location   	(1319, 3765)
+		    label      	(object ItemLabel
+			Parent_View 	@32
+			location   	(1257, 3569)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBSThoming")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E71A77A03E7"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @33
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3E71A79B0222"
+		    client     	@32
+		    supplier   	@31
+		    line_style 	0)
+		(object ModView "Component View::EBST (Stepper Motor)::EBSTlogic" "PackageType" "Specification" @34
+		    location   	(1865, 3316)
+		    label      	(object ItemLabel
+			Parent_View 	@34
+			location   	(1803, 3120)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBSTlogic")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E75E2660360"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @35
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3E75E270011D"
+		    client     	@30
+		    supplier   	@29
+		    line_style 	0)
+		(object ModView "Component View::EBST (Stepper Motor)::EBSTlogic" "PackageType" "Body" @36
+		    location   	(1887, 3761)
+		    label      	(object ItemLabel
+			Parent_View 	@36
+			location   	(1825, 3565)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBSTlogic")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E75E2740294"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @37
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3E75E287036F"
+		    client     	@36
+		    supplier   	@34
+		    line_style 	0)
+		(object ModView "Component View::EBST (Stepper Motor)::EBSTdebug" "PackageType" "Specification" @38
+		    location   	(714, 4312)
+		    label      	(object ItemLabel
+			Parent_View 	@38
+			location   	(652, 4116)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBSTdebug")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E75E7800246"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBST (Stepper Motor)::EBSTdebug" "PackageType" "Body" @39
+		    location   	(711, 4779)
+		    label      	(object ItemLabel
+			Parent_View 	@39
+			location   	(649, 4583)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBSTdebug")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E75E78D0302"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @40
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3E75E7940311"
+		    client     	@39
+		    supplier   	@38
+		    line_style 	0)
+		(object ModView "Component View::EBST (Stepper Motor)::EBSTlimit" "PackageType" "Body" @41
+		    location   	(1310, 4786)
+		    label      	(object ItemLabel
+			Parent_View 	@41
+			location   	(1248, 4590)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBSTlimit")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E797F3D0267"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBST (Stepper Motor)::EBSTlimit" "PackageType" "Specification" @42
+		    location   	(1321, 4291)
+		    label      	(object ItemLabel
+			Parent_View 	@42
+			location   	(1259, 4095)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBSTlimit")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E797F3F03BF"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @43
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3E797F560005"
+		    client     	@41
+		    supplier   	@42
+		    line_style 	0)
+		(object ModView "Component View::EBST (Stepper Motor)::EBSTlmwk" "PackageType" "Specification" @44
+		    location   	(1904, 4278)
+		    label      	(object ItemLabel
+			Parent_View 	@44
+			location   	(1842, 4082)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBSTlmwk")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E7AD31C004B"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBST (Stepper Motor)::EBSTlmwk" "PackageType" "Body" @45
+		    location   	(1903, 4790)
+		    label      	(object ItemLabel
+			Parent_View 	@45
+			location   	(1841, 4594)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBSTlmwk")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E7AD325003B"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @46
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3E7AD3300126"
+		    client     	@45
+		    supplier   	@44
+		    line_style 	0)
+		(object ModView "Component View::EBST (Stepper Motor)::EBSTexcp" "PackageType" "Body" @47
+		    location   	(716, 5757)
+		    label      	(object ItemLabel
+			Parent_View 	@47
+			location   	(654, 5561)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBSTexcp")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3ECA3CA101C9"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBST (Stepper Motor)::EBSTexcp" "PackageType" "Specification" @48
+		    location   	(712, 5259)
+		    label      	(object ItemLabel
+			Parent_View 	@48
+			location   	(650, 5063)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBSTexcp")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3ECA3D3F0208"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @49
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3ECA3D46010E"
+		    client     	@47
+		    supplier   	@48
+		    line_style 	0)
+		(object ModView "Component View::EBST (Stepper Motor)::EBSTconn" "PackageType" "Specification" @50
+		    location   	(1305, 5258)
+		    label      	(object ItemLabel
+			Parent_View 	@50
+			location   	(1243, 5062)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBSTconn")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EE5C9AF012E"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBST (Stepper Motor)::EBSTconn" "PackageType" "Body" @51
+		    location   	(1298, 5771)
+		    label      	(object ItemLabel
+			Parent_View 	@51
+			location   	(1236, 5575)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBSTconn")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EE5C9C50380"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @52
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3EE5C9CF0295"
+		    client     	@51
+		    supplier   	@50
+		    line_style 	0)
+		(object ModView "Component View::EBST (Stepper Motor)::EBSTmain" "PackageType" "Specification" @53
+		    location   	(1921, 5247)
+		    label      	(object ItemLabel
+			Parent_View 	@53
+			location   	(1859, 5051)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBSTmain")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EF063BB02B9"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBST (Stepper Motor)::EBSTmain" "PackageType" "Body" @54
+		    location   	(1901, 5789)
+		    label      	(object ItemLabel
+			Parent_View 	@54
+			location   	(1839, 5593)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBSTmain")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EF063BD0123"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @55
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3EF063D100E7"
+		    client     	@54
+		    supplier   	@53
+		    line_style 	0)
+		(object ModView "Component View::EBST (Stepper Motor)::EBSThwconn" "PackageType" "Body" @56
+		    location   	(732, 6880)
+		    label      	(object ItemLabel
+			Parent_View 	@56
+			location   	(670, 6684)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBSThwconn")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F3234310266"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBST (Stepper Motor)::EBSThwconn" "PackageType" "Specification" @57
+		    location   	(734, 6334)
+		    label      	(object ItemLabel
+			Parent_View 	@57
+			location   	(672, 6138)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBSThwconn")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F3234340208"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @58
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3F32343902B4"
+		    client     	@56
+		    supplier   	@57
+		    line_style 	0)
+		(object ModView "Component View::EBST (Stepper Motor)::EBSTactn" "PackageType" "Specification" @59
+		    location   	(1301, 6331)
+		    label      	(object ItemLabel
+			Parent_View 	@59
+			location   	(1239, 6135)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBSTactn")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3FBA3851035F"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBST (Stepper Motor)::EBSTactn" "PackageType" "Body" @60
+		    location   	(1299, 6907)
+		    label      	(object ItemLabel
+			Parent_View 	@60
+			location   	(1237, 6711)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBSTactn")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3FBA385B018B"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @61
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3FBA38620302"
+		    client     	@60
+		    supplier   	@59
+		    line_style 	0)
+		(object ModView "Component View::EBST (Stepper Motor)::EBSThome" "PackageType" "Body" @62
+		    location   	(1892, 6860)
+		    label      	(object ItemLabel
+			Parent_View 	@62
+			location   	(1830, 6664)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	543
+			label      	"EBSThome")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"4341377602C0"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBST (Stepper Motor)::EBSThome" "PackageType" "Specification" @63
+		    location   	(1896, 6325)
+		    label      	(object ItemLabel
+			Parent_View 	@63
+			location   	(1834, 6129)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	543
+			label      	"EBSThome")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"434137B002D8"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @64
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"434137B90136"
+		    client     	@62
+		    supplier   	@63
+		    line_style 	0)))))

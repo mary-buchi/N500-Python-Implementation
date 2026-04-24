@@ -1,0 +1,1521 @@
+
+(object Petal
+    version    	42
+    _written   	"Rose 4.5.8163.3"
+    charSet    	0)
+
+(object SubSystem "EBET (Ethernet Transport)"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    attributes 	(list Attribute_Set
+	(object Attribute
+	    tool       	"cg"
+	    name       	"Directory"
+	    value      	"Embedded\\Src\\EBET"))
+    quid       	"3D9D854401AF"
+    physical_models 	(list unit_reference_list
+	(object module "EBETchan" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBET\\EBETchan.h"))
+	    quid       	"3D9D88460355"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBETchan" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBET\\EBETchan.cpp"))
+	    quid       	"3D9D884C0096"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3D9D884F0057"
+		    supplier   	"Component View::EBET (Ethernet Transport)::EBETchan"
+		    quidu      	"3D9D88460355"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBETread" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBET\\EBETread.h"))
+	    quid       	"3DA14874033F"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBETread" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBET\\EBETread.cpp"))
+	    quid       	"3DA1487D02B2"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3DA148850031"
+		    supplier   	"Component View::EBET (Ethernet Transport)::EBETread"
+		    quidu      	"3DA14874033F"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBETmesg" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBET\\EBETmesg.h"))
+	    quid       	"3DA2A5A102CD"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBETmesg" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBET\\EBETmesg.cpp"))
+	    quid       	"3DA2A5B3034A"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3DA2A5BA02CD"
+		    supplier   	"Component View::EBET (Ethernet Transport)::EBETmesg"
+		    quidu      	"3DA2A5A102CD"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBETthrd" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBET\\EBETthrd.h"))
+	    quid       	"3DA3CC620295"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBETthrd" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBET\\EBETthrd.cpp"))
+	    quid       	"3DA3CC6B00C0"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3DA3CC730024"
+		    supplier   	"Component View::EBET (Ethernet Transport)::EBETthrd"
+		    quidu      	"3DA3CC620295"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBETmain" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBET\\EBETmain.h"))
+	    quid       	"3DA48FED02FB"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBETmain" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBET\\EBETmain.cpp"))
+	    quid       	"3DA48FF50035"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3DA48FFB01F6"
+		    supplier   	"Component View::EBET (Ethernet Transport)::EBETmain"
+		    quidu      	"3DA48FED02FB"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBETwrit" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBET\\EBETwrit.h"))
+	    quid       	"3DA53C1D0326"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBETwrit" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBET\\EBETwrit.cpp"))
+	    quid       	"3DA53C27022C"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3DA53C3001CE"
+		    supplier   	"Component View::EBET (Ethernet Transport)::EBETwrit"
+		    quidu      	"3DA53C1D0326"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBETchst" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBET\\EBETchst.h"))
+	    quid       	"3DAAACEB0294"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBETchst" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBET\\EBETchst.cpp"))
+	    quid       	"3DAAACF20004"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3DAAACF702E2"
+		    supplier   	"Component View::EBET (Ethernet Transport)::EBETchst"
+		    quidu      	"3DAAACEB0294"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBETchmc" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBET\\EBETchmc.h"))
+	    quid       	"3DAAACFA01C9"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBETchmc" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBET\\EBETchmc.cpp"))
+	    quid       	"3DAAAD0203DC"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3DAAAD0A00DF"
+		    supplier   	"Component View::EBET (Ethernet Transport)::EBETchmc"
+		    quidu      	"3DAAACFA01C9"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBETchcr" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBET\\EBETchcr.h"))
+	    quid       	"3DAAAD6E0052"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBETchcr" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBET\\EBETchcr.cpp"))
+	    quid       	"3DAAAD7602C3"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3DAAAD7C0321"
+		    supplier   	"Component View::EBET (Ethernet Transport)::EBETchcr"
+		    quidu      	"3DAAAD6E0052"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBETchpo" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBET\\EBETchpo.h"))
+	    quid       	"3DBC08CF0188"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBETchpo" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBET\\EBETchpo.cpp"))
+	    quid       	"3DBC08DE0143"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3DBC0976014C"
+		    supplier   	"Component View::EBET (Ethernet Transport)::EBETchpo"
+		    quidu      	"3DBC08CF0188"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBETchsr" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBET\\EBETchsr.h"))
+	    quid       	"3DBC08EB023C"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBETchsr" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBET\\EBETchsr.cpp"))
+	    quid       	"3DBC08F402CC"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3DBC097400E5"
+		    supplier   	"Component View::EBET (Ethernet Transport)::EBETchsr"
+		    quidu      	"3DBC08EB023C"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBETchot" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBET\\EBETchot.h"))
+	    quid       	"3DBC09000156"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBETchot" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBET\\EBETchot.cpp"))
+	    quid       	"3DBC090802B6"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3DBC0970007B"
+		    supplier   	"Component View::EBET (Ethernet Transport)::EBETchot"
+		    quidu      	"3DBC09000156"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBETchct" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBET\\EBETchct.h"))
+	    quid       	"3DBC09170286"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBETchct" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBET\\EBETchct.cpp"))
+	    quid       	"3DBC092003B5"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3DBC096E00C8"
+		    supplier   	"Component View::EBET (Ethernet Transport)::EBETchct"
+		    quidu      	"3DBC09170286"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBETchcp" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBET\\EBETchcp.h"))
+	    quid       	"3DBC092B01A8"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBETchcp" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBET\\EBETchcp.cpp"))
+	    quid       	"3DBC093301B4"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3DBC096C01A2"
+		    supplier   	"Component View::EBET (Ethernet Transport)::EBETchcp"
+		    quidu      	"3DBC092B01A8"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBETchcw" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBET\\EBETchcw.h"))
+	    quid       	"3DBC093F02E8"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBETchcw" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBET\\EBETchcw.cpp"))
+	    quid       	"3DBC094A006C"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3DBC096A025D"
+		    supplier   	"Component View::EBET (Ethernet Transport)::EBETchcw"
+		    quidu      	"3DBC093F02E8"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBETchet" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBET\\EBETchet.h"))
+	    quid       	"3DBC095501BD"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBETchet" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBET\\EBETchet.cpp"))
+	    quid       	"3DBC095D033B"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3DBC09680264"
+		    supplier   	"Component View::EBET (Ethernet Transport)::EBETchet"
+		    quidu      	"3DBC095501BD"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBETchdg" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBET\\EBETchdg.h"))
+	    quid       	"3DF72EE00017"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBETchdg" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBET\\EBETchdg.cpp"))
+	    quid       	"3DF72EE90279"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3DF72EF300F2"
+		    supplier   	"Component View::EBET (Ethernet Transport)::EBETchdg"
+		    quidu      	"3DF72EE00017"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBETchsy" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBET\\EBETchsy.cpp"))
+	    quid       	"3EE5C03A02F0"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3EE5C04F02A2"
+		    supplier   	"Component View::EBET (Ethernet Transport)::EBETchsy"
+		    quidu      	"3EE5C047006F"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBETchsy" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBET\\EBETchsy.h"))
+	    quid       	"3EE5C047006F"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBETchi2" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBET\\EBETchi2.h"))
+	    quid       	"3EE5C0510205"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBETchi2" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBET\\EBETchi2.cpp"))
+	    quid       	"3EE5C05A008E"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3EE5C0620050"
+		    supplier   	"Component View::EBET (Ethernet Transport)::EBETchi2"
+		    quidu      	"3EE5C0510205"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBETsmon" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBET\\EBETsmon.h"))
+	    quid       	"3F6CA80A036B"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBETsmon" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBET\\EBETsmon.cpp"))
+	    quid       	"3F6CA813017A"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3F6CA81C028B"
+		    supplier   	"Component View::EBET (Ethernet Transport)::EBETsmon"
+		    quidu      	"3F6CA80A036B"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBETsess" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBET\\EBETsess.h"))
+	    quid       	"468A41A3036C"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBETsess" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBET\\EBETsess.cpp"))
+	    quid       	"468A41AB031D"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"468A41B102F4"
+		    supplier   	"Component View::EBET (Ethernet Transport)::EBETsess"
+		    quidu      	"468A41A3036C"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBETflog" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBET\\EBETflog.h"))
+	    quid       	"468BA97C0221"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBETflog" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBET\\EBETflog.cpp"))
+	    quid       	"468BA9850288"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"468BA98C03D3"
+		    supplier   	"Component View::EBET (Ethernet Transport)::EBETflog"
+		    quidu      	"468BA97C0221"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBETbrws" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBET\\EBETbrws.cpp"))
+	    quid       	"47761E340395"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"47761E4900EC"
+		    supplier   	"Component View::EBET (Ethernet Transport)::EBETbrws"
+		    quidu      	"47761E4002CA"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBETbrws" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBET\\EBETbrws.h"))
+	    quid       	"47761E4002CA"
+	    stereotype 	"Package Specification"
+	    language   	"C++"))
+    physical_presentations 	(list unit_reference_list
+	(object Module_Diagram "1.0 Main"
+	    quid       	"3D9D87AF0057"
+	    title      	"1.0 Main"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	3970
+	    origin_y   	3010
+	    items      	(list diagram_item_list
+		(object ModView "Component View::EBET (Ethernet Transport)::EBETchan" "PackageType" "Specification" @1
+		    location   	(425, 391)
+		    label      	(object ItemLabel
+			Parent_View 	@1
+			location   	(363, 195)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBETchan")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3D9D88460355"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBET (Ethernet Transport)::EBETchan" "PackageType" "Body" @2
+		    location   	(425, 956)
+		    label      	(object ItemLabel
+			Parent_View 	@2
+			location   	(363, 760)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBETchan")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3D9D884C0096"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @3
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3D9D884F0057"
+		    client     	@2
+		    supplier   	@1
+		    line_style 	0)
+		(object ModView "Component View::EBET (Ethernet Transport)::EBETread" "PackageType" "Specification" @4
+		    location   	(443, 1503)
+		    label      	(object ItemLabel
+			Parent_View 	@4
+			location   	(381, 1307)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBETread")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DA14874033F"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBET (Ethernet Transport)::EBETread" "PackageType" "Body" @5
+		    location   	(436, 2027)
+		    label      	(object ItemLabel
+			Parent_View 	@5
+			location   	(374, 1831)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBETread")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DA1487D02B2"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @6
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DA148850031"
+		    client     	@5
+		    supplier   	@4
+		    line_style 	0)
+		(object ModView "Component View::EBET (Ethernet Transport)::EBETmesg" "PackageType" "Specification" @7
+		    location   	(1026, 401)
+		    label      	(object ItemLabel
+			Parent_View 	@7
+			location   	(964, 205)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBETmesg")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DA2A5A102CD"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBET (Ethernet Transport)::EBETmesg" "PackageType" "Body" @8
+		    location   	(1021, 952)
+		    label      	(object ItemLabel
+			Parent_View 	@8
+			location   	(959, 756)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBETmesg")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DA2A5B3034A"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @9
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DA2A5BA02CD"
+		    client     	@8
+		    supplier   	@7
+		    line_style 	0)
+		(object ModView "Component View::EBET (Ethernet Transport)::EBETthrd" "PackageType" "Specification" @10
+		    location   	(1599, 396)
+		    label      	(object ItemLabel
+			Parent_View 	@10
+			location   	(1537, 200)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBETthrd")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DA3CC620295"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBET (Ethernet Transport)::EBETthrd" "PackageType" "Body" @11
+		    location   	(1599, 946)
+		    label      	(object ItemLabel
+			Parent_View 	@11
+			location   	(1537, 750)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBETthrd")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DA3CC6B00C0"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @12
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DA3CC730024"
+		    client     	@11
+		    supplier   	@10
+		    line_style 	0)
+		(object ModView "Component View::EBET (Ethernet Transport)::EBETmain" "PackageType" "Specification" @13
+		    location   	(2116, 396)
+		    label      	(object ItemLabel
+			Parent_View 	@13
+			location   	(2054, 200)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBETmain")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DA48FED02FB"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBET (Ethernet Transport)::EBETmain" "PackageType" "Body" @14
+		    location   	(2090, 937)
+		    label      	(object ItemLabel
+			Parent_View 	@14
+			location   	(2028, 741)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBETmain")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DA48FF50035"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @15
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DA48FFB01F6"
+		    client     	@14
+		    supplier   	@13
+		    line_style 	0)
+		(object ModView "Component View::EBET (Ethernet Transport)::EBETwrit" "PackageType" "Specification" @16
+		    location   	(1042, 1506)
+		    label      	(object ItemLabel
+			Parent_View 	@16
+			location   	(980, 1310)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBETwrit")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DA53C1D0326"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBET (Ethernet Transport)::EBETwrit" "PackageType" "Body" @17
+		    location   	(1035, 2022)
+		    label      	(object ItemLabel
+			Parent_View 	@17
+			location   	(973, 1826)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBETwrit")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DA53C27022C"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @18
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DA53C3001CE"
+		    client     	@17
+		    supplier   	@16
+		    line_style 	0)
+		(object ModView "Component View::EBET (Ethernet Transport)::EBETchst" "PackageType" "Specification" @19
+		    location   	(453, 2568)
+		    label      	(object ItemLabel
+			Parent_View 	@19
+			location   	(391, 2372)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBETchst")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DAAACEB0294"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBET (Ethernet Transport)::EBETchst" "PackageType" "Body" @20
+		    location   	(450, 3037)
+		    label      	(object ItemLabel
+			Parent_View 	@20
+			location   	(388, 2841)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBETchst")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DAAACF20004"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @21
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DAAACF702E2"
+		    client     	@20
+		    supplier   	@19
+		    line_style 	0)
+		(object ModView "Component View::EBET (Ethernet Transport)::EBETchmc" "PackageType" "Specification" @22
+		    location   	(1048, 2568)
+		    label      	(object ItemLabel
+			Parent_View 	@22
+			location   	(986, 2372)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBETchmc")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DAAACFA01C9"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBET (Ethernet Transport)::EBETchmc" "PackageType" "Body" @23
+		    location   	(1043, 3052)
+		    label      	(object ItemLabel
+			Parent_View 	@23
+			location   	(981, 2856)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBETchmc")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DAAAD0203DC"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @24
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DAAAD0A00DF"
+		    client     	@23
+		    supplier   	@22
+		    line_style 	0)
+		(object ModView "Component View::EBET (Ethernet Transport)::EBETchcr" "PackageType" "Specification" @25
+		    location   	(1604, 2555)
+		    label      	(object ItemLabel
+			Parent_View 	@25
+			location   	(1542, 2359)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBETchcr")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DAAAD6E0052"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBET (Ethernet Transport)::EBETchcr" "PackageType" "Body" @26
+		    location   	(1599, 3065)
+		    label      	(object ItemLabel
+			Parent_View 	@26
+			location   	(1537, 2869)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBETchcr")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DAAAD7602C3"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @27
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DAAAD7C0321"
+		    client     	@26
+		    supplier   	@25
+		    line_style 	0)
+		(object ModView "Component View::EBET (Ethernet Transport)::EBETchpo" "PackageType" "Specification" @28
+		    location   	(2040, 2553)
+		    label      	(object ItemLabel
+			Parent_View 	@28
+			location   	(1978, 2357)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBETchpo")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DBC08CF0188"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBET (Ethernet Transport)::EBETchpo" "PackageType" "Body" @29
+		    location   	(2028, 3046)
+		    label      	(object ItemLabel
+			Parent_View 	@29
+			location   	(1966, 2850)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBETchpo")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DBC08DE0143"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBET (Ethernet Transport)::EBETchsr" "PackageType" "Specification" @30
+		    location   	(2484, 2540)
+		    label      	(object ItemLabel
+			Parent_View 	@30
+			location   	(2422, 2344)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBETchsr")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DBC08EB023C"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBET (Ethernet Transport)::EBETchsr" "PackageType" "Body" @31
+		    location   	(2490, 3061)
+		    label      	(object ItemLabel
+			Parent_View 	@31
+			location   	(2428, 2865)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBETchsr")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DBC08F402CC"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBET (Ethernet Transport)::EBETchot" "PackageType" "Specification" @32
+		    location   	(2918, 2546)
+		    label      	(object ItemLabel
+			Parent_View 	@32
+			location   	(2856, 2350)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBETchot")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DBC09000156"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBET (Ethernet Transport)::EBETchot" "PackageType" "Body" @33
+		    location   	(2890, 3052)
+		    label      	(object ItemLabel
+			Parent_View 	@33
+			location   	(2828, 2856)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBETchot")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DBC090802B6"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBET (Ethernet Transport)::EBETchct" "PackageType" "Specification" @34
+		    location   	(3357, 2546)
+		    label      	(object ItemLabel
+			Parent_View 	@34
+			location   	(3295, 2350)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBETchct")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DBC09170286"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBET (Ethernet Transport)::EBETchct" "PackageType" "Body" @35
+		    location   	(3346, 3040)
+		    label      	(object ItemLabel
+			Parent_View 	@35
+			location   	(3284, 2844)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBETchct")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DBC092003B5"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBET (Ethernet Transport)::EBETchcp" "PackageType" "Specification" @36
+		    location   	(3772, 2549)
+		    label      	(object ItemLabel
+			Parent_View 	@36
+			location   	(3710, 2353)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBETchcp")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DBC092B01A8"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBET (Ethernet Transport)::EBETchcp" "PackageType" "Body" @37
+		    location   	(3769, 3055)
+		    label      	(object ItemLabel
+			Parent_View 	@37
+			location   	(3707, 2859)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBETchcp")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DBC093301B4"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBET (Ethernet Transport)::EBETchcw" "PackageType" "Specification" @38
+		    location   	(4218, 2546)
+		    label      	(object ItemLabel
+			Parent_View 	@38
+			location   	(4156, 2350)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBETchcw")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DBC093F02E8"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBET (Ethernet Transport)::EBETchcw" "PackageType" "Body" @39
+		    location   	(4211, 3068)
+		    label      	(object ItemLabel
+			Parent_View 	@39
+			location   	(4149, 2872)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBETchcw")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DBC094A006C"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBET (Ethernet Transport)::EBETchet" "PackageType" "Specification" @40
+		    location   	(4626, 2540)
+		    label      	(object ItemLabel
+			Parent_View 	@40
+			location   	(4564, 2344)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBETchet")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DBC095501BD"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBET (Ethernet Transport)::EBETchet" "PackageType" "Body" @41
+		    location   	(4628, 3055)
+		    label      	(object ItemLabel
+			Parent_View 	@41
+			location   	(4566, 2859)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBETchet")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DBC095D033B"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @42
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DBC09680264"
+		    client     	@41
+		    supplier   	@40
+		    line_style 	0)
+		(object ModVisView "" @43
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DBC096A025D"
+		    client     	@39
+		    supplier   	@38
+		    line_style 	0)
+		(object ModVisView "" @44
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DBC096C01A2"
+		    client     	@37
+		    supplier   	@36
+		    line_style 	0)
+		(object ModVisView "" @45
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DBC096E00C8"
+		    client     	@35
+		    supplier   	@34
+		    line_style 	0)
+		(object ModVisView "" @46
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DBC0970007B"
+		    client     	@33
+		    supplier   	@32
+		    line_style 	0)
+		(object ModVisView "" @47
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DBC097400E5"
+		    client     	@31
+		    supplier   	@30
+		    line_style 	0)
+		(object ModVisView "" @48
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DBC0976014C"
+		    client     	@29
+		    supplier   	@28
+		    line_style 	0)
+		(object ModView "Component View::EBET (Ethernet Transport)::EBETchdg" "PackageType" "Specification" @49
+		    location   	(5152, 2537)
+		    label      	(object ItemLabel
+			Parent_View 	@49
+			location   	(5090, 2341)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBETchdg")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DF72EE00017"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBET (Ethernet Transport)::EBETchdg" "PackageType" "Body" @50
+		    location   	(5163, 3046)
+		    label      	(object ItemLabel
+			Parent_View 	@50
+			location   	(5101, 2850)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBETchdg")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DF72EE90279"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @51
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DF72EF300F2"
+		    client     	@50
+		    supplier   	@49
+		    line_style 	0)
+		(object ModView "Component View::EBET (Ethernet Transport)::EBETchsy" "PackageType" "Body" @52
+		    location   	(5657, 3052)
+		    label      	(object ItemLabel
+			Parent_View 	@52
+			location   	(5595, 2856)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBETchsy")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EE5C03A02F0"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBET (Ethernet Transport)::EBETchsy" "PackageType" "Specification" @53
+		    location   	(5651, 2533)
+		    label      	(object ItemLabel
+			Parent_View 	@53
+			location   	(5589, 2337)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBETchsy")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EE5C047006F"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @54
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3EE5C04F02A2"
+		    client     	@52
+		    supplier   	@53
+		    line_style 	0)
+		(object ModView "Component View::EBET (Ethernet Transport)::EBETchi2" "PackageType" "Specification" @55
+		    location   	(6117, 2530)
+		    label      	(object ItemLabel
+			Parent_View 	@55
+			location   	(6055, 2334)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBETchi2")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EE5C0510205"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBET (Ethernet Transport)::EBETchi2" "PackageType" "Body" @56
+		    location   	(6123, 3058)
+		    label      	(object ItemLabel
+			Parent_View 	@56
+			location   	(6061, 2862)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBETchi2")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EE5C05A008E"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @57
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3EE5C0620050"
+		    client     	@56
+		    supplier   	@55
+		    line_style 	0)
+		(object ModView "Component View::EBET (Ethernet Transport)::EBETsmon" "PackageType" "Specification" @58
+		    location   	(4195, 3546)
+		    label      	(object ItemLabel
+			Parent_View 	@58
+			location   	(4133, 3350)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBETsmon")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F6CA80A036B"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBET (Ethernet Transport)::EBETsmon" "PackageType" "Body" @59
+		    location   	(4192, 4099)
+		    label      	(object ItemLabel
+			Parent_View 	@59
+			location   	(4130, 3903)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBETsmon")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F6CA813017A"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @60
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3F6CA81C028B"
+		    client     	@59
+		    supplier   	@58
+		    line_style 	0)
+		(object ModView "Component View::EBET (Ethernet Transport)::EBETsess" "PackageType" "Specification" @61
+		    location   	(4654, 3551)
+		    label      	(object ItemLabel
+			Parent_View 	@61
+			location   	(4592, 3355)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBETsess")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"468A41A3036C"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBET (Ethernet Transport)::EBETsess" "PackageType" "Body" @62
+		    location   	(4654, 4097)
+		    label      	(object ItemLabel
+			Parent_View 	@62
+			location   	(4592, 3901)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBETsess")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"468A41AB031D"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @63
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"468A41B102F4"
+		    client     	@62
+		    supplier   	@61
+		    line_style 	0)
+		(object ModView "Component View::EBET (Ethernet Transport)::EBETflog" "PackageType" "Specification" @64
+		    location   	(5171, 3553)
+		    label      	(object ItemLabel
+			Parent_View 	@64
+			location   	(5109, 3357)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBETflog")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"468BA97C0221"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBET (Ethernet Transport)::EBETflog" "PackageType" "Body" @65
+		    location   	(5173, 4072)
+		    label      	(object ItemLabel
+			Parent_View 	@65
+			location   	(5111, 3876)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBETflog")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"468BA9850288"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @66
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"468BA98C03D3"
+		    client     	@65
+		    supplier   	@64
+		    line_style 	0)
+		(object ModView "Component View::EBET (Ethernet Transport)::EBETbrws" "PackageType" "Body" @67
+		    location   	(5677, 4091)
+		    label      	(object ItemLabel
+			Parent_View 	@67
+			location   	(5615, 3895)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	543
+			label      	"EBETbrws")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"47761E340395"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBET (Ethernet Transport)::EBETbrws" "PackageType" "Specification" @68
+		    location   	(5673, 3544)
+		    label      	(object ItemLabel
+			Parent_View 	@68
+			location   	(5611, 3348)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	543
+			label      	"EBETbrws")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"47761E4002CA"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @69
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"47761E4900EC"
+		    client     	@67
+		    supplier   	@68
+		    line_style 	0)))))

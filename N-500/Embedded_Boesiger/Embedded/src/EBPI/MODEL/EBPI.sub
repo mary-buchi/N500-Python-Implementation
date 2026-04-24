@@ -1,0 +1,630 @@
+
+(object Petal
+    version    	42
+    _written   	"Rose 4.5.8163.3"
+    charSet    	0)
+
+(object SubSystem "EBPI (PC Interface)"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    attributes 	(list Attribute_Set
+	(object Attribute
+	    tool       	"cg"
+	    name       	"Directory"
+	    value      	"Embedded\\Src\\EBPI"))
+    quid       	"3DA48803001C"
+    physical_models 	(list unit_reference_list
+	(object module "EBPImain" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBPI\\EBPImain.h"))
+	    quid       	"3DA48877004B"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBPImain" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBPI\\EBPImain.cpp"))
+	    quid       	"3DA4887F00F7"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3DA488880262"
+		    supplier   	"Component View::EBPI (PC Interface)::EBPImain"
+		    quidu      	"3DA48877004B"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBPIintf" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBPI\\EBPIintf.h"))
+	    quid       	"3DA52EE301A8"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBPIintf" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBPI\\EBPIintf.cpp"))
+	    quid       	"3DA52EEB00AE"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3DA52EF5016A"
+		    supplier   	"Component View::EBPI (PC Interface)::EBPIintf"
+		    quidu      	"3DA52EE301A8"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBPIfact" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBPI\\EBPIfact.h"))
+	    quid       	"3DA52FC200ED"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBPIfact" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBPI\\EBPIfact.cpp"))
+	    quid       	"3DA52FC9037D"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3DA52FD20041"
+		    supplier   	"Component View::EBPI (PC Interface)::EBPIfact"
+		    quidu      	"3DA52FC200ED"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBPIcrea" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBPI\\EBPIcrea.h"))
+	    quid       	"3DA5C23603A6"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBPIcrea" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBPI\\EBPIcrea.cpp"))
+	    quid       	"3DA5C23E00E0"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3DA5C2440125"
+		    supplier   	"Component View::EBPI (PC Interface)::EBPIcrea"
+		    quidu      	"3DA5C23603A6"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBPItype" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBPI\\EBPItype.h"))
+	    quid       	"3DAE54C202D2"
+	    stereotype 	"Package Specification"
+	    declarations 	
+|#define PI_PERSISTENT_OBJ_ID_LENGTH  64
+|#define PI_PERSISTENT_SW_CPO_NAME_LENGTH 128
+|#define PI_PERSISTENT_SW_CPO_VERSION_LENGTH 16
+|
+	    
+	    language   	"C++")
+	(object module "EBPItype" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBPI\\EBPItype.cpp"))
+	    quid       	"3DAE54C9009F"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3DAE54D0015B"
+		    supplier   	"Component View::EBPI (PC Interface)::EBPItype"
+		    quidu      	"3DAE54C202D2"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBPIenum" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBPI\\EBPIenum.h"))
+	    quid       	"3DB50DDA012B"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBPIexcp" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBPI\\EBPIexcp.cpp"))
+	    quid       	"3F019020016F"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3F019074021A"
+		    supplier   	"Component View::EBPI (PC Interface)::EBPIexcp"
+		    quidu      	"3F0190540120"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBPIexcp" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBPI\\EBPIexcp.h"))
+	    quid       	"3F0190540120"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBPIidnt" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBPI\\EBPIidnt.h"))
+	    quid       	"3F0199ED0269"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBPIcpst" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBPI\\EBPIcpst.h"))
+	    quid       	"3F4239AB03DD"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBPIcpst" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBPI\\EBPIcpst.cpp"))
+	    quid       	"3F4239B700D0"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3F4239C503BE"
+		    supplier   	"Component View::EBPI (PC Interface)::EBPIcpst"
+		    quidu      	"3F4239AB03DD"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBPIconst" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBPI\\EBPIconst.h"))
+	    quid       	"3FB4B0360048"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBPItias" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBPI\\EBPItias.h"))
+	    quid       	"40223A3B0278"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBPItias" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBPI\\EBPItias.cpp"))
+	    quid       	"4023AA7402BE"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"4023AA8002BE"
+		    supplier   	"Component View::EBPI (PC Interface)::EBPItias"
+		    quidu      	"40223A3B0278"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++"))
+    physical_presentations 	(list unit_reference_list
+	(object Module_Diagram "1.0 Main"
+	    quid       	"3DA4887002E0"
+	    title      	"1.0 Main"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	883
+	    origin_y   	1011
+	    items      	(list diagram_item_list
+		(object ModView "Component View::EBPI (PC Interface)::EBPImain" "PackageType" "Specification" @1
+		    location   	(338, 831)
+		    label      	(object ItemLabel
+			Parent_View 	@1
+			location   	(276, 635)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPImain")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DA48877004B"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBPI (PC Interface)::EBPImain" "PackageType" "Body" @2
+		    location   	(340, 1447)
+		    label      	(object ItemLabel
+			Parent_View 	@2
+			location   	(278, 1251)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPImain")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DA4887F00F7"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @3
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DA488880262"
+		    client     	@2
+		    supplier   	@1
+		    line_style 	0)
+		(object ModView "Component View::EBPI (PC Interface)::EBPIintf" "PackageType" "Specification" @4
+		    location   	(897, 835)
+		    label      	(object ItemLabel
+			Parent_View 	@4
+			location   	(835, 639)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPIintf")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DA52EE301A8"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBPI (PC Interface)::EBPIintf" "PackageType" "Body" @5
+		    location   	(902, 1453)
+		    label      	(object ItemLabel
+			Parent_View 	@5
+			location   	(840, 1257)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPIintf")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DA52EEB00AE"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @6
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DA52EF5016A"
+		    client     	@5
+		    supplier   	@4
+		    line_style 	0)
+		(object ModView "Component View::EBPI (PC Interface)::EBPIfact" "PackageType" "Specification" @7
+		    location   	(1463, 822)
+		    label      	(object ItemLabel
+			Parent_View 	@7
+			location   	(1401, 626)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPIfact")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DA52FC200ED"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBPI (PC Interface)::EBPIfact" "PackageType" "Body" @8
+		    location   	(1464, 1453)
+		    label      	(object ItemLabel
+			Parent_View 	@8
+			location   	(1402, 1257)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPIfact")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DA52FC9037D"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @9
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DA52FD20041"
+		    client     	@8
+		    supplier   	@7
+		    line_style 	0)
+		(object ModView "Component View::EBPI (PC Interface)::EBPIcrea" "PackageType" "Specification" @10
+		    location   	(338, 1977)
+		    label      	(object ItemLabel
+			Parent_View 	@10
+			location   	(276, 1781)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPIcrea")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DA5C23603A6"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBPI (PC Interface)::EBPIcrea" "PackageType" "Body" @11
+		    location   	(348, 2401)
+		    label      	(object ItemLabel
+			Parent_View 	@11
+			location   	(286, 2205)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPIcrea")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DA5C23E00E0"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @12
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DA5C2440125"
+		    client     	@11
+		    supplier   	@10
+		    line_style 	0)
+		(object ModView "Component View::EBPI (PC Interface)::EBPItype" "PackageType" "Specification" @13
+		    location   	(913, 1955)
+		    label      	(object ItemLabel
+			Parent_View 	@13
+			location   	(851, 1759)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPItype")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DAE54C202D2"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBPI (PC Interface)::EBPItype" "PackageType" "Body" @14
+		    location   	(927, 2414)
+		    label      	(object ItemLabel
+			Parent_View 	@14
+			location   	(865, 2218)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPItype")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DAE54C9009F"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @15
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DAE54D0015B"
+		    client     	@14
+		    supplier   	@13
+		    line_style 	0)
+		(object ModView "Component View::EBPI (PC Interface)::EBPIenum" "PackageType" "Specification" @16
+		    location   	(814, 298)
+		    label      	(object ItemLabel
+			Parent_View 	@16
+			location   	(752, 102)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPIenum")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DB50DDA012B"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBPI (PC Interface)::EBPIexcp" "PackageType" "Body" @17
+		    location   	(2043, 1472)
+		    label      	(object ItemLabel
+			Parent_View 	@17
+			location   	(1981, 1276)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPIexcp")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F019020016F"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBPI (PC Interface)::EBPIexcp" "PackageType" "Specification" @18
+		    location   	(2045, 816)
+		    label      	(object ItemLabel
+			Parent_View 	@18
+			location   	(1983, 620)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPIexcp")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F0190540120"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @19
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3F019074021A"
+		    client     	@17
+		    supplier   	@18
+		    line_style 	0)
+		(object ModView "Component View::EBPI (PC Interface)::EBPIidnt" "PackageType" "Specification" @20
+		    location   	(387, 296)
+		    label      	(object ItemLabel
+			Parent_View 	@20
+			location   	(325, 100)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPIidnt")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F0199ED0269"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBPI (PC Interface)::EBPIcpst" "PackageType" "Specification" @21
+		    location   	(1479, 1956)
+		    label      	(object ItemLabel
+			Parent_View 	@21
+			location   	(1417, 1760)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPIcpst")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F4239AB03DD"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBPI (PC Interface)::EBPIcpst" "PackageType" "Body" @22
+		    location   	(1479, 2440)
+		    label      	(object ItemLabel
+			Parent_View 	@22
+			location   	(1417, 2244)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPIcpst")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F4239B700D0"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @23
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3F4239C503BE"
+		    client     	@22
+		    supplier   	@21
+		    line_style 	0)
+		(object ModView "Component View::EBPI (PC Interface)::EBPIconst" "PackageType" "Specification" @24
+		    location   	(1414, 306)
+		    label      	(object ItemLabel
+			Parent_View 	@24
+			location   	(1352, 110)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPIconst")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3FB4B0360048"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBPI (PC Interface)::EBPItias" "PackageType" "Specification" @25
+		    location   	(2078, 1942)
+		    label      	(object ItemLabel
+			Parent_View 	@25
+			location   	(2016, 1746)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	543
+			label      	"EBPItias")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"40223A3B0278"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBPI (PC Interface)::EBPItias" "PackageType" "Body" @26
+		    location   	(2083, 2476)
+		    label      	(object ItemLabel
+			Parent_View 	@26
+			location   	(2021, 2280)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	543
+			label      	"EBPItias")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"4023AA7402BE"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @27
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"4023AA8002BE"
+		    client     	@26
+		    supplier   	@25
+		    line_style 	0)))))

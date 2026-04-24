@@ -1,0 +1,1402 @@
+
+(object Petal
+    version    	42
+    _written   	"Rose 4.5.8163.3"
+    charSet    	0)
+
+(object SubSystem "EBPO (Persistent Object)"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    attributes 	(list Attribute_Set
+	(object Attribute
+	    tool       	"cg"
+	    name       	"Directory"
+	    value      	"Embedded\\src\\EBPO"))
+    quid       	"3DE487EC01DB"
+    physical_models 	(list unit_reference_list
+	(object module "EBPOidnt" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBPO\\EBPOidnt.h"))
+	    quid       	"3DE5EACC0321"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBPOregy" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBPO\\EBPOregy.cpp"))
+	    quid       	"3DE5EADA01E9"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3DE5EBB0017B"
+		    supplier   	"Component View::EBPO (Persistent Object)::EBPOregy"
+		    quidu      	"3DE5EAF401BA"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBPOregy" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBPO\\EBPOregy.h"))
+	    quid       	"3DE5EAF401BA"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBPOcrea" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBPO\\EBPOcrea.cpp"))
+	    quid       	"3DE5EAFF0004"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3DE5EBB6017B"
+		    supplier   	"Component View::EBPO (Persistent Object)::EBPOcrea"
+		    quidu      	"3DE5EB1D0341"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBPOintf" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBPO\\EBPOintf.cpp"))
+	    quid       	"3DE5EB0C0208"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3DE5EBB900DF"
+		    supplier   	"Component View::EBPO (Persistent Object)::EBPOintf"
+		    quidu      	"3DE5EB25011E"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBPOimpl" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBPO\\EBPOimpl.cpp"))
+	    quid       	"3DE5EB140275"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3DE5EBBC01AA"
+		    supplier   	"Component View::EBPO (Persistent Object)::EBPOimpl"
+		    quidu      	"3DE5EB2C0072"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBPOcrea" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBPO\\EBPOcrea.h"))
+	    quid       	"3DE5EB1D0341"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBPOintf" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBPO\\EBPOintf.h"))
+	    quid       	"3DE5EB25011E"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBPOimpl" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBPO\\EBPOimpl.h"))
+	    quid       	"3DE5EB2C0072"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBPOsten" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBPO\\EBPOsten.cpp"))
+	    quid       	"3DE5EB340218"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3DE5EBBE039E"
+		    supplier   	"Component View::EBPO (Persistent Object)::EBPOsten"
+		    quidu      	"3DE5EB5D01D9"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBPOstat" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBPO\\EBPOstat.cpp"))
+	    quid       	"3DE5EB3D0208"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3DE5EBC10266"
+		    supplier   	"Component View::EBPO (Persistent Object)::EBPOstat"
+		    quidu      	"3DE5EB64037F"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBPOidle" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBPO\\EBPOidle.cpp"))
+	    quid       	"3DE5EB4800DF"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3DE5EBC401AA"
+		    supplier   	"Component View::EBPO (Persistent Object)::EBPOidle"
+		    quidu      	"3DE5EB6B0266"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBPOcomd" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBPO\\EBPOcomd.cpp"))
+	    quid       	"3DE5EB5101BA"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3DE5EBC7016C"
+		    supplier   	"Component View::EBPO (Persistent Object)::EBPOcomd"
+		    quidu      	"3DE5EB7100A1"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBPOsten" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBPO\\EBPOsten.h"))
+	    quid       	"3DE5EB5D01D9"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBPOstat" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBPO\\EBPOstat.h"))
+	    quid       	"3DE5EB64037F"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBPOidle" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBPO\\EBPOidle.h"))
+	    quid       	"3DE5EB6B0266"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBPOcomd" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBPO\\EBPOcomd.h"))
+	    quid       	"3DE5EB7100A1"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBPOmain" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBPO\\EBPOmain.h"))
+	    quid       	"3EF054150128"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBPOmain" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBPO\\EBPOmain.cpp"))
+	    quid       	"3EF0541F0213"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3EF054300186"
+		    supplier   	"Component View::EBPO (Persistent Object)::EBPOmain"
+		    quidu      	"3EF054150128"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBPOcnfg" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBPO\\EBPOcnfg.cpp"))
+	    quid       	"3F93A8D202E5"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3F93A92B0045"
+		    supplier   	"Component View::EBPO (Persistent Object)::EBPOcnfg"
+		    quidu      	"3F93A8D50249"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBPOcnfg" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBPO\\EBPOcnfg.h"))
+	    quid       	"3F93A8D50249"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBPOlcnt" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBPO\\EBPOlcnt.cpp"))
+	    quid       	"3F93A937019D"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3F93A93F0084"
+		    supplier   	"Component View::EBPO (Persistent Object)::EBPOlcnt"
+		    quidu      	"3F93A93A0064"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBPOlcnt" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBPO\\EBPOlcnt.h"))
+	    quid       	"3F93A93A0064"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBPOstor" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBPO\\EBPOstor.cpp"))
+	    quid       	"3F93ABA60278"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3F93ABB4014F"
+		    supplier   	"Component View::EBPO (Persistent Object)::EBPOstor"
+		    quidu      	"3F93ABA902D5"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBPOstor" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBPO\\EBPOstor.h"))
+	    quid       	"3F93ABA902D5"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBPOnotc" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBPO\\EBPOnotc.h"))
+	    quid       	"3F93ABF403C0"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBPOnotc" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBPO\\EBPOnotc.cpp"))
+	    quid       	"3F93ABF90333"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3F93AC2D01CC"
+		    supplier   	"Component View::EBPO (Persistent Object)::EBPOnotc"
+		    quidu      	"3F93ABF403C0"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBPOlogic" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBPO\\EBPOlogic.cpp"))
+	    quid       	"3F9D14CF023E"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3F9D14E201A2"
+		    supplier   	"Component View::EBPO (Persistent Object)::EBPOlogic"
+		    quidu      	"3F9D14DA00E7"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBPOlogic" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBPO\\EBPOlogic.h"))
+	    quid       	"3F9D14DA00E7"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBPOcounter" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBPO\\EBPOcounter.cpp"))
+	    quid       	"3F9E1D9800B2"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3F9E1DC00333"
+		    supplier   	"Component View::EBPO (Persistent Object)::EBPOcounter"
+		    quidu      	"3F9E1DB902A6"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBPOcounter" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBPO\\EBPOcounter.h"))
+	    quid       	"3F9E1DB902A6"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBPOeprom" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBPO\\EBPOeprom.cpp"))
+	    quid       	"3FA118390232"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3FA118900000"
+		    supplier   	"Component View::EBPO (Persistent Object)::EBPOeprom"
+		    quidu      	"3FA1183A0399"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBPOeprom" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBPO\\EBPOeprom.h"))
+	    quid       	"3FA1183A0399"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBPOpara" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBPO\\EBPOpara.cpp"))
+	    quid       	"3FA118A302EE"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3FA118A80399"
+		    supplier   	"Component View::EBPO (Persistent Object)::EBPOpara"
+		    quidu      	"3FA118A502FD"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBPOpara" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBPO\\EBPOpara.h"))
+	    quid       	"3FA118A502FD"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBPOshdn" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBPO\\EBPOshdn.cpp"))
+	    quid       	"3FA609E700CB"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3FA609FE003E"
+		    supplier   	"Component View::EBPO (Persistent Object)::EBPOshdn"
+		    quidu      	"3FA609EA001F"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBPOshdn" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBPO\\EBPOshdn.h"))
+	    quid       	"3FA609EA001F"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBPOsimu" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBPO\\EBPOsimu.cpp"))
+	    quid       	"3FA65ADE00FA"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3FA65AF40186"
+		    supplier   	"Component View::EBPO (Persistent Object)::EBPOsimu"
+		    quidu      	"3FA65AE00261"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBPOsimu" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBPO\\EBPOsimu.h"))
+	    quid       	"3FA65AE00261"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBPOenum" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBPO\\EBPOenum.h"))
+	    quid       	"3FFD529E0208"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBPOexcp" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBPO\\EBPOexcp.h"))
+	    quid       	"400248600322"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBPOexcp" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBPO\\EBPOexcp.cpp"))
+	    quid       	"400248890360"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"400248990256"
+		    supplier   	"Component View::EBPO (Persistent Object)::EBPOexcp"
+		    quidu      	"400248600322"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBPOmcun" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBPO\\EBPOmcun.cpp"))
+	    quid       	"42023DE70365"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"42023E050161"
+		    supplier   	"Component View::EBPO (Persistent Object)::EBPOmcun"
+		    quidu      	"42023DFB02D8"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBPOmcun" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBPO\\EBPOmcun.h"))
+	    quid       	"42023DFB02D8"
+	    stereotype 	"Package Specification"
+	    language   	"C++"))
+    physical_presentations 	(list unit_reference_list
+	(object Module_Diagram "main"
+	    quid       	"3DE5EA52036F"
+	    title      	"main"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	3383
+	    items      	(list diagram_item_list
+		(object ModView "Component View::EBPO (Persistent Object)::EBPOidnt" "PackageType" "Specification" @1
+		    location   	(382, 2755)
+		    label      	(object ItemLabel
+			Parent_View 	@1
+			location   	(320, 2559)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPOidnt")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DE5EACC0321"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBPO (Persistent Object)::EBPOregy" "PackageType" "Body" @2
+		    location   	(795, 868)
+		    label      	(object ItemLabel
+			Parent_View 	@2
+			location   	(733, 672)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPOregy")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DE5EADA01E9"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBPO (Persistent Object)::EBPOregy" "PackageType" "Specification" @3
+		    location   	(773, 296)
+		    label      	(object ItemLabel
+			Parent_View 	@3
+			location   	(711, 100)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPOregy")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DE5EAF401BA"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBPO (Persistent Object)::EBPOcrea" "PackageType" "Body" @4
+		    location   	(1245, 837)
+		    label      	(object ItemLabel
+			Parent_View 	@4
+			location   	(1183, 641)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPOcrea")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DE5EAFF0004"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBPO (Persistent Object)::EBPOintf" "PackageType" "Body" @5
+		    location   	(1729, 845)
+		    label      	(object ItemLabel
+			Parent_View 	@5
+			location   	(1667, 649)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPOintf")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DE5EB0C0208"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBPO (Persistent Object)::EBPOimpl" "PackageType" "Body" @6
+		    location   	(2217, 862)
+		    label      	(object ItemLabel
+			Parent_View 	@6
+			location   	(2155, 666)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPOimpl")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DE5EB140275"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBPO (Persistent Object)::EBPOcrea" "PackageType" "Specification" @7
+		    location   	(1226, 281)
+		    label      	(object ItemLabel
+			Parent_View 	@7
+			location   	(1164, 85)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPOcrea")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DE5EB1D0341"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBPO (Persistent Object)::EBPOintf" "PackageType" "Specification" @8
+		    location   	(1673, 287)
+		    label      	(object ItemLabel
+			Parent_View 	@8
+			location   	(1611, 91)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPOintf")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DE5EB25011E"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBPO (Persistent Object)::EBPOimpl" "PackageType" "Specification" @9
+		    location   	(2117, 262)
+		    label      	(object ItemLabel
+			Parent_View 	@9
+			location   	(2055, 66)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPOimpl")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DE5EB2C0072"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBPO (Persistent Object)::EBPOsten" "PackageType" "Body" @10
+		    location   	(328, 1827)
+		    label      	(object ItemLabel
+			Parent_View 	@10
+			location   	(266, 1631)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPOsten")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DE5EB340218"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBPO (Persistent Object)::EBPOstat" "PackageType" "Body" @11
+		    location   	(847, 1805)
+		    label      	(object ItemLabel
+			Parent_View 	@11
+			location   	(785, 1609)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPOstat")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DE5EB3D0208"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBPO (Persistent Object)::EBPOidle" "PackageType" "Body" @12
+		    location   	(1372, 1818)
+		    label      	(object ItemLabel
+			Parent_View 	@12
+			location   	(1310, 1622)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPOidle")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DE5EB4800DF"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBPO (Persistent Object)::EBPOcomd" "PackageType" "Body" @13
+		    location   	(1830, 1793)
+		    label      	(object ItemLabel
+			Parent_View 	@13
+			location   	(1768, 1597)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPOcomd")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DE5EB5101BA"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBPO (Persistent Object)::EBPOsten" "PackageType" "Specification" @14
+		    location   	(351, 1312)
+		    label      	(object ItemLabel
+			Parent_View 	@14
+			location   	(289, 1116)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPOsten")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DE5EB5D01D9"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBPO (Persistent Object)::EBPOstat" "PackageType" "Specification" @15
+		    location   	(839, 1296)
+		    label      	(object ItemLabel
+			Parent_View 	@15
+			location   	(777, 1100)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPOstat")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DE5EB64037F"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBPO (Persistent Object)::EBPOidle" "PackageType" "Specification" @16
+		    location   	(1347, 1312)
+		    label      	(object ItemLabel
+			Parent_View 	@16
+			location   	(1285, 1116)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPOidle")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DE5EB6B0266"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBPO (Persistent Object)::EBPOcomd" "PackageType" "Specification" @17
+		    location   	(1803, 1303)
+		    label      	(object ItemLabel
+			Parent_View 	@17
+			location   	(1741, 1107)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPOcomd")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DE5EB7100A1"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @18
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DE5EBB0017B"
+		    client     	@2
+		    supplier   	@3
+		    line_style 	0)
+		(object ModVisView "" @19
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DE5EBB6017B"
+		    client     	@4
+		    supplier   	@7
+		    line_style 	0)
+		(object ModVisView "" @20
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DE5EBB900DF"
+		    client     	@5
+		    supplier   	@8
+		    line_style 	0)
+		(object ModVisView "" @21
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DE5EBBC01AA"
+		    client     	@6
+		    supplier   	@9
+		    line_style 	0)
+		(object ModVisView "" @22
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DE5EBBE039E"
+		    client     	@10
+		    supplier   	@14
+		    line_style 	0)
+		(object ModVisView "" @23
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DE5EBC10266"
+		    client     	@11
+		    supplier   	@15
+		    line_style 	0)
+		(object ModVisView "" @24
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DE5EBC401AA"
+		    client     	@12
+		    supplier   	@16
+		    line_style 	0)
+		(object ModVisView "" @25
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DE5EBC7016C"
+		    client     	@13
+		    supplier   	@17
+		    line_style 	0)
+		(object ModView "Component View::EBPO (Persistent Object)::EBPOmain" "PackageType" "Specification" @26
+		    location   	(351, 275)
+		    label      	(object ItemLabel
+			Parent_View 	@26
+			location   	(289, 79)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPOmain")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EF054150128"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBPO (Persistent Object)::EBPOmain" "PackageType" "Body" @27
+		    location   	(348, 850)
+		    label      	(object ItemLabel
+			Parent_View 	@27
+			location   	(286, 654)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPOmain")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EF0541F0213"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @28
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3EF054300186"
+		    client     	@27
+		    supplier   	@26
+		    line_style 	0)
+		(object ModView "Component View::EBPO (Persistent Object)::EBPOcnfg" "PackageType" "Body" @29
+		    location   	(879, 2747)
+		    label      	(object ItemLabel
+			Parent_View 	@29
+			location   	(817, 2551)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPOcnfg")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F93A8D202E5"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBPO (Persistent Object)::EBPOcnfg" "PackageType" "Specification" @30
+		    location   	(848, 2293)
+		    label      	(object ItemLabel
+			Parent_View 	@30
+			location   	(786, 2097)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPOcnfg")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F93A8D50249"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @31
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3F93A92B0045"
+		    client     	@29
+		    supplier   	@30
+		    line_style 	0)
+		(object ModView "Component View::EBPO (Persistent Object)::EBPOlcnt" "PackageType" "Body" @32
+		    location   	(1401, 2775)
+		    label      	(object ItemLabel
+			Parent_View 	@32
+			location   	(1339, 2579)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPOlcnt")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F93A937019D"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBPO (Persistent Object)::EBPOlcnt" "PackageType" "Specification" @33
+		    location   	(1364, 2318)
+		    label      	(object ItemLabel
+			Parent_View 	@33
+			location   	(1302, 2122)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPOlcnt")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F93A93A0064"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @34
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3F93A93F0084"
+		    client     	@32
+		    supplier   	@33
+		    line_style 	0)
+		(object ModView "Component View::EBPO (Persistent Object)::EBPOstor" "PackageType" "Body" @35
+		    location   	(1929, 2734)
+		    label      	(object ItemLabel
+			Parent_View 	@35
+			location   	(1867, 2538)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPOstor")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F93ABA60278"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBPO (Persistent Object)::EBPOstor" "PackageType" "Specification" @36
+		    location   	(1890, 2275)
+		    label      	(object ItemLabel
+			Parent_View 	@36
+			location   	(1828, 2079)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPOstor")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F93ABA902D5"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @37
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3F93ABB4014F"
+		    client     	@35
+		    supplier   	@36
+		    line_style 	0)
+		(object ModView "Component View::EBPO (Persistent Object)::EBPOnotc" "PackageType" "Specification" @38
+		    location   	(342, 3281)
+		    label      	(object ItemLabel
+			Parent_View 	@38
+			location   	(280, 3085)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPOnotc")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F93ABF403C0"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBPO (Persistent Object)::EBPOnotc" "PackageType" "Body" @39
+		    location   	(332, 3809)
+		    label      	(object ItemLabel
+			Parent_View 	@39
+			location   	(270, 3613)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPOnotc")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F93ABF90333"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @40
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3F93AC2D01CC"
+		    client     	@39
+		    supplier   	@38
+		    line_style 	0)
+		(object ModView "Component View::EBPO (Persistent Object)::EBPOlogic" "PackageType" "Body" @41
+		    location   	(850, 3844)
+		    label      	(object ItemLabel
+			Parent_View 	@41
+			location   	(788, 3648)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	543
+			label      	"EBPOlogic")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F9D14CF023E"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBPO (Persistent Object)::EBPOlogic" "PackageType" "Specification" @42
+		    location   	(851, 3309)
+		    label      	(object ItemLabel
+			Parent_View 	@42
+			location   	(789, 3113)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPOlogic")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F9D14DA00E7"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @43
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3F9D14E201A2"
+		    client     	@41
+		    supplier   	@42
+		    line_style 	0)
+		(object ModView "Component View::EBPO (Persistent Object)::EBPOcounter" "PackageType" "Body" @44
+		    location   	(1358, 3834)
+		    label      	(object ItemLabel
+			Parent_View 	@44
+			location   	(1296, 3638)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	543
+			label      	"EBPOcounter")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F9E1D9800B2"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBPO (Persistent Object)::EBPOcounter" "PackageType" "Specification" @45
+		    location   	(1358, 3257)
+		    label      	(object ItemLabel
+			Parent_View 	@45
+			location   	(1296, 3061)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPOcounter")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F9E1DB902A6"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @46
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3F9E1DC00333"
+		    client     	@44
+		    supplier   	@45
+		    line_style 	0)
+		(object ModView "Component View::EBPO (Persistent Object)::EBPOeprom" "PackageType" "Body" @47
+		    location   	(1842, 3787)
+		    label      	(object ItemLabel
+			Parent_View 	@47
+			location   	(1780, 3591)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPOeprom")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3FA118390232"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBPO (Persistent Object)::EBPOeprom" "PackageType" "Specification" @48
+		    location   	(1842, 3286)
+		    label      	(object ItemLabel
+			Parent_View 	@48
+			location   	(1780, 3090)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPOeprom")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3FA1183A0399"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @49
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3FA118900000"
+		    client     	@47
+		    supplier   	@48
+		    line_style 	0)
+		(object ModView "Component View::EBPO (Persistent Object)::EBPOpara" "PackageType" "Body" @50
+		    location   	(312, 4806)
+		    label      	(object ItemLabel
+			Parent_View 	@50
+			location   	(250, 4610)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPOpara")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3FA118A302EE"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBPO (Persistent Object)::EBPOpara" "PackageType" "Specification" @51
+		    location   	(321, 4315)
+		    label      	(object ItemLabel
+			Parent_View 	@51
+			location   	(259, 4119)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPOpara")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3FA118A502FD"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @52
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3FA118A80399"
+		    client     	@50
+		    supplier   	@51
+		    line_style 	0)
+		(object ModView "Component View::EBPO (Persistent Object)::EBPOshdn" "PackageType" "Body" @53
+		    location   	(840, 4832)
+		    label      	(object ItemLabel
+			Parent_View 	@53
+			location   	(778, 4636)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPOshdn")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3FA609E700CB"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBPO (Persistent Object)::EBPOshdn" "PackageType" "Specification" @54
+		    location   	(829, 4325)
+		    label      	(object ItemLabel
+			Parent_View 	@54
+			location   	(767, 4129)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPOshdn")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3FA609EA001F"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @55
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3FA609FE003E"
+		    client     	@53
+		    supplier   	@54
+		    line_style 	0)
+		(object ModView "Component View::EBPO (Persistent Object)::EBPOsimu" "PackageType" "Body" @56
+		    location   	(1339, 4848)
+		    label      	(object ItemLabel
+			Parent_View 	@56
+			location   	(1277, 4652)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPOsimu")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3FA65ADE00FA"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBPO (Persistent Object)::EBPOsimu" "PackageType" "Specification" @57
+		    location   	(1315, 4329)
+		    label      	(object ItemLabel
+			Parent_View 	@57
+			location   	(1253, 4133)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPOsimu")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3FA65AE00261"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @58
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3FA65AF40186"
+		    client     	@56
+		    supplier   	@57
+		    line_style 	0)
+		(object ModView "Component View::EBPO (Persistent Object)::EBPOenum" "PackageType" "Specification" @59
+		    location   	(347, 2274)
+		    label      	(object ItemLabel
+			Parent_View 	@59
+			location   	(285, 2078)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPOenum")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3FFD529E0208"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBPO (Persistent Object)::EBPOexcp" "PackageType" "Specification" @60
+		    location   	(1867, 4302)
+		    label      	(object ItemLabel
+			Parent_View 	@60
+			location   	(1805, 4106)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPOexcp")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"400248600322"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBPO (Persistent Object)::EBPOexcp" "PackageType" "Body" @61
+		    location   	(1898, 4862)
+		    label      	(object ItemLabel
+			Parent_View 	@61
+			location   	(1836, 4666)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPOexcp")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"400248890360"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @62
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"400248990256"
+		    client     	@61
+		    supplier   	@60
+		    line_style 	0)))))

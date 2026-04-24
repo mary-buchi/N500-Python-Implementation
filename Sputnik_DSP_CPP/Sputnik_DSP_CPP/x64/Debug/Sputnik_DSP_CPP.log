@@ -1,0 +1,14 @@
+﻿  DSP.cpp
+C:\Users\mary\Documents\Sputnik_DSP_CPP\Sputnik_DSP_CPP\Vector.h(144,2): warning C4091: 'static ': ignored on left of 'Vector' when no variable is declared
+C:\Users\mary\Documents\Sputnik_DSP_CPP\Sputnik_DSP_CPP\DSP.cpp(294,10): warning C4244: 'argument': conversion from 'double' to 'const unsigned __int64', possible loss of data
+C:\Users\mary\Documents\Sputnik_DSP_CPP\Sputnik_DSP_CPP\DSP.cpp(294,30): warning C4244: 'argument': conversion from 'double' to 'const unsigned __int64', possible loss of data
+C:\Users\mary\Documents\Sputnik_DSP_CPP\Sputnik_DSP_CPP\DSP.cpp(295,22): warning C4244: 'return': conversion from 'double' to 'size_t', possible loss of data
+C:\Users\mary\Documents\Sputnik_DSP_CPP\Sputnik_DSP_CPP\DSP.cpp(298,24): warning C4244: 'return': conversion from 'double' to 'size_t', possible loss of data
+  FFT.cpp
+C:\Users\mary\Documents\Sputnik_DSP_CPP\Sputnik_DSP_CPP\FFT.cpp(41,11): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\mary\Documents\Sputnik_DSP_CPP\Sputnik_DSP_CPP\FFT.cpp(144,8): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  Sputnik_DSP_CPP.cpp
+  Vector.cpp
+C:\Users\mary\Documents\Sputnik_DSP_CPP\Sputnik_DSP_CPP\Vector.h(144,2): warning C4091: 'static ': ignored on left of 'Vector' when no variable is declared
+  Generating Code...
+  Sputnik_DSP_CPP.vcxproj -> C:\Users\mary\Documents\Sputnik_DSP_CPP\x64\Debug\Sputnik_DSP_CPP.exe

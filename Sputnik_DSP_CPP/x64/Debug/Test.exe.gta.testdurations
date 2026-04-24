@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GtaTestDurations xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Executable>C:\Users\motm\source\repos\Sputnik_DSP_CPP\x64\Debug\Test.exe</Executable>
+  <TestDurations>
+    <TestDuration Test="DSP.OneEqualsOne" Duration="1" />
+    <TestDuration Test="DSP.SignOfPositiveDoubleIsOne" Duration="1" />
+    <TestDuration Test="UsingDSP.SignOfPositiveDoubleIsOne" Duration="1" />
+    <TestDuration Test="UsingDSP.SignOfNegativDoubleIsMinusOne" Duration="1" />
+    <TestDuration Test="UsingDSP.SignOfZeroIsZero" Duration="1" />
+    <TestDuration Test="UsingDSP.DataShiftIsComputedCorrectly" Duration="1" />
+    <TestDuration Test="UsingDSP.TimeFromSampleIsComputedCorrectly" Duration="1" />
+    <TestDuration Test="UsingDSP.InterferogramSizeForFullScanIsCorrect" Duration="1" />
+    <TestDuration Test="UsingDSP.InterferogramSizeForHalfScanIsCorrect" Duration="1" />
+    <TestDuration Test="UsingDSP.MinRawDataSizeForFullScanIsCorrect" Duration="1" />
+    <TestDuration Test="UsingDSP.MinRawDataSizeForHalfScanIsCorrect" Duration="1" />
+    <TestDuration Test="ConfigurationFixture.DataShiftIsComputedCorrectly" Duration="1" />
+    <TestDuration Test="ConfigurationFixture.TimeFromSampleIsComputedCorrectly" Duration="1" />
+    <TestDuration Test="ConfigurationFixture.InterferogramSizeForFullScanIsCorrect" Duration="1" />
+    <TestDuration Test="ConfigurationFixture.InterferogramSizeForHalfScanIsCorrect" Duration="1" />
+    <TestDuration Test="ConfigurationFixture.MinRawDataSizeForFullScanIsCorrect" Duration="1" />
+    <TestDuration Test="ConfigurationFixture.MinRawDataSizeForHalfScanIsCorrect" Duration="1" />
+    <TestDuration Test="DSPFixture.SignOfPositiveDoubleIsOne" Duration="1" />
+    <TestDuration Test="DSPFixture.SignOfNegativDoubleIsMinusOne" Duration="1" />
+    <TestDuration Test="DSPFixture.SignOfZeroIsZero" Duration="2" />
+    <TestDuration Test="DSPFixture.LaserApodization" Duration="173" />
+    <TestDuration Test="DSPFixture.LaserFirFilter" Duration="225" />
+    <TestDuration Test="DSPFixture.DetectorFirFilter" Duration="222" />
+    <TestDuration Test="DSPFixture.CheckPeakToPeakAmplitude" Duration="104" />
+    <TestDuration Test="DSPFixture.DetectZeroCrossings" Duration="129" />
+    <TestDuration Test="DSPFixture.InterpolateDetectorData" Duration="181" />
+    <TestDuration Test="DSPFixture.BuildSpeedVector" Duration="69" />
+    <TestDuration Test="DSPFixture.FindScanWindows" Duration="24" />
+    <TestDuration Test="DSPFixture.FindPeaks" Duration="28" />
+    <TestDuration Test="DSPFixture.EnoughPoints" Duration="2" />
+    <TestDuration Test="DSPFixture.CreateReferenceScanForward" Duration="25" />
+    <TestDuration Test="DSPFixture.EnoughPointsForward" Duration="1" />
+    <TestDuration Test="DSPFixture.EnoughPointsReverse" Duration="1" />
+    <TestDuration Test="DSPFixture.CreateReferenceScanReverse" Duration="24" />
+    <TestDuration Test="DSPFixture.CalculateIsolateForward" Duration="34" />
+    <TestDuration Test="DSPFixture.CalculateShiftForward" Duration="25" />
+    <TestDuration Test="DSPFixture.CalculateShiftReverse" Duration="25" />
+    <TestDuration Test="DSP.FFTSHIFT_EVEN" Duration="70" />
+    <TestDuration Test="DSPFixture.FFTSHIFT_EVEN" Duration="2" />
+    <TestDuration Test="DSPFixture.FFTSHIFT_ODD" Duration="1" />
+    <TestDuration Test="DSPFixture.CalculateAverageForward" Duration="185" />
+    <TestDuration Test="DSPFixture.CalculateAverageReverse" Duration="83" />
+    <TestDuration Test="DSPFixture.CalculateIsolateReverse" Duration="34" />
+    <TestDuration Test="DSPFixture.CalculateCenteredAverageForward" Duration="1015" />
+    <TestDuration Test="DSPFixture.CalculateCenteredAveragedScansForward" Duration="45" />
+    <TestDuration Test="DSPFixture.CalculateAveragedScansForward" Duration="49" />
+    <TestDuration Test="DSPFixture.CalculateAveragedScansReverse" Duration="49" />
+    <TestDuration Test="DSPFixture.SpeedIsOkForward" Duration="24" />
+    <TestDuration Test="DSPFixture.SpeedIsOkReverse" Duration="23" />
+    <TestDuration Test="DSPFixture.CalculateCenteredAveragedScansReverse" Duration="45" />
+    <TestDuration Test="DSPFixture.CalculatePhaseCorrectionForward" Duration="28" />
+    <TestDuration Test="DSPFixture.CalculatePhaseCorrectionReverse" Duration="28" />
+    <TestDuration Test="DSPFixture.CalculateRawSpectrumForward" Duration="136" />
+    <TestDuration Test="DSPFixture.CalculateRawSpectrumReverse" Duration="138" />
+    <TestDuration Test="DSPFixture.CalculateDispersionCorrectedSpectrumForward" Duration="102" />
+    <TestDuration Test="DSPFixture.CalculateDispersionCorrectedSpectrumReverse" Duration="102" />
+    <TestDuration Test="DSPFixture.CalculateDispersionCorrectedSpectrumAverage" Duration="14" />
+  </TestDurations>
+</GtaTestDurations>

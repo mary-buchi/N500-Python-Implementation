@@ -1,0 +1,12 @@
+load sy.txt
+load di.txt
+load es.txt
+load do.txt
+load ds.txt
+load ao.txt
+load as.txt
+load pc.txt
+load po.txt
+load st.txt
+load tc.txt
+load wc.txt

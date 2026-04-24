@@ -1,0 +1,386 @@
+
+(object Petal
+    version    	42
+    _written   	"Rose 4.5.8163.3"
+    charSet    	0)
+
+(object SubSystem "EBIO (Analog- / Digital- In-/Output)"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    attributes 	(list Attribute_Set
+	(object Attribute
+	    tool       	"cg"
+	    name       	"Directory"
+	    value      	"Embedded\\src\\EBIO"))
+    quid       	"3DF5A4B6036B"
+    physical_models 	(list unit_reference_list
+	(object module "EBIOident" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBIO\\EBIOident.h"))
+	    quid       	"3DF5AF3B03D8"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBIOregy" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBIO\\EBIOregy.cpp"))
+	    quid       	"3DF5AF54009C"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3DF5AFC80148"
+		    supplier   	"Component View::EBIO (Analog- / Digital- In-/Output)::EBIOregy"
+		    quidu      	"3DF5AF9E01B5"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBIOintf" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBIO\\EBIOintf.cpp"))
+	    quid       	"3DF5AF6101F4"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3DF5AFCD01E4"
+		    supplier   	"Component View::EBIO (Analog- / Digital- In-/Output)::EBIOintf"
+		    quidu      	"3DF5AFAF0232"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBIOcrea" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBIO\\EBIOcrea.cpp"))
+	    quid       	"3DF5AF72034B"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3DF5AFCA03B9"
+		    supplier   	"Component View::EBIO (Analog- / Digital- In-/Output)::EBIOcrea"
+		    quidu      	"3DF5AFA5008C"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBIOcomd" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBIO\\EBIOcomd.cpp"))
+	    quid       	"3DF5AF8C02AF"
+	    stereotype 	"Package Body"
+	    language   	"C++")
+	(object module "EBIOregy" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBIO\\EBIOregy.h"))
+	    quid       	"3DF5AF9E01B5"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBIOcrea" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBIO\\EBIOcrea.h"))
+	    quid       	"3DF5AFA5008C"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBIOintf" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBIO\\EBIOintf.h"))
+	    quid       	"3DF5AFAF0232"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBIOmain" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBIO\\EBIOmain.cpp"))
+	    quid       	"3EF0546A0251"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3EF05485007C"
+		    supplier   	"Component View::EBIO (Analog- / Digital- In-/Output)::EBIOmain"
+		    quidu      	"3EF054710119"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBIOmain" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBIO\\EBIOmain.h"))
+	    quid       	"3EF054710119"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBIOstat" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBIO\\EBIOstat.h"))
+	    quid       	"3FA1170C0242"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBIOstat" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBIO\\EBIOstat.cpp"))
+	    quid       	"3FA117230177"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3FA117280399"
+		    supplier   	"Component View::EBIO (Analog- / Digital- In-/Output)::EBIOstat"
+		    quidu      	"3FA1170C0242"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++"))
+    physical_presentations 	(list unit_reference_list
+	(object Module_Diagram "main"
+	    quid       	"3DF5A735003E"
+	    title      	"main"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object ModView "Component View::EBIO (Analog- / Digital- In-/Output)::EBIOident" "PackageType" "Specification" @1
+		    location   	(2057, 259)
+		    label      	(object ItemLabel
+			Parent_View 	@1
+			location   	(1995, 63)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBIOident")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DF5AF3B03D8"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBIO (Analog- / Digital- In-/Output)::EBIOregy" "PackageType" "Body" @2
+		    location   	(715, 793)
+		    label      	(object ItemLabel
+			Parent_View 	@2
+			location   	(653, 597)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBIOregy")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DF5AF54009C"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBIO (Analog- / Digital- In-/Output)::EBIOintf" "PackageType" "Body" @3
+		    location   	(1621, 802)
+		    label      	(object ItemLabel
+			Parent_View 	@3
+			location   	(1559, 606)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBIOintf")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DF5AF6101F4"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBIO (Analog- / Digital- In-/Output)::EBIOcrea" "PackageType" "Body" @4
+		    location   	(1185, 796)
+		    label      	(object ItemLabel
+			Parent_View 	@4
+			location   	(1123, 600)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBIOcrea")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DF5AF72034B"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBIO (Analog- / Digital- In-/Output)::EBIOregy" "PackageType" "Specification" @5
+		    location   	(723, 255)
+		    label      	(object ItemLabel
+			Parent_View 	@5
+			location   	(661, 59)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBIOregy")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DF5AF9E01B5"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBIO (Analog- / Digital- In-/Output)::EBIOcrea" "PackageType" "Specification" @6
+		    location   	(1182, 261)
+		    label      	(object ItemLabel
+			Parent_View 	@6
+			location   	(1120, 65)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBIOcrea")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DF5AFA5008C"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBIO (Analog- / Digital- In-/Output)::EBIOintf" "PackageType" "Specification" @7
+		    location   	(1634, 246)
+		    label      	(object ItemLabel
+			Parent_View 	@7
+			location   	(1572, 50)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBIOintf")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DF5AFAF0232"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @8
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DF5AFC80148"
+		    client     	@2
+		    supplier   	@5
+		    line_style 	0)
+		(object ModVisView "" @9
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DF5AFCA03B9"
+		    client     	@4
+		    supplier   	@6
+		    line_style 	0)
+		(object ModVisView "" @10
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DF5AFCD01E4"
+		    client     	@3
+		    supplier   	@7
+		    line_style 	0)
+		(object ModView "Component View::EBIO (Analog- / Digital- In-/Output)::EBIOmain" "PackageType" "Body" @11
+		    location   	(202, 789)
+		    label      	(object ItemLabel
+			Parent_View 	@11
+			location   	(140, 593)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBIOmain")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EF0546A0251"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBIO (Analog- / Digital- In-/Output)::EBIOmain" "PackageType" "Specification" @12
+		    location   	(195, 246)
+		    label      	(object ItemLabel
+			Parent_View 	@12
+			location   	(133, 50)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBIOmain")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EF054710119"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @13
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3EF05485007C"
+		    client     	@11
+		    supplier   	@12
+		    line_style 	0)
+		(object ModView "Component View::EBIO (Analog- / Digital- In-/Output)::EBIOstat" "PackageType" "Specification" @14
+		    location   	(209, 1353)
+		    label      	(object ItemLabel
+			Parent_View 	@14
+			location   	(147, 1157)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	543
+			label      	"EBIOstat")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3FA1170C0242"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBIO (Analog- / Digital- In-/Output)::EBIOstat" "PackageType" "Body" @15
+		    location   	(200, 1881)
+		    label      	(object ItemLabel
+			Parent_View 	@15
+			location   	(138, 1685)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	543
+			label      	"EBIOstat")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3FA117230177"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @16
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3FA117280399"
+		    client     	@15
+		    supplier   	@14
+		    line_style 	0)))))

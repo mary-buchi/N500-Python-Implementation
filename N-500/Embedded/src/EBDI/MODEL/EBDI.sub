@@ -1,0 +1,312 @@
+
+(object Petal
+    version    	42
+    _written   	"Rose 4.5.8163.3"
+    charSet    	0)
+
+(object SubSystem "EBDI (Diagnostics)"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    attributes 	(list Attribute_Set
+	(object Attribute
+	    tool       	"cg"
+	    name       	"Directory"
+	    value      	"Embedded\\src\\EBDI"))
+    quid       	"3E197C2800D6"
+    physical_models 	(list unit_reference_list
+	(object module "EBDIident" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBDI\\EBDIident.h"))
+	    quid       	"3E1980080049"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBDIregy" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBDI\\EBDIregy.h"))
+	    quid       	"3E1981010337"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBDIcrea" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBDI\\EBDIcrea.h"))
+	    quid       	"3E1981110328"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBDIintf" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBDI\\EBDIintf.h"))
+	    quid       	"3E19811A01D0"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBDIregy" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBDI\\EBDIregy.cpp"))
+	    quid       	"3E1981F50385"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3E19823F00D6"
+		    supplier   	"Component View::EBDI (Diagnostics)::EBDIregy"
+		    quidu      	"3E1981010337"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBDIcrea" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBDI\\EBDIcrea.cpp"))
+	    quid       	"3E19820301EF"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3E1982410356"
+		    supplier   	"Component View::EBDI (Diagnostics)::EBDIcrea"
+		    quidu      	"3E1981110328"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBDIintf" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBDI\\EBDIintf.cpp"))
+	    quid       	"3E19820B0114"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3E19827B02AB"
+		    supplier   	"Component View::EBDI (Diagnostics)::EBDIintf"
+		    quidu      	"3E19811A01D0"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBDImain" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBDI\\EBDImain.h"))
+	    quid       	"3EF05DAD005D"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBDImain" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBDI\\EBDImain.cpp"))
+	    quid       	"3EF05DB40186"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3EF05DC80290"
+		    supplier   	"Component View::EBDI (Diagnostics)::EBDImain"
+		    quidu      	"3EF05DAD005D"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++"))
+    physical_presentations 	(list unit_reference_list
+	(object Module_Diagram "main"
+	    quid       	"3E197FA201FF"
+	    title      	"main"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object ModView "Component View::EBDI (Diagnostics)::EBDIident" "PackageType" "Specification" @1
+		    location   	(629, 490)
+		    label      	(object ItemLabel
+			Parent_View 	@1
+			location   	(567, 294)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	543
+			label      	"EBDIident")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E1980080049"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBDI (Diagnostics)::EBDIregy" "PackageType" "Specification" @2
+		    location   	(975, 1050)
+		    label      	(object ItemLabel
+			Parent_View 	@2
+			location   	(913, 854)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBDIregy")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E1981010337"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBDI (Diagnostics)::EBDIcrea" "PackageType" "Specification" @3
+		    location   	(1501, 1059)
+		    label      	(object ItemLabel
+			Parent_View 	@3
+			location   	(1439, 863)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBDIcrea")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E1981110328"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBDI (Diagnostics)::EBDIintf" "PackageType" "Specification" @4
+		    location   	(1981, 1059)
+		    label      	(object ItemLabel
+			Parent_View 	@4
+			location   	(1919, 863)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBDIintf")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E19811A01D0"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBDI (Diagnostics)::EBDIregy" "PackageType" "Body" @5
+		    location   	(981, 496)
+		    label      	(object ItemLabel
+			Parent_View 	@5
+			location   	(919, 300)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBDIregy")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E1981F50385"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBDI (Diagnostics)::EBDIcrea" "PackageType" "Body" @6
+		    location   	(1487, 503)
+		    label      	(object ItemLabel
+			Parent_View 	@6
+			location   	(1425, 307)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBDIcrea")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E19820301EF"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBDI (Diagnostics)::EBDIintf" "PackageType" "Body" @7
+		    location   	(1965, 494)
+		    label      	(object ItemLabel
+			Parent_View 	@7
+			location   	(1903, 298)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBDIintf")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E19820B0114"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @8
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3E19823F00D6"
+		    client     	@5
+		    supplier   	@2
+		    line_style 	0)
+		(object ModVisView "" @9
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3E1982410356"
+		    client     	@6
+		    supplier   	@3
+		    line_style 	0)
+		(object ModVisView "" @10
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3E19827B02AB"
+		    client     	@7
+		    supplier   	@4
+		    line_style 	0)
+		(object ModView "Component View::EBDI (Diagnostics)::EBDImain" "PackageType" "Specification" @11
+		    location   	(251, 1018)
+		    label      	(object ItemLabel
+			Parent_View 	@11
+			location   	(189, 822)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBDImain")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EF05DAD005D"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBDI (Diagnostics)::EBDImain" "PackageType" "Body" @12
+		    location   	(251, 481)
+		    label      	(object ItemLabel
+			Parent_View 	@12
+			location   	(189, 285)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBDImain")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EF05DB40186"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @13
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3EF05DC80290"
+		    client     	@12
+		    supplier   	@11
+		    line_style 	0)))))

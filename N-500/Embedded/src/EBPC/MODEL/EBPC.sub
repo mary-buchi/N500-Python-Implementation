@@ -1,0 +1,1092 @@
+
+(object Petal
+    version    	42
+    _written   	"Rose 4.5.8163.3"
+    charSet    	0)
+
+(object SubSystem "EBPC (Power Control)"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    attributes 	(list Attribute_Set
+	(object Attribute
+	    tool       	"cg"
+	    name       	"Directory"
+	    value      	"Embedded\\src\\EBPC"))
+    quid       	"3EED769F0343"
+    physical_models 	(list unit_reference_list
+	(object module "EBPCident" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBPC\\EBPCident.h"))
+	    quid       	"3EED769F0349"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBPCregy" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBPC\\EBPCregy.cpp"))
+	    quid       	"3EED769F034B"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3EED769F034D"
+		    supplier   	"Component View::EBPC (Power Control)::EBPCregy"
+		    quidu      	"3EED769F036E"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBPCcrea" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBPC\\EBPCcrea.cpp"))
+	    quid       	"3EED769F0350"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3EED769F0352"
+		    supplier   	"Component View::EBPC (Power Control)::EBPCcrea"
+		    quidu      	"3EED769F0370"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBPCimpl" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBPC\\EBPCimpl.cpp"))
+	    quid       	"3EED769F0355"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3EED769F0357"
+		    supplier   	"Component View::EBPC (Power Control)::EBPCimpl"
+		    quidu      	"3EED769F0374"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBPCsten" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBPC\\EBPCsten.cpp"))
+	    quid       	"3EED769F035A"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3EED769F035C"
+		    supplier   	"Component View::EBPC (Power Control)::EBPCsten"
+		    quidu      	"3EED769F0376"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBPCstat" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBPC\\EBPCstat.cpp"))
+	    quid       	"3EED769F035F"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3EED769F0361"
+		    supplier   	"Component View::EBPC (Power Control)::EBPCstat"
+		    quidu      	"3EED769F0378"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBPCidle" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBPC\\EBPCidle.cpp"))
+	    quid       	"3EED769F0364"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3EED769F0366"
+		    supplier   	"Component View::EBPC (Power Control)::EBPCidle"
+		    quidu      	"3EED769F037A"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBPCcomd" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBPC\\EBPCcomd.cpp"))
+	    quid       	"3EED769F0369"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3EED769F036B"
+		    supplier   	"Component View::EBPC (Power Control)::EBPCcomd"
+		    quidu      	"3EED769F037C"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBPCregy" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBPC\\EBPCregy.h"))
+	    quid       	"3EED769F036E"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBPCcrea" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBPC\\EBPCcrea.h"))
+	    quid       	"3EED769F0370"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBPCintf" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBPC\\EBPCintf.h"))
+	    quid       	"3EED769F0372"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBPCimpl" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBPC\\EBPCimpl.h"))
+	    quid       	"3EED769F0374"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBPCsten" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBPC\\EBPCsten.h"))
+	    quid       	"3EED769F0376"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBPCstat" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBPC\\EBPCstat.h"))
+	    quid       	"3EED769F0378"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBPCidle" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBPC\\EBPCidle.h"))
+	    quid       	"3EED769F037A"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBPCcomd" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBPC\\EBPCcomd.h"))
+	    quid       	"3EED769F037C"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBPCintf" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBPC\\EBPCintf.cpp"))
+	    quid       	"3EED769F037E"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3EED769F0380"
+		    supplier   	"Component View::EBPC (Power Control)::EBPCintf"
+		    quidu      	"3EED769F0372"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBPCconfig" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBPC\\EBPCconfig.cpp"))
+	    quid       	"3EED769F0383"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3EED769F0385"
+		    supplier   	"Component View::EBPC (Power Control)::EBPCconfig"
+		    quidu      	"3EED769F0388"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBPCconfig" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBPC\\EBPCconfig.h"))
+	    quid       	"3EED769F0388"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBPCproc" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBPC\\EBPCproc.h"))
+	    quid       	"3EED769F038A"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBPCproc" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBPC\\EBPCproc.cpp"))
+	    quid       	"3EED769F038C"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3EED769F038E"
+		    supplier   	"Component View::EBPC (Power Control)::EBPCproc"
+		    quidu      	"3EED769F038A"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBPClogic" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBPC\\EBPClogic.h"))
+	    quid       	"3EED769F0391"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBPClogic" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBPC\\EBPClogic.cpp"))
+	    quid       	"3EED769F0393"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3EED769F0395"
+		    supplier   	"Component View::EBPC (Power Control)::EBPClogic"
+		    quidu      	"3EED769F0391"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBPCconn" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBPC\\EBPCconn.h"))
+	    quid       	"3EED769F039F"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBPCconn" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBPC\\EBPCconn.cpp"))
+	    quid       	"3EED769F03A1"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3EED769F03A3"
+		    supplier   	"Component View::EBPC (Power Control)::EBPCconn"
+		    quidu      	"3EED769F039F"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBPCmain" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBPC\\EBPCmain.cpp"))
+	    quid       	"3EED769F03A6"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3EED769F03A8"
+		    supplier   	"Component View::EBPC (Power Control)::EBPCmain"
+		    quidu      	"3EED769F03AB"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBPCmain" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBPC\\EBPCmain.h"))
+	    quid       	"3EED769F03AB"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBPCexcp" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBPC\\EBPCexcp.cpp"))
+	    quid       	"3EED769F03AD"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3EED769F03AF"
+		    supplier   	"Component View::EBPC (Power Control)::EBPCexcp"
+		    quidu      	"3EED769F03B2"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBPCexcp" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBPC\\EBPCexcp.h"))
+	    quid       	"3EED769F03B2"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBPCtrac" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBPC\\EBPCtrac.cpp"))
+	    quid       	"4028CB5F02BC"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"4028CB860106"
+		    supplier   	"Component View::EBPC (Power Control)::EBPCtrac"
+		    quidu      	"4028CB79027D"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBPCtrac" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBPC\\EBPCtrac.h"))
+	    quid       	"4028CB79027D"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBPCpid" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBPC\\EBPCpid.cpp"))
+	    quid       	"4033A00A0065"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"4033A0210353"
+		    supplier   	"Component View::EBPC (Power Control)::EBPCpid"
+		    quidu      	"4033A00C015F"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBPCpid" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBPC\\EBPCpid.h"))
+	    quid       	"4033A00C015F"
+	    stereotype 	"Package Specification"
+	    language   	"C++"))
+    physical_presentations 	(list unit_reference_list
+	(object Module_Diagram "main"
+	    quid       	"3EED769F03B4"
+	    title      	"main"
+	    zoom       	89
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	1765
+	    items      	(list diagram_item_list
+		(object ModView "Component View::EBPC (Power Control)::EBPCident" "PackageType" "Specification" @1
+		    location   	(237, 221)
+		    label      	(object ItemLabel
+			Parent_View 	@1
+			location   	(175, 25)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPCident")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EED769F0349"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBPC (Power Control)::EBPCregy" "PackageType" "Body" @2
+		    location   	(784, 800)
+		    label      	(object ItemLabel
+			Parent_View 	@2
+			location   	(722, 604)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPCregy")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EED769F034B"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBPC (Power Control)::EBPCcrea" "PackageType" "Body" @3
+		    location   	(1241, 803)
+		    label      	(object ItemLabel
+			Parent_View 	@3
+			location   	(1179, 607)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPCcrea")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EED769F0350"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBPC (Power Control)::EBPCimpl" "PackageType" "Body" @4
+		    location   	(2129, 819)
+		    label      	(object ItemLabel
+			Parent_View 	@4
+			location   	(2067, 623)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPCimpl")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EED769F0355"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBPC (Power Control)::EBPCsten" "PackageType" "Body" @5
+		    location   	(793, 1834)
+		    label      	(object ItemLabel
+			Parent_View 	@5
+			location   	(731, 1638)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPCsten")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EED769F035A"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBPC (Power Control)::EBPCstat" "PackageType" "Body" @6
+		    location   	(1254, 1849)
+		    label      	(object ItemLabel
+			Parent_View 	@6
+			location   	(1192, 1653)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPCstat")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EED769F035F"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBPC (Power Control)::EBPCidle" "PackageType" "Body" @7
+		    location   	(1743, 1849)
+		    label      	(object ItemLabel
+			Parent_View 	@7
+			location   	(1681, 1653)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPCidle")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EED769F0364"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBPC (Power Control)::EBPCcomd" "PackageType" "Body" @8
+		    location   	(2205, 1840)
+		    label      	(object ItemLabel
+			Parent_View 	@8
+			location   	(2143, 1644)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPCcomd")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EED769F0369"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBPC (Power Control)::EBPCregy" "PackageType" "Specification" @9
+		    location   	(756, 268)
+		    label      	(object ItemLabel
+			Parent_View 	@9
+			location   	(694, 72)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPCregy")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EED769F036E"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBPC (Power Control)::EBPCcrea" "PackageType" "Specification" @10
+		    location   	(1223, 272)
+		    label      	(object ItemLabel
+			Parent_View 	@10
+			location   	(1161, 76)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPCcrea")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EED769F0370"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBPC (Power Control)::EBPCintf" "PackageType" "Specification" @11
+		    location   	(1667, 290)
+		    label      	(object ItemLabel
+			Parent_View 	@11
+			location   	(1605, 94)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPCintf")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EED769F0372"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBPC (Power Control)::EBPCimpl" "PackageType" "Specification" @12
+		    location   	(2123, 287)
+		    label      	(object ItemLabel
+			Parent_View 	@12
+			location   	(2061, 91)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPCimpl")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EED769F0374"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBPC (Power Control)::EBPCsten" "PackageType" "Specification" @13
+		    location   	(756, 1333)
+		    label      	(object ItemLabel
+			Parent_View 	@13
+			location   	(694, 1137)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPCsten")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EED769F0376"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBPC (Power Control)::EBPCstat" "PackageType" "Specification" @14
+		    location   	(1206, 1339)
+		    label      	(object ItemLabel
+			Parent_View 	@14
+			location   	(1144, 1143)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPCstat")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EED769F0378"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBPC (Power Control)::EBPCidle" "PackageType" "Specification" @15
+		    location   	(1731, 1314)
+		    label      	(object ItemLabel
+			Parent_View 	@15
+			location   	(1669, 1118)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPCidle")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EED769F037A"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBPC (Power Control)::EBPCcomd" "PackageType" "Specification" @16
+		    location   	(2215, 1317)
+		    label      	(object ItemLabel
+			Parent_View 	@16
+			location   	(2153, 1121)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPCcomd")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EED769F037C"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @17
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3EED769F034D"
+		    client     	@2
+		    supplier   	@9
+		    line_style 	0)
+		(object ModVisView "" @18
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3EED769F0352"
+		    client     	@3
+		    supplier   	@10
+		    line_style 	0)
+		(object ModVisView "" @19
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3EED769F0357"
+		    client     	@4
+		    supplier   	@12
+		    line_style 	0)
+		(object ModVisView "" @20
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3EED769F035C"
+		    client     	@5
+		    supplier   	@13
+		    line_style 	0)
+		(object ModVisView "" @21
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3EED769F0361"
+		    client     	@6
+		    supplier   	@14
+		    line_style 	0)
+		(object ModVisView "" @22
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3EED769F0366"
+		    client     	@7
+		    supplier   	@15
+		    line_style 	0)
+		(object ModVisView "" @23
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3EED769F036B"
+		    client     	@8
+		    supplier   	@16
+		    line_style 	0)
+		(object ModView "Component View::EBPC (Power Control)::EBPCintf" "PackageType" "Body" @24
+		    location   	(1698, 803)
+		    label      	(object ItemLabel
+			Parent_View 	@24
+			location   	(1636, 607)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPCintf")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EED769F037E"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @25
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3EED769F0380"
+		    client     	@24
+		    supplier   	@11
+		    line_style 	0)
+		(object ModView "Component View::EBPC (Power Control)::EBPCconfig" "PackageType" "Body" @26
+		    location   	(800, 2874)
+		    label      	(object ItemLabel
+			Parent_View 	@26
+			location   	(738, 2678)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPCconfig")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EED769F0383"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBPC (Power Control)::EBPCconfig" "PackageType" "Specification" @27
+		    location   	(782, 2409)
+		    label      	(object ItemLabel
+			Parent_View 	@27
+			location   	(720, 2213)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPCconfig")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EED769F0388"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBPC (Power Control)::EBPCproc" "PackageType" "Specification" @28
+		    location   	(1314, 2387)
+		    label      	(object ItemLabel
+			Parent_View 	@28
+			location   	(1252, 2191)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPCproc")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EED769F038A"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBPC (Power Control)::EBPCproc" "PackageType" "Body" @29
+		    location   	(1315, 2886)
+		    label      	(object ItemLabel
+			Parent_View 	@29
+			location   	(1253, 2690)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPCproc")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EED769F038C"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @30
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3EED769F0385"
+		    client     	@26
+		    supplier   	@27
+		    line_style 	0)
+		(object ModVisView "" @31
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3EED769F038E"
+		    client     	@29
+		    supplier   	@28
+		    line_style 	0)
+		(object ModView "Component View::EBPC (Power Control)::EBPClogic" "PackageType" "Specification" @32
+		    location   	(1772, 2403)
+		    label      	(object ItemLabel
+			Parent_View 	@32
+			location   	(1710, 2207)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPClogic")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EED769F0391"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBPC (Power Control)::EBPClogic" "PackageType" "Body" @33
+		    location   	(1784, 2891)
+		    label      	(object ItemLabel
+			Parent_View 	@33
+			location   	(1722, 2695)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPClogic")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EED769F0393"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @34
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3EED769F0395"
+		    client     	@33
+		    supplier   	@32
+		    line_style 	0)
+		(object ModView "Component View::EBPC (Power Control)::EBPCconn" "PackageType" "Specification" @35
+		    location   	(804, 3426)
+		    label      	(object ItemLabel
+			Parent_View 	@35
+			location   	(742, 3230)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPCconn")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EED769F039F"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBPC (Power Control)::EBPCconn" "PackageType" "Body" @36
+		    location   	(797, 3914)
+		    label      	(object ItemLabel
+			Parent_View 	@36
+			location   	(735, 3718)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPCconn")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EED769F03A1"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @37
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3EED769F03A3"
+		    client     	@36
+		    supplier   	@35
+		    line_style 	0)
+		(object ModView "Component View::EBPC (Power Control)::EBPCmain" "PackageType" "Body" @38
+		    location   	(1330, 3914)
+		    label      	(object ItemLabel
+			Parent_View 	@38
+			location   	(1268, 3718)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPCmain")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EED769F03A6"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBPC (Power Control)::EBPCmain" "PackageType" "Specification" @39
+		    location   	(1320, 3415)
+		    label      	(object ItemLabel
+			Parent_View 	@39
+			location   	(1258, 3219)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPCmain")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EED769F03AB"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @40
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3EED769F03A8"
+		    client     	@38
+		    supplier   	@39
+		    line_style 	0)
+		(object ModView "Component View::EBPC (Power Control)::EBPCexcp" "PackageType" "Body" @41
+		    location   	(1804, 3879)
+		    label      	(object ItemLabel
+			Parent_View 	@41
+			location   	(1742, 3683)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPCexcp")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EED769F03AD"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBPC (Power Control)::EBPCexcp" "PackageType" "Specification" @42
+		    location   	(1814, 3401)
+		    label      	(object ItemLabel
+			Parent_View 	@42
+			location   	(1752, 3205)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPCexcp")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EED769F03B2"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @43
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3EED769F03AF"
+		    client     	@41
+		    supplier   	@42
+		    line_style 	0)
+		(object ModView "Component View::EBPC (Power Control)::EBPCtrac" "PackageType" "Body" @44
+		    location   	(2306, 2876)
+		    label      	(object ItemLabel
+			Parent_View 	@44
+			location   	(2244, 2680)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPCtrac")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"4028CB5F02BC"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBPC (Power Control)::EBPCtrac" "PackageType" "Specification" @45
+		    location   	(2310, 2412)
+		    label      	(object ItemLabel
+			Parent_View 	@45
+			location   	(2248, 2216)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBPCtrac")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"4028CB79027D"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @46
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"4028CB860106"
+		    client     	@44
+		    supplier   	@45
+		    line_style 	0)
+		(object ModView "Component View::EBPC (Power Control)::EBPCpid" "PackageType" "Body" @47
+		    location   	(2341, 3899)
+		    label      	(object ItemLabel
+			Parent_View 	@47
+			location   	(2279, 3703)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	543
+			label      	"EBPCpid")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"4033A00A0065"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBPC (Power Control)::EBPCpid" "PackageType" "Specification" @48
+		    location   	(2341, 3402)
+		    label      	(object ItemLabel
+			Parent_View 	@48
+			location   	(2279, 3206)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	543
+			label      	"EBPCpid")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"4033A00C015F"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @49
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"4033A0210353"
+		    client     	@47
+		    supplier   	@48
+		    line_style 	0)))))

@@ -1,0 +1,52 @@
+
+(object Petal
+    version    	42
+    _written   	"Rose 4.5.8163.3"
+    charSet    	0)
+
+(object Class_Category "EBPCI (PCI Driver)"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    quid       	"3F657039002E"
+    exportControl 	"Public"
+    subsystem  	"EBPCI (PCI Driver)"
+    quidu      	"3F65705302AF"
+    logical_models 	(list unit_reference_list
+	(object Class_Utility "PCI_IDENTIFIERS"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"cg_style"
+		    value      	"Dummy Class"))
+	    quid       	"3F6570FC02FD"
+	    module     	"Component View::EBPCI (PCI Driver)::EBPCIident (module spec)"
+	    quidu      	"3F6570E3031C"
+	    language   	"C++"))
+    logical_presentations 	(list unit_reference_list
+	(object ClassDiagram "0.0 Globals"
+	    quid       	"3F6570B30222"
+	    title      	"0.0 Globals"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object ClassView "ClassUtility" "Logical View::EBPCI (PCI Driver)::PCI_IDENTIFIERS" @1
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(709, 366)
+		    label      	(object ItemLabel
+			Parent_View 	@1
+			location   	(529, 315)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	360
+			justify    	0
+			label      	"PCI_IDENTIFIERS")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F6570FC02FD"
+		    width      	378
+		    height     	126
+		    autoResize 	TRUE)))))

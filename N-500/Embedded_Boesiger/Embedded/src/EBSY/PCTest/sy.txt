@@ -1,0 +1,2 @@
+sy(19).startup
+sy(19).startdevice

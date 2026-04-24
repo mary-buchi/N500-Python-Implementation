@@ -1,0 +1,1157 @@
+
+(object Petal
+    version    	42
+    _written   	"Rose 4.5.8163.3"
+    charSet    	0)
+
+(object SubSystem "EBTC (Temperature Control)"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    attributes 	(list Attribute_Set
+	(object Attribute
+	    tool       	"cg"
+	    name       	"Directory"
+	    value      	"Embedded\\src\\EBTC"))
+    quid       	"3DE5E83800D0"
+    physical_models 	(list unit_reference_list
+	(object module "EBTCident" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBTC\\EBTCident.h"))
+	    quid       	"3DE5EDB200C0"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBTCregy" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBTC\\EBTCregy.cpp"))
+	    quid       	"3DE5EDBC02F2"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3DE5EE3700EF"
+		    supplier   	"Component View::EBTC (Temperature Control)::EBTCregy"
+		    quidu      	"3DE5EDFE0331"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBTCcrea" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBTC\\EBTCcrea.cpp"))
+	    quid       	"3DE5EDC60081"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3DE5EE390062"
+		    supplier   	"Component View::EBTC (Temperature Control)::EBTCcrea"
+		    quidu      	"3DE5EE04019B"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBTCimpl" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBTC\\EBTCimpl.cpp"))
+	    quid       	"3DE5EDD8014D"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3DE5EE3D0024"
+		    supplier   	"Component View::EBTC (Temperature Control)::EBTCimpl"
+		    quidu      	"3DE5EE1400A1"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBTCsten" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBTC\\EBTCsten.cpp"))
+	    quid       	"3DE5EDE00024"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3DE5EE3F0081"
+		    supplier   	"Component View::EBTC (Temperature Control)::EBTCsten"
+		    quidu      	"3DE5EE1B0024"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBTCstat" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBTC\\EBTCstat.cpp"))
+	    quid       	"3DE5EDE503AE"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3DE5EE410091"
+		    supplier   	"Component View::EBTC (Temperature Control)::EBTCstat"
+		    quidu      	"3DE5EE21011E"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBTCidle" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBTC\\EBTCidle.cpp"))
+	    quid       	"3DE5EDEB038F"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3DE5EE430350"
+		    supplier   	"Component View::EBTC (Temperature Control)::EBTCidle"
+		    quidu      	"3DE5EE27017B"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBTCcomd" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBTC\\EBTCcomd.cpp"))
+	    quid       	"3DE5EDF203AE"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3DE5EE460072"
+		    supplier   	"Component View::EBTC (Temperature Control)::EBTCcomd"
+		    quidu      	"3DE5EE2E014D"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBTCregy" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBTC\\EBTCregy.h"))
+	    quid       	"3DE5EDFE0331"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBTCcrea" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBTC\\EBTCcrea.h"))
+	    quid       	"3DE5EE04019B"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBTCintf" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBTC\\EBTCintf.h"))
+	    quid       	"3DE5EE0B012D"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBTCimpl" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBTC\\EBTCimpl.h"))
+	    quid       	"3DE5EE1400A1"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBTCsten" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBTC\\EBTCsten.h"))
+	    quid       	"3DE5EE1B0024"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBTCstat" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBTC\\EBTCstat.h"))
+	    quid       	"3DE5EE21011E"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBTCidle" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBTC\\EBTCidle.h"))
+	    quid       	"3DE5EE27017B"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBTCcomd" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBTC\\EBTCcomd.h"))
+	    quid       	"3DE5EE2E014D"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBTCintf" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBTC\\EBTCintf.cpp"))
+	    quid       	"3DE5EFB5012D"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3DE5EFC70062"
+		    supplier   	"Component View::EBTC (Temperature Control)::EBTCintf"
+		    quidu      	"3DE5EE0B012D"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBTCconfig" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBTC\\EBTCconfig.cpp"))
+	    quid       	"3E41045C0373"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3E538B620129"
+		    supplier   	"Component View::EBTC (Temperature Control)::EBTCconfig"
+		    quidu      	"3E4104640075"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBTCconfig" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBTC\\EBTCconfig.h"))
+	    quid       	"3E4104640075"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBTCprocess" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBTC\\EBTCprocess.h"))
+	    quid       	"3E410469020B"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBTCprocess" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBTC\\EBTCprocess.cpp"))
+	    quid       	"3E41046C0373"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3E538B66036B"
+		    supplier   	"Component View::EBTC (Temperature Control)::EBTCprocess"
+		    quidu      	"3E410469020B"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBTClogic" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBTC\\EBTClogic.h"))
+	    quid       	"3E538BD000EA"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBTClogic" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBTC\\EBTClogic.cpp"))
+	    quid       	"3E538BD7032C"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3E538C080138"
+		    supplier   	"Component View::EBTC (Temperature Control)::EBTClogic"
+		    quidu      	"3E538BD000EA"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBTCconn" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBTC\\EBTCconn.h"))
+	    quid       	"3EE6DFD900EA"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBTCconn" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBTC\\EBTCconn.cpp"))
+	    quid       	"3EE6DFEA0177"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3EE6DFF401E4"
+		    supplier   	"Component View::EBTC (Temperature Control)::EBTCconn"
+		    quidu      	"3EE6DFD900EA"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBTCmain" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBTC\\EBTCmain.cpp"))
+	    quid       	"3EE992790182"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3EE9932A00D6"
+		    supplier   	"Component View::EBTC (Temperature Control)::EBTCmain"
+		    quidu      	"3EE993230153"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBTCmain" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBTC\\EBTCmain.h"))
+	    quid       	"3EE993230153"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBTCexcp" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBTC\\EBTCexcp.cpp"))
+	    quid       	"3EE9C87B021E"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3EE9C8820059"
+		    supplier   	"Component View::EBTC (Temperature Control)::EBTCexcp"
+		    quidu      	"3EE9C87E020F"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBTCexcp" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBTC\\EBTCexcp.h"))
+	    quid       	"3EE9C87E020F"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBTCpid" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBTC\\EBTCpid.h"))
+	    quid       	"40C8045D022E"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBTCpid" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBTC\\EBTCpid.cpp"))
+	    quid       	"40C804650328"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"40C8047501D1"
+		    supplier   	"Component View::EBTC (Temperature Control)::EBTCpid"
+		    quidu      	"40C8045D022E"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBTCsim" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBTC\\EBTCsim.h"))
+	    quid       	"40CFFAC401C7"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBTCsim" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBTC\\EBTCsim.cpp"))
+	    quid       	"40CFFAD0039C"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"40CFFAD8030F"
+		    supplier   	"Component View::EBTC (Temperature Control)::EBTCsim"
+		    quidu      	"40CFFAC401C7"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBTCpid2" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBTC\\EBTCpid2.cpp"))
+	    quid       	"48898FC80099"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"4889902A00BB"
+		    supplier   	"Component View::EBTC (Temperature Control)::EBTCpid2"
+		    quidu      	"48898FCD01E8"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBTCpid2" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBTC\\EBTCpid2.h"))
+	    quid       	"48898FCD01E8"
+	    stereotype 	"Package Specification"
+	    language   	"C++"))
+    physical_presentations 	(list unit_reference_list
+	(object Module_Diagram "main"
+	    quid       	"3DE5EDAA01CA"
+	    title      	"main"
+	    zoom       	89
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object ModView "Component View::EBTC (Temperature Control)::EBTCident" "PackageType" "Specification" @1
+		    location   	(237, 221)
+		    label      	(object ItemLabel
+			Parent_View 	@1
+			location   	(175, 25)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBTCident")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DE5EDB200C0"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBTC (Temperature Control)::EBTCregy" "PackageType" "Body" @2
+		    location   	(780, 765)
+		    label      	(object ItemLabel
+			Parent_View 	@2
+			location   	(718, 569)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBTCregy")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DE5EDBC02F2"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBTC (Temperature Control)::EBTCcrea" "PackageType" "Body" @3
+		    location   	(1237, 768)
+		    label      	(object ItemLabel
+			Parent_View 	@3
+			location   	(1175, 572)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBTCcrea")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DE5EDC60081"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBTC (Temperature Control)::EBTCimpl" "PackageType" "Body" @4
+		    location   	(2125, 784)
+		    label      	(object ItemLabel
+			Parent_View 	@4
+			location   	(2063, 588)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBTCimpl")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DE5EDD8014D"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBTC (Temperature Control)::EBTCsten" "PackageType" "Body" @5
+		    location   	(793, 1834)
+		    label      	(object ItemLabel
+			Parent_View 	@5
+			location   	(731, 1638)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBTCsten")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DE5EDE00024"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBTC (Temperature Control)::EBTCstat" "PackageType" "Body" @6
+		    location   	(1254, 1849)
+		    label      	(object ItemLabel
+			Parent_View 	@6
+			location   	(1192, 1653)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBTCstat")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DE5EDE503AE"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBTC (Temperature Control)::EBTCidle" "PackageType" "Body" @7
+		    location   	(1743, 1849)
+		    label      	(object ItemLabel
+			Parent_View 	@7
+			location   	(1681, 1653)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBTCidle")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DE5EDEB038F"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBTC (Temperature Control)::EBTCcomd" "PackageType" "Body" @8
+		    location   	(2205, 1840)
+		    label      	(object ItemLabel
+			Parent_View 	@8
+			location   	(2143, 1644)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBTCcomd")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DE5EDF203AE"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBTC (Temperature Control)::EBTCregy" "PackageType" "Specification" @9
+		    location   	(732, 240)
+		    label      	(object ItemLabel
+			Parent_View 	@9
+			location   	(670, 44)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBTCregy")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DE5EDFE0331"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBTC (Temperature Control)::EBTCcrea" "PackageType" "Specification" @10
+		    location   	(1219, 237)
+		    label      	(object ItemLabel
+			Parent_View 	@10
+			location   	(1157, 41)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBTCcrea")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DE5EE04019B"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBTC (Temperature Control)::EBTCintf" "PackageType" "Specification" @11
+		    location   	(1663, 255)
+		    label      	(object ItemLabel
+			Parent_View 	@11
+			location   	(1601, 59)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBTCintf")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DE5EE0B012D"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBTC (Temperature Control)::EBTCimpl" "PackageType" "Specification" @12
+		    location   	(2119, 252)
+		    label      	(object ItemLabel
+			Parent_View 	@12
+			location   	(2057, 56)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBTCimpl")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DE5EE1400A1"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBTC (Temperature Control)::EBTCsten" "PackageType" "Specification" @13
+		    location   	(756, 1333)
+		    label      	(object ItemLabel
+			Parent_View 	@13
+			location   	(694, 1137)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBTCsten")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DE5EE1B0024"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBTC (Temperature Control)::EBTCstat" "PackageType" "Specification" @14
+		    location   	(1206, 1339)
+		    label      	(object ItemLabel
+			Parent_View 	@14
+			location   	(1144, 1143)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBTCstat")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DE5EE21011E"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBTC (Temperature Control)::EBTCidle" "PackageType" "Specification" @15
+		    location   	(1731, 1314)
+		    label      	(object ItemLabel
+			Parent_View 	@15
+			location   	(1669, 1118)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBTCidle")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DE5EE27017B"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBTC (Temperature Control)::EBTCcomd" "PackageType" "Specification" @16
+		    location   	(2215, 1317)
+		    label      	(object ItemLabel
+			Parent_View 	@16
+			location   	(2153, 1121)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBTCcomd")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DE5EE2E014D"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @17
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DE5EE3700EF"
+		    client     	@2
+		    supplier   	@9
+		    line_style 	0)
+		(object ModVisView "" @18
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DE5EE390062"
+		    client     	@3
+		    supplier   	@10
+		    line_style 	0)
+		(object ModVisView "" @19
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DE5EE3D0024"
+		    client     	@4
+		    supplier   	@12
+		    line_style 	0)
+		(object ModVisView "" @20
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DE5EE3F0081"
+		    client     	@5
+		    supplier   	@13
+		    line_style 	0)
+		(object ModVisView "" @21
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DE5EE410091"
+		    client     	@6
+		    supplier   	@14
+		    line_style 	0)
+		(object ModVisView "" @22
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DE5EE430350"
+		    client     	@7
+		    supplier   	@15
+		    line_style 	0)
+		(object ModVisView "" @23
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DE5EE460072"
+		    client     	@8
+		    supplier   	@16
+		    line_style 	0)
+		(object ModView "Component View::EBTC (Temperature Control)::EBTCintf" "PackageType" "Body" @24
+		    location   	(1694, 768)
+		    label      	(object ItemLabel
+			Parent_View 	@24
+			location   	(1632, 572)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBTCintf")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DE5EFB5012D"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @25
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DE5EFC70062"
+		    client     	@24
+		    supplier   	@11
+		    line_style 	0)
+		(object ModView "Component View::EBTC (Temperature Control)::EBTCconfig" "PackageType" "Body" @26
+		    location   	(800, 2874)
+		    label      	(object ItemLabel
+			Parent_View 	@26
+			location   	(738, 2678)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBTCconfig")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E41045C0373"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBTC (Temperature Control)::EBTCconfig" "PackageType" "Specification" @27
+		    location   	(782, 2409)
+		    label      	(object ItemLabel
+			Parent_View 	@27
+			location   	(720, 2213)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBTCconfig")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E4104640075"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBTC (Temperature Control)::EBTCprocess" "PackageType" "Specification" @28
+		    location   	(1314, 2387)
+		    label      	(object ItemLabel
+			Parent_View 	@28
+			location   	(1252, 2191)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBTCprocess")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E410469020B"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBTC (Temperature Control)::EBTCprocess" "PackageType" "Body" @29
+		    location   	(1315, 2886)
+		    label      	(object ItemLabel
+			Parent_View 	@29
+			location   	(1253, 2690)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBTCprocess")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E41046C0373"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @30
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3E538B620129"
+		    client     	@26
+		    supplier   	@27
+		    line_style 	0)
+		(object ModVisView "" @31
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3E538B66036B"
+		    client     	@29
+		    supplier   	@28
+		    line_style 	0)
+		(object ModView "Component View::EBTC (Temperature Control)::EBTClogic" "PackageType" "Specification" @32
+		    location   	(1772, 2403)
+		    label      	(object ItemLabel
+			Parent_View 	@32
+			location   	(1710, 2207)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBTClogic")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E538BD000EA"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBTC (Temperature Control)::EBTClogic" "PackageType" "Body" @33
+		    location   	(1784, 2891)
+		    label      	(object ItemLabel
+			Parent_View 	@33
+			location   	(1722, 2695)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBTClogic")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E538BD7032C"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @34
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3E538C080138"
+		    client     	@33
+		    supplier   	@32
+		    line_style 	0)
+		(object ModView "Component View::EBTC (Temperature Control)::EBTCconn" "PackageType" "Specification" @35
+		    location   	(804, 3426)
+		    label      	(object ItemLabel
+			Parent_View 	@35
+			location   	(742, 3230)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBTCconn")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EE6DFD900EA"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBTC (Temperature Control)::EBTCconn" "PackageType" "Body" @36
+		    location   	(797, 3914)
+		    label      	(object ItemLabel
+			Parent_View 	@36
+			location   	(735, 3718)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBTCconn")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EE6DFEA0177"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @37
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3EE6DFF401E4"
+		    client     	@36
+		    supplier   	@35
+		    line_style 	0)
+		(object ModView "Component View::EBTC (Temperature Control)::EBTCmain" "PackageType" "Body" @38
+		    location   	(1330, 3914)
+		    label      	(object ItemLabel
+			Parent_View 	@38
+			location   	(1268, 3718)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBTCmain")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EE992790182"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBTC (Temperature Control)::EBTCmain" "PackageType" "Specification" @39
+		    location   	(1320, 3415)
+		    label      	(object ItemLabel
+			Parent_View 	@39
+			location   	(1258, 3219)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBTCmain")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EE993230153"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @40
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3EE9932A00D6"
+		    client     	@38
+		    supplier   	@39
+		    line_style 	0)
+		(object ModView "Component View::EBTC (Temperature Control)::EBTCexcp" "PackageType" "Body" @41
+		    location   	(1815, 3928)
+		    label      	(object ItemLabel
+			Parent_View 	@41
+			location   	(1753, 3732)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBTCexcp")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EE9C87B021E"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBTC (Temperature Control)::EBTCexcp" "PackageType" "Specification" @42
+		    location   	(1825, 3450)
+		    label      	(object ItemLabel
+			Parent_View 	@42
+			location   	(1763, 3254)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBTCexcp")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EE9C87E020F"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @43
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3EE9C8820059"
+		    client     	@41
+		    supplier   	@42
+		    line_style 	0)
+		(object ModView "Component View::EBTC (Temperature Control)::EBTCpid" "PackageType" "Specification" @44
+		    location   	(793, 4461)
+		    label      	(object ItemLabel
+			Parent_View 	@44
+			location   	(731, 4265)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBTCpid")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"40C8045D022E"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBTC (Temperature Control)::EBTCpid" "PackageType" "Body" @45
+		    location   	(797, 4932)
+		    label      	(object ItemLabel
+			Parent_View 	@45
+			location   	(735, 4736)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBTCpid")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"40C804650328"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @46
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"40C8047501D1"
+		    client     	@45
+		    supplier   	@44
+		    line_style 	0)
+		(object ModView "Component View::EBTC (Temperature Control)::EBTCsim" "PackageType" "Specification" @47
+		    location   	(1983, 4466)
+		    label      	(object ItemLabel
+			Parent_View 	@47
+			location   	(1921, 4270)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBTCsim")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"40CFFAC401C7"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBTC (Temperature Control)::EBTCsim" "PackageType" "Body" @48
+		    location   	(1984, 4984)
+		    label      	(object ItemLabel
+			Parent_View 	@48
+			location   	(1922, 4788)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBTCsim")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"40CFFAD0039C"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @49
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"40CFFAD8030F"
+		    client     	@48
+		    supplier   	@47
+		    line_style 	0)
+		(object ModView "Component View::EBTC (Temperature Control)::EBTCpid2" "PackageType" "Body" @50
+		    location   	(1295, 4935)
+		    label      	(object ItemLabel
+			Parent_View 	@50
+			location   	(1233, 4739)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBTCpid2")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"48898FC80099"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBTC (Temperature Control)::EBTCpid2" "PackageType" "Specification" @51
+		    location   	(1313, 4455)
+		    label      	(object ItemLabel
+			Parent_View 	@51
+			location   	(1251, 4259)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBTCpid2")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"48898FCD01E8"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @52
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"4889902A00BB"
+		    client     	@50
+		    supplier   	@51
+		    line_style 	0)))))

@@ -1,0 +1,312 @@
+
+(object Petal
+    version    	42
+    _written   	"Rose 4.5.8163.3"
+    charSet    	0)
+
+(object SubSystem "EBES (Event Source)"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    attributes 	(list Attribute_Set
+	(object Attribute
+	    tool       	"cg"
+	    name       	"Directory"
+	    value      	"Embedded\\src\\EBES"))
+    quid       	"3DE5E67F00D0"
+    physical_models 	(list unit_reference_list
+	(object module "EBESidnt" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBES\\EBESidnt.h"))
+	    quid       	"3DE5EC2D0218"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBESregy" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBES\\EBESregy.cpp"))
+	    quid       	"3DE5EC3C0331"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3DE5ECE101CA"
+		    supplier   	"Component View::EBES (Event Source)::EBESregy"
+		    quidu      	"3DE5EC600237"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBEScrea" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBES\\EBEScrea.cpp"))
+	    quid       	"3DE5EC4902D3"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3DE5ECE3012D"
+		    supplier   	"Component View::EBES (Event Source)::EBEScrea"
+		    quidu      	"3DE5EC67015C"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBESintf" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBES\\EBESintf.cpp"))
+	    quid       	"3DE5EC52016C"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3DE5ECE600A1"
+		    supplier   	"Component View::EBES (Event Source)::EBESintf"
+		    quidu      	"3DE5EC6D012D"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBESregy" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBES\\EBESregy.h"))
+	    quid       	"3DE5EC600237"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBEScrea" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBES\\EBEScrea.h"))
+	    quid       	"3DE5EC67015C"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBESintf" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBES\\EBESintf.h"))
+	    quid       	"3DE5EC6D012D"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBESmain" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBES\\EBESmain.cpp"))
+	    quid       	"3EF0544400CA"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3EF054590213"
+		    supplier   	"Component View::EBES (Event Source)::EBESmain"
+		    quidu      	"3EF0544C034B"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBESmain" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBES\\EBESmain.h"))
+	    quid       	"3EF0544C034B"
+	    stereotype 	"Package Specification"
+	    language   	"C++"))
+    physical_presentations 	(list unit_reference_list
+	(object Module_Diagram "main"
+	    quid       	"3DE5EC2503AE"
+	    title      	"main"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object ModView "Component View::EBES (Event Source)::EBESidnt" "PackageType" "Specification" @1
+		    location   	(276, 284)
+		    label      	(object ItemLabel
+			Parent_View 	@1
+			location   	(214, 88)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	543
+			label      	"EBESidnt")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DE5EC2D0218"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBES (Event Source)::EBESregy" "PackageType" "Body" @2
+		    location   	(1110, 309)
+		    label      	(object ItemLabel
+			Parent_View 	@2
+			location   	(1048, 113)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBESregy")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DE5EC3C0331"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBES (Event Source)::EBEScrea" "PackageType" "Body" @3
+		    location   	(1617, 303)
+		    label      	(object ItemLabel
+			Parent_View 	@3
+			location   	(1555, 107)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBEScrea")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DE5EC4902D3"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBES (Event Source)::EBESintf" "PackageType" "Body" @4
+		    location   	(1677, 1419)
+		    label      	(object ItemLabel
+			Parent_View 	@4
+			location   	(1615, 1223)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	543
+			label      	"EBESintf")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DE5EC52016C"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBES (Event Source)::EBESregy" "PackageType" "Specification" @5
+		    location   	(1126, 785)
+		    label      	(object ItemLabel
+			Parent_View 	@5
+			location   	(1064, 589)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBESregy")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DE5EC600237"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBES (Event Source)::EBEScrea" "PackageType" "Specification" @6
+		    location   	(1626, 791)
+		    label      	(object ItemLabel
+			Parent_View 	@6
+			location   	(1564, 595)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBEScrea")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DE5EC67015C"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBES (Event Source)::EBESintf" "PackageType" "Specification" @7
+		    location   	(1688, 1919)
+		    label      	(object ItemLabel
+			Parent_View 	@7
+			location   	(1626, 1723)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBESintf")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DE5EC6D012D"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @8
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DE5ECE101CA"
+		    client     	@2
+		    supplier   	@5
+		    line_style 	0)
+		(object ModVisView "" @9
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DE5ECE3012D"
+		    client     	@3
+		    supplier   	@6
+		    line_style 	0)
+		(object ModVisView "" @10
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DE5ECE600A1"
+		    client     	@4
+		    supplier   	@7
+		    line_style 	0)
+		(object ModView "Component View::EBES (Event Source)::EBESmain" "PackageType" "Body" @11
+		    location   	(630, 300)
+		    label      	(object ItemLabel
+			Parent_View 	@11
+			location   	(568, 104)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBESmain")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EF0544400CA"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBES (Event Source)::EBESmain" "PackageType" "Specification" @12
+		    location   	(629, 781)
+		    label      	(object ItemLabel
+			Parent_View 	@12
+			location   	(567, 585)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBESmain")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EF0544C034B"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @13
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3EF054590213"
+		    client     	@11
+		    supplier   	@12
+		    line_style 	0)))))

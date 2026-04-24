@@ -1,0 +1,247 @@
+
+(object Petal
+    version    	42
+    _written   	"Rose 4.5.8163.3"
+    charSet    	0)
+
+(object SubSystem "EBHIT (Hardware Interface Types)"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    attributes 	(list Attribute_Set
+	(object Attribute
+	    tool       	"cg"
+	    name       	"Directory"
+	    value      	"Embedded\\src\\EBHIT"))
+    quid       	"3E425F5A034B"
+    physical_models 	(list unit_reference_list
+	(object module "EBHITtype" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBHIT\\EBHITtype.h"))
+	    quid       	"3E26C6DC02DC"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBHITenum" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBHIT\\EBHITenum.h"))
+	    quid       	"3E26B74B01E2"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBHITtype" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBHIT\\EBHITtype.cpp"))
+	    quid       	"3E42648802CE"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3E4264A30128"
+		    supplier   	"Component View::EBHIT (Hardware Interface Types)::EBHITtype"
+		    quidu      	"3E26C6DC02DC"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBHITrsm" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBHIT\\EBHITrsm.cpp"))
+	    quid       	"3E5499530138"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3E54997A009C"
+		    supplier   	"Component View::EBHIT (Hardware Interface Types)::EBHITrsm"
+		    quidu      	"3E54997201B5"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBHITrsm" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBHIT\\EBHITrsm.h"))
+	    quid       	"3E54997201B5"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBHITpci" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBHIT\\EBHITpci.cpp"))
+	    quid       	"3E8BE6960261"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3E8BE6AD02BF"
+		    supplier   	"Component View::EBHIT (Hardware Interface Types)::EBHITpci"
+		    quidu      	"3E8BE6A001D4"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBHITpci" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBHIT\\EBHITpci.h"))
+	    quid       	"3E8BE6A001D4"
+	    stereotype 	"Package Specification"
+	    language   	"C++"))
+    physical_presentations 	(list unit_reference_list
+	(object Module_Diagram "main"
+	    quid       	"3E4260140232"
+	    title      	"main"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object ModView "Component View::EBHIT (Hardware Interface Types)::EBHITtype" "PackageType" "Specification" @1
+		    location   	(703, 791)
+		    label      	(object ItemLabel
+			Parent_View 	@1
+			location   	(641, 595)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBHITtype")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E26C6DC02DC"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBHIT (Hardware Interface Types)::EBHITenum" "PackageType" "Specification" @2
+		    location   	(1334, 828)
+		    label      	(object ItemLabel
+			Parent_View 	@2
+			location   	(1272, 632)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBHITenum")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E26B74B01E2"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBHIT (Hardware Interface Types)::EBHITtype" "PackageType" "Body" @3
+		    location   	(687, 259)
+		    label      	(object ItemLabel
+			Parent_View 	@3
+			location   	(625, 63)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBHITtype")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E42648802CE"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @4
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3E4264A30128"
+		    client     	@3
+		    supplier   	@1
+		    line_style 	0)
+		(object ModView "Component View::EBHIT (Hardware Interface Types)::EBHITrsm" "PackageType" "Body" @5
+		    location   	(1962, 265)
+		    label      	(object ItemLabel
+			Parent_View 	@5
+			location   	(1900, 69)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	543
+			label      	"EBHITrsm")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E5499530138"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBHIT (Hardware Interface Types)::EBHITrsm" "PackageType" "Specification" @6
+		    location   	(1956, 834)
+		    label      	(object ItemLabel
+			Parent_View 	@6
+			location   	(1894, 638)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBHITrsm")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E54997201B5"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @7
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3E54997A009C"
+		    client     	@5
+		    supplier   	@6
+		    line_style 	0)
+		(object ModView "Component View::EBHIT (Hardware Interface Types)::EBHITpci" "PackageType" "Body" @8
+		    location   	(719, 1253)
+		    label      	(object ItemLabel
+			Parent_View 	@8
+			location   	(657, 1057)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	543
+			label      	"EBHITpci")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E8BE6960261"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBHIT (Hardware Interface Types)::EBHITpci" "PackageType" "Specification" @9
+		    location   	(722, 1753)
+		    label      	(object ItemLabel
+			Parent_View 	@9
+			location   	(660, 1557)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	543
+			label      	"EBHITpci")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E8BE6A001D4"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @10
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3E8BE6AD02BF"
+		    client     	@8
+		    supplier   	@9
+		    line_style 	0)))))

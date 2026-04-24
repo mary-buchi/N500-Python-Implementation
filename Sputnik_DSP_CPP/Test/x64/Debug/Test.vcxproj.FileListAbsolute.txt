@@ -1,0 +1,2 @@
+C:\Users\motm\source\repos\Sputnik_DSP_CPP\Test\x64\Debug\Test.vcxproj.Up2Date
+C:\Users\mary\Documents\Sputnik_DSP_CPP\Test\x64\Debug\Test.vcxproj.CopyComplete

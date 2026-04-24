@@ -1,0 +1,468 @@
+
+(object Petal
+    version    	42
+    _written   	"Rose 4.5.8163.3"
+    charSet    	0)
+
+(object SubSystem "EBI2CTemp (I2C Temperature Device)"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    attributes 	(list Attribute_Set
+	(object Attribute
+	    tool       	"cg"
+	    name       	"Directory"
+	    value      	"Embedded\\src\\EBI2CTEMP"))
+    quid       	"3EE7361D0232"
+    physical_models 	(list unit_reference_list
+	(object module "EBI2CTEMPident" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBI2CTEMP\\EBI2CTEMPident.h"))
+	    quid       	"3EE73726003E"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBI2CTEMPintf" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBI2CTEMP\\EBI2CTEMPintf.cpp"))
+	    quid       	"3EE7373A03C8"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3EE7375500EA"
+		    supplier   	"Component View::EBI2CTemp (I2C Temperature Device)::EBI2CTEMPintf"
+		    quidu      	"3EE737460186"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBI2CTEMPintf" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBI2CTEMP\\EBI2CTEMPintf.h"))
+	    quid       	"3EE737460186"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBI2CTEMPexcp" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBI2CTEMP\\EBI2CTEMPexcp.cpp"))
+	    quid       	"3EE73756030D"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3EE7377C004E"
+		    supplier   	"Component View::EBI2CTemp (I2C Temperature Device)::EBI2CTEMPexcp"
+		    quidu      	"3EE73764002E"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBI2CTEMPexcp" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBI2CTEMP\\EBI2CTEMPexcp.h"))
+	    quid       	"3EE73764002E"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBI2CTEMPenum" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBI2CTEMP\\EBI2CTEMPenum.h"))
+	    quid       	"3EE8634F02BF"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBI2CTEMPcrea" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBI2CTEMP\\EBI2CTEMPcrea.cpp"))
+	    quid       	"3F02C69A030B"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3F02C6BA0167"
+		    supplier   	"Component View::EBI2CTemp (I2C Temperature Device)::EBI2CTEMPcrea"
+		    quidu      	"3F02C6AE0166"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBI2CTEMPcrea" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBI2CTEMP\\EBI2CTEMPcrea.h"))
+	    quid       	"3F02C6AE0166"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBI2CTEMPregy" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBI2CTEMP\\EBI2CTEMPregy.h"))
+	    quid       	"3F02C88B016C"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBI2CTEMPregy" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBI2CTEMP\\EBI2CTEMPregy.cpp"))
+	    quid       	"3F02C89603DE"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3F02C8A50267"
+		    supplier   	"Component View::EBI2CTemp (I2C Temperature Device)::EBI2CTEMPregy"
+		    quidu      	"3F02C88B016C"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBI2CTEMPmain" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBI2CTEMP\\EBI2CTEMPmain.h"))
+	    quid       	"3F02C8F50152"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBI2CTEMPmain" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBI2CTEMP\\EBI2CTEMPmain.cpp"))
+	    quid       	"3F02C903021D"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3F02C91102D9"
+		    supplier   	"Component View::EBI2CTemp (I2C Temperature Device)::EBI2CTEMPmain"
+		    quidu      	"3F02C8F50152"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBI2CTEMPcomd" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBI2CTEMP\\EBI2CTEMPcomd.h"))
+	    quid       	"3FD73D82033C"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBI2CTEMPcomd" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBI2CTEMP\\EBI2CTEMPcomd.cpp"))
+	    quid       	"3FD73DA90138"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3FD73DAF030D"
+		    supplier   	"Component View::EBI2CTemp (I2C Temperature Device)::EBI2CTEMPcomd"
+		    quidu      	"3FD73D82033C"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++"))
+    physical_presentations 	(list unit_reference_list
+	(object Module_Diagram "main"
+	    quid       	"3EE7371B02EE"
+	    title      	"main"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object ModView "Component View::EBI2CTemp (I2C Temperature Device)::EBI2CTEMPident" "PackageType" "Specification" @1
+		    location   	(248, 292)
+		    label      	(object ItemLabel
+			Parent_View 	@1
+			location   	(186, 96)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBI2CTEMPident")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EE73726003E"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBI2CTemp (I2C Temperature Device)::EBI2CTEMPintf" "PackageType" "Body" @2
+		    location   	(278, 775)
+		    label      	(object ItemLabel
+			Parent_View 	@2
+			location   	(216, 579)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBI2CTEMPintf")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EE7373A03C8"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBI2CTemp (I2C Temperature Device)::EBI2CTEMPintf" "PackageType" "Specification" @3
+		    location   	(279, 1374)
+		    label      	(object ItemLabel
+			Parent_View 	@3
+			location   	(217, 1178)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBI2CTEMPintf")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EE737460186"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @4
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3EE7375500EA"
+		    client     	@2
+		    supplier   	@3
+		    line_style 	0)
+		(object ModView "Component View::EBI2CTemp (I2C Temperature Device)::EBI2CTEMPexcp" "PackageType" "Body" @5
+		    location   	(764, 765)
+		    label      	(object ItemLabel
+			Parent_View 	@5
+			location   	(702, 569)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBI2CTEMPexcp")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EE73756030D"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBI2CTemp (I2C Temperature Device)::EBI2CTEMPexcp" "PackageType" "Specification" @6
+		    location   	(764, 1381)
+		    label      	(object ItemLabel
+			Parent_View 	@6
+			location   	(702, 1185)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBI2CTEMPexcp")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EE73764002E"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @7
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3EE7377C004E"
+		    client     	@5
+		    supplier   	@6
+		    line_style 	0)
+		(object ModView "Component View::EBI2CTemp (I2C Temperature Device)::EBI2CTEMPenum" "PackageType" "Specification" @8
+		    location   	(773, 292)
+		    label      	(object ItemLabel
+			Parent_View 	@8
+			location   	(711, 96)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBI2CTEMPenum")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EE8634F02BF"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBI2CTemp (I2C Temperature Device)::EBI2CTEMPcrea" "PackageType" "Body" @9
+		    location   	(1351, 771)
+		    label      	(object ItemLabel
+			Parent_View 	@9
+			location   	(1289, 575)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBI2CTEMPcrea")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F02C69A030B"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBI2CTemp (I2C Temperature Device)::EBI2CTEMPcrea" "PackageType" "Specification" @10
+		    location   	(1362, 1353)
+		    label      	(object ItemLabel
+			Parent_View 	@10
+			location   	(1300, 1157)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBI2CTEMPcrea")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F02C6AE0166"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @11
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3F02C6BA0167"
+		    client     	@9
+		    supplier   	@10
+		    line_style 	0)
+		(object ModView "Component View::EBI2CTemp (I2C Temperature Device)::EBI2CTEMPregy" "PackageType" "Specification" @12
+		    location   	(1861, 1349)
+		    label      	(object ItemLabel
+			Parent_View 	@12
+			location   	(1799, 1153)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBI2CTEMPregy")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F02C88B016C"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBI2CTemp (I2C Temperature Device)::EBI2CTEMPregy" "PackageType" "Body" @13
+		    location   	(1854, 759)
+		    label      	(object ItemLabel
+			Parent_View 	@13
+			location   	(1792, 563)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBI2CTEMPregy")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F02C89603DE"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @14
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3F02C8A50267"
+		    client     	@13
+		    supplier   	@12
+		    line_style 	0)
+		(object ModView "Component View::EBI2CTemp (I2C Temperature Device)::EBI2CTEMPmain" "PackageType" "Specification" @15
+		    location   	(2344, 1340)
+		    label      	(object ItemLabel
+			Parent_View 	@15
+			location   	(2282, 1144)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBI2CTEMPmain")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F02C8F50152"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBI2CTemp (I2C Temperature Device)::EBI2CTEMPmain" "PackageType" "Body" @16
+		    location   	(2331, 756)
+		    label      	(object ItemLabel
+			Parent_View 	@16
+			location   	(2269, 560)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBI2CTEMPmain")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F02C903021D"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @17
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3F02C91102D9"
+		    client     	@16
+		    supplier   	@15
+		    line_style 	0)
+		(object ModView "Component View::EBI2CTemp (I2C Temperature Device)::EBI2CTEMPcomd" "PackageType" "Specification" @18
+		    location   	(351, 2427)
+		    label      	(object ItemLabel
+			Parent_View 	@18
+			location   	(289, 2231)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	543
+			label      	"EBI2CTEMPcomd")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3FD73D82033C"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBI2CTemp (I2C Temperature Device)::EBI2CTEMPcomd" "PackageType" "Body" @19
+		    location   	(348, 1918)
+		    label      	(object ItemLabel
+			Parent_View 	@19
+			location   	(286, 1722)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	543
+			label      	"EBI2CTEMPcomd")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3FD73DA90138"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @20
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3FD73DAF030D"
+		    client     	@19
+		    supplier   	@18
+		    line_style 	0)))))

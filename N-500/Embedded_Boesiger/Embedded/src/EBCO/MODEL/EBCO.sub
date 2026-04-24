@@ -1,0 +1,1292 @@
+
+(object Petal
+    version    	42
+    _written   	"Rose 4.5.8163.3"
+    charSet    	0)
+
+(object SubSystem "EBCO (Core Classes)"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    attributes 	(list Attribute_Set
+	(object Attribute
+	    tool       	"cg"
+	    name       	"Directory"
+	    value      	"Embedded\\Src\\EBCO"))
+    quid       	"3B86CCF602D6"
+    physical_models 	(list unit_reference_list
+	(object module "EBCOthrd" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBCO\\EBCOthrd.h"))
+	    quid       	"3B86D1D001C3"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBCOthrd" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBCO\\EBCOthrd.cpp"))
+	    quid       	"3B86D1DF0391"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3B86D1E601C5"
+		    supplier   	"Component View::EBCO (Core Classes)::EBCOthrd"
+		    quidu      	"3B86D1D001C3"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBCOrefc" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBCO\\EBCOrefc.h"))
+	    quid       	"3B8D539703DD"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBCOrefc" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBCO\\EBCOrefc.cpp"))
+	    quid       	"3B8D539F0154"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3B8D53A5035B"
+		    supplier   	"Component View::EBCO (Core Classes)::EBCOrefc"
+		    quidu      	"3B8D539703DD"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBCOsync" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBCO\\EBCOsync.h"))
+	    quid       	"3B8D53AE006F"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBCOsync" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBCO\\EBCOsync.cpp"))
+	    quid       	"3B8D53B800A6"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3B8D53BE03B1"
+		    supplier   	"Component View::EBCO (Core Classes)::EBCOsync"
+		    quidu      	"3B8D53AE006F"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBCOexcp" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBCO\\EBCOexcp.h"))
+	    quid       	"3B8D591101F9"
+	    stereotype 	"Package Specification"
+	    declarations 	
+|#define XCO_INVALID_STATE(unit) throw new XCOExceptionInvalidState(unit,IDE_CORE_WRONG_STATE,__FILE__,__LINE__);
+|
+|#define XCO_CLEANUP_STOP(unit) throw new XCOExceptionCleanupStop(unit,IDE_CORE_CLEANUP_STOP,__FILE__,__LINE__);
+|
+|#define XCO_CLEANUP_INIT(unit) throw new XCOExceptionCleanupInitialize(unit,IDE_CORE_CLEANUP_INITIALIZE,__FILE__,__LINE__);
+|
+|#define XCO_EXCEPTION(class,unit,id) throw new (class)(unit,id,__FILE__,__LINE__);
+|
+	    
+	    language   	"C++")
+	(object module "EBCOexcp" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBCO\\EBCOexcp.cpp"))
+	    quid       	"3B8D591703BA"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3B8D5922024D"
+		    supplier   	"Component View::EBCO (Core Classes)::EBCOexcp"
+		    quidu      	"3B8D591101F9"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBCOtmpl" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBCO\\EBCOtmpl.h"))
+	    quid       	"3B8EA7B90040"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBCOsypr" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBCO\\EBCOsypr.h"))
+	    quid       	"3B9B537402C9"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBCOsypr" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBCO\\EBCOsypr.cpp"))
+	    quid       	"3BA3BFD2017C"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3B9B53820002"
+		    supplier   	"Component View::EBCO (Core Classes)::EBCOsypr"
+		    quidu      	"3B9B537402C9"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBCOidnt" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBCO\\EBCOidnt.h"))
+	    quid       	"3DA3C0D803AE"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBCOimct" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBCO\\EBCOimct.h"))
+	    quid       	"3B91278600C3"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBCOimct" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBCO\\EBCOimct.cpp"))
+	    quid       	"3B9127CD0224"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3B9127D802D4"
+		    supplier   	"Component View::EBCO (Core Classes)::EBCOimct"
+		    quidu      	"3B91278600C3"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBCOactn" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBCO\\EBCOactn.h"))
+	    quid       	"3BA8E6D20027"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBCOactn" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBCO\\EBCOactn.cpp"))
+	    quid       	"3BA8E6D902DA"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3BA8E6E102F9"
+		    supplier   	"Component View::EBCO (Core Classes)::EBCOactn"
+		    quidu      	"3BA8E6D20027"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBCOtype" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBCO\\EBCOtype.h"))
+	    quid       	"3BAA50270271"
+	    stereotype 	"Package Specification"
+	    declarations 	
+|#define CO_WAKE_MASK_CMD_ABOVE_NORMAL       1
+|#define CO_WAKE_MASK_CMD_HIGH               2
+|#define CO_WAKE_MASK_ACTIONS_ONE            32
+|#define CO_WAKE_MASK_ACTIONS_ALL            64
+|#define CO_WAKE_MASK_DEFAULT                (CO_WAKE_MASK_CMD_HIGH+CO_WAKE_MASK_ACTIONS_ALL)
+|
+	    
+	    language   	"C++")
+	(object module "EBCOintf" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBCO\\EBCOintf.h"))
+	    quid       	"3B86D6DD0172"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBCOintf" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBCO\\EBCOintf.cpp"))
+	    quid       	"3B86D6E401F4"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3B86D6EB0118"
+		    supplier   	"Component View::EBCO (Core Classes)::EBCOintf"
+		    quidu      	"3B86D6DD0172"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBCOwkth" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBCO\\EBCOwkth.h"))
+	    quid       	"3B8D2E9A0002"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBCOwkth" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBCO\\EBCOwkth.cpp"))
+	    quid       	"3B8D2EA70155"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3DA68BAE00E7"
+		    supplier   	"Component View::EBCO (Core Classes)::EBCOwkth"
+		    quidu      	"3B8D2E9A0002"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBCOimpl" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBCO\\EBCOimpl.h"))
+	    quid       	"3B8D3ACC0214"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBCOimpl" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBCO\\EBCOimpl.cpp"))
+	    quid       	"3B8D3AD4020C"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3B8D3ADC009B"
+		    supplier   	"Component View::EBCO (Core Classes)::EBCOimpl"
+		    quidu      	"3B8D3ACC0214"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBCOenum" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBCO\\EBCOenum.h"))
+	    quid       	"3B8D3DA6005B"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBCOqueu" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBCO\\EBCOqueu.h"))
+	    quid       	"3B8D4D3D006E"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBCOqueu" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBCO\\EBCOqueu.cpp"))
+	    quid       	"3B8D4D4A022F"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3B8D4D550249"
+		    supplier   	"Component View::EBCO (Core Classes)::EBCOqueu"
+		    quidu      	"3B8D4D3D006E"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBCOcomd" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBCO\\EBCOcomd.h"))
+	    quid       	"3B8EA57401FD"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBCOcomd" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBCO\\EBCOcomd.cpp"))
+	    quid       	"3B8EA57B024D"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3B8EA58B020A"
+		    supplier   	"Component View::EBCO (Core Classes)::EBCOcomd"
+		    quidu      	"3B8EA57401FD"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBCOstat" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBCO\\EBCOstat.h"))
+	    quid       	"3B9146FF0231"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBCOstat" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBCO\\EBCOstat.cpp"))
+	    quid       	"3B9147060340"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3B91470C0154"
+		    supplier   	"Component View::EBCO (Core Classes)::EBCOstat"
+		    quidu      	"3B9146FF0231"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBCOtype" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBCO\\EBCOtype.cpp"))
+	    quid       	"3DB51299013B"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3DB5129F02F0"
+		    supplier   	"Component View::EBCO (Core Classes)::EBCOtype"
+		    quidu      	"3BAA50270271"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBCOthtm" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBCO\\EBCOthtm.h"))
+	    quid       	"3EC8D242033F"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBCOthtm" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBCO\\EBCOthtm.cpp"))
+	    quid       	"3EC8D24C0311"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3EC8D2560284"
+		    supplier   	"Component View::EBCO (Core Classes)::EBCOthtm"
+		    quidu      	"3EC8D242033F"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBCOsmon" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBCO\\EBCOsmon.cpp"))
+	    quid       	"3F708CEF008A"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3F708D0401C1"
+		    supplier   	"Component View::EBCO (Core Classes)::EBCOsmon"
+		    quidu      	"3F708CF80047"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBCOsmon" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBCO\\EBCOsmon.h"))
+	    quid       	"3F708CF80047"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBCOmark" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBCO\\EBCOmark.h"))
+	    quid       	"3FB3834502D6"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBCOmark" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBCO\\EBCOmark.cpp"))
+	    quid       	"3FB3834C015F"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3FB383530373"
+		    supplier   	"Component View::EBCO (Core Classes)::EBCOmark"
+		    quidu      	"3FB3834502D6"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBCOvers" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBCO\\EBCOvers.h"))
+	    quid       	"406C1D8201C7"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBCOvers" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBCO\\EBCOvers.cpp"))
+	    quid       	"406C1D97002C"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"406C1D9E0090"
+		    supplier   	"Component View::EBCO (Core Classes)::EBCOvers"
+		    quidu      	"406C1D8201C7"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++"))
+    physical_presentations 	(list unit_reference_list
+	(object Module_Diagram "1.0 Main"
+	    quid       	"3B86CD790360"
+	    title      	"1.0 Main"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	5553
+	    items      	(list diagram_item_list
+		(object ModView "Component View::EBCO (Core Classes)::EBCOthrd" "PackageType" "Specification" @1
+		    location   	(300, 303)
+		    label      	(object ItemLabel
+			Parent_View 	@1
+			location   	(238, 107)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBCOthrd")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3B86D1D001C3"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBCO (Core Classes)::EBCOthrd" "PackageType" "Body" @2
+		    location   	(301, 881)
+		    label      	(object ItemLabel
+			Parent_View 	@2
+			location   	(239, 685)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBCOthrd")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3B86D1DF0391"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @3
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3B86D1E601C5"
+		    client     	@2
+		    supplier   	@1
+		    line_style 	0)
+		(object ModView "Component View::EBCO (Core Classes)::EBCOrefc" "PackageType" "Specification" @4
+		    location   	(831, 306)
+		    label      	(object ItemLabel
+			Parent_View 	@4
+			location   	(769, 110)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBCOrefc")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3B8D539703DD"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBCO (Core Classes)::EBCOrefc" "PackageType" "Body" @5
+		    location   	(834, 868)
+		    label      	(object ItemLabel
+			Parent_View 	@5
+			location   	(772, 672)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBCOrefc")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3B8D539F0154"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @6
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3B8D53A5035B"
+		    client     	@5
+		    supplier   	@4
+		    line_style 	0)
+		(object ModView "Component View::EBCO (Core Classes)::EBCOsync" "PackageType" "Specification" @7
+		    location   	(1315, 300)
+		    label      	(object ItemLabel
+			Parent_View 	@7
+			location   	(1253, 104)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBCOsync")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3B8D53AE006F"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBCO (Core Classes)::EBCOsync" "PackageType" "Body" @8
+		    location   	(1329, 868)
+		    label      	(object ItemLabel
+			Parent_View 	@8
+			location   	(1267, 672)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBCOsync")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3B8D53B800A6"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBCO (Core Classes)::EBCOexcp" "PackageType" "Specification" @9
+		    location   	(303, 1403)
+		    label      	(object ItemLabel
+			Parent_View 	@9
+			location   	(241, 1207)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBCOexcp")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3B8D591101F9"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBCO (Core Classes)::EBCOexcp" "PackageType" "Body" @10
+		    location   	(307, 1933)
+		    label      	(object ItemLabel
+			Parent_View 	@10
+			location   	(245, 1737)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBCOexcp")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3B8D591703BA"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @11
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3B8D5922024D"
+		    client     	@10
+		    supplier   	@9
+		    line_style 	0)
+		(object ModView "Component View::EBCO (Core Classes)::EBCOtmpl" "PackageType" "Specification" @12
+		    location   	(845, 1409)
+		    label      	(object ItemLabel
+			Parent_View 	@12
+			location   	(783, 1213)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBCOtmpl")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3B8EA7B90040"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBCO (Core Classes)::EBCOsypr" "PackageType" "Specification" @13
+		    location   	(1749, 309)
+		    label      	(object ItemLabel
+			Parent_View 	@13
+			location   	(1687, 113)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBCOsypr")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3B9B537402C9"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBCO (Core Classes)::EBCOsypr" "PackageType" "Body" @14
+		    location   	(1757, 865)
+		    label      	(object ItemLabel
+			Parent_View 	@14
+			location   	(1695, 669)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBCOsypr")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3BA3BFD2017C"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @15
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3B8D53BE03B1"
+		    client     	@8
+		    supplier   	@7
+		    line_style 	0)
+		(object ModVisView "" @16
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3B9B53820002"
+		    client     	@14
+		    supplier   	@13
+		    line_style 	0)
+		(object ModView "Component View::EBCO (Core Classes)::EBCOidnt" "PackageType" "Specification" @17
+		    location   	(1364, 1392)
+		    label      	(object ItemLabel
+			Parent_View 	@17
+			location   	(1302, 1196)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBCOidnt")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DA3C0D803AE"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBCO (Core Classes)::EBCOimct" "PackageType" "Specification" @18
+		    location   	(314, 2468)
+		    label      	(object ItemLabel
+			Parent_View 	@18
+			location   	(252, 2272)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBCOimct")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3B91278600C3"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBCO (Core Classes)::EBCOimct" "PackageType" "Body" @19
+		    location   	(326, 2978)
+		    label      	(object ItemLabel
+			Parent_View 	@19
+			location   	(264, 2782)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBCOimct")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3B9127CD0224"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @20
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3B9127D802D4"
+		    client     	@19
+		    supplier   	@18
+		    line_style 	0)
+		(object ModView "Component View::EBCO (Core Classes)::EBCOactn" "PackageType" "Specification" @21
+		    location   	(956, 2472)
+		    label      	(object ItemLabel
+			Parent_View 	@21
+			location   	(894, 2276)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBCOactn")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3BA8E6D20027"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBCO (Core Classes)::EBCOactn" "PackageType" "Body" @22
+		    location   	(958, 2994)
+		    label      	(object ItemLabel
+			Parent_View 	@22
+			location   	(896, 2798)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBCOactn")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3BA8E6D902DA"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @23
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3BA8E6E102F9"
+		    client     	@22
+		    supplier   	@21
+		    line_style 	0)
+		(object ModView "Component View::EBCO (Core Classes)::EBCOintf" "PackageType" "Specification" @24
+		    location   	(324, 3528)
+		    label      	(object ItemLabel
+			Parent_View 	@24
+			location   	(262, 3332)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBCOintf")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3B86D6DD0172"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBCO (Core Classes)::EBCOintf" "PackageType" "Body" @25
+		    location   	(329, 4059)
+		    label      	(object ItemLabel
+			Parent_View 	@25
+			location   	(267, 3863)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBCOintf")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3B86D6E401F4"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @26
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3B86D6EB0118"
+		    client     	@25
+		    supplier   	@24
+		    line_style 	0)
+		(object ModView "Component View::EBCO (Core Classes)::EBCOwkth" "PackageType" "Body" @27
+		    location   	(934, 4040)
+		    label      	(object ItemLabel
+			Parent_View 	@27
+			location   	(872, 3844)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBCOwkth")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3B8D2EA70155"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBCO (Core Classes)::EBCOimpl" "PackageType" "Specification" @28
+		    location   	(1406, 3522)
+		    label      	(object ItemLabel
+			Parent_View 	@28
+			location   	(1344, 3326)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBCOimpl")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3B8D3ACC0214"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBCO (Core Classes)::EBCOimpl" "PackageType" "Body" @29
+		    location   	(1417, 4015)
+		    label      	(object ItemLabel
+			Parent_View 	@29
+			location   	(1355, 3819)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBCOimpl")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3B8D3AD4020C"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @30
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3B8D3ADC009B"
+		    client     	@29
+		    supplier   	@28
+		    line_style 	0)
+		(object ModView "Component View::EBCO (Core Classes)::EBCOenum" "PackageType" "Specification" @31
+		    location   	(1924, 3514)
+		    label      	(object ItemLabel
+			Parent_View 	@31
+			location   	(1862, 3318)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBCOenum")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3B8D3DA6005B"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBCO (Core Classes)::EBCOqueu" "PackageType" "Specification" @32
+		    location   	(342, 4568)
+		    label      	(object ItemLabel
+			Parent_View 	@32
+			location   	(280, 4372)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBCOqueu")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3B8D4D3D006E"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBCO (Core Classes)::EBCOqueu" "PackageType" "Body" @33
+		    location   	(336, 5115)
+		    label      	(object ItemLabel
+			Parent_View 	@33
+			location   	(274, 4919)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBCOqueu")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3B8D4D4A022F"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @34
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3B8D4D550249"
+		    client     	@33
+		    supplier   	@32
+		    line_style 	0)
+		(object ModView "Component View::EBCO (Core Classes)::EBCOcomd" "PackageType" "Specification" @35
+		    location   	(935, 4571)
+		    label      	(object ItemLabel
+			Parent_View 	@35
+			location   	(873, 4375)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBCOcomd")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3B8EA57401FD"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBCO (Core Classes)::EBCOcomd" "PackageType" "Body" @36
+		    location   	(935, 5129)
+		    label      	(object ItemLabel
+			Parent_View 	@36
+			location   	(873, 4933)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBCOcomd")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3B8EA57B024D"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @37
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3B8EA58B020A"
+		    client     	@36
+		    supplier   	@35
+		    line_style 	0)
+		(object ModView "Component View::EBCO (Core Classes)::EBCOstat" "PackageType" "Specification" @38
+		    location   	(1467, 4577)
+		    label      	(object ItemLabel
+			Parent_View 	@38
+			location   	(1405, 4381)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBCOstat")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3B9146FF0231"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBCO (Core Classes)::EBCOstat" "PackageType" "Body" @39
+		    location   	(1460, 5114)
+		    label      	(object ItemLabel
+			Parent_View 	@39
+			location   	(1398, 4918)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBCOstat")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3B9147060340"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @40
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3B91470C0154"
+		    client     	@39
+		    supplier   	@38
+		    line_style 	0)
+		(object ModView "Component View::EBCO (Core Classes)::EBCOwkth" "PackageType" "Specification" @41
+		    location   	(939, 3520)
+		    label      	(object ItemLabel
+			Parent_View 	@41
+			location   	(877, 3324)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBCOwkth")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3B8D2E9A0002"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @42
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DA68BAE00E7"
+		    client     	@27
+		    supplier   	@41
+		    line_style 	0)
+		(object ModView "Component View::EBCO (Core Classes)::EBCOtype" "PackageType" "Specification" @43
+		    location   	(1791, 1396)
+		    label      	(object ItemLabel
+			Parent_View 	@43
+			location   	(1729, 1200)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBCOtype")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3BAA50270271"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBCO (Core Classes)::EBCOtype" "PackageType" "Body" @44
+		    location   	(1777, 1981)
+		    label      	(object ItemLabel
+			Parent_View 	@44
+			location   	(1715, 1785)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBCOtype")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DB51299013B"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @45
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DB5129F02F0"
+		    client     	@44
+		    supplier   	@43
+		    line_style 	0)
+		(object ModView "Component View::EBCO (Core Classes)::EBCOthtm" "PackageType" "Specification" @46
+		    location   	(331, 5605)
+		    label      	(object ItemLabel
+			Parent_View 	@46
+			location   	(269, 5409)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBCOthtm")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EC8D242033F"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBCO (Core Classes)::EBCOthtm" "PackageType" "Body" @47
+		    location   	(336, 6073)
+		    label      	(object ItemLabel
+			Parent_View 	@47
+			location   	(274, 5877)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBCOthtm")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EC8D24C0311"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @48
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3EC8D2560284"
+		    client     	@47
+		    supplier   	@46
+		    line_style 	0)
+		(object ModView "Component View::EBCO (Core Classes)::EBCOsmon" "PackageType" "Body" @49
+		    location   	(953, 6065)
+		    label      	(object ItemLabel
+			Parent_View 	@49
+			location   	(891, 5869)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBCOsmon")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F708CEF008A"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBCO (Core Classes)::EBCOsmon" "PackageType" "Specification" @50
+		    location   	(950, 5590)
+		    label      	(object ItemLabel
+			Parent_View 	@50
+			location   	(888, 5394)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBCOsmon")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F708CF80047"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @51
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3F708D0401C1"
+		    client     	@49
+		    supplier   	@50
+		    line_style 	0)
+		(object ModView "Component View::EBCO (Core Classes)::EBCOmark" "PackageType" "Specification" @52
+		    location   	(1478, 5596)
+		    label      	(object ItemLabel
+			Parent_View 	@52
+			location   	(1416, 5400)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBCOmark")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3FB3834502D6"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBCO (Core Classes)::EBCOmark" "PackageType" "Body" @53
+		    location   	(1482, 6081)
+		    label      	(object ItemLabel
+			Parent_View 	@53
+			location   	(1420, 5885)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBCOmark")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3FB3834C015F"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @54
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3FB383530373"
+		    client     	@53
+		    supplier   	@52
+		    line_style 	0)
+		(object ModView "Component View::EBCO (Core Classes)::EBCOvers" "PackageType" "Specification" @55
+		    location   	(322, 6591)
+		    label      	(object ItemLabel
+			Parent_View 	@55
+			location   	(260, 6395)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	543
+			label      	"EBCOvers")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"406C1D8201C7"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBCO (Core Classes)::EBCOvers" "PackageType" "Body" @56
+		    location   	(327, 7096)
+		    label      	(object ItemLabel
+			Parent_View 	@56
+			location   	(265, 6900)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	543
+			label      	"EBCOvers")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"406C1D97002C"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @57
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"406C1D9E0090"
+		    client     	@56
+		    supplier   	@55
+		    line_style 	0)))))

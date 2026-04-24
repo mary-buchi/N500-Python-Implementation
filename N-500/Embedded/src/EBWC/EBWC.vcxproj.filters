@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{e2865357-fb3e-43a5-a27b-04fb2aef4435}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{2754fc4b-72db-4963-aac9-341d52d2a5a3}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{df88cbe9-e781-4cff-bce4-9dee42359153}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="EBWC.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="EBWCacti.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EBWCcomd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EBWCconf.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EBWCconn.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EBWCcrea.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EBWCemst.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EBWCexcp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EBWCidle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EBWCimpl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EBWCinit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EBWCintf.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EBWCmain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EBWCproc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EBWCregy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EBWCstat.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EBWCsten.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="dllie.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EBWC_res.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EBWCacti.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EBWCcomd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EBWCconf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EBWCconn.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EBWCcrea.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EBWCemst.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EBWCexcp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EBWCidle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EBWCidnt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EBWCimpl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EBWCinit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EBWCintf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EBWCmain.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EBWCproc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EBWCregy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EBWCstat.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EBWCsten.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,1092 @@
+
+(object Petal
+    version    	42
+    _written   	"Rose 4.5.8163.3"
+    charSet    	0)
+
+(object SubSystem "EBMC (Measurement Channel)"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    attributes 	(list Attribute_Set
+	(object Attribute
+	    tool       	"cg"
+	    name       	"Directory"
+	    value      	"Embedded\\Src\\EBMC"))
+    quid       	"3DAAD35002C3"
+    physical_models 	(list unit_reference_list
+	(object module "EBMCidnt" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBMC\\EBMCidnt.h"))
+	    quid       	"3DAAD3E9037F"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBMCregy" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBMC\\EBMCregy.h"))
+	    quid       	"3DAAD46802A4"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBMCregy" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBMC\\EBMCregy.cpp"))
+	    quid       	"3DAAD4710208"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3DAAD476038E"
+		    supplier   	"Component View::EBMC (Measurement Channel)::EBMCregy"
+		    quidu      	"3DAAD46802A4"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBMCcrea" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBMC\\EBMCcrea.h"))
+	    quid       	"3DAAD4BE00BF"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBMCcrea" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBMC\\EBMCcrea.cpp"))
+	    quid       	"3DAAD4C40014"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3DAAD4C90004"
+		    supplier   	"Component View::EBMC (Measurement Channel)::EBMCcrea"
+		    quidu      	"3DAAD4BE00BF"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBMCintf" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBMC\\EBMCintf.h"))
+	    quid       	"3DAAD5340350"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBMCintf" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBMC\\EBMCintf.cpp"))
+	    quid       	"3DAAD53F0091"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3DAAD54402B3"
+		    supplier   	"Component View::EBMC (Measurement Channel)::EBMCintf"
+		    quidu      	"3DAAD5340350"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBMCimpl" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBMC\\EBMCimpl.h"))
+	    quid       	"3DAAE3BD02E2"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBMCimpl" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBMC\\EBMCimpl.cpp"))
+	    quid       	"3DAAE3CB0294"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3DAAE3D100EE"
+		    supplier   	"Component View::EBMC (Measurement Channel)::EBMCimpl"
+		    quidu      	"3DAAE3BD02E2"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBMCsten" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBMC\\EBMCsten.h"))
+	    quid       	"3DAAE3D40081"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBMCsten" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBMC\\EBMCsten.cpp"))
+	    quid       	"3DAAE3DA013C"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3DAAE3DF012D"
+		    supplier   	"Component View::EBMC (Measurement Channel)::EBMCsten"
+		    quidu      	"3DAAE3D40081"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBMCstat" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBMC\\EBMCstat.h"))
+	    quid       	"3DAAE3EA00A0"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBMCstat" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBMC\\EBMCstat.cpp"))
+	    quid       	"3DAAE3F201C9"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3DAAE3F802A4"
+		    supplier   	"Component View::EBMC (Measurement Channel)::EBMCstat"
+		    quidu      	"3DAAE3EA00A0"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBMCidle" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBMC\\EBMCidle.h"))
+	    quid       	"3DAAE824018B"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBMCidle" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBMC\\EBMCidle.cpp"))
+	    quid       	"3DAAE82E019A"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3DAAE836013C"
+		    supplier   	"Component View::EBMC (Measurement Channel)::EBMCidle"
+		    quidu      	"3DAAE824018B"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBMCcomd" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBMC\\EBMCcomd.h"))
+	    quid       	"3DAAE8AA03BD"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBMCcomd" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBMC\\EBMCcomd.cpp"))
+	    quid       	"3DAAE8B0036F"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3DAAE8B80265"
+		    supplier   	"Component View::EBMC (Measurement Channel)::EBMCcomd"
+		    quidu      	"3DAAE8AA03BD"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBMCtype" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBMC\\EBMCtype.h"))
+	    quid       	"3DAE56270341"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBMCtype" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBMC\\EBMCtype.cpp"))
+	    quid       	"3DAE562E039F"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3DAE5636019B"
+		    supplier   	"Component View::EBMC (Measurement Channel)::EBMCtype"
+		    quidu      	"3DAE56270341"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBMCproc" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBMC\\EBMCproc.h"))
+	    quid       	"3E6DD9B601F4"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBMCproc" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBMC\\EBMCproc.cpp"))
+	    quid       	"3E6DD9C10196"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3E6DD9CD0242"
+		    supplier   	"Component View::EBMC (Measurement Channel)::EBMCproc"
+		    quidu      	"3E6DD9B601F4"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBMCdata" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBMC\\EBMCdata.h"))
+	    quid       	"3E6DE60702DE"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBMCdata" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBMC\\EBMCdata.cpp"))
+	    quid       	"3E6DE60F0280"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3E6DE6170213"
+		    supplier   	"Component View::EBMC (Measurement Channel)::EBMCdata"
+		    quidu      	"3E6DE60702DE"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBMCacti" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBMC\\EBMCacti.h"))
+	    quid       	"3E6E06A8034B"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBMCacti" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBMC\\EBMCacti.cpp"))
+	    quid       	"3E6E06AE0280"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3E6E06B60251"
+		    supplier   	"Component View::EBMC (Measurement Channel)::EBMCacti"
+		    quidu      	"3E6E06A8034B"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBMCmain" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBMC\\EBMCmain.cpp"))
+	    quid       	"3EF049AC0176"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3EF04E7F02AF"
+		    supplier   	"Component View::EBMC (Measurement Channel)::EBMCmain"
+		    quidu      	"3EF04E6B0213"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBMCmain" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBMC\\EBMCmain.h"))
+	    quid       	"3EF04E6B0213"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBMCconn" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBMC\\EBMCconn.h"))
+	    quid       	"3F60193C034B"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBMCconn" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBMC\\EBMCconn.cpp"))
+	    quid       	"3F60194201B5"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3F60194B0196"
+		    supplier   	"Component View::EBMC (Measurement Channel)::EBMCconn"
+		    quidu      	"3F60193C034B"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBMCsimu" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBMC\\EBMCsimu.h"))
+	    quid       	"3F97883303CC"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBMCsimu" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBMC\\EBMCsimu.cpp"))
+	    quid       	"3F97883D0003"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3F9788440051"
+		    supplier   	"Component View::EBMC (Measurement Channel)::EBMCsimu"
+		    quidu      	"3F97883303CC"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBMCexcp" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBMC\\EBMCexcp.h"))
+	    quid       	"3FD025E701E4"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBMCexcp" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\Src\\EBMC\\EBMCexcp.cpp"))
+	    quid       	"3FD026080242"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3FD026130196"
+		    supplier   	"Component View::EBMC (Measurement Channel)::EBMCexcp"
+		    quidu      	"3FD025E701E4"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++"))
+    physical_presentations 	(list unit_reference_list
+	(object Module_Diagram "1.0 Main"
+	    quid       	"3DAAD37B0227"
+	    title      	"1.0 Main"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	3639
+	    items      	(list diagram_item_list
+		(object ModView "Component View::EBMC (Measurement Channel)::EBMCidnt" "PackageType" "Specification" @1
+		    location   	(789, 378)
+		    label      	(object ItemLabel
+			Parent_View 	@1
+			location   	(727, 182)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBMCidnt")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DAAD3E9037F"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBMC (Measurement Channel)::EBMCregy" "PackageType" "Specification" @2
+		    location   	(247, 1387)
+		    label      	(object ItemLabel
+			Parent_View 	@2
+			location   	(185, 1191)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBMCregy")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DAAD46802A4"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBMC (Measurement Channel)::EBMCregy" "PackageType" "Body" @3
+		    location   	(253, 1890)
+		    label      	(object ItemLabel
+			Parent_View 	@3
+			location   	(191, 1694)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBMCregy")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DAAD4710208"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @4
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DAAD476038E"
+		    client     	@3
+		    supplier   	@2
+		    line_style 	0)
+		(object ModView "Component View::EBMC (Measurement Channel)::EBMCcrea" "PackageType" "Specification" @5
+		    location   	(795, 1393)
+		    label      	(object ItemLabel
+			Parent_View 	@5
+			location   	(733, 1197)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBMCcrea")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DAAD4BE00BF"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBMC (Measurement Channel)::EBMCcrea" "PackageType" "Body" @6
+		    location   	(790, 1899)
+		    label      	(object ItemLabel
+			Parent_View 	@6
+			location   	(728, 1703)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBMCcrea")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DAAD4C40014"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @7
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DAAD4C90004"
+		    client     	@6
+		    supplier   	@5
+		    line_style 	0)
+		(object ModView "Component View::EBMC (Measurement Channel)::EBMCintf" "PackageType" "Specification" @8
+		    location   	(269, 2396)
+		    label      	(object ItemLabel
+			Parent_View 	@8
+			location   	(207, 2200)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBMCintf")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DAAD5340350"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBMC (Measurement Channel)::EBMCintf" "PackageType" "Body" @9
+		    location   	(260, 2903)
+		    label      	(object ItemLabel
+			Parent_View 	@9
+			location   	(198, 2707)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBMCintf")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DAAD53F0091"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @10
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DAAD54402B3"
+		    client     	@9
+		    supplier   	@8
+		    line_style 	0)
+		(object ModView "Component View::EBMC (Measurement Channel)::EBMCimpl" "PackageType" "Specification" @11
+		    location   	(795, 2387)
+		    label      	(object ItemLabel
+			Parent_View 	@11
+			location   	(733, 2191)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBMCimpl")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DAAE3BD02E2"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBMC (Measurement Channel)::EBMCimpl" "PackageType" "Body" @12
+		    location   	(797, 2884)
+		    label      	(object ItemLabel
+			Parent_View 	@12
+			location   	(735, 2688)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBMCimpl")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DAAE3CB0294"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @13
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DAAE3D100EE"
+		    client     	@12
+		    supplier   	@11
+		    line_style 	0)
+		(object ModView "Component View::EBMC (Measurement Channel)::EBMCsten" "PackageType" "Specification" @14
+		    location   	(1336, 2390)
+		    label      	(object ItemLabel
+			Parent_View 	@14
+			location   	(1274, 2194)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBMCsten")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DAAE3D40081"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBMC (Measurement Channel)::EBMCsten" "PackageType" "Body" @15
+		    location   	(1337, 2913)
+		    label      	(object ItemLabel
+			Parent_View 	@15
+			location   	(1275, 2717)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBMCsten")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DAAE3DA013C"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @16
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DAAE3DF012D"
+		    client     	@15
+		    supplier   	@14
+		    line_style 	0)
+		(object ModView "Component View::EBMC (Measurement Channel)::EBMCstat" "PackageType" "Specification" @17
+		    location   	(282, 3462)
+		    label      	(object ItemLabel
+			Parent_View 	@17
+			location   	(220, 3266)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBMCstat")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DAAE3EA00A0"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBMC (Measurement Channel)::EBMCstat" "PackageType" "Body" @18
+		    location   	(278, 3956)
+		    label      	(object ItemLabel
+			Parent_View 	@18
+			location   	(216, 3760)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBMCstat")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DAAE3F201C9"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @19
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DAAE3F802A4"
+		    client     	@18
+		    supplier   	@17
+		    line_style 	0)
+		(object ModView "Component View::EBMC (Measurement Channel)::EBMCidle" "PackageType" "Specification" @20
+		    location   	(823, 3459)
+		    label      	(object ItemLabel
+			Parent_View 	@20
+			location   	(761, 3263)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBMCidle")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DAAE824018B"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBMC (Measurement Channel)::EBMCidle" "PackageType" "Body" @21
+		    location   	(815, 3962)
+		    label      	(object ItemLabel
+			Parent_View 	@21
+			location   	(753, 3766)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBMCidle")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DAAE82E019A"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @22
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DAAE836013C"
+		    client     	@21
+		    supplier   	@20
+		    line_style 	0)
+		(object ModView "Component View::EBMC (Measurement Channel)::EBMCcomd" "PackageType" "Specification" @23
+		    location   	(1356, 3434)
+		    label      	(object ItemLabel
+			Parent_View 	@23
+			location   	(1294, 3238)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBMCcomd")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DAAE8AA03BD"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBMC (Measurement Channel)::EBMCcomd" "PackageType" "Body" @24
+		    location   	(1361, 3962)
+		    label      	(object ItemLabel
+			Parent_View 	@24
+			location   	(1299, 3766)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBMCcomd")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DAAE8B0036F"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @25
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DAAE8B80265"
+		    client     	@24
+		    supplier   	@23
+		    line_style 	0)
+		(object ModView "Component View::EBMC (Measurement Channel)::EBMCtype" "PackageType" "Specification" @26
+		    location   	(1342, 1368)
+		    label      	(object ItemLabel
+			Parent_View 	@26
+			location   	(1280, 1172)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBMCtype")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DAE56270341"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBMC (Measurement Channel)::EBMCtype" "PackageType" "Body" @27
+		    location   	(1339, 1893)
+		    label      	(object ItemLabel
+			Parent_View 	@27
+			location   	(1277, 1697)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBMCtype")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DAE562E039F"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @28
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DAE5636019B"
+		    client     	@27
+		    supplier   	@26
+		    line_style 	0)
+		(object ModView "Component View::EBMC (Measurement Channel)::EBMCproc" "PackageType" "Specification" @29
+		    location   	(278, 4439)
+		    label      	(object ItemLabel
+			Parent_View 	@29
+			location   	(216, 4243)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBMCproc")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E6DD9B601F4"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBMC (Measurement Channel)::EBMCproc" "PackageType" "Body" @30
+		    location   	(272, 4942)
+		    label      	(object ItemLabel
+			Parent_View 	@30
+			location   	(210, 4746)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBMCproc")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E6DD9C10196"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @31
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3E6DD9CD0242"
+		    client     	@30
+		    supplier   	@29
+		    line_style 	0)
+		(object ModView "Component View::EBMC (Measurement Channel)::EBMCdata" "PackageType" "Specification" @32
+		    location   	(838, 4439)
+		    label      	(object ItemLabel
+			Parent_View 	@32
+			location   	(776, 4243)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBMCdata")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E6DE60702DE"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBMC (Measurement Channel)::EBMCdata" "PackageType" "Body" @33
+		    location   	(853, 4952)
+		    label      	(object ItemLabel
+			Parent_View 	@33
+			location   	(791, 4756)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBMCdata")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E6DE60F0280"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @34
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3E6DE6170213"
+		    client     	@33
+		    supplier   	@32
+		    line_style 	0)
+		(object ModView "Component View::EBMC (Measurement Channel)::EBMCacti" "PackageType" "Specification" @35
+		    location   	(1381, 4452)
+		    label      	(object ItemLabel
+			Parent_View 	@35
+			location   	(1319, 4256)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBMCacti")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E6E06A8034B"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBMC (Measurement Channel)::EBMCacti" "PackageType" "Body" @36
+		    location   	(1419, 4943)
+		    label      	(object ItemLabel
+			Parent_View 	@36
+			location   	(1357, 4747)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBMCacti")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E6E06AE0280"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @37
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3E6E06B60251"
+		    client     	@36
+		    supplier   	@35
+		    line_style 	0)
+		(object ModView "Component View::EBMC (Measurement Channel)::EBMCmain" "PackageType" "Body" @38
+		    location   	(283, 890)
+		    label      	(object ItemLabel
+			Parent_View 	@38
+			location   	(221, 694)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBMCmain")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EF049AC0176"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBMC (Measurement Channel)::EBMCmain" "PackageType" "Specification" @39
+		    location   	(289, 371)
+		    label      	(object ItemLabel
+			Parent_View 	@39
+			location   	(227, 175)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBMCmain")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EF04E6B0213"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @40
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3EF04E7F02AF"
+		    client     	@38
+		    supplier   	@39
+		    line_style 	0)
+		(object ModView "Component View::EBMC (Measurement Channel)::EBMCconn" "PackageType" "Specification" @41
+		    location   	(306, 5434)
+		    label      	(object ItemLabel
+			Parent_View 	@41
+			location   	(244, 5238)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBMCconn")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F60193C034B"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBMC (Measurement Channel)::EBMCconn" "PackageType" "Body" @42
+		    location   	(320, 5853)
+		    label      	(object ItemLabel
+			Parent_View 	@42
+			location   	(258, 5657)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBMCconn")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F60194201B5"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @43
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3F60194B0196"
+		    client     	@42
+		    supplier   	@41
+		    line_style 	0)
+		(object ModView "Component View::EBMC (Measurement Channel)::EBMCsimu" "PackageType" "Specification" @44
+		    location   	(872, 5437)
+		    label      	(object ItemLabel
+			Parent_View 	@44
+			location   	(810, 5241)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBMCsimu")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F97883303CC"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBMC (Measurement Channel)::EBMCsimu" "PackageType" "Body" @45
+		    location   	(857, 5884)
+		    label      	(object ItemLabel
+			Parent_View 	@45
+			location   	(795, 5688)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBMCsimu")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F97883D0003"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @46
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3F9788440051"
+		    client     	@45
+		    supplier   	@44
+		    line_style 	0)
+		(object ModView "Component View::EBMC (Measurement Channel)::EBMCexcp" "PackageType" "Specification" @47
+		    location   	(1435, 5429)
+		    label      	(object ItemLabel
+			Parent_View 	@47
+			location   	(1373, 5233)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	543
+			label      	"EBMCexcp")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3FD025E701E4"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBMC (Measurement Channel)::EBMCexcp" "PackageType" "Body" @48
+		    location   	(1438, 5907)
+		    label      	(object ItemLabel
+			Parent_View 	@48
+			location   	(1376, 5711)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	543
+			label      	"EBMCexcp")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3FD026080242"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @49
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3FD026130196"
+		    client     	@48
+		    supplier   	@47
+		    line_style 	0)))))

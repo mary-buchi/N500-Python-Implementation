@@ -1,0 +1,1694 @@
+
+(object Petal
+    version    	42
+    _written   	"Rose 4.5.8163.3"
+    charSet    	0)
+
+(object Class_Category "EBI2CDP (I2C Digital Potentiometer)"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    quid       	"3F4B4CE20177"
+    exportControl 	"Public"
+    subsystem  	"EBI2CDP (I2C Digital Potentiometer)"
+    quidu      	"3F4B4D0A007D"
+    logical_models 	(list unit_reference_list
+	(object Class_Utility "I2CDP_IDENTIFIERS"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"cg_style"
+		    value      	"Dummy Class"))
+	    quid       	"3F4B4F4A00EA"
+	    module     	"Component View::EBI2CDP (I2C Digital Potentiometer)::EBI2CDPident (module spec)"
+	    quidu      	"3F4B4E6B0000"
+	    language   	"C++")
+	(object Class "CI2CDigitalPotiAD5245CreatorV0s"
+	    quid       	"3F4B6136036B"
+	    superclasses 	(list inheritance_relationship_list
+		(object Inheritance_Relationship
+		    quid       	"3F4B61510271"
+		    supplier   	"Logical View::EBPI (PC Interface)::CPIObjCreatorI2CDigitalPotiAD5245"
+		    quidu      	"3F4B564500DA"))
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    quid       	"3F4B649D03C8"
+		    supplier   	"Logical View::EBI2CDP (I2C Digital Potentiometer)::CI2CDigitalPotiAD5245"
+		    quidu      	"3F4B6249005D"))
+	    operations 	(list Operations
+		(object Operation "Create"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3F4B616F02CE"
+		    stereotype 	"virtual"
+		    parameters 	(list Parameters
+			(object Parameter "p_uiID"
+			    type       	"UINT"))
+		    result     	"IPII2CDigitalPotiAD5245*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1061902076))
+	    module     	"Component View::EBI2CDP (I2C Digital Potentiometer)::EBI2CDPcrea (module body)"
+	    quidu      	"3F4B4EBF0119"
+	    module     	"Component View::EBI2CDP (I2C Digital Potentiometer)::EBI2CDPcrea (module spec)"
+	    quidu      	"3F4B4EC70148"
+	    language   	"C++")
+	(object Class "CI2CDigitalPotiInterfaceRegistry"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"cg_style"
+		    value      	"ExtraLean")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"GenerateDefaultConstructor"
+		    value      	("GenerateSet" 206))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"GenerateDestructor"
+		    value      	FALSE)
+		(object Attribute
+		    tool       	"MSVC"
+		    name       	"DeclSpec"
+		    value      	"EBI2CDP_DLL_DECL"))
+	    quid       	"3F4B61C0005D"
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    quid       	"3F4B62220261"
+		    supplier   	"Logical View::EBI2CDP (I2C Digital Potentiometer)::CI2CDigitalPotiAD5245CreatorV0s"
+		    quidu      	"3F4B6136036B")
+		(object Uses_Relationship
+		    quid       	"3F4B6482036B"
+		    supplier   	"Logical View::EBPI (PC Interface)::CPIObjectFactory"
+		    quidu      	"3DA52FD80189"))
+	    operations 	(list Operations
+		(object Operation "RegisterInterfaces"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 203))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Static"))
+		    quid       	"3F4B61E60222"
+		    stereotype 	"static"
+		    result     	"void"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1061902075))
+	    module     	"Component View::EBI2CDP (I2C Digital Potentiometer)::EBI2CDPregy (module body)"
+	    quidu      	"3F4B4EAF00EA"
+	    module     	"Component View::EBI2CDP (I2C Digital Potentiometer)::EBI2CDPregy (module spec)"
+	    quidu      	"3F4B4EB6003E"
+	    language   	"C++")
+	(object Class "CI2CDigitalPotiAD5245"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"cg_style"
+		    value      	"NoDefContr")
+		(object Attribute
+		    tool       	"MSVC"
+		    name       	"DeclSpec"
+		    value      	"EBI2CDP_DLL_DECL"))
+	    quid       	"3F4B6249005D"
+	    superclasses 	(list inheritance_relationship_list
+		(object Inheritance_Relationship
+		    quid       	"3F4B6275032C"
+		    supplier   	"Logical View::EBPI (PC Interface)::IPII2CDigitalPotiAD5245"
+		    quidu      	"3F44C077032C"))
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    quid       	"3F4B636F02BF"
+		    supplier   	"Logical View::EBI2CDP (I2C Digital Potentiometer)::I2CDP_IDENTIFIERS"
+		    quidu      	"3F4B4F4A00EA")
+		(object Uses_Relationship
+		    quid       	"3F4B6371029F"
+		    supplier   	"Logical View::EBI2CSTDLIB (I2C Standard Library)::CI2CSTDLIBConvert"
+		    quidu      	"3EE5975C0138")
+		(object Uses_Relationship
+		    quid       	"3F4B63730290"
+		    supplier   	"Logical View::EBI2CSTDLIB (I2C Standard Library)::CI2CSTDLIBCmd"
+		    quidu      	"3EE891A00157")
+		(object Uses_Relationship
+		    quid       	"3F5D79930213"
+		    supplier   	"Logical View::EBHI (Hardware Interface)::CHIProcessImageParameter"
+		    quidu      	"3EBA10D00128")
+		(object Uses_Relationship
+		    quid       	"3FFBC8C00242"
+		    supplier   	"Logical View::EBPI (PC Interface)::CPIComponentsState"
+		    quidu      	"3F4235EA0005")
+		(object Uses_Relationship
+		    quid       	"3FFBC90701F4"
+		    supplier   	"Logical View::EBPI (PC Interface)::CPISyncObjI2CDataStream"
+		    quidu      	"3FD82B6701B5")
+		(object Uses_Relationship
+		    quid       	"3FFBC90A00EA"
+		    supplier   	"Logical View::EBHI (Hardware Interface)::CHII2CWorkerThread"
+		    quidu      	"3E227BB3027B")
+		(object Uses_Relationship
+		    quid       	"3FFBC90D0167"
+		    supplier   	"Logical View::EBHI (Hardware Interface)::IHIInterface"
+		    quidu      	"3E2271C40106")
+		(object Uses_Relationship
+		    quid       	"3FFBC933007D"
+		    supplier   	"Logical View::EBI2CDP (I2C Digital Potentiometer)::XI2CDigitalPotiExceptionError"
+		    quidu      	"3F4B63C200FA")
+		(object Uses_Relationship
+		    quid       	"3FFBD81700EA"
+		    supplier   	"Logical View::EBI2CDP (I2C Digital Potentiometer)::CI2CDigitalPotiAD5245Command"
+		    quidu      	"3FFBC99C0290"))
+	    operations 	(list Operations
+		(object Operation "CI2CDigitalPotiAD5245"
+		    quid       	"3F4B628B0232"
+		    parameters 	(list Parameters
+			(object Parameter "p_uiID"
+			    type       	"UINT"))
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1061902077)
+		(object Operation "GetuiID"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3F4B6284008C"
+		    stereotype 	"virtual"
+		    result     	"UINT"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1061902078)
+		(object Operation "Startup"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3F4B6284009C"
+		    documentation 	
+|DESCRIPTION
+|Links the object to the hardware
+|
+|RETURNS
+|async void
+		    
+		    stereotype 	"virtual"
+		    result     	"CCOSyncObject*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1061902079)
+		(object Operation "Shutdown"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3F4B628400AB"
+		    documentation 	
+|DESCRIPTION
+|Detaches the object from the hardware
+|
+|RETURNS
+|async void
+		    
+		    stereotype 	"virtual"
+		    result     	"CCOSyncObject*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1061902080)
+		(object Operation "ConnectionEstablished"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3F4B628400BB"
+		    documentation 	
+|DESCRIPTION
+|The connection to the PC has been established
+|
+|RETURNS
+|async void
+		    
+		    stereotype 	"virtual"
+		    result     	"CCOSyncObject*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1061902081)
+		(object Operation "ConnectionLost"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3F4B628400BC"
+		    documentation 	
+|DESCRIPTION
+|The connection to the PC has been lost
+|
+|RETURNS
+|async void
+		    
+		    stereotype 	"virtual"
+		    result     	"CCOSyncObject*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1061902082)
+		(object Operation "WriteValue"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3F4B628400CB"
+		    documentation 	
+|DESCRIPTION
+|writes the value to the digital potentiometer
+|
+|INPUT:
+|- data byte
+|
+|RETURNS
+|async void
+		    
+		    stereotype 	"virtual"
+		    parameters 	(list Parameters
+			(object Parameter "p_cValue"
+			    type       	"BYTE"))
+		    result     	"CCOSyncObject*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1061902083)
+		(object Operation "ReadValue"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3F4B628400DA"
+		    documentation 	
+|DESCRIPTION
+|gets the digital potentiometer value
+|
+|RETURNS
+|async int
+		    
+		    stereotype 	"virtual"
+		    result     	"CCOSyncObjectInt*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1061902084))
+	    class_attributes 	(list class_attribute_list
+		(object ClassAttribute "dwI2CBaseAdr"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateGetOperation"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetIsConst"
+			    value      	TRUE))
+		    quid       	"3FFBD7D2000F"
+		    type       	"DWORD")
+		(object ClassAttribute "cI2CDeviceAdr"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateGetOperation"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetIsConst"
+			    value      	TRUE))
+		    quid       	"3F5D78C1007D"
+		    type       	"BYTE")
+		(object ClassAttribute "cI2CBusNumber"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateGetOperation"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetIsConst"
+			    value      	TRUE))
+		    quid       	"3F5D78C1009C"
+		    type       	"BYTE")
+		(object ClassAttribute "cI2CTransferSpeed"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateGetOperation"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetIsConst"
+			    value      	TRUE))
+		    quid       	"3F5D78C100AB"
+		    type       	"BYTE")
+		(object ClassAttribute "cI2CDevice"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateGetOperation"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetIsConst"
+			    value      	TRUE))
+		    quid       	"3F5D78C100BB"
+		    type       	"BYTE")
+		(object ClassAttribute "cInstruction"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateGetOperation"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetIsConst"
+			    value      	TRUE))
+		    quid       	"3FFBD32801F4"
+		    type       	"BYTE"
+		    initv      	"0x00")
+		(object ClassAttribute "cMaskDPAD5245"
+		    quid       	"3FFBD4D30138"
+		    type       	"BYTE"
+		    initv      	"0x1")
+		(object ClassAttribute "cMaskWriteAccess"
+		    quid       	"3FFBD5BD0196"
+		    type       	"BYTE"
+		    initv      	"0xFE")
+		(object ClassAttribute "cMaskReadAccess"
+		    quid       	"3FFBF4D9035B"
+		    type       	"BYTE"
+		    initv      	"0x01"))
+	    module     	"Component View::EBI2CDP (I2C Digital Potentiometer)::EBI2CDPintf (module body)"
+	    quidu      	"3F4B4E7A036B"
+	    module     	"Component View::EBI2CDP (I2C Digital Potentiometer)::EBI2CDPintf (module spec)"
+	    quidu      	"3F4B4E8502CE"
+	    language   	"C++")
+	(object Class "XI2CDigitalPotiExceptionError"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"cg_style"
+		    value      	"NoDefContr"))
+	    quid       	"3F4B63C200FA"
+	    superclasses 	(list inheritance_relationship_list
+		(object Inheritance_Relationship
+		    quid       	"3F4B63D0038A"
+		    supplier   	"Logical View::EBCO (Core Classes)::XCOExceptionError"
+		    quidu      	"3BA649E20099"))
+	    operations 	(list Operations
+		(object Operation "XI2CDigitalPotiExceptionError"
+		    quid       	"3F4B63EA0399"
+		    parameters 	(list Parameters
+			(object Parameter "p_sUnitID"
+			    type       	"const CString&")
+			(object Parameter "p_uiExceptionID"
+			    type       	"const UINT")
+			(object Parameter "p_sModuleName"
+			    type       	"const CString&")
+			(object Parameter "p_uiModuleLine"
+			    type       	"const UINT")
+			(object Parameter "p_dwErrorCode"
+			    type       	"const DWORD"))
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1061902085)
+		(object Operation "XI2CDigitalPotiExceptionError"
+		    quid       	"3F4B63EA039F"
+		    parameters 	(list Parameters
+			(object Parameter "p_pOrigException"
+			    type       	"XCOExceptionError*"))
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1061902086)
+		(object Operation "Throw"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3F4B63EA03AA"
+		    documentation 	
+|DESCRIPTION
+|Re-throws an exception without losing type information.
+|
+		    
+		    stereotype 	"virtual"
+		    result     	"void"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1061902087)
+		(object Operation "Clone"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3F4B63EA03B9"
+		    documentation 	
+|DESCRIPTION
+|Clones the current exception.
+|
+|RETURNS
+|Pointer to clone
+|
+		    
+		    stereotype 	"virtual"
+		    result     	"XCOException*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1061902088))
+	    module     	"Component View::EBI2CDP (I2C Digital Potentiometer)::EBI2CDPexcp (module body)"
+	    quidu      	"3F4B4E900261"
+	    module     	"Component View::EBI2CDP (I2C Digital Potentiometer)::EBI2CDPexcp (module spec)"
+	    quidu      	"3F4B4E97031C"
+	    language   	"C++")
+	(object Class "I2CDP_MAIN"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"cg_style"
+		    value      	"Dummy Class"))
+	    quid       	"3F4B642B0196"
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    quid       	"3F4B646501F4"
+		    supplier   	"Logical View::EBI2CDP (I2C Digital Potentiometer)::CI2CDigitalPotiInterfaceRegistry"
+		    quidu      	"3F4B61C0005D"))
+	    module     	"Component View::EBI2CDP (I2C Digital Potentiometer)::EBI2CDPmain (module body)"
+	    quidu      	"3F4B4EA10128"
+	    module     	"Component View::EBI2CDP (I2C Digital Potentiometer)::EBI2CDPmain (module spec)"
+	    quidu      	"3F4B4EA9002E"
+	    language   	"C++")
+	(object Class "CI2CDigitalPotiAD5245Command"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"cg_style"
+		    value      	"NoDefContr"))
+	    quid       	"3FFBC99C0290"
+	    superclasses 	(list inheritance_relationship_list
+		(object Inheritance_Relationship
+		    quid       	"3FFBCA6201B5"
+		    supplier   	"Logical View::EBHI (Hardware Interface)::CHII2CCommand"
+		    quidu      	"3E22999502B9"))
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    quid       	"3FFBCB140261"
+		    supplier   	"Logical View::EBI2CDP (I2C Digital Potentiometer)::XI2CDigitalPotiExceptionError"
+		    quidu      	"3F4B63C200FA")
+		(object Uses_Relationship
+		    quid       	"3FFBCB1603C8"
+		    supplier   	"Logical View::EBI2CDP (I2C Digital Potentiometer)::I2CDP_IDENTIFIERS"
+		    quidu      	"3F4B4F4A00EA")
+		(object Uses_Relationship
+		    quid       	"3FFBCB1900EA"
+		    supplier   	"Logical View::EBHI (Hardware Interface)::CHII2CParameter"
+		    quidu      	"3FD9C47E033C")
+		(object Uses_Relationship
+		    quid       	"3FFBCB1B01C5"
+		    supplier   	"Logical View::EBHI (Hardware Interface)::IHIInterface"
+		    quidu      	"3E2271C40106"))
+	    operations 	(list Operations
+		(object Operation "CI2CDigitalPotiAD5245Command"
+		    quid       	"3FFBCA21004E"
+		    parameters 	(list Parameters
+			(object Parameter "p_pcI2CStream"
+			    type       	"BYTE*")
+			(object Parameter "p_nLength"
+			    type       	"int")
+			(object Parameter "p_dwI2CBusNumber"
+			    type       	"DWORD")
+			(object Parameter "p_dwI2CTransferSpeed"
+			    type       	"DWORD"))
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1073465616)
+		(object Operation "Execute"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3FFBCA21005D"
+		    documentation 	
+|DESCRIPTION
+|Executes the current command.
+|
+|PARAMETERS
+|-
+|
+|RETURNS
+|true, if the command is finished and the clients sync object may be signalled
+		    
+		    stereotype 	"virtual"
+		    result     	"bool"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1073465617))
+	    class_attributes 	(list class_attribute_list
+		(object ClassAttribute "dwI2CBusNumber"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateGetOperation"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetIsConst"
+			    value      	TRUE))
+		    quid       	"3FFD60EA0222"
+		    type       	"DWORD"
+		    initv      	"p_dwI2CBusNumber")
+		(object ClassAttribute "dwI2CTransferSpeed"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateGetOperation"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetIsConst"
+			    value      	TRUE))
+		    quid       	"3FFD60EA0242"
+		    type       	"DWORD"
+		    initv      	"p_dwI2CTransferSpeed"))
+	    module     	"Component View::EBI2CDP (I2C Digital Potentiometer)::EBI2CDPcomd (module body)"
+	    quidu      	"3FFBC9D902CE"
+	    module     	"Component View::EBI2CDP (I2C Digital Potentiometer)::EBI2CDPcomd (module spec)"
+	    quidu      	"3FFBC9EB037A"
+	    language   	"C++")
+	(object Association "$UNNAMED$0"
+	    quid       	"3F4B630902AF"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$1"
+		    quid       	"3F4B630A005D"
+		    supplier   	"Logical View::EBI2CDP (I2C Digital Potentiometer)::CI2CDigitalPotiAD5245"
+		    quidu      	"3F4B6249005D"
+		    client_cardinality 	(value cardinality "1..1")
+		    is_aggregate 	TRUE)
+		(object Role "uiID"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"InitialValue"
+			    value      	(value Text "p_uiID")))
+		    quid       	"3F4B630A005E"
+		    label      	"uiID"
+		    supplier   	"Logical View::IMWINS (Microsoft Windows)::UINT"
+		    quidu      	"369DEAA80004"
+		    client_cardinality 	(value cardinality "1..1")
+		    Containment 	"By Value"
+		    is_navigable 	TRUE)))
+	(object Association "$UNNAMED$2"
+	    quid       	"3FFBC86F005D"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$3"
+		    quid       	"3FFBC86F02BF"
+		    supplier   	"Logical View::EBI2CDP (I2C Digital Potentiometer)::CI2CDigitalPotiAD5245"
+		    quidu      	"3F4B6249005D"
+		    client_cardinality 	(value cardinality "1..1")
+		    is_aggregate 	TRUE)
+		(object Role "bHWPresent"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"InitialValue"
+			    value      	(value Text "false")))
+		    quid       	"3FFBC86F02C0"
+		    label      	"bHWPresent"
+		    supplier   	"Logical View::IMWINS (Microsoft Windows)::bool"
+		    quidu      	"369DEAA80005"
+		    client_cardinality 	(value cardinality "1..1")
+		    Containment 	"By Value"
+		    is_navigable 	TRUE)))
+	(object Association "$UNNAMED$4"
+	    quid       	"3FFBCA8E00AB"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$5"
+		    quid       	"3FFBCA8E02AF"
+		    supplier   	"Logical View::EBI2CDP (I2C Digital Potentiometer)::CI2CDigitalPotiAD5245Command"
+		    quidu      	"3FFBC99C0290"
+		    client_cardinality 	(value cardinality "1..1")
+		    is_aggregate 	TRUE)
+		(object Role "pI2CDataStream"
+		    quid       	"3FFBCA8E02B0"
+		    label      	"pI2CDataStream"
+		    supplier   	"Logical View::EBPI (PC Interface)::CPII2CDataStream"
+		    quidu      	"3FD8310603B9"
+		    client_cardinality 	(value cardinality "1..1")
+		    Containment 	"By Reference"
+		    is_navigable 	TRUE))))
+    logical_presentations 	(list unit_reference_list
+	(object ClassDiagram "0.0 Globals"
+	    quid       	"3F4B4EF7031C"
+	    title      	"0.0 Globals"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object ClassView "ClassUtility" "Logical View::EBI2CDP (I2C Digital Potentiometer)::I2CDP_IDENTIFIERS" @1
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(828, 484)
+		    label      	(object ItemLabel
+			Parent_View 	@1
+			location   	(621, 433)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	414
+			justify    	0
+			label      	"I2CDP_IDENTIFIERS")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F4B4F4A00EA"
+		    width      	432
+		    height     	126
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBI2CDP (I2C Digital Potentiometer)::I2CDP_MAIN" @2
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1562, 640)
+		    label      	(object ItemLabel
+			Parent_View 	@2
+			location   	(1428, 589)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	268
+			justify    	0
+			label      	"I2CDP_MAIN")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F4B642B0196"
+		    width      	286
+		    height     	126
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBI2CDP (I2C Digital Potentiometer)::CI2CDigitalPotiInterfaceRegistry" @3
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1610, 1049)
+		    label      	(object ItemLabel
+			Parent_View 	@3
+			location   	(1305, 998)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	610
+			justify    	0
+			label      	"CI2CDigitalPotiInterfaceRegistry")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F4B61C0005D"
+		    width      	628
+		    height     	126
+		    autoResize 	TRUE)
+		(object UsesView "" @4
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3F4B646501F4"
+		    client     	@2
+		    supplier   	@3
+		    line_style 	0)
+		(object ClassView "Class" "Logical View::EBPI (PC Interface)::CPIObjectFactory" @5
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1831, 1506)
+		    label      	(object ItemLabel
+			Parent_View 	@5
+			location   	(1653, 1455)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	356
+			justify    	0
+			label      	"CPIObjectFactory")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DA52FD80189"
+		    width      	374
+		    height     	126
+		    autoResize 	TRUE)
+		(object UsesView "" @6
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3F4B6482036B"
+		    client     	@3
+		    supplier   	@5
+		    line_style 	0)))
+	(object ClassDiagram "0.1 Creators / Registry"
+	    quid       	"3F4B4F070167"
+	    title      	"0.1 Creators / Registry"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object ClassView "InstantiatedClass" "Logical View::EBPI (PC Interface)::CPIObjCreatorI2CDigitalPotiAD5245" @7
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(731, 399)
+		    label      	(object ItemLabel
+			Parent_View 	@7
+			location   	(392, 347)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	678
+			justify    	0
+			label      	"CPIObjCreatorI2CDigitalPotiAD5245")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F4B564500DA"
+		    width      	696
+		    height     	128
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBI2CDP (I2C Digital Potentiometer)::CI2CDigitalPotiAD5245CreatorV0s" @8
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(734, 1090)
+		    label      	(object ItemLabel
+			Parent_View 	@8
+			location   	(406, 1009)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	656
+			justify    	0
+			label      	"CI2CDigitalPotiAD5245CreatorV0s")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F4B6136036B"
+		    compartment 	(object Compartment
+			Parent_View 	@8
+			location   	(406, 1069)
+			icon_style 	"Icon"
+			fill_color 	16777215
+			anchor     	2
+			nlines     	2
+			max_width  	409)
+		    width      	674
+		    height     	186
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object InheritView "" @9
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3F4B61510271"
+		    client     	@8
+		    supplier   	@7
+		    line_style 	0)
+		(object ClassView "Class" "Logical View::EBI2CDP (I2C Digital Potentiometer)::CI2CDigitalPotiInterfaceRegistry" @10
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(1796, 672)
+		    label      	(object ItemLabel
+			Parent_View 	@10
+			location   	(1489, 591)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	614
+			justify    	0
+			label      	"CI2CDigitalPotiInterfaceRegistry")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F4B61C0005D"
+		    compartment 	(object Compartment
+			Parent_View 	@10
+			location   	(1489, 651)
+			icon_style 	"Icon"
+			fill_color 	16777215
+			anchor     	2
+			nlines     	2
+			max_width  	612)
+		    width      	632
+		    height     	186
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object UsesView "" @11
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3F4B62220261"
+		    client     	@10
+		    supplier   	@8
+		    line_style 	0)
+		(object ClassView "Class" "Logical View::EBI2CDP (I2C Digital Potentiometer)::CI2CDigitalPotiAD5245" @12
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1815, 1184)
+		    label      	(object ItemLabel
+			Parent_View 	@12
+			location   	(1589, 1133)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	452
+			justify    	0
+			label      	"CI2CDigitalPotiAD5245")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F4B6249005D"
+		    width      	470
+		    height     	126
+		    autoResize 	TRUE)
+		(object UsesView "" @13
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3F4B649D03C8"
+		    client     	@8
+		    supplier   	@12
+		    line_style 	0)))
+	(object ClassDiagram "1.0 Sync Interface"
+	    quid       	"3F4B4F1600DA"
+	    title      	"1.0 Sync Interface"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object ClassView "Class" "Logical View::EBPI (PC Interface)::IPII2CDigitalPotiAD5245" @14
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(641, 412)
+		    label      	(object ItemLabel
+			Parent_View 	@14
+			location   	(405, 337)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	472
+			justify    	0
+			label      	"IPII2CDigitalPotiAD5245")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F44C077032C"
+		    width      	490
+		    height     	174
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::IMWINS (Microsoft Windows)::UINT" @15
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(893, 2009)
+		    label      	(object ItemLabel
+			Parent_View 	@15
+			location   	(812, 1958)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	162
+			justify    	0
+			label      	"UINT")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"369DEAA80004"
+		    height     	126
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBI2CDP (I2C Digital Potentiometer)::CI2CDigitalPotiAD5245" @16
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(643, 1217)
+		    label      	(object ItemLabel
+			Parent_View 	@16
+			location   	(289, 961)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	708
+			justify    	0
+			label      	"CI2CDigitalPotiAD5245")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F4B6249005D"
+		    compartment 	(object Compartment
+			Parent_View 	@16
+			location   	(289, 1021)
+			icon_style 	"Icon"
+			fill_color 	16777215
+			anchor     	2
+			nlines     	9
+			max_width  	706)
+		    width      	726
+		    height     	536
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object InheritView "" @17
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3F4B6275032C"
+		    client     	@16
+		    supplier   	@14
+		    line_style 	0)
+		(object AssociationViewNew "$UNNAMED$0" @18
+		    location   	(799, 1715)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3F4B630902AF"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$1" @19
+			    Parent_View 	@18
+			    location   	(-94, -294)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3F4B630A005D"
+			    client     	@18
+			    supplier   	@16
+			    line_style 	0
+			    label      	(object SegLabel @20
+				Parent_View 	@19
+				location   	(786, 1493)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	1))
+			(object RoleView "uiID" @21
+			    Parent_View 	@18
+			    location   	(-94, -294)
+			    label      	(object SegLabel @22
+				Parent_View 	@21
+				location   	(783, 1704)
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	96
+				justify    	0
+				label      	"+uiID"
+				pctDist    	-0.068711
+				height     	13
+				orientation 	1)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3F4B630A005E"
+			    client     	@18
+			    supplier   	@15
+			    line_style 	0
+			    label      	(object SegLabel @23
+				Parent_View 	@21
+				location   	(916, 1907)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	0))))
+		(object ClassView "Class" "Logical View::IMWINS (Microsoft Windows)::bool" @24
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1937, 1078)
+		    label      	(object ItemLabel
+			Parent_View 	@24
+			location   	(1856, 1027)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	162
+			justify    	0
+			label      	"bool")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"369DEAA80005"
+		    height     	126
+		    autoResize 	TRUE)
+		(object AssociationViewNew "$UNNAMED$2" @25
+		    location   	(1426, 1131)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3FFBC86F005D"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$3" @26
+			    Parent_View 	@25
+			    location   	(-511, 53)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3FFBC86F02BF"
+			    client     	@25
+			    supplier   	@16
+			    line_style 	0
+			    label      	(object SegLabel @27
+				Parent_View 	@26
+				location   	(1054, 1226)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	0))
+			(object RoleView "bHWPresent" @28
+			    Parent_View 	@25
+			    location   	(-511, 53)
+			    label      	(object SegLabel @29
+				Parent_View 	@28
+				location   	(1470, 1088)
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	264
+				justify    	0
+				label      	"+bHWPresent"
+				pctDist    	0.114670
+				height     	39
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3FFBC86F02C0"
+			    client     	@25
+			    supplier   	@24
+			    line_style 	0
+			    label      	(object SegLabel @30
+				Parent_View 	@28
+				location   	(1810, 1145)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	1))))))
+	(object ClassDiagram "1.1 Sync Interface Uses"
+	    quid       	"3F4B4F200196"
+	    title      	"1.1 Sync Interface Uses"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object ClassView "Class" "Logical View::EBI2CDP (I2C Digital Potentiometer)::CI2CDigitalPotiAD5245" @31
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(800, 815)
+		    label      	(object ItemLabel
+			Parent_View 	@31
+			location   	(574, 764)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	452
+			justify    	0
+			label      	"CI2CDigitalPotiAD5245")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F4B6249005D"
+		    width      	470
+		    height     	126
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBI2CSTDLIB (I2C Standard Library)::CI2CSTDLIBCmd" @32
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(593, 1827)
+		    label      	(object ItemLabel
+			Parent_View 	@32
+			location   	(422, 1776)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	342
+			justify    	0
+			label      	"CI2CSTDLIBCmd")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EE891A00157"
+		    width      	360
+		    height     	126
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBI2CSTDLIB (I2C Standard Library)::CI2CSTDLIBConvert" @33
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(831, 2143)
+		    label      	(object ItemLabel
+			Parent_View 	@33
+			location   	(638, 2092)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	386
+			justify    	0
+			label      	"CI2CSTDLIBConvert")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EE5975C0138"
+		    width      	404
+		    height     	126
+		    autoResize 	TRUE)
+		(object ClassView "ClassUtility" "Logical View::EBI2CDP (I2C Digital Potentiometer)::I2CDP_IDENTIFIERS" @34
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1659, 631)
+		    label      	(object ItemLabel
+			Parent_View 	@34
+			location   	(1452, 580)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	414
+			justify    	0
+			label      	"I2CDP_IDENTIFIERS")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F4B4F4A00EA"
+		    width      	432
+		    height     	126
+		    autoResize 	TRUE)
+		(object UsesView "" @35
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3F4B636F02BF"
+		    client     	@31
+		    supplier   	@34
+		    line_style 	0)
+		(object UsesView "" @36
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3F4B6371029F"
+		    client     	@31
+		    supplier   	@33
+		    line_style 	0)
+		(object UsesView "" @37
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3F4B63730290"
+		    client     	@31
+		    supplier   	@32
+		    line_style 	0)
+		(object ClassView "Class" "Logical View::EBHI (Hardware Interface)::CHIProcessImageParameter" @38
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1951, 968)
+		    label      	(object ItemLabel
+			Parent_View 	@38
+			location   	(1677, 917)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	548
+			justify    	0
+			label      	"CHIProcessImageParameter")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EBA10D00128"
+		    width      	566
+		    height     	126
+		    autoResize 	TRUE)
+		(object UsesView "" @39
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3F5D79930213"
+		    client     	@31
+		    supplier   	@38
+		    line_style 	0)
+		(object ClassView "Class" "Logical View::EBPI (PC Interface)::CPIComponentsState" @40
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(218, 1587)
+		    label      	(object ItemLabel
+			Parent_View 	@40
+			location   	(9, 1536)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	418
+			justify    	0
+			label      	"CPIComponentsState")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F4235EA0005"
+		    width      	436
+		    height     	126
+		    autoResize 	TRUE)
+		(object UsesView "" @41
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3FFBC8C00242"
+		    client     	@31
+		    supplier   	@40
+		    line_style 	0)
+		(object ClassView "InstantiatedClass" "Logical View::EBPI (PC Interface)::CPISyncObjI2CDataStream" @42
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1621, 2127)
+		    label      	(object ItemLabel
+			Parent_View 	@42
+			location   	(1358, 2076)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	526
+			justify    	0
+			label      	"CPISyncObjI2CDataStream")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3FD82B6701B5"
+		    width      	544
+		    height     	126
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBHI (Hardware Interface)::CHII2CWorkerThread" @43
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(2105, 1837)
+		    label      	(object ItemLabel
+			Parent_View 	@43
+			location   	(1902, 1786)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	406
+			justify    	0
+			label      	"CHII2CWorkerThread")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E227BB3027B"
+		    width      	424
+		    height     	126
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBHI (Hardware Interface)::IHIInterface" @44
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(2221, 1427)
+		    label      	(object ItemLabel
+			Parent_View 	@44
+			location   	(2103, 1376)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	236
+			justify    	0
+			label      	"IHIInterface")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E2271C40106"
+		    width      	254
+		    height     	126
+		    autoResize 	TRUE)
+		(object UsesView "" @45
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3FFBC90701F4"
+		    client     	@31
+		    supplier   	@42
+		    line_style 	0)
+		(object UsesView "" @46
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3FFBC90A00EA"
+		    client     	@31
+		    supplier   	@43
+		    line_style 	0)
+		(object UsesView "" @47
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3FFBC90D0167"
+		    client     	@31
+		    supplier   	@44
+		    line_style 	0)
+		(object ClassView "Class" "Logical View::EBI2CDP (I2C Digital Potentiometer)::XI2CDigitalPotiExceptionError" @48
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(2196, 1184)
+		    label      	(object ItemLabel
+			Parent_View 	@48
+			location   	(1911, 1133)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	570
+			justify    	0
+			label      	"XI2CDigitalPotiExceptionError")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F4B63C200FA"
+		    width      	588
+		    height     	126
+		    autoResize 	TRUE)
+		(object UsesView "" @49
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3FFBC933007D"
+		    client     	@31
+		    supplier   	@48
+		    line_style 	0)
+		(object ClassView "Class" "Logical View::EBI2CDP (I2C Digital Potentiometer)::CI2CDigitalPotiAD5245Command" @50
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1690, 365)
+		    label      	(object ItemLabel
+			Parent_View 	@50
+			location   	(1371, 314)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	638
+			justify    	0
+			label      	"CI2CDigitalPotiAD5245Command")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3FFBC99C0290"
+		    width      	656
+		    height     	126
+		    autoResize 	TRUE)
+		(object UsesView "" @51
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3FFBD81700EA"
+		    client     	@31
+		    supplier   	@50
+		    line_style 	0)))
+	(object ClassDiagram "5.0 Exceptions"
+	    quid       	"3F4B4F2D0177"
+	    title      	"5.0 Exceptions"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object ClassView "Class" "Logical View::EBCO (Core Classes)::XCOExceptionError" @52
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(684, 468)
+		    label      	(object ItemLabel
+			Parent_View 	@52
+			location   	(484, 393)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	400
+			justify    	0
+			label      	"XCOExceptionError")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3BA649E20099"
+		    width      	418
+		    height     	174
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBI2CDP (I2C Digital Potentiometer)::XI2CDigitalPotiExceptionError" @53
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(678, 1193)
+		    label      	(object ItemLabel
+			Parent_View 	@53
+			location   	(372, 1037)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	612
+			justify    	0
+			label      	"XI2CDigitalPotiExceptionError")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F4B63C200FA"
+		    compartment 	(object Compartment
+			Parent_View 	@53
+			location   	(372, 1097)
+			icon_style 	"Icon"
+			fill_color 	16777215
+			anchor     	2
+			nlines     	5
+			max_width  	609)
+		    width      	630
+		    height     	336
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object InheritView "" @54
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3F4B63D0038A"
+		    client     	@53
+		    supplier   	@52
+		    line_style 	0)))
+	(object ClassDiagram "2.0 Async I2C Commands"
+	    quid       	"3FFBC97403A9"
+	    title      	"2.0 Async I2C Commands"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object ClassView "Class" "Logical View::EBHI (Hardware Interface)::CHII2CCommand" @55
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(825, 594)
+		    label      	(object ItemLabel
+			Parent_View 	@55
+			location   	(654, 543)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	342
+			justify    	0
+			label      	"CHII2CCommand")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E22999502B9"
+		    width      	360
+		    height     	126
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBI2CDP (I2C Digital Potentiometer)::CI2CDigitalPotiAD5245Command" @56
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(823, 1131)
+		    label      	(object ItemLabel
+			Parent_View 	@56
+			location   	(484, 1025)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	678
+			justify    	0
+			label      	"CI2CDigitalPotiAD5245Command")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3FFBC99C0290"
+		    compartment 	(object Compartment
+			Parent_View 	@56
+			location   	(484, 1085)
+			icon_style 	"Icon"
+			fill_color 	16777215
+			anchor     	2
+			nlines     	3
+			max_width  	675)
+		    width      	696
+		    height     	236
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object InheritView "" @57
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3FFBCA6201B5"
+		    client     	@56
+		    supplier   	@55
+		    line_style 	0)
+		(object ClassView "Class" "Logical View::EBPI (PC Interface)::CPII2CDataStream" @58
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1381, 1721)
+		    label      	(object ItemLabel
+			Parent_View 	@58
+			location   	(1193, 1670)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	376
+			justify    	0
+			label      	"CPII2CDataStream")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3FD8310603B9"
+		    width      	394
+		    height     	126
+		    autoResize 	TRUE)
+		(object AssociationViewNew "$UNNAMED$4" @59
+		    location   	(1127, 1453)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3FFBCA8E00AB"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$5" @60
+			    Parent_View 	@59
+			    location   	(-254, -268)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3FFBCA8E02AF"
+			    client     	@59
+			    supplier   	@56
+			    line_style 	0
+			    label      	(object SegLabel @61
+				Parent_View 	@60
+				location   	(1022, 1279)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.709327
+				height     	44
+				orientation 	1))
+			(object RoleView "pI2CDataStream" @62
+			    Parent_View 	@59
+			    location   	(-254, -268)
+			    label      	(object SegLabel @63
+				Parent_View 	@62
+				location   	(1191, 1460)
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	324
+				justify    	0
+				label      	"+pI2CDataStream"
+				pctDist    	0.169695
+				height     	42
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3FFBCA8E02B0"
+			    client     	@59
+			    supplier   	@58
+			    line_style 	0
+			    label      	(object SegLabel @64
+				Parent_View 	@62
+				location   	(1340, 1601)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	0))))))
+	(object ClassDiagram "2.1 Async I2C Commands Uses"
+	    quid       	"3FFBCAC601B5"
+	    title      	"2.1 Async I2C Commands Uses"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object ClassView "Class" "Logical View::EBI2CDP (I2C Digital Potentiometer)::CI2CDigitalPotiAD5245Command" @65
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(887, 828)
+		    label      	(object ItemLabel
+			Parent_View 	@65
+			location   	(568, 777)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	638
+			justify    	0
+			label      	"CI2CDigitalPotiAD5245Command")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3FFBC99C0290"
+		    width      	656
+		    height     	126
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBI2CDP (I2C Digital Potentiometer)::XI2CDigitalPotiExceptionError" @66
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1725, 540)
+		    label      	(object ItemLabel
+			Parent_View 	@66
+			location   	(1440, 489)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	570
+			justify    	0
+			label      	"XI2CDigitalPotiExceptionError")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F4B63C200FA"
+		    width      	588
+		    height     	126
+		    autoResize 	TRUE)
+		(object ClassView "ClassUtility" "Logical View::EBI2CDP (I2C Digital Potentiometer)::I2CDP_IDENTIFIERS" @67
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1968, 818)
+		    label      	(object ItemLabel
+			Parent_View 	@67
+			location   	(1761, 767)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	414
+			justify    	0
+			label      	"I2CDP_IDENTIFIERS")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F4B4F4A00EA"
+		    width      	432
+		    height     	126
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBHI (Hardware Interface)::CHII2CParameter" @68
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1856, 1218)
+		    label      	(object ItemLabel
+			Parent_View 	@68
+			location   	(1684, 1167)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	344
+			justify    	0
+			label      	"CHII2CParameter")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3FD9C47E033C"
+		    width      	362
+		    height     	126
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBHI (Hardware Interface)::IHIInterface" @69
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(840, 1465)
+		    label      	(object ItemLabel
+			Parent_View 	@69
+			location   	(722, 1414)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	236
+			justify    	0
+			label      	"IHIInterface")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E2271C40106"
+		    width      	254
+		    height     	126
+		    autoResize 	TRUE)
+		(object UsesView "" @70
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3FFBCB140261"
+		    client     	@65
+		    supplier   	@66
+		    line_style 	0)
+		(object UsesView "" @71
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3FFBCB1603C8"
+		    client     	@65
+		    supplier   	@67
+		    line_style 	0)
+		(object UsesView "" @72
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3FFBCB1900EA"
+		    client     	@65
+		    supplier   	@68
+		    line_style 	0)
+		(object UsesView "" @73
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3FFBCB1B01C5"
+		    client     	@65
+		    supplier   	@69
+		    line_style 	0)))))

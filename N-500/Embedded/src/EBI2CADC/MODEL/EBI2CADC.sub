@@ -1,0 +1,442 @@
+
+(object Petal
+    version    	42
+    _written   	"Rose 4.5.8163.3"
+    charSet    	0)
+
+(object SubSystem "EBI2CADC (I2C ADC)"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    attributes 	(list Attribute_Set
+	(object Attribute
+	    tool       	"cg"
+	    name       	"Directory"
+	    value      	"Embedded\\src\\EBI2CADC"))
+    quid       	"3F49CFF0033C"
+    physical_models 	(list unit_reference_list
+	(object module "EBI2CADCident" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBI2CADC\\EBI2CADCident.h"))
+	    quid       	"3F49F7CF008C"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBI2CADCintf" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBI2CADC\\EBI2CADCintf.cpp"))
+	    quid       	"3F49F7E900BB"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3F49F820029F"
+		    supplier   	"Component View::EBI2CADC (I2C ADC)::EBI2CADCintf"
+		    quidu      	"3F49F814007D"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBI2CADCintf" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBI2CADC\\EBI2CADCintf.h"))
+	    quid       	"3F49F814007D"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBI2CADCexcp" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBI2CADC\\EBI2CADCexcp.cpp"))
+	    quid       	"3F49F8270290"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3F49F83E0203"
+		    supplier   	"Component View::EBI2CADC (I2C ADC)::EBI2CADCexcp"
+		    quidu      	"3F49F8340177"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBI2CADCexcp" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBI2CADC\\EBI2CADCexcp.h"))
+	    quid       	"3F49F8340177"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBI2CADCmain" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBI2CADC\\EBI2CADCmain.cpp"))
+	    quid       	"3F49F9DE0196"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3F49F9F90290"
+		    supplier   	"Component View::EBI2CADC (I2C ADC)::EBI2CADCmain"
+		    quidu      	"3F49F9EF0196"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBI2CADCmain" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBI2CADC\\EBI2CADCmain.h"))
+	    quid       	"3F49F9EF0196"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBI2CADCregy" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBI2CADC\\EBI2CADCregy.cpp"))
+	    quid       	"3F49FA0000BB"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3F49FA1501C5"
+		    supplier   	"Component View::EBI2CADC (I2C ADC)::EBI2CADCregy"
+		    quidu      	"3F49FA0C007D"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBI2CADCregy" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBI2CADC\\EBI2CADCregy.h"))
+	    quid       	"3F49FA0C007D"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBI2CADCcrea" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBI2CADC\\EBI2CADCcrea.cpp"))
+	    quid       	"3F49FA1F03C8"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3F49FA5B032C"
+		    supplier   	"Component View::EBI2CADC (I2C ADC)::EBI2CADCcrea"
+		    quidu      	"3F49FA5003A9"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBI2CADCcrea" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBI2CADC\\EBI2CADCcrea.h"))
+	    quid       	"3F49FA5003A9"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBI2CADCcomd" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBI2CADC\\EBI2CADCcomd.cpp"))
+	    quid       	"3FFC0DFC034B"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3FFC0E1501E4"
+		    supplier   	"Component View::EBI2CADC (I2C ADC)::EBI2CADCcomd"
+		    quidu      	"3FFC0E0A004E"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBI2CADCcomd" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBI2CADC\\EBI2CADCcomd.h"))
+	    quid       	"3FFC0E0A004E"
+	    stereotype 	"Package Specification"
+	    language   	"C++"))
+    physical_presentations 	(list unit_reference_list
+	(object Module_Diagram "main"
+	    quid       	"3F49F7C502DE"
+	    title      	"main"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	888
+	    items      	(list diagram_item_list
+		(object ModView "Component View::EBI2CADC (I2C ADC)::EBI2CADCident" "PackageType" "Specification" @1
+		    location   	(472, 1015)
+		    label      	(object ItemLabel
+			Parent_View 	@1
+			location   	(410, 819)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	543
+			label      	"EBI2CADCident")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F49F7CF008C"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBI2CADC (I2C ADC)::EBI2CADCintf" "PackageType" "Body" @2
+		    location   	(1231, 522)
+		    label      	(object ItemLabel
+			Parent_View 	@2
+			location   	(1169, 326)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	543
+			label      	"EBI2CADCintf")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F49F7E900BB"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBI2CADC (I2C ADC)::EBI2CADCintf" "PackageType" "Specification" @3
+		    location   	(1240, 1106)
+		    label      	(object ItemLabel
+			Parent_View 	@3
+			location   	(1178, 910)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	543
+			label      	"EBI2CADCintf")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F49F814007D"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @4
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3F49F820029F"
+		    client     	@2
+		    supplier   	@3
+		    line_style 	0)
+		(object ModView "Component View::EBI2CADC (I2C ADC)::EBI2CADCexcp" "PackageType" "Body" @5
+		    location   	(1818, 518)
+		    label      	(object ItemLabel
+			Parent_View 	@5
+			location   	(1756, 322)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	543
+			label      	"EBI2CADCexcp")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F49F8270290"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBI2CADC (I2C ADC)::EBI2CADCexcp" "PackageType" "Specification" @6
+		    location   	(1809, 1118)
+		    label      	(object ItemLabel
+			Parent_View 	@6
+			location   	(1747, 922)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	543
+			label      	"EBI2CADCexcp")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F49F8340177"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @7
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3F49F83E0203"
+		    client     	@5
+		    supplier   	@6
+		    line_style 	0)
+		(object ModView "Component View::EBI2CADC (I2C ADC)::EBI2CADCmain" "PackageType" "Body" @8
+		    location   	(1190, 1606)
+		    label      	(object ItemLabel
+			Parent_View 	@8
+			location   	(1128, 1410)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	543
+			label      	"EBI2CADCmain")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F49F9DE0196"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBI2CADC (I2C ADC)::EBI2CADCmain" "PackageType" "Specification" @9
+		    location   	(1201, 2149)
+		    label      	(object ItemLabel
+			Parent_View 	@9
+			location   	(1139, 1953)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	543
+			label      	"EBI2CADCmain")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F49F9EF0196"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @10
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3F49F9F90290"
+		    client     	@8
+		    supplier   	@9
+		    line_style 	0)
+		(object ModView "Component View::EBI2CADC (I2C ADC)::EBI2CADCregy" "PackageType" "Body" @11
+		    location   	(1803, 1618)
+		    label      	(object ItemLabel
+			Parent_View 	@11
+			location   	(1741, 1422)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	543
+			label      	"EBI2CADCregy")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F49FA0000BB"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBI2CADC (I2C ADC)::EBI2CADCregy" "PackageType" "Specification" @12
+		    location   	(1806, 2112)
+		    label      	(object ItemLabel
+			Parent_View 	@12
+			location   	(1744, 1916)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	543
+			label      	"EBI2CADCregy")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F49FA0C007D"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @13
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3F49FA1501C5"
+		    client     	@11
+		    supplier   	@12
+		    line_style 	0)
+		(object ModView "Component View::EBI2CADC (I2C ADC)::EBI2CADCcrea" "PackageType" "Body" @14
+		    location   	(1137, 2682)
+		    label      	(object ItemLabel
+			Parent_View 	@14
+			location   	(1075, 2486)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	543
+			label      	"EBI2CADCcrea")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F49FA1F03C8"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBI2CADC (I2C ADC)::EBI2CADCcrea" "PackageType" "Specification" @15
+		    location   	(1129, 3219)
+		    label      	(object ItemLabel
+			Parent_View 	@15
+			location   	(1067, 3023)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	543
+			label      	"EBI2CADCcrea")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F49FA5003A9"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @16
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3F49FA5B032C"
+		    client     	@14
+		    supplier   	@15
+		    line_style 	0)
+		(object ModView "Component View::EBI2CADC (I2C ADC)::EBI2CADCcomd" "PackageType" "Body" @17
+		    location   	(1757, 2662)
+		    label      	(object ItemLabel
+			Parent_View 	@17
+			location   	(1695, 2466)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	543
+			label      	"EBI2CADCcomd")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3FFC0DFC034B"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBI2CADC (I2C ADC)::EBI2CADCcomd" "PackageType" "Specification" @18
+		    location   	(1757, 3219)
+		    label      	(object ItemLabel
+			Parent_View 	@18
+			location   	(1695, 3023)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	543
+			label      	"EBI2CADCcomd")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3FFC0E0A004E"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @19
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3FFC0E1501E4"
+		    client     	@17
+		    supplier   	@18
+		    line_style 	0)))))

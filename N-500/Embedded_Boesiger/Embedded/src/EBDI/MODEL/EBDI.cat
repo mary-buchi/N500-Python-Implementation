@@ -1,0 +1,1471 @@
+
+(object Petal
+    version    	42
+    _written   	"Rose 4.5.8163.3"
+    charSet    	0)
+
+(object Class_Category "EBDI (Diagnostics)"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    quid       	"3E197C790124"
+    visible_categories 	(list visibility_relationship_list
+	(object Visibility_Relationship
+	    quid       	"3E1C2B9A007C"
+	    supplier   	"Logical View::EBPI (PC Interface)"
+	    quidu      	"3DA488100179")
+	(object Visibility_Relationship
+	    quid       	"3E1C2CA403D7"
+	    supplier   	"Logical View::EBCO (Core Classes)"
+	    quidu      	"3B86CD280273")
+	(object Visibility_Relationship
+	    quid       	"3E4777F30399"
+	    supplier   	"Logical View::EBHI (Hardware Interface)"
+	    quidu      	"3E22670202FA"))
+    exportControl 	"Public"
+    subsystem  	"EBDI (Diagnostics)"
+    quidu      	"3E197C2800D6"
+    logical_models 	(list unit_reference_list
+	(object Class_Utility "DI_IDENTIFIERS"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"cg_style"
+		    value      	"Dummy Class"))
+	    quid       	"3E19860A0356"
+	    module     	"Component View::EBDI (Diagnostics)::EBDIident (module spec)"
+	    quidu      	"3E1980080049"
+	    language   	"C++")
+	(object Class "CDIDiagnosticCreatorV0"
+	    quid       	"3E198B090328"
+	    superclasses 	(list inheritance_relationship_list
+		(object Inheritance_Relationship
+		    quid       	"3E198B6E0105"
+		    supplier   	"Logical View::EBPI (PC Interface)::CPIObjCreatorDiagnostics"
+		    quidu      	"3DF7314500F2"))
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    quid       	"3E19999500A7"
+		    supplier   	"Logical View::EBDI (Diagnostics)::CDIDiagnosticInterface"
+		    quidu      	"3E198CAE029B"))
+	    operations 	(list Operations
+		(object Operation "Create"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3E198B8203A5"
+		    stereotype 	"virtual"
+		    parameters 	(list Parameters
+			(object Parameter "p_uiID"
+			    type       	"UINT"))
+		    result     	"IPIDiagnosticInterface*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1041861675))
+	    module     	"Component View::EBDI (Diagnostics)::EBDIcrea (module spec)"
+	    quidu      	"3E1981110328"
+	    module     	"Component View::EBDI (Diagnostics)::EBDIcrea (module body)"
+	    quidu      	"3E19820301EF"
+	    language   	"C++")
+	(object Class "CDIInterfaceRegistry"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"cg_style"
+		    value      	"ExtraLean")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"GenerateDefaultConstructor"
+		    value      	("GenerateSet" 206))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"GenerateDestructor"
+		    value      	FALSE)
+		(object Attribute
+		    tool       	"MSVC"
+		    name       	"DeclSpec"
+		    value      	"EBDI_DLL_DECL"))
+	    quid       	"3E198BCC0143"
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    quid       	"3E198C330162"
+		    supplier   	"Logical View::EBDI (Diagnostics)::CDIDiagnosticCreatorV0"
+		    quidu      	"3E198B090328")
+		(object Uses_Relationship
+		    quid       	"3E198C5601A1"
+		    supplier   	"Logical View::EBPI (PC Interface)::CPIObjectFactory"
+		    quidu      	"3DA52FD80189"))
+	    operations 	(list Operations
+		(object Operation "RegisterInterfaces"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 203))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Static"))
+		    quid       	"3E198BEB0097"
+		    stereotype 	"static"
+		    result     	"void"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1041861674))
+	    module     	"Component View::EBDI (Diagnostics)::EBDIregy (module spec)"
+	    quidu      	"3E1981010337"
+	    module     	"Component View::EBDI (Diagnostics)::EBDIregy (module body)"
+	    quidu      	"3E1981F50385"
+	    language   	"C++")
+	(object Class "CDIDiagnosticInterface"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"cg_style"
+		    value      	"NoDefContr")
+		(object Attribute
+		    tool       	"MSVC"
+		    name       	"DeclSpec"
+		    value      	"EBDI_DLL_DECL"))
+	    quid       	"3E198CAE029B"
+	    superclasses 	(list inheritance_relationship_list
+		(object Inheritance_Relationship
+		    quid       	"3E198CBC0366"
+		    supplier   	"Logical View::EBPI (PC Interface)::IPIDiagnosticInterface"
+		    quidu      	"3DF5F2B4014F"))
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    quid       	"3E199D2E027C"
+		    supplier   	"Logical View::EBDI (Diagnostics)::DI_IDENTIFIERS"
+		    quidu      	"3E19860A0356")
+		(object Uses_Relationship
+		    quid       	"3F55DB6A0290"
+		    supplier   	"Logical View::EBPI (PC Interface)::CPIComponentsState"
+		    quidu      	"3F4235EA0005")
+		(object Uses_Relationship
+		    quid       	"3F55DB6D0232"
+		    supplier   	"Logical View::EBHI (Hardware Interface)::IHIInterface"
+		    quidu      	"3E2271C40106")
+		(object Uses_Relationship
+		    quid       	"4141A0A400FA"
+		    supplier   	"Logical View::EBPI (PC Interface)::IPII2CEprom24LC515"
+		    quidu      	"3EDC3C5901B5")
+		(object Uses_Relationship
+		    quid       	"41455CAD00FA"
+		    supplier   	"Logical View::EBPI (PC Interface)::CPIObjectFactory"
+		    quidu      	"3DA52FD80189")
+		(object Uses_Relationship
+		    quid       	"4147EE6C008C"
+		    supplier   	"Logical View::EBCO (Core Classes)::XCOExceptionError"
+		    quidu      	"3BA649E20099"))
+	    operations 	(list Operations
+		(object Operation "CDIDiagnosticInterface"
+		    quid       	"3E198CEE0114"
+		    parameters 	(list Parameters
+			(object Parameter "p_uiID"
+			    type       	"UINT"))
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1041861676)
+		(object Operation "Startup"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3E1999DD00F5"
+		    documentation 	
+|DESCRIPTION
+|Links the object to the hardware
+|
+|RETURNS
+|async void
+		    
+		    stereotype 	"virtual"
+		    result     	"CCOSyncObject*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1041861679)
+		(object Operation "Shutdown"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3E1999DD0124"
+		    documentation 	
+|DESCRIPTION
+|Detaches the object from the hardware
+|
+|RETURNS
+|async void
+		    
+		    stereotype 	"virtual"
+		    result     	"CCOSyncObject*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1041861680)
+		(object Operation "ConnectionEstablished"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3EEDC5F00368"
+		    documentation 	
+|DESCRIPTION
+|The connection to the PC has been established
+|
+|RETURNS
+|async void
+		    
+		    stereotype 	"virtual"
+		    result     	"CCOSyncObject*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1055770102)
+		(object Operation "ConnectionLost"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3EEDC5F00378"
+		    documentation 	
+|DESCRIPTION
+|The connection to the PC has been lost
+|
+|RETURNS
+|async void
+		    
+		    stereotype 	"virtual"
+		    result     	"CCOSyncObject*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1055770103)
+		(object Operation "GetuiID"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3E1A7A4701AA"
+		    stereotype 	"virtual"
+		    result     	"UINT"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1041922647)
+		(object Operation "ReadDWord"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3E198CEE0124"
+		    documentation 	
+|DESCRIPTION
+|Reads a double word from a specific PCI address
+|
+|RETURNS
+|async integer
+		    
+		    stereotype 	"virtual"
+		    parameters 	(list Parameters
+			(object Parameter "p_uiAddress"
+			    type       	"UINT")
+			(object Parameter "p_eRegisterType"
+			    type       	"EPIRegisterType"))
+		    result     	"CCOSyncObjectInt*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1041861677)
+		(object Operation "WriteDWord"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3E198CEE0134"
+		    documentation 	
+|DESCRIPTION
+|Writes a double word to a specific PCI address
+|
+|RETURNS
+|async void
+		    
+		    stereotype 	"virtual"
+		    parameters 	(list Parameters
+			(object Parameter "p_uiAddress"
+			    type       	"UINT")
+			(object Parameter "p_uiValue"
+			    type       	"UINT")
+			(object Parameter "p_eRegisterType"
+			    type       	"EPIRegisterType"))
+		    result     	"CCOSyncObject*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1041861678)
+		(object Operation "EnableEventSignalisation"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3F8BB0B10242"
+		    documentation 	
+|DESCRIPTION
+|enables the event signalisation (open events)
+		    
+		    stereotype 	"virtual"
+		    result     	"CCOSyncObject*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1066028230)
+		(object Operation "DisableEventSignalisation"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3F8BB0B10251"
+		    documentation 	
+|DESCRIPTION
+|disables the event signalisation (open events)
+		    
+		    stereotype 	"virtual"
+		    result     	"CCOSyncObject*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1066028231)
+		(object Operation "PCSetNomVoltage"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"414196920000"
+		    documentation 	
+|DESCRIPTION:
+|sets the nominal voltage for the primary or secondary lamp
+|
+|select lamp (primary or secondary first with function PCLampSelection
+|
+|INPUT:
+|DAC value
+		    
+		    stereotype 	"virtual"
+		    parameters 	(list Parameters
+			(object Parameter "p_dwDACValue"
+			    type       	"DWORD"))
+		    result     	"CCOSyncObject*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1094803150)
+		(object Operation "PCLampSelection"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"41419692001F"
+		    documentation 	
+|DESCRIPTION:
+|selects the primary or secondary lamp
+|
+|
+|INPUT:
+| - EPILamp
+		    
+		    stereotype 	"virtual"
+		    parameters 	(list Parameters
+			(object Parameter "p_eSelection"
+			    type       	"EPILamp"))
+		    result     	"CCOSyncObject*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1094803151)
+		(object Operation "PCLampOnOff"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"41419692002E"
+		    documentation 	
+|DESCRIPTION:
+|primary or secondary lamp On / Off
+|
+|
+|INPUT:
+|false: OFF default
+|true:  ON
+		    
+		    stereotype 	"virtual"
+		    parameters 	(list Parameters
+			(object Parameter "p_bSelection"
+			    type       	"bool"
+			    initv      	"false"))
+		    result     	"CCOSyncObject*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1094803152)
+		(object Operation "PCGetActCurrent"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"41419692003E"
+		    documentation 	
+|DESCRIPTION:
+|gets the actual current from the selected lamp (primary or secondary)
+|
+|RETURN:
+|actual current
+		    
+		    stereotype 	"virtual"
+		    result     	"CCOSyncObjectInt*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1094803153)
+		(object Operation "PCGetActVoltage"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"41419692005D"
+		    documentation 	
+|DESCRIPTION:
+|gets the actual voltage from the selected lamp (primary or secondary)
+|
+|INPUT:
+| - EPILamp
+|
+|RETURN:
+|actual voltage
+|
+		    
+		    stereotype 	"virtual"
+		    parameters 	(list Parameters
+			(object Parameter "p_eSelection"
+			    type       	"EPILamp"))
+		    result     	"CCOSyncObjectInt*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1094803154)
+		(object Operation "PCGetLampIdentification"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"41419692006D"
+		    documentation 	
+|DESCRIPTION:
+|gets the selected lamp identification (primary or secondary)
+|
+|INPUT:
+| - EPILamp
+|
+|RETURN:
+|lamp identification
+		    
+		    stereotype 	"virtual"
+		    parameters 	(list Parameters
+			(object Parameter "p_eSelection"
+			    type       	"EPILamp"))
+		    result     	"CCOSyncObjectInt*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1094803155)
+		(object Operation "WCGetActVelocityCounts"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"414196BF01C5"
+		    documentation 	
+|DESCRIPTION:
+|gets the actual wedge velocity counts
+|
+|RETURN:
+|actual velocity counts (wdg_act_vlc)
+		    
+		    stereotype 	"virtual"
+		    result     	"CCOSyncObjectInt*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1094803156)
+		(object Operation "WCGetLastVelocityCounts"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"414196BF01D4"
+		    documentation 	
+|DESCRIPTION:
+|gets the last wedge velocity counts
+|
+|RETURN:
+|last velocity counts (wdg_last_vlc)
+		    
+		    stereotype 	"virtual"
+		    result     	"CCOSyncObjectInt*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1094803157)
+		(object Operation "WCGetPosition"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"414196BF01E4"
+		    documentation 	
+|DESCRIPTION:
+|gets the wedge position
+|
+|RETURN:
+|position (wdg_pos_vlc)
+		    
+		    stereotype 	"virtual"
+		    result     	"CCOSyncObjectInt*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1094803158)
+		(object Operation "WCInitializeDAC"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"414196BF0203"
+		    documentation 	
+|DESCRIPTION:
+|initialize the wedge control DAC
+|
+		    
+		    stereotype 	"virtual"
+		    result     	"CCOSyncObject*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1094803159)
+		(object Operation "WCSetDACValue"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"414196BF0213"
+		    documentation 	
+|DESCRIPTION:
+|sets the DAC wedge value
+|
+|INPUT:
+|DAC value
+		    
+		    stereotype 	"virtual"
+		    parameters 	(list Parameters
+			(object Parameter "p_dwDACValue"
+			    type       	"DWORD"))
+		    result     	"CCOSyncObject*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1094803160)
+		(object Operation "ReadFpgaArtNr"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"414196D80000"
+		    documentation 	
+|DESCRIPTION:
+|reads the FPGA software article number from the FPGA
+|
+|RETURN:
+|Article Number e.g. "045400"
+		    
+		    stereotype 	"virtual"
+		    result     	"CCOSyncObjectCString*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1094803162)
+		(object Operation "ReadFpgaSwVersion"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"414196D8000F"
+		    documentation 	
+|DESCRIPTION:
+|reads the FPGA softwareversion from the FPGA
+|
+|RETURN:
+|Version e.g. ""
+		    
+		    stereotype 	"virtual"
+		    result     	"CCOSyncObjectCString*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1094803163)
+		(object Operation "I2CEpromByteRead"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"41419756005D"
+		    documentation 	
+|DESCRIPTION
+|Reads a byte from the specific eprom address
+|
+|RETURNS
+|async int
+		    
+		    stereotype 	"virtual"
+		    parameters 	(list Parameters
+			(object Parameter "p_uiObjID"
+			    type       	"DWORD")
+			(object Parameter "p_uiAddress"
+			    type       	"WORD"))
+		    result     	"CCOSyncObjectInt*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1094803164)
+		(object Operation "I2CEpromByteWrite"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"41419756008C"
+		    documentation 	
+|DESCRIPTION
+|writes a byte to the specific eprom address
+|
+		    
+		    stereotype 	"virtual"
+		    parameters 	(list Parameters
+			(object Parameter "p_uiObjID"
+			    type       	"DWORD")
+			(object Parameter "p_uiAddress"
+			    type       	"WORD")
+			(object Parameter "p_cValue"
+			    type       	"BYTE"))
+		    result     	"CCOSyncObject*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1094803166)
+		(object Operation "GetDigitsLaserLevelDetection"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"416CDE0E005D"
+		    documentation 	
+|DESCRIPTION:
+|gets the Digits from the Laser Level Detection ADC
+|
+|
+|RETURN:
+|ADC Digits
+		    
+		    stereotype 	"virtual"
+		    result     	"CCOSyncObjectInt*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1097650515)
+		(object Operation "ReleaseHWReset"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"416CDE0E007D"
+		    documentation 	
+|DESCRIPTION:
+|release hardware reset (over hardware watchdog)
+		    
+		    stereotype 	"virtual"
+		    result     	"CCOSyncObject*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1097650516)
+		(object Operation "DisableWatchdog"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"416CDE0E008C"
+		    documentation 	
+|DESCRIPTION:
+|disables hardware watchdog
+		    
+		    stereotype 	"virtual"
+		    result     	"CCOSyncObject*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1097650517)
+		(object Operation "GetOsVersion"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"4210520601E4"
+		    documentation 	
+|DESCRIPTION:
+|reads the Os Version
+|
+|RETURN:
+|Version String e.g. Major.Minor.Build.0
+		    
+		    stereotype 	"virtual"
+		    result     	"CCOSyncObjectCString*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1108365888)
+		(object Operation "GetUsedMemory"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"4602495402CE"
+		    documentation 	
+|DESCRIPTION:
+|reads the memory information
+|
+|RETURN:
+|available and used memory
+		    
+		    stereotype 	"virtual"
+		    result     	"CCOSyncObjectInt*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1174554258)
+		(object Operation "GetMemoryAllocInfo"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"46090CA20244"
+		    documentation 	
+|DESCRIPTION:
+|reads the memory allocation info. Only valid in debug mode
+|
+|RETURN:
+|available memory allocation info
+		    
+		    stereotype 	"virtual"
+		    result     	"CCOSyncObjectCString*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1174997741))
+	    module     	"Component View::EBDI (Diagnostics)::EBDIintf (module spec)"
+	    quidu      	"3E19811A01D0"
+	    module     	"Component View::EBDI (Diagnostics)::EBDIintf (module body)"
+	    quidu      	"3E19820B0114"
+	    language   	"C++")
+	(object Class_Utility "DI_MAIN"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"cg_style"
+		    value      	"Dummy Class"))
+	    quid       	"3EF05E220119"
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    quid       	"3EF05EA102CE"
+		    supplier   	"Logical View::EBDI (Diagnostics)::CDIInterfaceRegistry"
+		    quidu      	"3E198BCC0143"))
+	    module     	"Component View::EBDI (Diagnostics)::EBDImain (module spec)"
+	    quidu      	"3EF05DAD005D"
+	    module     	"Component View::EBDI (Diagnostics)::EBDImain (module body)"
+	    quidu      	"3EF05DB40186"
+	    language   	"C++")
+	(object Association "$UNNAMED$0"
+	    quid       	"3E19917803D3"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$1"
+		    quid       	"3E19917901C0"
+		    supplier   	"Logical View::EBDI (Diagnostics)::CDIDiagnosticInterface"
+		    quidu      	"3E198CAE029B"
+		    client_cardinality 	(value cardinality "1..1")
+		    is_aggregate 	TRUE)
+		(object Role "uiID"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"InitialValue"
+			    value      	(value Text "p_uiID")))
+		    quid       	"3E19917901C1"
+		    label      	"uiID"
+		    supplier   	"Logical View::IMWINS (Microsoft Windows)::UINT"
+		    quidu      	"369DEAA80004"
+		    client_cardinality 	(value cardinality "1..1")
+		    Containment 	"By Value"
+		    is_navigable 	TRUE)))
+	(object Association "$UNNAMED$2"
+	    quid       	"3F55D95702CE"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$3"
+		    quid       	"3F55D95702CF"
+		    supplier   	"Logical View::EBDI (Diagnostics)::CDIDiagnosticInterface"
+		    quidu      	"3E198CAE029B"
+		    client_cardinality 	(value cardinality "1..1")
+		    is_aggregate 	TRUE)
+		(object Role "bHardwarePresent"
+		    quid       	"3F55D95702D0"
+		    label      	"bHardwarePresent"
+		    supplier   	"Logical View::IMWINS (Microsoft Windows)::bool"
+		    quidu      	"369DEAA80005"
+		    client_cardinality 	(value cardinality "1..1")
+		    Containment 	"By Value"
+		    is_navigable 	TRUE))))
+    logical_presentations 	(list unit_reference_list
+	(object ClassDiagram "0.0 Globals"
+	    quid       	"3E1985F70078"
+	    title      	"0.0 Globals"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object ClassView "ClassUtility" "Logical View::EBDI (Diagnostics)::DI_IDENTIFIERS" @1
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(291, 178)
+		    label      	(object ItemLabel
+			Parent_View 	@1
+			location   	(121, 127)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	340
+			justify    	0
+			label      	"DI_IDENTIFIERS")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E19860A0356"
+		    width      	358
+		    height     	126
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "ClassUtility" "Logical View::EBDI (Diagnostics)::DI_MAIN" @2
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(231, 456)
+		    label      	(object ItemLabel
+			Parent_View 	@2
+			location   	(134, 405)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	194
+			justify    	0
+			label      	"DI_MAIN")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EF05E220119"
+		    width      	212
+		    height     	126
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBDI (Diagnostics)::CDIInterfaceRegistry" @3
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(967, 455)
+		    label      	(object ItemLabel
+			Parent_View 	@3
+			location   	(765, 403)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	404
+			justify    	0
+			label      	"CDIInterfaceRegistry")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E198BCC0143"
+		    width      	422
+		    height     	128
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object UsesView "" @4
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3EF05EA102CE"
+		    client     	@2
+		    supplier   	@3
+		    line_style 	0)))
+	(object ClassDiagram "0.1 Creators / Registry"
+	    quid       	"3E198AD40097"
+	    title      	"0.1 Creators / Registry"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object ClassView "InstantiatedClass" "Logical View::EBPI (PC Interface)::CPIObjCreatorDiagnostics" @5
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(597, 403)
+		    label      	(object ItemLabel
+			Parent_View 	@5
+			location   	(342, 328)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	510
+			justify    	0
+			label      	"CPIObjCreatorDiagnostics")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DF7314500F2"
+		    width      	528
+		    height     	174
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBDI (Diagnostics)::CDIDiagnosticCreatorV0" @6
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(597, 1031)
+		    label      	(object ItemLabel
+			Parent_View 	@6
+			location   	(360, 950)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	474
+			justify    	0
+			label      	"CDIDiagnosticCreatorV0")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E198B090328"
+		    width      	492
+		    height     	186
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object InheritView "" @7
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3E198B6E0105"
+		    client     	@6
+		    supplier   	@5
+		    line_style 	0)
+		(object ClassView "Class" "Logical View::EBDI (Diagnostics)::CDIInterfaceRegistry" @8
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(981, 2081)
+		    label      	(object ItemLabel
+			Parent_View 	@8
+			location   	(674, 2000)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	614
+			justify    	0
+			label      	"CDIInterfaceRegistry")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E198BCC0143"
+		    width      	632
+		    height     	186
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object UsesView "" @9
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3E198C330162"
+		    client     	@8
+		    supplier   	@6
+		    line_style 	0)
+		(object ClassView "Class" "Logical View::EBPI (PC Interface)::CPIObjectFactory" @10
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(2156, 1806)
+		    label      	(object ItemLabel
+			Parent_View 	@10
+			location   	(1965, 1731)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	382
+			justify    	0
+			label      	"CPIObjectFactory")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DA52FD80189"
+		    width      	400
+		    height     	174
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object UsesView "" @11
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3E198C5601A1"
+		    client     	@8
+		    supplier   	@10
+		    line_style 	0)))
+	(object ClassDiagram "1.0 Sync Interface"
+	    quid       	"3E198C740097"
+	    title      	"1.0 Sync Interface"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object ClassView "Class" "Logical View::EBPI (PC Interface)::IPIDiagnosticInterface" @12
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(825, 90)
+		    label      	(object ItemLabel
+			Parent_View 	@12
+			location   	(613, 15)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	424
+			justify    	0
+			label      	"IPIDiagnosticInterface")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DF5F2B4014F"
+		    width      	442
+		    height     	174
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::IMWINS (Microsoft Windows)::UINT" @13
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(453, 2586)
+		    label      	(object ItemLabel
+			Parent_View 	@13
+			location   	(372, 2534)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	162
+			justify    	0
+			label      	"UINT")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"369DEAA80004"
+		    height     	128
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBDI (Diagnostics)::CDIDiagnosticInterface" @14
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(814, 1178)
+		    label      	(object ItemLabel
+			Parent_View 	@14
+			location   	(402, 347)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	824
+			justify    	0
+			label      	"CDIDiagnosticInterface")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E198CAE029B"
+		    compartment 	(object Compartment
+			Parent_View 	@14
+			location   	(402, 407)
+			icon_style 	"Icon"
+			fill_color 	16777215
+			anchor     	2
+			nlines     	32
+			max_width  	822)
+		    width      	842
+		    height     	1686
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object InheritView "" @15
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3E198CBC0366"
+		    client     	@14
+		    supplier   	@12
+		    line_style 	0)
+		(object AssociationViewNew "$UNNAMED$0" @16
+		    location   	(532, 2271)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3E19917803D3"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$1" @17
+			    Parent_View 	@16
+			    location   	(-271, 693)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3E19917901C0"
+			    client     	@16
+			    supplier   	@14
+			    line_style 	0
+			    label      	(object SegLabel @18
+				Parent_View 	@17
+				location   	(639, 2117)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.679480
+				height     	66
+				orientation 	1))
+			(object RoleView "uiID" @19
+			    Parent_View 	@16
+			    location   	(-271, 693)
+			    label      	(object SegLabel @20
+				Parent_View 	@19
+				location   	(465, 2330)
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	96
+				justify    	0
+				label      	"+uiID"
+				pctDist    	0.286441
+				height     	52
+				orientation 	1)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3E19917901C1"
+			    client     	@16
+			    supplier   	@13
+			    line_style 	0
+			    label      	(object SegLabel @21
+				Parent_View 	@19
+				location   	(543, 2427)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.582635
+				height     	50
+				orientation 	0))))
+		(object ClassView "Class" "Logical View::IMWINS (Microsoft Windows)::bool" @22
+		    location   	(1261, 2573)
+		    label      	(object ItemLabel
+			Parent_View 	@22
+			location   	(1180, 2521)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	162
+			justify    	0
+			label      	"bool")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"369DEAA80005"
+		    height     	128
+		    autoResize 	TRUE)
+		(object AssociationViewNew "$UNNAMED$2" @23
+		    location   	(1162, 2264)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3F55D95702CE"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$3" @24
+			    Parent_View 	@23
+			    location   	(591, 405)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3F55D95702CF"
+			    client     	@23
+			    supplier   	@14
+			    line_style 	0
+			    label      	(object SegLabel @25
+				Parent_View 	@24
+				location   	(1143, 2030)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	1))
+			(object RoleView "bHardwarePresent" @26
+			    Parent_View 	@23
+			    location   	(591, 405)
+			    label      	(object SegLabel @27
+				Parent_View 	@26
+				location   	(1204, 2307)
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	360
+				justify    	0
+				label      	"+bHardwarePresent"
+				pctDist    	0.203499
+				height     	27
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3F55D95702D0"
+			    client     	@23
+			    supplier   	@22
+			    line_style 	0
+			    label      	(object SegLabel @28
+				Parent_View 	@26
+				location   	(1283, 2468)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	0))))))
+	(object ClassDiagram "0.2 Creators Uses"
+	    quid       	"3E19996203B4"
+	    title      	"0.2 Creators Uses"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object ClassView "Class" "Logical View::EBDI (Diagnostics)::CDIDiagnosticCreatorV0" @29
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(675, 694)
+		    label      	(object ItemLabel
+			Parent_View 	@29
+			location   	(439, 642)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	472
+			justify    	0
+			label      	"CDIDiagnosticCreatorV0")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E198B090328"
+		    width      	490
+		    height     	128
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBDI (Diagnostics)::CDIDiagnosticInterface" @30
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(800, 1204)
+		    label      	(object ItemLabel
+			Parent_View 	@30
+			location   	(579, 1152)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	442
+			justify    	0
+			label      	"CDIDiagnosticInterface")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E198CAE029B"
+		    width      	460
+		    height     	128
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object UsesView "" @31
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3E19999500A7"
+		    client     	@29
+		    supplier   	@30
+		    line_style 	0)))
+	(object ClassDiagram "1.1 Sync Interface Uses"
+	    quid       	"3E199D090366"
+	    title      	"1.1 Sync Interface Uses"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object ClassView "ClassUtility" "Logical View::EBDI (Diagnostics)::DI_IDENTIFIERS" @32
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(397, 906)
+		    label      	(object ItemLabel
+			Parent_View 	@32
+			location   	(227, 855)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	340
+			justify    	0
+			label      	"DI_IDENTIFIERS")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E19860A0356"
+		    width      	358
+		    height     	126
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBDI (Diagnostics)::CDIDiagnosticInterface" @33
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(540, 339)
+		    label      	(object ItemLabel
+			Parent_View 	@33
+			location   	(317, 287)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	446
+			justify    	0
+			label      	"CDIDiagnosticInterface")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E198CAE029B"
+		    width      	464
+		    height     	128
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object UsesView "" @34
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3E199D2E027C"
+		    client     	@33
+		    supplier   	@32
+		    line_style 	0)
+		(object ClassView "Class" "Logical View::EBPI (PC Interface)::CPIComponentsState" @35
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(976, 939)
+		    label      	(object ItemLabel
+			Parent_View 	@35
+			location   	(767, 864)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	418
+			justify    	0
+			label      	"CPIComponentsState")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F4235EA0005"
+		    width      	436
+		    height     	174
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBHI (Hardware Interface)::IHIInterface" @36
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1536, 923)
+		    label      	(object ItemLabel
+			Parent_View 	@36
+			location   	(1299, 848)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	474
+			justify    	0
+			label      	"IHIInterface")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E2271C40106"
+		    width      	492
+		    height     	174
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object UsesView "" @37
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3F55DB6A0290"
+		    client     	@33
+		    supplier   	@35
+		    line_style 	0)
+		(object UsesView "" @38
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3F55DB6D0232"
+		    client     	@33
+		    supplier   	@36
+		    line_style 	0)
+		(object ClassView "Class" "Logical View::EBPI (PC Interface)::IPII2CEprom24LC515" @39
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(2115, 896)
+		    label      	(object ItemLabel
+			Parent_View 	@39
+			location   	(1906, 845)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	418
+			justify    	0
+			label      	"IPII2CEprom24LC515")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EDC3C5901B5"
+		    width      	436
+		    height     	126
+		    autoResize 	TRUE)
+		(object UsesView "" @40
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"4141A0A400FA"
+		    client     	@33
+		    supplier   	@39
+		    line_style 	0)
+		(object ClassView "Class" "Logical View::EBPI (PC Interface)::CPIObjectFactory" @41
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1974, 496)
+		    label      	(object ItemLabel
+			Parent_View 	@41
+			location   	(1796, 445)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	356
+			justify    	0
+			label      	"CPIObjectFactory")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DA52FD80189"
+		    width      	374
+		    height     	126
+		    autoResize 	TRUE)
+		(object UsesView "" @42
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"41455CAD00FA"
+		    client     	@33
+		    supplier   	@41
+		    line_style 	0)
+		(object ClassView "Class" "Logical View::EBCO (Core Classes)::XCOExceptionError" @43
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1912, 221)
+		    label      	(object ItemLabel
+			Parent_View 	@43
+			location   	(1721, 170)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	382
+			justify    	0
+			label      	"XCOExceptionError")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3BA649E20099"
+		    width      	400
+		    height     	126
+		    autoResize 	TRUE)
+		(object UsesView "" @44
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"4147EE6C008C"
+		    client     	@33
+		    supplier   	@43
+		    line_style 	0)))))

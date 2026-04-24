@@ -1,0 +1,1092 @@
+
+(object Petal
+    version    	42
+    _written   	"Rose 4.5.8163.3"
+    charSet    	0)
+
+(object SubSystem "EBWC (Wedge Control)"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    attributes 	(list Attribute_Set
+	(object Attribute
+	    tool       	"cg"
+	    name       	"Directory"
+	    value      	"Embedded\\src\\EBWC"))
+    quid       	"3DCFD5DD00C5"
+    physical_models 	(list unit_reference_list
+	(object module "EBWCidnt" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBWC\\EBWCidnt.h"))
+	    quid       	"3DCFD73F01A0"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBWCregy" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBWC\\EBWCregy.cpp"))
+	    quid       	"3DD0B1CF0132"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3DD1EF9D0296"
+		    supplier   	"Component View::EBWC (Wedge Control)::EBWCregy"
+		    quidu      	"3DD0B1DF00E4"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBWCregy" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBWC\\EBWCregy.h"))
+	    quid       	"3DD0B1DF00E4"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBWCcrea" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBWC\\EBWCcrea.cpp"))
+	    quid       	"3DD0B45E01BF"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3DD1EFA1014D"
+		    supplier   	"Component View::EBWC (Wedge Control)::EBWCcrea"
+		    quidu      	"3DD0B4800087"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBWCcrea" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBWC\\EBWCcrea.h"))
+	    quid       	"3DD0B4800087"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBWCintf" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBWC\\EBWCintf.cpp"))
+	    quid       	"3DD0BBEA0317"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3DD1EFA400FF"
+		    supplier   	"Component View::EBWC (Wedge Control)::EBWCintf"
+		    quidu      	"3DD0BC070038"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBWCintf" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBWC\\EBWCintf.h"))
+	    quid       	"3DD0BC070038"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBWCimpl" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBWC\\EBWCimpl.cpp"))
+	    quid       	"3DD0F89E0050"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3DD1EFA603DE"
+		    supplier   	"Component View::EBWC (Wedge Control)::EBWCimpl"
+		    quidu      	"3DD0F8A601B7"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBWCimpl" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBWC\\EBWCimpl.h"))
+	    quid       	"3DD0F8A601B7"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBWCsten" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBWC\\EBWCsten.cpp"))
+	    quid       	"3DD100C8031F"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3DD1EFA902E4"
+		    supplier   	"Component View::EBWC (Wedge Control)::EBWCsten"
+		    quidu      	"3DD100D80031"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBWCsten" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBWC\\EBWCsten.h"))
+	    quid       	"3DD100D80031"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBWCstat" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBWC\\EBWCstat.cpp"))
+	    quid       	"3DD103B0010B"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3DD1EFAC0044"
+		    supplier   	"Component View::EBWC (Wedge Control)::EBWCstat"
+		    quidu      	"3DD103C1013A"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBWCstat" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBWC\\EBWCstat.h"))
+	    quid       	"3DD103C1013A"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBWCidle" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBWC\\EBWCidle.cpp"))
+	    quid       	"3DD1045D0292"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3DD1EFAE03DE"
+		    supplier   	"Component View::EBWC (Wedge Control)::EBWCidle"
+		    quidu      	"3DD1046603CA"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBWCidle" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBWC\\EBWCidle.h"))
+	    quid       	"3DD1046603CA"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBWCcomd" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBWC\\EBWCcomd.cpp"))
+	    quid       	"3DD39E9A0397"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3DD39EAD02BC"
+		    supplier   	"Component View::EBWC (Wedge Control)::EBWCcomd"
+		    quidu      	"3DD39EA203A6"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBWCcomd" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBWC\\EBWCcomd.h"))
+	    quid       	"3DD39EA203A6"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBWCconf" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBWC\\EBWCconf.cpp"))
+	    quid       	"3E38FDBA0280"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3E38FE100186"
+		    supplier   	"Component View::EBWC (Wedge Control)::EBWCconf"
+		    quidu      	"3E38FDF2005D"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBWCinit" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBWC\\EBWCinit.cpp"))
+	    quid       	"3E38FDC802EE"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3E38FE120232"
+		    supplier   	"Component View::EBWC (Wedge Control)::EBWCinit"
+		    quidu      	"3E38FDFE00DA"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBWCproc" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBWC\\EBWCproc.cpp"))
+	    quid       	"3E38FDE00242"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3E38FE14030D"
+		    supplier   	"Component View::EBWC (Wedge Control)::EBWCproc"
+		    quidu      	"3E38FE07007D"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBWCconf" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBWC\\EBWCconf.h"))
+	    quid       	"3E38FDF2005D"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBWCinit" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBWC\\EBWCinit.h"))
+	    quid       	"3E38FDFE00DA"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBWCproc" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBWC\\EBWCproc.h"))
+	    quid       	"3E38FE07007D"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBWCacti" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBWC\\EBWCacti.cpp"))
+	    quid       	"3E5E0B6D00EA"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3E5E0B8100FA"
+		    supplier   	"Component View::EBWC (Wedge Control)::EBWCacti"
+		    quidu      	"3E5E0B790251"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBWCacti" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBWC\\EBWCacti.h"))
+	    quid       	"3E5E0B790251"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBWCmain" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBWC\\EBWCmain.h"))
+	    quid       	"3EF053CF006D"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBWCmain" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBWC\\EBWCmain.cpp"))
+	    quid       	"3EF053D7005D"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3EF0569D029F"
+		    supplier   	"Component View::EBWC (Wedge Control)::EBWCmain"
+		    quidu      	"3EF053CF006D"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBWCconn" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBWC\\EBWCconn.cpp"))
+	    quid       	"3F6017BE00EA"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3F6017CD01A5"
+		    supplier   	"Component View::EBWC (Wedge Control)::EBWCconn"
+		    quidu      	"3F6017C6003E"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBWCconn" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBWC\\EBWCconn.h"))
+	    quid       	"3F6017C6003E"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBWCexcp" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBWC\\EBWCexcp.h"))
+	    quid       	"3FB4AEF4031C"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBWCexcp" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBWC\\EBWCexcp.cpp"))
+	    quid       	"3FB4AF0B01A5"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3FB4AF13002E"
+		    supplier   	"Component View::EBWC (Wedge Control)::EBWCexcp"
+		    quidu      	"3FB4AEF4031C"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBWCemst" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBWC\\EBWCemst.cpp"))
+	    quid       	"3FCB352A0186"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3FCB353F02AF"
+		    supplier   	"Component View::EBWC (Wedge Control)::EBWCemst"
+		    quidu      	"3FCB35360251"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBWCemst" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBWC\\EBWCemst.h"))
+	    quid       	"3FCB35360251"
+	    stereotype 	"Package Specification"
+	    language   	"C++"))
+    physical_presentations 	(list unit_reference_list
+	(object Module_Diagram "main"
+	    quid       	"3DCFD7070104"
+	    title      	"main"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	1887
+	    items      	(list diagram_item_list
+		(object ModView "Component View::EBWC (Wedge Control)::EBWCidnt" "PackageType" "Specification" @1
+		    location   	(2547, 359)
+		    label      	(object ItemLabel
+			Parent_View 	@1
+			location   	(2485, 163)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBWCidnt")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DCFD73F01A0"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBWC (Wedge Control)::EBWCregy" "PackageType" "Body" @2
+		    location   	(751, 346)
+		    label      	(object ItemLabel
+			Parent_View 	@2
+			location   	(689, 150)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBWCregy")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DD0B1CF0132"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBWC (Wedge Control)::EBWCregy" "PackageType" "Specification" @3
+		    location   	(767, 881)
+		    label      	(object ItemLabel
+			Parent_View 	@3
+			location   	(705, 685)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBWCregy")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DD0B1DF00E4"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBWC (Wedge Control)::EBWCcrea" "PackageType" "Body" @4
+		    location   	(1178, 381)
+		    label      	(object ItemLabel
+			Parent_View 	@4
+			location   	(1116, 185)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBWCcrea")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DD0B45E01BF"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBWC (Wedge Control)::EBWCcrea" "PackageType" "Specification" @5
+		    location   	(1228, 884)
+		    label      	(object ItemLabel
+			Parent_View 	@5
+			location   	(1166, 688)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBWCcrea")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DD0B4800087"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBWC (Wedge Control)::EBWCintf" "PackageType" "Body" @6
+		    location   	(1660, 375)
+		    label      	(object ItemLabel
+			Parent_View 	@6
+			location   	(1598, 179)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBWCintf")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DD0BBEA0317"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBWC (Wedge Control)::EBWCintf" "PackageType" "Specification" @7
+		    location   	(1693, 887)
+		    label      	(object ItemLabel
+			Parent_View 	@7
+			location   	(1631, 691)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBWCintf")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DD0BC070038"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBWC (Wedge Control)::EBWCimpl" "PackageType" "Body" @8
+		    location   	(2131, 371)
+		    label      	(object ItemLabel
+			Parent_View 	@8
+			location   	(2069, 175)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBWCimpl")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DD0F89E0050"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBWC (Wedge Control)::EBWCimpl" "PackageType" "Specification" @9
+		    location   	(2154, 884)
+		    label      	(object ItemLabel
+			Parent_View 	@9
+			location   	(2092, 688)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBWCimpl")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DD0F8A601B7"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBWC (Wedge Control)::EBWCsten" "PackageType" "Body" @10
+		    location   	(737, 1469)
+		    label      	(object ItemLabel
+			Parent_View 	@10
+			location   	(675, 1273)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBWCsten")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DD100C8031F"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBWC (Wedge Control)::EBWCsten" "PackageType" "Specification" @11
+		    location   	(747, 2034)
+		    label      	(object ItemLabel
+			Parent_View 	@11
+			location   	(685, 1838)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBWCsten")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DD100D80031"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBWC (Wedge Control)::EBWCstat" "PackageType" "Body" @12
+		    location   	(1243, 1481)
+		    label      	(object ItemLabel
+			Parent_View 	@12
+			location   	(1181, 1285)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBWCstat")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DD103B0010B"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBWC (Wedge Control)::EBWCstat" "PackageType" "Specification" @13
+		    location   	(1256, 2018)
+		    label      	(object ItemLabel
+			Parent_View 	@13
+			location   	(1194, 1822)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBWCstat")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DD103C1013A"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBWC (Wedge Control)::EBWCidle" "PackageType" "Body" @14
+		    location   	(1739, 1493)
+		    label      	(object ItemLabel
+			Parent_View 	@14
+			location   	(1677, 1297)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBWCidle")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DD1045D0292"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBWC (Wedge Control)::EBWCidle" "PackageType" "Specification" @15
+		    location   	(1751, 1990)
+		    label      	(object ItemLabel
+			Parent_View 	@15
+			location   	(1689, 1794)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBWCidle")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DD1046603CA"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @16
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DD1EF9D0296"
+		    client     	@2
+		    supplier   	@3
+		    line_style 	0)
+		(object ModVisView "" @17
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DD1EFA1014D"
+		    client     	@4
+		    supplier   	@5
+		    line_style 	0)
+		(object ModVisView "" @18
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DD1EFA400FF"
+		    client     	@6
+		    supplier   	@7
+		    line_style 	0)
+		(object ModVisView "" @19
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DD1EFA603DE"
+		    client     	@8
+		    supplier   	@9
+		    line_style 	0)
+		(object ModVisView "" @20
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DD1EFA902E4"
+		    client     	@10
+		    supplier   	@11
+		    line_style 	0)
+		(object ModVisView "" @21
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DD1EFAC0044"
+		    client     	@12
+		    supplier   	@13
+		    line_style 	0)
+		(object ModVisView "" @22
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DD1EFAE03DE"
+		    client     	@14
+		    supplier   	@15
+		    line_style 	0)
+		(object ModView "Component View::EBWC (Wedge Control)::EBWCcomd" "PackageType" "Body" @23
+		    location   	(2198, 1490)
+		    label      	(object ItemLabel
+			Parent_View 	@23
+			location   	(2136, 1294)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBWCcomd")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DD39E9A0397"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBWC (Wedge Control)::EBWCcomd" "PackageType" "Specification" @24
+		    location   	(2206, 2003)
+		    label      	(object ItemLabel
+			Parent_View 	@24
+			location   	(2144, 1807)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBWCcomd")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DD39EA203A6"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @25
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DD39EAD02BC"
+		    client     	@23
+		    supplier   	@24
+		    line_style 	0)
+		(object ModView "Component View::EBWC (Wedge Control)::EBWCconf" "PackageType" "Body" @26
+		    location   	(787, 2549)
+		    label      	(object ItemLabel
+			Parent_View 	@26
+			location   	(725, 2353)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBWCconf")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E38FDBA0280"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBWC (Wedge Control)::EBWCinit" "PackageType" "Body" @27
+		    location   	(1293, 2549)
+		    label      	(object ItemLabel
+			Parent_View 	@27
+			location   	(1231, 2353)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBWCinit")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E38FDC802EE"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBWC (Wedge Control)::EBWCproc" "PackageType" "Body" @28
+		    location   	(1795, 2541)
+		    label      	(object ItemLabel
+			Parent_View 	@28
+			location   	(1733, 2345)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBWCproc")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E38FDE00242"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBWC (Wedge Control)::EBWCconf" "PackageType" "Specification" @29
+		    location   	(787, 3037)
+		    label      	(object ItemLabel
+			Parent_View 	@29
+			location   	(725, 2841)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBWCconf")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E38FDF2005D"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBWC (Wedge Control)::EBWCinit" "PackageType" "Specification" @30
+		    location   	(1303, 3024)
+		    label      	(object ItemLabel
+			Parent_View 	@30
+			location   	(1241, 2828)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBWCinit")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E38FDFE00DA"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBWC (Wedge Control)::EBWCproc" "PackageType" "Specification" @31
+		    location   	(1823, 3015)
+		    label      	(object ItemLabel
+			Parent_View 	@31
+			location   	(1761, 2819)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBWCproc")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E38FE07007D"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @32
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3E38FE100186"
+		    client     	@26
+		    supplier   	@29
+		    line_style 	0)
+		(object ModVisView "" @33
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3E38FE120232"
+		    client     	@27
+		    supplier   	@30
+		    line_style 	0)
+		(object ModVisView "" @34
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3E38FE14030D"
+		    client     	@28
+		    supplier   	@31
+		    line_style 	0)
+		(object ModView "Component View::EBWC (Wedge Control)::EBWCacti" "PackageType" "Body" @35
+		    location   	(2246, 2527)
+		    label      	(object ItemLabel
+			Parent_View 	@35
+			location   	(2184, 2331)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBWCacti")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E5E0B6D00EA"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBWC (Wedge Control)::EBWCacti" "PackageType" "Specification" @36
+		    location   	(2259, 3040)
+		    label      	(object ItemLabel
+			Parent_View 	@36
+			location   	(2197, 2844)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBWCacti")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E5E0B790251"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @37
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3E5E0B8100FA"
+		    client     	@35
+		    supplier   	@36
+		    line_style 	0)
+		(object ModView "Component View::EBWC (Wedge Control)::EBWCmain" "PackageType" "Specification" @38
+		    location   	(311, 868)
+		    label      	(object ItemLabel
+			Parent_View 	@38
+			location   	(249, 672)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBWCmain")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EF053CF006D"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBWC (Wedge Control)::EBWCmain" "PackageType" "Body" @39
+		    location   	(301, 350)
+		    label      	(object ItemLabel
+			Parent_View 	@39
+			location   	(239, 154)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBWCmain")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EF053D7005D"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @40
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3EF0569D029F"
+		    client     	@39
+		    supplier   	@38
+		    line_style 	0)
+		(object ModView "Component View::EBWC (Wedge Control)::EBWCconn" "PackageType" "Body" @41
+		    location   	(806, 3540)
+		    label      	(object ItemLabel
+			Parent_View 	@41
+			location   	(744, 3344)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	543
+			label      	"EBWCconn")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F6017BE00EA"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBWC (Wedge Control)::EBWCconn" "PackageType" "Specification" @42
+		    location   	(806, 4009)
+		    label      	(object ItemLabel
+			Parent_View 	@42
+			location   	(744, 3813)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBWCconn")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F6017C6003E"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @43
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3F6017CD01A5"
+		    client     	@41
+		    supplier   	@42
+		    line_style 	0)
+		(object ModView "Component View::EBWC (Wedge Control)::EBWCexcp" "PackageType" "Specification" @44
+		    location   	(1312, 3987)
+		    label      	(object ItemLabel
+			Parent_View 	@44
+			location   	(1250, 3791)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBWCexcp")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3FB4AEF4031C"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBWC (Wedge Control)::EBWCexcp" "PackageType" "Body" @45
+		    location   	(1317, 3524)
+		    label      	(object ItemLabel
+			Parent_View 	@45
+			location   	(1255, 3328)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBWCexcp")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3FB4AF0B01A5"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @46
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3FB4AF13002E"
+		    client     	@45
+		    supplier   	@44
+		    line_style 	0)
+		(object ModView "Component View::EBWC (Wedge Control)::EBWCemst" "PackageType" "Body" @47
+		    location   	(1866, 3518)
+		    label      	(object ItemLabel
+			Parent_View 	@47
+			location   	(1804, 3322)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	543
+			label      	"EBWCemst")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3FCB352A0186"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBWC (Wedge Control)::EBWCemst" "PackageType" "Specification" @48
+		    location   	(1898, 4030)
+		    label      	(object ItemLabel
+			Parent_View 	@48
+			location   	(1836, 3834)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	543
+			label      	"EBWCemst")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3FCB35360251"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @49
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3FCB353F02AF"
+		    client     	@47
+		    supplier   	@48
+		    line_style 	0)))))

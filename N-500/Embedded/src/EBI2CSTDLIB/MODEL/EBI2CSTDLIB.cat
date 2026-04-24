@@ -1,0 +1,742 @@
+
+(object Petal
+    version    	42
+    _written   	"Rose 4.5.8163.3"
+    charSet    	0)
+
+(object Class_Category "EBI2CSTDLIB (I2C Standard Library)"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    quid       	"3EE73A9A009C"
+    exportControl 	"Public"
+    subsystem  	"EBI2CSTDLIB (I2C Standard Library)"
+    quidu      	"3EE73A490138"
+    logical_models 	(list unit_reference_list
+	(object Class "CI2CSTDLIBConvert"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"cg_style"
+		    value      	"NoDefContr")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"GenerateDestructor"
+		    value      	FALSE))
+	    quid       	"3EE5975C0138"
+	    operations 	(list Operations
+		(object Operation "ByteToI2CString"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Static"))
+		    quid       	"3EE59937002E"
+		    documentation 	
+|DESCRIPTION:
+|Converts a byte value to a I2C string.
+|I2C String:
+|11: HIGH Byte
+|00: LOW Byte
+|
+|e.g. 91h => 11 00 00 11 00 00 00 11 (String)
+|
+|PARAMETER:
+|byte value to convert
+|
+|RETURN:
+|I2C string
+		    
+		    stereotype 	"static"
+		    parameters 	(list Parameters
+			(object Parameter "p_cValue"
+			    type       	"BYTE"))
+		    result     	"CString"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1055234430)
+		(object Operation "I2CStringToByteStream"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Static"))
+		    quid       	"3EE5BECD0167"
+		    documentation 	
+|DESCRIPTION:
+|Converts a I2C string byte stream.
+|I2C String:
+|11: HIGH Byte
+|00: LOW Byte
+|
+|e.g. 11 00 00 11 00 00 00 11 (I2C String) => 91h
+|
+|PARAMETER:
+|- string to convert
+|- byte pointer that receives the data stream
+|- pointer to the number of bytes convert
+|
+|RETURN:
+|-
+		    
+		    stereotype 	"static"
+		    parameters 	(list Parameters
+			(object Parameter "p_strI2CStream"
+			    type       	"CString")
+			(object Parameter "p_pcI2CStream"
+			    type       	"BYTE*")
+			(object Parameter "p_nI2CDataStreamLength"
+			    type       	"int"))
+		    result     	"void"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1055234431)
+		(object Operation "I2CStringToByte"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Static"))
+		    quid       	"3EE6E47E02BF"
+		    documentation 	
+|DESCRIPTION:
+|Converts a I2C string byte stream (16 characters!).
+|I2C String:
+|11: HIGH Byte
+|00: LOW Byte
+|
+|e.g. 11 00 00 11 00 00 00 11 (I2C String) => 91h
+|
+|PARAMETER:
+|- string to convert
+|- byte pointer that receives the data
+|
+|RETURN:
+|onzero if the operation is successful otherwise, it is 0.
+		    
+		    stereotype 	"static"
+		    parameters 	(list Parameters
+			(object Parameter "p_strI2CStream"
+			    type       	"CString")
+			(object Parameter "p_cI2CStream"
+			    type       	"BYTE&"))
+		    result     	"bool"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1055310786)
+		(object Operation "ByteStreamToI2CString"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Static"))
+		    quid       	"3EE5F0AC0399"
+		    documentation 	
+|DESCRIPTION:
+|Converts a byte stream to a I2C string stream.
+|I2C String:
+|11: HIGH Byte
+|00: LOW Byte
+|
+|e.g. 91h => 11 00 00 11 00 00 00 11 (I2C String)
+|
+|PARAMETER:
+|- byte pointer data stream
+|- pointer to the number of bytes convert
+|
+|RETURN:
+|-
+		    
+		    stereotype 	"static"
+		    parameters 	(list Parameters
+			(object Parameter "p_pcI2CStream"
+			    type       	"BYTE*")
+			(object Parameter "p_nI2CDataStreamLength"
+			    type       	"int"))
+		    result     	"CString"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1055234432)
+		(object Operation "ByteToString"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Static"))
+		    quid       	"3EE6C8470177"
+		    documentation 	
+|DESCRIPTION:
+|Converts a byte value to a string.
+|
+|PARAMETER:
+|byte value to convert
+|
+|RETURN:
+|string
+		    
+		    stereotype 	"static"
+		    parameters 	(list Parameters
+			(object Parameter "p_cValue"
+			    type       	"BYTE"))
+		    result     	"CString"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1055310784)
+		(object Operation "CheckACK"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Static"))
+		    quid       	"3FE83F2E00BB"
+		    documentation 	
+|DESCRIPTION:
+|checks the ACK from a char stream
+|
+|PARAMETER:
+|char stream
+|
+|RETURN:
+|true: ACK ok
+|false: ACK failed
+		    
+		    stereotype 	"static"
+		    parameters 	(list Parameters
+			(object Parameter "p_cStream"
+			    type       	"char*")
+			(object Parameter "p_Position"
+			    type       	"int"))
+		    result     	"bool"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1072166712)
+		(object Operation "CheckNACK"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Static"))
+		    quid       	"3FFD1A9000EA"
+		    documentation 	
+|DESCRIPTION:
+|checks the NACK from a char stream
+|
+|PARAMETER:
+|char stream
+|
+|RETURN:
+|true: NACK ok
+|false: NACK failed
+		    
+		    stereotype 	"static"
+		    parameters 	(list Parameters
+			(object Parameter "p_cStream"
+			    type       	"char*")
+			(object Parameter "p_Position"
+			    type       	"int"))
+		    result     	"bool"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1073545771)
+		(object Operation "ByteToI2CCharStream"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Static"))
+		    quid       	"3FE7F709034B"
+		    documentation 	
+|DESCRIPTION:
+|Converts a byte value to a char stream
+|I2C char stream:
+|11: HIGH Byte
+|00: LOW Byte
+|
+|e.g. 91h => 11 00 00 11 00 00 00 11 (char stream)
+|
+|PARAMETER:
+|byte value to convert
+|
+|RETURN:
+|I2C string
+		    
+		    stereotype 	"static"
+		    parameters 	(list Parameters
+			(object Parameter "p_cValue"
+			    type       	"BYTE")
+			(object Parameter "p_cI2CStream"
+			    type       	"char*"))
+		    result     	"void"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1072166708)
+		(object Operation "CharStreamToByteStream"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Static"))
+		    quid       	"3FE813590000"
+		    documentation 	
+|DESCRIPTION:
+|Converts a char stream to a byte stream.
+|char stream:
+|11: HIGH Byte
+|00: LOW Byte
+|
+|e.g. 11 00 00 11 00 00 00 11 (I2C String) => 91h
+|
+|PARAMETER:
+|- char stream
+|- byte pointer that receives the data stream
+|- pointer to the number of bytes convert
+|
+|RETURN:
+|-
+		    
+		    stereotype 	"static"
+		    parameters 	(list Parameters
+			(object Parameter "p_cI2CStream"
+			    type       	"char*")
+			(object Parameter "p_pcI2CStream"
+			    type       	"BYTE*")
+			(object Parameter "p_nI2CDataStreamLength"
+			    type       	"int"))
+		    result     	"void"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1072166709)
+		(object Operation "ByteStreamToCharStream"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Static"))
+		    quid       	"3FE839CB0148"
+		    documentation 	
+|DESCRIPTION:
+|Converts a byte stream to a char stream.
+|char stream:
+|11: HIGH Byte
+|00: LOW Byte
+|
+|e.g. 91h => 11 00 00 11 00 00 00 11 (I2C stream)
+|
+|PARAMETER:
+|- byte pointer data stream
+|- pointer to the number of bytes convert
+|- char stream
+|RETURN:
+|-
+		    
+		    stereotype 	"static"
+		    parameters 	(list Parameters
+			(object Parameter "p_pcI2CStream"
+			    type       	"BYTE*")
+			(object Parameter "p_nI2CDataStreamLength"
+			    type       	"int")
+			(object Parameter "p_cI2CStream"
+			    type       	"char*"))
+		    result     	"void"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1072166710)
+		(object Operation "ByteToCharStream"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Static"))
+		    quid       	"3FE83D5D03C8"
+		    documentation 	
+|DESCRIPTION:
+|Converts a byte value to a char stream
+|
+|PARAMETER:
+|byte value to convert
+|char stream
+		    
+		    stereotype 	"static"
+		    parameters 	(list Parameters
+			(object Parameter "p_cValue"
+			    type       	"BYTE")
+			(object Parameter "p_cDataStream"
+			    type       	"char*"))
+		    result     	"void"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1072166711)
+		(object Operation "I2CCharStreamToByte"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Static"))
+		    quid       	"3FE841F50251"
+		    documentation 	
+|DESCRIPTION:
+|Converts a I2C char stream to byte stream (16 characters!).
+|I2C char stream:
+|11: HIGH Byte
+|00: LOW Byte
+|
+|e.g. 11 00 00 11 00 00 00 11 (I2C String) => 91h
+|
+|PARAMETER:
+|- string to convert
+|- byte pointer that receives the data
+|
+|RETURN:
+|onzero if the operation is successful otherwise, it is 0.
+		    
+		    stereotype 	"static"
+		    parameters 	(list Parameters
+			(object Parameter "p_cI2CStream"
+			    type       	"char*")
+			(object Parameter "p_cI2CData"
+			    type       	"BYTE&"))
+		    result     	"bool"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1072166713)
+		(object Operation "CharStreamToDWordStream"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Static"))
+		    quid       	"40472942000F"
+		    documentation 	
+|DESCRIPTION:
+|Converts a char stream to a DWORD stream.
+|char stream:
+|11: HIGH Byte
+|00: LOW Byte
+|
+|e.g. 11 00 00 11 00 00 00 11 (I2C String) => 91h
+|
+|PARAMETER:
+|- char stream
+|- DWORD pointer that receives the data stream
+|- pointer to the number of DWORD convert
+|
+|RETURN:
+|-
+		    
+		    stereotype 	"static"
+		    parameters 	(list Parameters
+			(object Parameter "p_cI2CStream"
+			    type       	"char*")
+			(object Parameter "p_pdwI2CStream"
+			    type       	"DWORD*")
+			(object Parameter "p_nI2CDataStreamLength"
+			    type       	"int"))
+		    result     	"void"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1078405492)
+		(object Operation "DWordStreamToCharStream"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Static"))
+		    quid       	"404734050186"
+		    documentation 	
+|DESCRIPTION:
+|Converts a DWORD stream to a char stream.
+|char stream:
+|11: HIGH Byte
+|00: LOW Byte
+|
+|e.g. 91h => 11 00 00 11 00 00 00 11 (I2C stream)
+|
+|PARAMETER:
+|- DWORD pointer data stream
+|- pointer to the number of DWORD convert
+|- char stream
+|RETURN:
+|-
+		    
+		    stereotype 	"static"
+		    parameters 	(list Parameters
+			(object Parameter "p_pdwI2CStream"
+			    type       	"DWORD*")
+			(object Parameter "p_nI2CDataStreamLength"
+			    type       	"int")
+			(object Parameter "p_cI2CStream"
+			    type       	"char*"))
+		    result     	"void"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1078405494)
+		(object Operation "DWordToCharStream"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Static"))
+		    quid       	"4047340700AB"
+		    documentation 	
+|DESCRIPTION:
+|Converts a DWORD value to a char stream
+|
+|PARAMETER:
+|DWORD value to convert
+|char stream
+		    
+		    stereotype 	"static"
+		    parameters 	(list Parameters
+			(object Parameter "p_dwValue"
+			    type       	"DWORD")
+			(object Parameter "p_cDataStream"
+			    type       	"char*"))
+		    result     	"void"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1078405495))
+	    module     	"Component View::EBI2CSTDLIB (I2C Standard Library)::EBI2CSTDLIBconv (module body)"
+	    quidu      	"3EE73AEB0290"
+	    module     	"Component View::EBI2CSTDLIB (I2C Standard Library)::EBI2CSTDLIBconv (module spec)"
+	    quidu      	"3EE73AF7033C"
+	    language   	"C++")
+	(object Class "CI2CSTDLIBCmd"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"cg_style"
+		    value      	"NoDefContr")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"PutBodiesInSpec"
+		    value      	TRUE)
+		(object Attribute
+		    tool       	"cg"
+		    name       	"GenerateDestructor"
+		    value      	FALSE))
+	    quid       	"3EE891A00157"
+	    class_attributes 	(list class_attribute_list
+		(object ClassAttribute "strI2CStart"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 45)))
+		    quid       	"3EE891D90119"
+		    type       	"CString"
+		    initv      	
+|_T("10")
+		    
+		    exportControl 	"Public"
+		    static     	TRUE)
+		(object ClassAttribute "strI2CStop"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 45)))
+		    quid       	"3EE891D90128"
+		    type       	"CString"
+		    initv      	
+|_T("01")
+		    
+		    exportControl 	"Public"
+		    static     	TRUE)
+		(object ClassAttribute "strI2CAck"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 45)))
+		    quid       	"3EE891D90138"
+		    type       	"CString"
+		    initv      	
+|_T("11")
+		    
+		    exportControl 	"Public"
+		    static     	TRUE)
+		(object ClassAttribute "strI2CNack"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 45)))
+		    quid       	"3EE891D90139"
+		    type       	"CString"
+		    initv      	
+|_T("11")
+		    
+		    exportControl 	"Public"
+		    static     	TRUE)
+		(object ClassAttribute "strI2CHigh"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 45)))
+		    quid       	"3EE891D90148"
+		    type       	"CString"
+		    initv      	
+|_T("11")
+		    
+		    exportControl 	"Public"
+		    static     	TRUE)
+		(object ClassAttribute "strI2CLow"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 45)))
+		    quid       	"3EE891D90157"
+		    type       	"CString"
+		    initv      	
+|_T("00")
+		    
+		    exportControl 	"Public"
+		    static     	TRUE)
+		(object ClassAttribute "cI2CStart"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 45)))
+		    quid       	"3FE7F5A80280"
+		    type       	"char[]"
+		    initv      	
+|"10"
+		    
+		    exportControl 	"Public"
+		    static     	TRUE)
+		(object ClassAttribute "cI2CStop"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 45)))
+		    quid       	"3FE7F6AF03C8"
+		    type       	"char[]"
+		    initv      	
+|"01"
+		    
+		    exportControl 	"Public"
+		    static     	TRUE)
+		(object ClassAttribute "cI2CAck"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 45)))
+		    quid       	"3FE7F6B00000"
+		    type       	"char[]"
+		    initv      	
+|"11"
+		    
+		    exportControl 	"Public"
+		    static     	TRUE)
+		(object ClassAttribute "cI2CNack"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 45)))
+		    quid       	"3FE7F6B0000F"
+		    type       	"char[]"
+		    initv      	
+|"00"
+		    
+		    exportControl 	"Public"
+		    static     	TRUE)
+		(object ClassAttribute "cI2CHigh"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 45)))
+		    quid       	"3FE7F6B0002E"
+		    type       	"char[]"
+		    initv      	
+|"11"
+		    
+		    exportControl 	"Public"
+		    static     	TRUE)
+		(object ClassAttribute "cI2CLow"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"DataMemberVisibility"
+			    value      	("DataMemberVisibilitySet" 45)))
+		    quid       	"3FE7F6B0003E"
+		    type       	"char[]"
+		    initv      	
+|"00"
+		    
+		    exportControl 	"Public"
+		    static     	TRUE))
+	    module     	"Component View::EBI2CSTDLIB (I2C Standard Library)::EBI2CSTDLIBcomd (module spec)"
+	    quidu      	"3EE891890000"
+	    language   	"C++"))
+    logical_presentations 	(list unit_reference_list
+	(object ClassDiagram "1.0 Conevrt Functions"
+	    quid       	"3EE819480128"
+	    title      	"1.0 Conevrt Functions"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object ClassView "Class" "Logical View::EBI2CSTDLIB (I2C Standard Library)::CI2CSTDLIBConvert" @1
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(1031, 961)
+		    label      	(object ItemLabel
+			Parent_View 	@1
+			location   	(653, 530)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	756
+			justify    	0
+			label      	"CI2CSTDLIBConvert")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EE5975C0138"
+		    compartment 	(object Compartment
+			Parent_View 	@1
+			location   	(653, 590)
+			icon_style 	"Icon"
+			fill_color 	16777215
+			anchor     	2
+			nlines     	16
+			max_width  	753)
+		    width      	774
+		    height     	886
+		    autoResize 	TRUE)))
+	(object ClassDiagram "1.1 I2C Commands"
+	    quid       	"3EE8914501C5"
+	    title      	"1.1 I2C Commands"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object ClassView "Class" "Logical View::EBI2CSTDLIB (I2C Standard Library)::CI2CSTDLIBCmd" @2
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    location   	(953, 1078)
+		    label      	(object ItemLabel
+			Parent_View 	@2
+			location   	(627, 722)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	652
+			justify    	0
+			label      	"CI2CSTDLIBCmd")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EE891A00157"
+		    width      	670
+		    height     	736
+		    annotation 	8
+		    autoResize 	TRUE)))))

@@ -1,0 +1,876 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+#include "EBNF_res.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\EBNF.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Test"
+    BEGIN
+        MENUITEM "&System",                     TEST_SYSTEM
+        MENUITEM "Mc Get Data",                 IDD_DLG_MCGETDATA
+        MENUITEM "Test",                        IDD_DLG_TEST
+        MENUITEM "Set- / Get DWORD",            IDD_DLG_SETGET_DWORD
+        MENUITEM "Events",                      ID_TEST_EVENTS
+        MENUITEM "Wedge Control",               ID_TEST_WEDGECONTROL
+        MENUITEM "I2C Eprom",                   ID_TEST_I2CEPROM
+        MENUITEM "I2C Temperature",             ID_TEST_I2CTEMPERATURE
+        MENUITEM "I2C DP",                      ID_TEST_I2CDP
+        MENUITEM "I2C ADC",                     ID_TEST_I2CADC
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About GeminiII...",          ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS 
+BEGIN
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY 
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG  0, 0, 125, 55
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE 0x80000000L
+CAPTION "About GeminiII"
+FONT 8, "System"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "GeminiII Version 1.0",IDC_STATIC,40,10,65,8,SS_NOPREFIX
+    LTEXT           "Copyright  2003",IDC_STATIC,40,25,65,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 9,2,8,0
+ PRODUCTVERSION 2,6,5000,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "CompanyName", "Buchi Labortechnik AG"
+            VALUE "FileDescription", "NIRFlex WCE MFC Application"
+            VALUE "FileVersion", "9.2.8.0"
+            VALUE "InternalName", "NIRFlex"
+            VALUE "LegalCopyright", "Copyright  2003"
+            VALUE "OriginalFilename", "NIRFlex.exe"
+            VALUE "ProductName", "NIRFlex Application"
+            VALUE "ProductVersion", "2, 6, 5000, 0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 118
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDR_MAINFRAME           "GeminiII\n\nGeminiII\n\n\nGeminiII.Document\nGeminiII Document"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_NEW             "Create a new document\nNew"
+    ID_FILE_OPEN            "Open an existing document\nOpen"
+    ID_FILE_CLOSE           "Close the active document\nClose"
+    ID_FILE_SAVE            "Save the active document\nSave"
+    ID_FILE_SAVE_AS         "Save the active document with a new name\nSave As"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this document"
+    ID_FILE_MRU_FILE2       "Open this document"
+    ID_FILE_MRU_FILE3       "Open this document"
+    ID_FILE_MRU_FILE4       "Open this document"
+    ID_FILE_MRU_FILE5       "Open this document"
+    ID_FILE_MRU_FILE6       "Open this document"
+    ID_FILE_MRU_FILE7       "Open this document"
+    ID_FILE_MRU_FILE8       "Open this document"
+    ID_FILE_MRU_FILE9       "Open this document"
+    ID_FILE_MRU_FILE10      "Open this document"
+    ID_FILE_MRU_FILE11      "Open this document"
+    ID_FILE_MRU_FILE12      "Open this document"
+    ID_FILE_MRU_FILE13      "Open this document"
+    ID_FILE_MRU_FILE14      "Open this document"
+    ID_FILE_MRU_FILE15      "Open this document"
+    ID_FILE_MRU_FILE16      "Open this document"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Erase the selection\nErase"
+    ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undo the last action\nUndo"
+    ID_EDIT_REDO            "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_INDICATOR_CAPS       "CAP"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// German (Switzerland) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_DES)
+#ifdef _WIN32
+LANGUAGE LANG_GERMAN, SUBLANG_GERMAN_SWISS
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DLG_MCGETDATA DIALOG  0, 0, 322, 286
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "MC Get Data Package"
+FONT 8, "System"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,265,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,265,24,50,14
+    PUSHBUTTON      "Get Data",IDC_BTN_MCGETDATA,265,223,50,14
+    PUSHBUTTON      "Set Data",IDC_BTN_MCSETDATA,265,199,50,14
+    EDITTEXT        IDC_EDT_MCSETDATA,266,182,49,13,ES_AUTOHSCROLL
+    PUSHBUTTON      "StartUp",IDC_BTN_MCSTARTUP,7,39,180,14
+    PUSHBUTTON      "SetProfile",IDC_BTN_MCSETPROFILE,7,62,180,14
+    LTEXT           "State Machine:",IDC_STATIC,7,7,79,10
+    PUSHBUTTON      "Initialize",IDC_BTN_MCINITIALIZE,7,85,180,14
+    PUSHBUTTON      "Start",IDC_BTN_MCSTART,7,108,180,14
+    PUSHBUTTON      "Stop",IDC_BTN_MCSTOP,7,131,180,14
+    PUSHBUTTON      "GetDataPackage",IDC_BTN_MCGETDATAPACKAGE,7,154,180,14
+    LTEXT           "Actual State:",IDC_STATIC,7,23,46,8
+    EDITTEXT        IDC_EDT_MCACTSTATE,53,20,122,14,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "Get Data Start",IDC_BTN_MCGETDATASTART,265,265,50,14
+    EDITTEXT        IDC_EDT_MCNUMBER_OF_PACKAGE,209,265,50,14,ES_AUTOHSCROLL
+    LTEXT           "Number of Package",IDC_STATIC,209,253,106,11
+    PUSHBUTTON      "TEST",IDC_BTN_MC_TEST,18,265,50,14
+END
+
+IDD_DLG_SETGET DIALOG  0, 0, 252, 263
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Set- / Get DWORD"
+FONT 8, "System"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,195,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,195,24,50,14
+    EDITTEXT        IDC_EDT_LOGID,82,59,72,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDT_SETDWORD,82,80,72,14,ES_AUTOHSCROLL
+    LTEXT           "Log ID",IDC_STATIC,14,62,49,8
+    EDITTEXT        IDC_EDT_GETDWORD,82,103,72,14,ES_AUTOHSCROLL | ES_READONLY,WS_EX_STATICEDGE
+    PUSHBUTTON      "Set DWORD",IDC_BTN_SETDWORD,7,80,65,14
+    PUSHBUTTON      "Get DWORD",IDC_BTN_GETDWORD,7,103,65,14
+    PUSHBUTTON      "Write",IDC_BTN_PCI_WRITE,25,185,50,14
+    PUSHBUTTON      "Read",IDC_BTN_PCI_READ,25,212,50,14
+    EDITTEXT        IDC_EDT_PCI_ADR_WRITE,90,185,60,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDT_PCI_VAL_WRITE,165,185,60,14,ES_AUTOHSCROLL
+    LTEXT           "Address Offset",IDC_STATIC,89,172,55,8
+    LTEXT           "Value",IDC_STATIC,166,172,56,8
+    EDITTEXT        IDC_EDT_PCI_ADR_READ,90,212,60,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDT_PCI_VAL_READ,165,212,60,14,ES_AUTOHSCROLL | ES_READONLY
+    GROUPBOX        "DI Interface",IDC_STATIC,15,158,222,91
+    CONTROL         "Read",IDC_RDO_READ,"Button",BS_AUTORADIOBUTTON | WS_GROUP,28,232,33,10
+    CONTROL         "Write",IDC_RDO_WRITE,"Button",BS_AUTORADIOBUTTON,70,232,33,10
+    PUSHBUTTON      "Events",IDC_BTN_EVENT,7,129,65,14
+    PUSHBUTTON      "Test",IDC_BTN_TEST,195,129,50,14
+    EDITTEXT        IDC_EDT_TEST,196,110,49,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Read FPGA Art Nr.",IDC_BTN_FPGA_ARTNR,7,14,65,14
+    PUSHBUTTON      "Read FPGA SW",IDC_BTN_FPGA_SWVERSION,7,32,65,14
+    EDITTEXT        IDC_EDT_FPGA_ARTNR,82,14,72,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDT_FPGA_SWVERSION,82,32,72,14,ES_AUTOHSCROLL
+END
+
+IDD_DLG_EVENT DIALOG  0, 0, 250, 103
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Event"
+FONT 8, "System"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,193,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,193,24,50,14
+    PUSHBUTTON      "Open Event",IDC_DLG_EVENT_OPEN_EVENT,9,54,50,14
+    PUSHBUTTON      "Close Event",IDC_DLG_EVENT_CLOSE_EVENT,9,75,50,14
+    EDITTEXT        IDC_DLG_EVENT_OPEN_EVENT_ID,67,54,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_DLG_EVENT_CLOSE_EVENT_ID,67,75,40,14,ES_AUTOHSCROLL
+    CONTROL         "+Edge",IDC_DLG_EVENT_POS,"Button",BS_AUTORADIOBUTTON,125,54,48,10
+    CONTROL         "-Edge",IDC_DLG_EVENT_NEG,"Button",BS_AUTORADIOBUTTON,178,54,48,10
+    LTEXT           "Event ID",IDC_STATIC,67,39,41,8
+    GROUPBOX        "Event Registration ",IDC_STATIC,121,43,122,29
+END
+
+IDD_DLG_WC DIALOG  0, 0, 461, 277
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Wedge Control"
+FONT 8, "System"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,404,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,404,24,50,14
+    LTEXT           "Actual State:",IDC_STATIC,17,17,45,8
+    EDITTEXT        IDC_EDT_WC_ACT_STATE,17,29,197,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Startup",IDC_BTN_WC_STARTUP,17,54,197,14
+    PUSHBUTTON      "Set Configuration",IDC_BTN_WC_SETCONFIGURATION,17,75,197,14
+    PUSHBUTTON      "Set Profile",IDC_BTN_WC_SETPROFILE,17,96,197,14
+    PUSHBUTTON      "Initialize",IDC_BTN_WC_INITIALIZE,17,117,197,14
+    PUSHBUTTON      "Referencing",IDC_BTN_WC_REFERENCING,17,138,197,14
+    PUSHBUTTON      "Start",IDC_BTN_WC_START,17,159,197,14
+    PUSHBUTTON      "Stop",IDC_BTN_WC_STOP,17,180,197,14
+    PUSHBUTTON      "Shutdown",IDC_BTN_WC_SHUTDOWN,17,248,197,14
+    GROUPBOX        "Wedge Control States:",IDC_STATIC,5,5,225,260
+    PUSHBUTTON      "Set / Get DWORD",IDC_BTN_SETGET_DWORD,245,248,129,14
+    PUSHBUTTON      "Update State",IDC_BTN_UPDATE_STATE,404,42,50,14
+    PUSHBUTTON      "Show Velocity Counter",IDC_BTN_SHOW_VELOCITY_COUNTER,245,134,129,14
+    PUSHBUTTON      "WC PID On / Off",IDC_BTN_WC_PID,245,203,129,14
+    CONTROL         "ON",IDC_RDO_CONTROLLER_ON,"Button",BS_AUTORADIOBUTTON | WS_GROUP,382,206,26,10
+    CONTROL         "OFF",IDC_RDO_CONTROLLER_OFF,"Button",BS_AUTORADIOBUTTON,416,206,30,10
+    PUSHBUTTON      "EMERGENCY STOP",IDC_BTN_WC_EMERGENCY_STOP,245,17,129,33
+    PUSHBUTTON      "Laser",IDC_BTN_LASER_ON_OFF,245,180,129,14
+    PUSHBUTTON      "Initialize DAC",IDC_BTN_WC_DAC_INI,245,157,129,14
+    CONTROL         "ON",IDC_RDO_LASER_ON,"Button",BS_AUTORADIOBUTTON | WS_GROUP,381,183,26,10
+    CONTROL         "OFF",IDC_RDO_LASER_OFF,"Button",BS_AUTORADIOBUTTON,415,183,30,10
+    PUSHBUTTON      "Read Data",IDC_BTN_READ_BUFFER,404,76,50,14
+    PUSHBUTTON      "Only TEST",IDC_BTN_ONLY_TEST,404,249,50,14
+    EDITTEXT        IDC_EDT_TEST,384,231,70,14,ES_AUTOHSCROLL | ES_READONLY
+END
+
+IDD_DLG_SET_WC_CONFIGURATION DIALOG  0, 0, 345, 362
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Set WC Configuration"
+FONT 8, "System"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,288,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,288,24,50,14
+    LTEXT           "01: Velocity Warning Level High:",IDC_STATIC,14,20,123,8
+    LTEXT           "02: Velocity Warning Level Low:",IDC_STATIC,14,33,123,8
+    LTEXT           "04: Velocity Error Level Low:",IDC_STATIC,14,59,123,8
+    LTEXT           "03: Velocity Error Level High:",IDC_STATIC,14,46,123,8
+    LTEXT           "07: Forward Watch Time:",IDC_STATIC,14,98,123,8
+    LTEXT           "08: Backward Watch Time:",IDC_STATIC,14,111,123,8
+    LTEXT           "05: Initialize Watch Time:",IDC_STATIC,14,72,123,8
+    LTEXT           "06: Nom. Velocity Initialize Watch Time:",IDC_STATIC,14,85,123,8
+    LTEXT           "09: Park Watch Time:",IDC_STATIC,14,124,123,8
+    LTEXT           "17: Reference Distance 1:",IDC_STATIC,14,228,123,8
+    LTEXT           "11: Reference Watch Time1:",IDC_STATIC,14,150,123,8
+    LTEXT           "12: Reference Watch Time2:",IDC_STATIC,14,163,123,8
+    LTEXT           "13: Start Distance Forward:",IDC_STATIC,14,176,123,8
+    LTEXT           "14: End Distance Forward:",IDC_STATIC,14,189,123,8
+    LTEXT           "15: Measuring Distance:",IDC_STATIC,14,202,123,8
+    LTEXT           "16: Start Distance Backward:",IDC_STATIC,14,215,123,8
+    LTEXT           "10: Watch Time:",IDC_STATIC,14,137,123,8
+    LTEXT           "18: Reference Distance 2:",IDC_STATIC,14,241,123,8
+    LTEXT           "20: I-Factor",IDC_STATIC,14,267,123,8
+    LTEXT           "21: D-Factor",IDC_STATIC,14,280,123,8
+    LTEXT           "22: Upper Limt",IDC_STATIC,14,293,123,8
+    LTEXT           "23: Lower Limit",IDC_STATIC,14,306,123,8
+    LTEXT           "24: Run After Time:",IDC_STATIC,14,319,123,8
+    LTEXT           "25: Acceleration StandBy Mode:",IDC_STATIC,14,332,123,8
+    LTEXT           "19: P-Factor",IDC_STATIC,14,254,123,8
+    EDITTEXT        IDC_EDT_WC_1,141,20,68,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDT_WC_2,141,33,68,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDT_WC_3,141,46,68,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDT_WC_4,141,59,68,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDT_WC_5,141,72,68,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDT_WC_6,141,85,68,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDT_WC_7,141,98,68,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDT_WC_8,141,111,68,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDT_WC_9,141,124,68,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDT_WC_10,141,137,68,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDT_WC_11,141,150,68,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDT_WC_12,141,163,68,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDT_WC_13,141,176,68,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDT_WC_14,141,189,68,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDT_WC_15,141,202,68,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDT_WC_16,141,215,68,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDT_WC_17,141,228,68,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDT_WC_18,141,241,68,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDT_WC_19,141,254,68,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDT_WC_20,141,267,68,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDT_WC_21,141,280,68,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDT_WC_22,141,293,68,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDT_WC_23,141,306,68,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDT_WC_24,141,319,68,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDT_WC_25,141,332,68,12,ES_AUTOHSCROLL
+    GROUPBOX        "Wedge Control Configuration Parameter:",IDC_STATIC,7,7,263,348
+    LTEXT           "[Hz]",IDC_STATIC,213,20,27,8
+    LTEXT           "[Hz]",IDC_STATIC,213,33,27,8
+    LTEXT           "[Hz]",IDC_STATIC,213,46,27,8
+    LTEXT           "[Hz]",IDC_STATIC,213,59,27,8
+    LTEXT           "[ms]",IDC_STATIC,213,72,27,8
+    LTEXT           "[ms]",IDC_STATIC,213,85,27,8
+    LTEXT           "[ms]",IDC_STATIC,213,98,27,8
+    LTEXT           "[ms]",IDC_STATIC,213,111,27,8
+    LTEXT           "[ms]",IDC_STATIC,213,124,27,8
+    LTEXT           "[ms]",IDC_STATIC,213,137,27,8
+    LTEXT           "[ms]",IDC_STATIC,213,150,27,8
+    LTEXT           "[ms]",IDC_STATIC,213,163,27,8
+    LTEXT           "[Sample Points]",IDC_STATIC,213,176,55,8
+    LTEXT           "[Sample Points]",IDC_STATIC,213,189,55,8
+    LTEXT           "[Sample Points]",IDC_STATIC,213,202,55,8
+    LTEXT           "[Sample Points]",IDC_STATIC,213,215,55,8
+    LTEXT           "[Sample Points]",IDC_STATIC,213,228,55,8
+    LTEXT           "[Sample Points]",IDC_STATIC,213,241,55,8
+    LTEXT           "1/1000",IDC_STATIC,213,254,55,8
+    LTEXT           "1/1000",IDC_STATIC,213,267,55,8
+    LTEXT           "1/1000",IDC_STATIC,213,280,55,8
+    LTEXT           "",IDC_STATIC,213,293,55,8
+    LTEXT           "",IDC_STATIC,213,306,55,8
+    LTEXT           "[s]",IDC_STATIC,213,319,55,8
+    LTEXT           "[Hz/s]",IDC_STATIC,213,332,55,8
+    PUSHBUTTON      "Set Default",IDC_BTN_WCCONFIG_SET_DEFAULT,288,341,50,14
+END
+
+IDD_DLG_SET_WC_PROFILE DIALOG  0, 0, 330, 73
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Set WC Profile"
+FONT 8, "System"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,273,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,273,24,50,14
+    LTEXT           "01: Nom. Acceleration",IDC_STATIC,14,20,123,8
+    LTEXT           "02: Nom. Deceleration",IDC_STATIC,14,33,123,8
+    LTEXT           "03: Nom. Velocity",IDC_STATIC,14,46,123,8
+    EDITTEXT        IDC_EDT_WC_1,141,20,68,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDT_WC_2,141,33,68,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDT_WC_3,141,46,68,12,ES_AUTOHSCROLL
+    LTEXT           "[Hz/s]",IDC_STATIC,213,20,27,8
+    LTEXT           "[Hz/s]",IDC_STATIC,213,33,27,8
+    LTEXT           "[Hz]",IDC_STATIC,213,46,27,8
+    GROUPBOX        "Wedge Control Profile Parameter:",IDC_STATIC,7,7,246,58
+    PUSHBUTTON      "Set Default",IDC_BTN_WCPROFILE_SET_DEFAULT,273,52,50,14
+END
+
+IDD_DLG_SYSTEM DIALOG  0, 0, 378, 269
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "System Control"
+FONT 8, "System"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,227,248,128,14
+    LTEXT           "Current State:",IDC_STATIC,18,76,109,8
+    EDITTEXT        IDC_EDT_SYS_STATE,18,89,167,14,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "Connection Established",IDC_BTN_SYS_CONNECTION_ESTABLISHED,35,124,128,14
+    PUSHBUTTON      "Start Device",IDC_BTN_SYS_START_DEVICE,35,147,128,14
+    PUSHBUTTON      "Reset Device",IDC_BTN_SYS_RESET_DEVICE,35,169,128,14
+    PUSHBUTTON      "Connection Lost",IDC_BTN_SYS_CONNECTION_LOST,35,191,128,14
+    PUSHBUTTON      "ReadSoftwareVersions",IDC_BTN_SYS_READ_SW_VERSIONS,230,100,128,14
+    PUSHBUTTON      "DownloadSWComponets",IDC_BTN_SYS_DL_SW_COMP,230,144,128,14
+    PUSHBUTTON      "SetInterfaceConfig",IDC_BTN_SYS_SET_IF_CONFIG,230,122,128,14
+    EDITTEXT        IDC_EDT_SYS_CONN_STATE,21,248,164,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Current Connection State",IDC_STATIC,22,235,83,8
+    GROUPBOX        "Setup",IDC_STATIC,212,85,159,133
+    GROUPBOX        "Control",IDC_STATIC,21,110,163,107
+    PUSHBUTTON      "Component State",IDC_BTN_SYS_COMPONENT_STATE,227,228,128,14
+    EDITTEXT        IDC_EDIT_VERSION,120,34,68,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "NIRWare Embedded Version:",IDC_STATIC,14,37,98,8
+    EDITTEXT        IDC_EDIT_FPGA_VERSION,120,55,68,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "NIRWare FPGA Version:",IDC_STATIC,14,58,98,8
+    LTEXT           "Win CE OS Version:",IDC_STATIC,14,17,98,8
+    EDITTEXT        IDC_EDIT_OSVERSION,120,13,68,14,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "Trace Sync Objects",IDC_BTN_SYS_DL_SW_TRACESYNC,230,55,128,14
+    LTEXT           "IP Address:",IDC_STATIC,230,17,52,8
+    EDITTEXT        IDC_EDIT_IP_ADDRESS,290,13,68,14,ES_AUTOHSCROLL | ES_READONLY
+END
+
+IDD_DLG_COMPONENT_STATE DIALOG  0, 0, 164, 196
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Component State"
+FONT 8, "System"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,107,7,50,14
+    CONTROL         "EBDI",IDC_DLG_SYSCP_DI,"Button",BS_AUTOCHECKBOX,7,21,68,10
+    CONTROL         "EBES",IDC_DLG_SYSCP_ES,"Button",BS_AUTOCHECKBOX,7,32,68,10
+    CONTROL         "EBI2CEPROM",IDC_DLG_SYSCP_I2CEPROM,"Button",BS_AUTOCHECKBOX,7,76,68,10
+    CONTROL         "EBI2CTEMP",IDC_DLG_SYSCP_I2TEMP,"Button",BS_AUTOCHECKBOX,7,87,68,10
+    CONTROL         "EBMC",IDC_DLG_SYSCP_MC,"Button",BS_AUTOCHECKBOX,7,109,68,10
+    CONTROL         "EBPC",IDC_DLG_SYSCP_PC,"Button",BS_AUTOCHECKBOX,7,120,68,10
+    CONTROL         "EBPO",IDC_DLG_SYSCP_PO,"Button",BS_AUTOCHECKBOX,7,131,68,10
+    CONTROL         "EBST",IDC_DLG_SYSCP_ST,"Button",BS_AUTOCHECKBOX,7,142,68,10
+    CONTROL         "EBTC",IDC_DLG_SYSCP_TC,"Button",BS_AUTOCHECKBOX,7,153,68,10
+    CONTROL         "EBWC",IDC_DLG_SYSCP_WC,"Button",BS_AUTOCHECKBOX,7,164,68,10
+    CONTROL         "EBHI",IDC_DLG_SYSCP_HI,"Button",BS_AUTOCHECKBOX,7,43,68,10
+    CONTROL         "EBIO",IDC_DLG_SYSCP_IO,"Button",BS_AUTOCHECKBOX,7,98,68,10
+    CONTROL         "EBI2CADC",IDC_DLG_SYSCP_I2CADC,"Button",BS_AUTOCHECKBOX,7,54,68,10
+    CONTROL         "EBI2CDP",IDC_DLG_SYSCP_I2CDP,"Button",BS_AUTOCHECKBOX,7,65,68,10
+END
+
+IDD_DIALOG_SHUTDOWN DIALOG  0, 0, 185, 55
+STYLE DS_SETFONT | DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION
+CAPTION "Shutdown"
+FONT 8, "System"
+BEGIN
+    CTEXT           "shutting down ...",IDC_STATIC,7,22,171,12,WS_BORDER
+END
+
+IDD_DLG_VELOCITY_COUNTER DIALOG  0, 0, 360, 257
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "WC Velocity Counters"
+FONT 8, "System"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,302,20,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,302,37,50,14
+    EDITTEXT        IDC_EDT_WDG_POS,178,20,53,14,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDT_WDG_ACT_VLC,178,62,53,14,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDT_WDG_LAST_VLC,178,88,53,14,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDT_WDG_WDG_VOLT,178,120,53,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Update",IDC_BTN_UPDATE_COUNTER,302,55,50,14
+    LTEXT           "Wedge Position (Wdg_Pos):",IDC_STATIC,7,22,160,8
+    LTEXT           "Wedge Actual Velocity (Wdg_Act_Vlc):",IDC_STATIC,7,64,160,8
+    LTEXT           "Wedge Last Velocity (Wdg_Last_Vlc):",IDC_STATIC,7,90,160,8
+    LTEXT           "Wedge Voltage DAC (Wdg_Volt):",IDC_STATIC,7,122,160,8
+    CONTROL         "Forward Direction",IDC_RDO_POS_DIR,"Button",BS_AUTORADIOBUTTON | WS_GROUP,11,40,76,10
+    CONTROL         "Backward Direction",IDC_RDO_NEG_DIR,"Button",BS_AUTORADIOBUTTON,93,40,77,10
+    PUSHBUTTON      "Reset Position",IDC_BTN_RESET_POSITION,178,39,53,14
+    PUSHBUTTON      "Initialize DAC",IDC_BTN_DAC_INI,191,178,69,14
+    PUSHBUTTON      "Emergency Stop",IDC_BTN_EMERGENCY_STOP,7,215,345,35
+    PUSHBUTTON      "Laser",IDC_BTN_LASER_ON,99,178,69,14
+    CONTROL         "ON",IDC_RDO_LSR_ON,"Button",BS_AUTORADIOBUTTON | WS_GROUP,102,197,28,10
+    CONTROL         "OFF",IDC_RDO_LSR_OFF,"Button",BS_AUTORADIOBUTTON,136,197,28,10
+    PUSHBUTTON      "Set DAC Value",IDC_BTN_DAC_SET,283,178,69,14
+    PUSHBUTTON      "WC PID",IDC_BTN_DAC_CONTROLLER_ON_OFF,7,178,69,14
+    CONTROL         "ON",IDC_RDO_CONTROLLER_ON,"Button",BS_AUTORADIOBUTTON | WS_GROUP,11,197,28,10
+    CONTROL         "OFF",IDC_RDO_CONTROLLER_OFF,"Button",BS_AUTORADIOBUTTON,45,197,28,10
+    PUSHBUTTON      "Get Light Barrier State:",IDC_BTN_LB,7,143,157,14,BS_LEFT
+    EDITTEXT        IDC_EDT_LB,178,143,53,14,ES_AUTOHSCROLL | ES_READONLY
+    CONTROL         "Update Counters Automatic",IDC_CHK_AUTO_UPDATE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,163,169,10
+    EDITTEXT        IDC_EDT_WDG_POS_INT,240,20,53,14,ES_AUTOHSCROLL | ES_READONLY
+END
+
+IDD_DLG_I2C_EPROM DIALOG  0, 0, 246, 298
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "I2C Eprom"
+FONT 8, "System"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,189,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,189,24,50,14
+    PUSHBUTTON      "Read Byte",IDC_BTN_RD_BYTE,12,132,59,14
+    PUSHBUTTON      "Read Block",IDC_BTN_RD_PAGE,12,158,59,14
+    PUSHBUTTON      "Read Content",IDC_BTN_RD_CONTENT,12,182,59,14
+    PUSHBUTTON      "Write Byte",IDC_BTN_WR_BYTE,12,226,59,14
+    PUSHBUTTON      "Write Page",IDC_BTN_WR_BLOCK,12,249,59,14
+    PUSHBUTTON      "Write Content",IDC_BTN_WR_CONTENT,12,272,59,14
+    EDITTEXT        IDC_EDT_READ_VALUE,161,132,68,14,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDT_BYTE_WRITE_VALUE,161,226,68,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDT_PAGE_WRITE_VALUE,161,249,68,14,ES_AUTOHSCROLL
+    LTEXT           "Value:",IDC_STATIC,161,121,60,8
+    LTEXT           "Value:",IDC_STATIC,161,214,60,8
+    EDITTEXT        IDC_EDT_READ_ADR_RB,81,133,68,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDT_BYTE_WRITE_ADR_WB,81,227,68,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDT_PAGE_WRITE_ADR_WB,81,249,68,14,ES_AUTOHSCROLL
+    LTEXT           "Address:",IDC_STATIC,81,122,60,8
+    LTEXT           "Address:",IDC_STATIC,81,215,60,8
+    EDITTEXT        IDC_EDT_READ_ADR_RP,81,158,68,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDT_CONTENT_WRITE_VALUE,161,272,68,14,ES_AUTOHSCROLL
+    GROUPBOX        "Write:",IDC_STATIC,7,204,232,87
+    CONTROL         "Write to File",IDC_CHK_WRITE_FILE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,163,184,70,10
+    EDITTEXT        IDC_EDT_NUMBEROFPAGES,161,158,68,14,ES_AUTOHSCROLL
+    LTEXT           "Number of Pages:",IDC_STATIC,161,148,60,8
+    GROUPBOX        "Read:",IDC_STATIC,7,115,232,87
+    EDITTEXT        IDC_EDT_DEVICE_ID,8,66,72,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Startup Device",IDC_BTN_STARTUP,8,87,72,14
+    PUSHBUTTON      "Shutdown Device",IDC_BTN_SHUTDOWN,96,87,72,14
+    GROUPBOX        "Device ID",IDC_STATIC,7,47,232,61
+END
+
+IDD_DLG_I2C_TEMP DIALOG  0, 0, 210, 249
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "I2C Temperature"
+FONT 8, "System"
+BEGIN
+    CONTROL         "Continous",IDC_RDO_CONTINOUS,"Button",BS_AUTORADIOBUTTON | WS_GROUP,9,204,48,10
+    CONTROL         "Single",IDC_RDO_SINGLE,"Button",BS_AUTORADIOBUTTON,59,204,35,10
+    CONTROL         "Low",IDC_RDO_LOW,"Button",BS_AUTORADIOBUTTON | WS_GROUP,9,219,29,10
+    CONTROL         "Above Low",IDC_RDO_ABOVE_LOW,"Button",BS_AUTORADIOBUTTON,59,219,51,10
+    CONTROL         "Normal",IDC_RDO_NORMAL,"Button",BS_AUTORADIOBUTTON,111,219,38,10
+    CONTROL         "High",IDC_RDO_HIGH,"Button",BS_AUTORADIOBUTTON,163,219,30,10
+    DEFPUSHBUTTON   "OK",IDOK,153,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,153,24,50,14
+    PUSHBUTTON      "Get Temperature",IDC_BTN_GET_TEMP,8,113,72,14
+    PUSHBUTTON      "Get Configuration",IDC_BTN_GET_CONFIG,8,158,72,14
+    PUSHBUTTON      "Set Configuration",IDC_BTN_SET_CONFIG,8,179,72,14
+    EDITTEXT        IDC_EDT_GET_TEMP,85,113,65,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDT_GET_CONFIG,85,158,65,14,ES_AUTOHSCROLL
+    GROUPBOX        "Configuration",IDC_STATIC,7,138,196,104
+    EDITTEXT        IDC_EDT_DEVICE_ID,8,56,72,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Startup Device",IDC_BTN_STARTUP,8,77,72,14
+    PUSHBUTTON      "Shutdown Device",IDC_BTN_SHUTDOWN,96,77,72,14
+    GROUPBOX        "Device ID",IDC_STATIC,7,37,196,61
+END
+
+IDD_DLG_I2C_DP DIALOG  0, 0, 191, 177
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Digital Potentiometer"
+FONT 8, "System"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,134,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,134,24,50,14
+    PUSHBUTTON      "Write",IDC_BTN_DP_WRITE,14,133,50,14
+    PUSHBUTTON      "Read",IDC_BTN_DP_READ,14,154,50,14
+    EDITTEXT        IDC_EDT_DP_WRITE,71,133,50,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDT_DP_READ,71,154,50,14,ES_AUTOHSCROLL
+    LTEXT           "Value:",IDC_STATIC,71,121,36,8
+    EDITTEXT        IDC_EDT_DEVICE_ID,14,63,72,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Startup Device",IDC_BTN_STARTUP,14,84,72,14
+    PUSHBUTTON      "Shutdown Device",IDC_BTN_SHUTDOWN,102,84,72,14
+    GROUPBOX        "Device ID",IDC_STATIC,11,44,168,61
+    GROUPBOX        "Digital Potentiometer",IDC_STATIC,11,107,168,63
+END
+
+IDD_DLG_I2C_ADC DIALOG  0, 0, 244, 183
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "ADC"
+FONT 8, "System"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,187,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,187,24,50,14
+    PUSHBUTTON      "Initialize",IDC_BTN_ADC_INI,12,110,50,14
+    PUSHBUTTON      "Get Data",IDC_BTN_ADC_GET_DATA,12,130,50,14
+    EDITTEXT        IDC_EDT_ADC_AIN0,14,159,40,14,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDT_ADC_AIN1,69,159,40,14,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDT_ADC_AIN2,126,159,40,14,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDT_ADC_AIN3,181,159,40,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "AIN 0",IDC_STATIC,16,148,19,8
+    LTEXT           "AIN 1",IDC_STATIC,72,148,19,8
+    LTEXT           "AIN 2",IDC_STATIC,128,148,19,8
+    LTEXT           "AIN 3",IDC_STATIC,183,148,19,8
+    GROUPBOX        "ADC",IDC_STATIC,9,95,224,81
+    EDITTEXT        IDC_EDT_DEVICE_ID,8,48,72,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Startup Device",IDC_BTN_STARTUP,8,69,72,14
+    PUSHBUTTON      "Shutdown Device",IDC_BTN_SHUTDOWN,96,69,72,14
+    GROUPBOX        "Device ID",IDC_STATIC,7,29,167,61
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_DLG_MCGETDATA, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 315
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 279
+    END
+
+    IDD_DLG_SETGET, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 245
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 256
+    END
+
+    IDD_DLG_EVENT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 243
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 96
+    END
+
+    IDD_DLG_WC, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 454
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 270
+    END
+
+    IDD_DLG_SET_WC_CONFIGURATION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 338
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 355
+    END
+
+    IDD_DLG_SET_WC_PROFILE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 323
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 66
+    END
+
+    IDD_DLG_SYSTEM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 371
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 262
+    END
+
+    IDD_DLG_COMPONENT_STATE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 157
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 189
+    END
+
+    IDD_DIALOG_SHUTDOWN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 178
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_DLG_VELOCITY_COUNTER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 352
+        TOPMARGIN, 14
+        BOTTOMMARGIN, 250
+    END
+
+    IDD_DLG_I2C_EPROM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 239
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 291
+    END
+
+    IDD_DLG_I2C_TEMP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 203
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 242
+    END
+
+    IDD_DLG_I2C_DP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 184
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 170
+    END
+
+    IDD_DLG_I2C_ADC, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 237
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 176
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "#include ""EBNF_res.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\EBNF.rc2""  // non-Microsoft eMbedded Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#include ""wceres.rc""         // WCE-specific components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // German (Switzerland) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\EBNF.rc2"  // non-Microsoft eMbedded Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#include "wceres.rc"         // WCE-specific components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

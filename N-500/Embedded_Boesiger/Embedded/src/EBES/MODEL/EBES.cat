@@ -1,0 +1,1452 @@
+
+(object Petal
+    version    	42
+    _written   	"Rose 4.5.8163.3"
+    charSet    	0)
+
+(object Class_Category "EBES (Event Source)"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    quid       	"3DE5E6910350"
+    visible_categories 	(list visibility_relationship_list
+	(object Visibility_Relationship
+	    quid       	"3E1C2B19027F"
+	    supplier   	"Logical View::EBPI (PC Interface)"
+	    quidu      	"3DA488100179")
+	(object Visibility_Relationship
+	    quid       	"3E1C2C490389"
+	    supplier   	"Logical View::EBCO (Core Classes)"
+	    quidu      	"3B86CD280273")
+	(object Visibility_Relationship
+	    quid       	"3E4777E10290"
+	    supplier   	"Logical View::EBHI (Hardware Interface)"
+	    quidu      	"3E22670202FA"))
+    exportControl 	"Public"
+    subsystem  	"EBES (Event Source)"
+    quidu      	"3DE5E67F00D0"
+    logical_models 	(list unit_reference_list
+	(object Class_Utility "ES_IDENTIFIERS"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"cg_style"
+		    value      	"Dummy Class"))
+	    quid       	"3DE5F5390091"
+	    module     	"Component View::EBES (Event Source)::EBESidnt (module spec)"
+	    quidu      	"3DE5EC2D0218"
+	    language   	"C++")
+	(object Class "CESEventSourceCreatorV0"
+	    quid       	"3DE7107402CD"
+	    superclasses 	(list inheritance_relationship_list
+		(object Inheritance_Relationship
+		    quid       	"3DE7109200C9"
+		    supplier   	"Logical View::EBPI (PC Interface)::CPIObjCreatorEventSource"
+		    quidu      	"3DD0A43203DD"))
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    quid       	"3DEB72710259"
+		    supplier   	"Logical View::EBES (Event Source)::CESEventSourceInterface"
+		    quidu      	"3DE713B402CD"))
+	    operations 	(list Operations
+		(object Operation "Create"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3DE710B50117"
+		    stereotype 	"virtual"
+		    parameters 	(list Parameters
+			(object Parameter "p_uiID"
+			    type       	"UINT"))
+		    result     	"IPIEventSourceInterface*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1038837051))
+	    module     	"Component View::EBES (Event Source)::EBEScrea (module body)"
+	    quidu      	"3DE5EC4902D3"
+	    module     	"Component View::EBES (Event Source)::EBEScrea (module spec)"
+	    quidu      	"3DE5EC67015C"
+	    language   	"C++")
+	(object Class "CESEventSourceInterface"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"cg_style"
+		    value      	"NoDefContr")
+		(object Attribute
+		    tool       	"MSVC"
+		    name       	"DeclSpec"
+		    value      	"EBES_DLL_DECL")
+		(object Attribute
+		    tool       	"MSVC"
+		    name       	"MFCDeclares"
+		    value      	(value Text "")))
+	    quid       	"3DE713B402CD"
+	    superclasses 	(list inheritance_relationship_list
+		(object Inheritance_Relationship
+		    quid       	"3DE713C502FC"
+		    supplier   	"Logical View::EBPI (PC Interface)::IPIEventSourceInterface"
+		    quidu      	"3DB94D5F02B8"))
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    quid       	"3DEB67BF017E"
+		    supplier   	"Logical View::EBES (Event Source)::ES_IDENTIFIERS"
+		    quidu      	"3DE5F5390091")
+		(object Uses_Relationship
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"IncludeInHeader"))
+		    quid       	"3DF4B2CA01DF"
+		    supplier   	"Logical View::EBCO (Core Classes)::CCOSyncObjectInt"
+		    quidu      	"3DAA644F0263")
+		(object Uses_Relationship
+		    quid       	"3EF311E402FD"
+		    supplier   	"Logical View::EBHI (Hardware Interface)::EHIOpenEventRegistration"
+		    quidu      	"3E880B550242")
+		(object Uses_Relationship
+		    quid       	"3EF318D80177"
+		    supplier   	"Logical View::EBHI (Hardware Interface)::CHIInterface"
+		    quidu      	"3E2271DE02EA"))
+	    operations 	(list Operations
+		(object Operation "CESEventSourceInterface"
+		    quid       	"3DEB66D70046"
+		    parameters 	(list Parameters
+			(object Parameter "p_uiID"
+			    type       	"UINT"))
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1038837056)
+		(object Operation "GetuiID"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3DEB65640334"
+		    stereotype 	"virtual"
+		    result     	"UINT"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1038837052)
+		(object Operation "ConnectionEstablished"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3EEDB8AA02AD"
+		    documentation 	
+|DESCRIPTION
+|The connection to the PC has been established
+|
+|RETURNS
+|async void
+		    
+		    stereotype 	"virtual"
+		    result     	"CCOSyncObject*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1055744816)
+		(object Operation "ConnectionLost"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3EEDB8AB000D"
+		    documentation 	
+|DESCRIPTION
+|The connection to the PC has been lost
+|
+|RETURNS
+|async void
+		    
+		    stereotype 	"virtual"
+		    result     	"CCOSyncObject*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1055744817)
+		(object Operation "Startup"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3EF2D50302FD"
+		    documentation 	
+|DESCRIPTION
+|Links the object to the hardware
+|
+|RETURNS
+|async void
+		    
+		    stereotype 	"virtual"
+		    result     	"CCOSyncObject*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1056098156)
+		(object Operation "Shutdown"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3EF2D503032C"
+		    documentation 	
+|DESCRIPTION
+|Detaches the object from the hardware
+|
+|RETURNS
+|async void
+		    
+		    stereotype 	"virtual"
+		    result     	"CCOSyncObject*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1056098157)
+		(object Operation "RegisterForEvent"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3EF6AC830119"
+		    documentation 	
+|DESCRIPTION
+|registers the given client to the event manager.
+|
+|PARAMETERS
+|type of event being interested in
+|process image id of the input being interested in
+|
+|RETURNS
+|async array:
+|[0]: async int, ID for later unregistering, command executed
+|[1]: event occured
+|
+		    
+		    stereotype 	"virtual"
+		    parameters 	(list Parameters
+			(object Parameter "p_uiInputID"
+			    type       	"UINT")
+			(object Parameter "p_iEventID"
+			    type       	"INT&"))
+		    result     	"CCOSyncObjectArray*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1056353484)
+		(object Operation "UnRegisterFromEvent"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3EF6AC830128"
+		    documentation 	
+|DESCRIPTION
+|unregisters the given client from the event manager.
+|
+|PARAMETERS
+|client identification
+|type of event being interested in
+|
+|RETURNS
+|async void
+		    
+		    stereotype 	"virtual"
+		    parameters 	(list Parameters
+			(object Parameter "p_uiClientID"
+			    type       	"UINT"))
+		    result     	"CCOSyncObject*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1056353485)
+		(object Operation "Cleanup"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"456FE171035A"
+		    stereotype 	"virtual"
+		    result     	"void"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1164898825))
+	    class_attributes 	(list class_attribute_list
+		(object ClassAttribute "uiNextClientID"
+		    quid       	"3EF320A40196"
+		    type       	"UINT"
+		    initv      	"0"
+		    static     	TRUE))
+	    module     	"Component View::EBES (Event Source)::EBESintf (module body)"
+	    quidu      	"3DE5EC52016C"
+	    module     	"Component View::EBES (Event Source)::EBESintf (module spec)"
+	    quidu      	"3DE5EC6D012D"
+	    language   	"C++")
+	(object Class "CESInterfaceRegistry"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"cg_style"
+		    value      	"ExtraLean")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"GenerateDefaultConstructor"
+		    value      	("GenerateSet" 206))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"GenerateDestructor"
+		    value      	FALSE)
+		(object Attribute
+		    tool       	"MSVC"
+		    name       	"DeclSpec"
+		    value      	"EBES_DLL_DECL"))
+	    quid       	"3DEB71E90334"
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    quid       	"3DEB725F02C6"
+		    supplier   	"Logical View::EBPI (PC Interface)::CPIObjectFactory"
+		    quidu      	"3DA52FD80189")
+		(object Uses_Relationship
+		    quid       	"3DEB72740314"
+		    supplier   	"Logical View::EBES (Event Source)::CESEventSourceCreatorV0"
+		    quidu      	"3DE7107402CD"))
+	    operations 	(list Operations
+		(object Operation "RegisterInterfaces"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 203))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Static"))
+		    quid       	"3DEB722B0055"
+		    stereotype 	"static"
+		    result     	"void"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1038837066))
+	    module     	"Component View::EBES (Event Source)::EBESregy (module body)"
+	    quidu      	"3DE5EC3C0331"
+	    module     	"Component View::EBES (Event Source)::EBESregy (module spec)"
+	    quidu      	"3DE5EC600237"
+	    language   	"C++")
+	(object Class "CESCommandRegisterForEvent"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"cg_style"
+		    value      	"NoDefContr")
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBES\\CESCommandRegisterForEvent.h")
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"BodyFile"
+		    value      	"$ROOT\\Embedded\\src\\EBES\\CESCommandRegisterForEvent.cpp"))
+	    quid       	"3DF4ADA701DF"
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    quid       	"3EF2D953008C"
+		    supplier   	"Logical View::EBCO (Core Classes)::CCOSyncObject"
+		    quidu      	"3B8D554D00B2")
+		(object Uses_Relationship
+		    quid       	"3EF2D97002DE"
+		    supplier   	"Logical View::EBCO (Core Classes)::CCOSyncObjectInt"
+		    quidu      	"3DAA644F0263")
+		(object Uses_Relationship
+		    quid       	"3EF300490196"
+		    supplier   	"Logical View::EBHI (Hardware Interface)::IHIInterface"
+		    quidu      	"3E2271C40106")
+		(object Uses_Relationship
+		    quid       	"3EF3004B0261"
+		    supplier   	"Logical View::EBHI (Hardware Interface)::EHIOpenEventRegistration"
+		    quidu      	"3E880B550242"))
+	    operations 	(list Operations
+		(object Operation "CESCommandRegisterForEvent"
+		    quid       	"3DF4AEAB029B"
+		    parameters 	(list Parameters
+			(object Parameter "p_uiClientID"
+			    type       	"UINT")
+			(object Parameter "p_eEvent"
+			    type       	"EPIEventSource"))
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1039429761)
+		(object Operation "CreateSyncObjects"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3DF4AEAB02AB"
+		    stereotype 	"virtual"
+		    result     	"void"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1039429762)
+		(object Operation "Execute"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3DF4AEAB02CA"
+		    documentation 	
+|DESCRIPTION
+|Executes the current command.
+|
+|PARAMETERS
+|Pointer to the current State
+|
+|RETURNS
+|true, if the command is finished and the clients sync object may be signalled
+		    
+		    stereotype 	"virtual"
+		    result     	"bool"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1039429763))
+	    module     	"::EBEScomd (module body)"
+	    quidu      	"3DE5ECB5010E"
+	    module     	"::EBEScomd (module spec)"
+	    quidu      	"3DE5ECCF0275"
+	    language   	"C++")
+	(object Class "CESCommandUnRegisterFromEvent"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"cg_style"
+		    value      	"NoDefContr")
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBES\\CESCommandUnRegisterFromEvent.h")
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"BodyFile"
+		    value      	"$ROOT\\Embedded\\src\\EBES\\CESCommandUnRegisterFromEvent.cpp"))
+	    quid       	"3DF4ADB9003A"
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    quid       	"3EF2D9550271"
+		    supplier   	"Logical View::EBCO (Core Classes)::CCOSyncObject"
+		    quidu      	"3B8D554D00B2")
+		(object Uses_Relationship
+		    quid       	"3EF2D9730290"
+		    supplier   	"Logical View::EBCO (Core Classes)::CCOSyncObjectInt"
+		    quidu      	"3DAA644F0263")
+		(object Uses_Relationship
+		    quid       	"3EF3004D02EE"
+		    supplier   	"Logical View::EBHI (Hardware Interface)::IHIInterface"
+		    quidu      	"3E2271C40106")
+		(object Uses_Relationship
+		    quid       	"3EF30050009C"
+		    supplier   	"Logical View::EBHI (Hardware Interface)::EHIOpenEventRegistration"
+		    quidu      	"3E880B550242"))
+	    operations 	(list Operations
+		(object Operation "CESCommandUnRegisterFromEvent"
+		    quid       	"3DF4AF02003A"
+		    parameters 	(list Parameters
+			(object Parameter "p_uiClientID"
+			    type       	"UINT")
+			(object Parameter "p_eEvent"
+			    type       	"EPIEventSource"))
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1039429764)
+		(object Operation "Execute"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3DF4AF020078"
+		    documentation 	
+|DESCRIPTION
+|Executes the current command.
+|
+|PARAMETERS
+|Pointer to the current State
+|
+|RETURNS
+|true, if the command is finished and the clients sync object may be signalled
+		    
+		    stereotype 	"virtual"
+		    result     	"bool"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1039429766))
+	    module     	"::EBEScomd (module body)"
+	    quidu      	"3DE5ECB5010E"
+	    module     	"::EBEScomd (module spec)"
+	    quidu      	"3DE5ECCF0275"
+	    language   	"C++")
+	(object Class_Utility "ES_MAIN"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"cg_style"
+		    value      	"Dummy Class"))
+	    quid       	"3EF05A190290"
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    quid       	"3EF05A4103A9"
+		    supplier   	"Logical View::EBES (Event Source)::CESInterfaceRegistry"
+		    quidu      	"3DEB71E90334"))
+	    module     	"Component View::EBES (Event Source)::EBESmain (module body)"
+	    quidu      	"3EF0544400CA"
+	    module     	"Component View::EBES (Event Source)::EBESmain (module spec)"
+	    quidu      	"3EF0544C034B"
+	    language   	"C++")
+	(object Class "CESClient"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"cg_style"
+		    value      	"NoDefContr"))
+	    quid       	"3EF31EEE01E4"
+	    operations 	(list Operations
+		(object Operation "CESClient"
+		    quid       	"3EF3204C0280"
+		    parameters 	(list Parameters
+			(object Parameter "p_pSyncObj"
+			    type       	"CCOSyncObject*")
+			(object Parameter "p_uiInputID"
+			    type       	"UINT"))
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1056098158))
+	    module     	"Component View::EBES (Event Source)::EBESintf (module body)"
+	    quidu      	"3DE5EC52016C"
+	    module     	"Component View::EBES (Event Source)::EBESintf (module spec)"
+	    quidu      	"3DE5EC6D012D"
+	    language   	"C++")
+	(object Association "$UNNAMED$0"
+	    quid       	"3DE713E00221"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$1"
+		    quid       	"3DE713E10211"
+		    supplier   	"Logical View::EBES (Event Source)::CESEventSourceInterface"
+		    quidu      	"3DE713B402CD"
+		    client_cardinality 	(value cardinality "1..1")
+		    is_navigable 	TRUE
+		    is_aggregate 	TRUE)
+		(object Role "uiID"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"InitialValue"
+			    value      	(value Text "p_uiID")))
+		    quid       	"3DE713E10212"
+		    label      	"uiID"
+		    supplier   	"Logical View::IMWINS (Microsoft Windows)::UINT"
+		    quidu      	"369DEAA80004"
+		    client_cardinality 	(value cardinality "1..1")
+		    Containment 	"By Value"
+		    is_navigable 	TRUE)))
+	(object Association "$UNNAMED$2"
+	    quid       	"3DF4B01B0318"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$3"
+		    quid       	"3DF4B01C00D6"
+		    supplier   	"Logical View::EBES (Event Source)::CESCommandUnRegisterFromEvent"
+		    quidu      	"3DF4ADB9003A"
+		    client_cardinality 	(value cardinality "1..1")
+		    is_aggregate 	TRUE)
+		(object Role "uiClientID"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"InitialValue"
+			    value      	(value Text "p_uiClientID")))
+		    quid       	"3DF4B01C00E5"
+		    label      	"uiClientID"
+		    supplier   	"Logical View::IMWINS (Microsoft Windows)::UINT"
+		    quidu      	"369DEAA80004"
+		    client_cardinality 	(value cardinality "1..1")
+		    Containment 	"By Value"
+		    is_navigable 	TRUE)))
+	(object Association "$UNNAMED$4"
+	    quid       	"3EF31F32003E"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$5"
+		    quid       	"3EF31F320251"
+		    supplier   	"Logical View::EBES (Event Source)::CESClient"
+		    quidu      	"3EF31EEE01E4"
+		    client_cardinality 	(value cardinality "1..1")
+		    is_aggregate 	TRUE)
+		(object Role "pSyncObj"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"InitialValue"
+			    value      	(value Text "p_pSyncObj"))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateGetOperation"
+			    value      	TRUE))
+		    quid       	"3EF31F320252"
+		    label      	"pSyncObj"
+		    supplier   	"Logical View::EBCO (Core Classes)::CCOSyncObject"
+		    quidu      	"3B8D554D00B2"
+		    client_cardinality 	(value cardinality "1..1")
+		    Containment 	"By Reference"
+		    is_navigable 	TRUE)))
+	(object Association "$UNNAMED$6"
+	    quid       	"3EF31F730280"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$7"
+		    quid       	"3EF31F75004E"
+		    supplier   	"Logical View::EBES (Event Source)::CESEventSourceInterface"
+		    quidu      	"3DE713B402CD"
+		    client_cardinality 	(value cardinality "1")
+		    Constraints 	"ordered"
+		    is_aggregate 	TRUE)
+		(object Role "Clients"
+		    quid       	"3EF31F75004F"
+		    label      	"Clients"
+		    supplier   	"Logical View::EBES (Event Source)::CESClient"
+		    quidu      	"3EF31EEE01E4"
+		    keys       	(list class_attribute_list
+			(object ClassAttribute "uiID"
+			    quid       	"3EF31FF101E4"
+			    type       	"UINT"))
+		    client_cardinality 	(value cardinality "1")
+		    Constraints 	"ordered"
+		    Containment 	"By Reference"
+		    is_navigable 	TRUE)))
+	(object Association "$UNNAMED$8"
+	    quid       	"3EF6AF1F0167"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$9"
+		    quid       	"3EF6AF20006D"
+		    supplier   	"Logical View::EBES (Event Source)::CESClient"
+		    quidu      	"3EF31EEE01E4"
+		    client_cardinality 	(value cardinality "1..1")
+		    is_navigable 	TRUE
+		    is_aggregate 	TRUE)
+		(object Role "uiInputID"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"default")
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateGetOperation"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateSetOperation"
+			    value      	FALSE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"InitialValue"
+			    value      	(value Text "p_uiInputID")))
+		    quid       	"3EF6AF20006E"
+		    label      	"uiInputID"
+		    supplier   	"Logical View::IMWINS (Microsoft Windows)::UINT"
+		    quidu      	"369DEAA80004"
+		    client_cardinality 	(value cardinality "1..1")
+		    Containment 	"By Value"
+		    is_navigable 	TRUE))))
+    logical_presentations 	(list unit_reference_list
+	(object ClassDiagram "0.0 Globals"
+	    quid       	"3DE5F5280053"
+	    title      	"0.0 Globals"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object ClassView "ClassUtility" "Logical View::EBES (Event Source)::ES_IDENTIFIERS" @1
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(339, 230)
+		    label      	(object ItemLabel
+			Parent_View 	@1
+			location   	(159, 178)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	360
+			justify    	0
+			label      	"ES_IDENTIFIERS")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DE5F5390091"
+		    width      	378
+		    height     	128
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBES (Event Source)::CESInterfaceRegistry" @2
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(812, 745)
+		    label      	(object ItemLabel
+			Parent_View 	@2
+			location   	(602, 693)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	420
+			justify    	0
+			label      	"CESInterfaceRegistry")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DEB71E90334"
+		    width      	438
+		    height     	128
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "ClassUtility" "Logical View::EBES (Event Source)::ES_MAIN" @3
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(283, 608)
+		    label      	(object ItemLabel
+			Parent_View 	@3
+			location   	(178, 557)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	210
+			justify    	0
+			label      	"ES_MAIN")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EF05A190290"
+		    width      	228
+		    height     	126
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object UsesView "" @4
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3EF05A4103A9"
+		    client     	@3
+		    supplier   	@2
+		    line_style 	0)))
+	(object ClassDiagram "0.1 Creators / Registry"
+	    quid       	"3DE7104B00F8"
+	    title      	"0.1 Creators / Registry"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object ClassView "InstantiatedClass" "Logical View::EBPI (PC Interface)::CPIObjCreatorEventSource" @5
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(606, 234)
+		    label      	(object ItemLabel
+			Parent_View 	@5
+			location   	(349, 159)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	514
+			justify    	0
+			label      	"CPIObjCreatorEventSource")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DD0A43203DD"
+		    width      	532
+		    height     	174
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBES (Event Source)::CESEventSourceCreatorV0" @6
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(606, 753)
+		    label      	(object ItemLabel
+			Parent_View 	@6
+			location   	(343, 672)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	526
+			justify    	0
+			label      	"CESEventSourceCreatorV0")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DE7107402CD"
+		    width      	544
+		    height     	186
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object InheritView "" @7
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DE7109200C9"
+		    client     	@6
+		    supplier   	@5
+		    line_style 	0)
+		(object ClassView "Class" "Logical View::EBES (Event Source)::CESInterfaceRegistry" @8
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(606, 1265)
+		    label      	(object ItemLabel
+			Parent_View 	@8
+			location   	(299, 1184)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	614
+			justify    	0
+			label      	"CESInterfaceRegistry")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DEB71E90334"
+		    width      	632
+		    height     	186
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBPI (PC Interface)::CPIObjectFactory" @9
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(606, 1759)
+		    label      	(object ItemLabel
+			Parent_View 	@9
+			location   	(415, 1684)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	382
+			justify    	0
+			label      	"CPIObjectFactory")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DA52FD80189"
+		    width      	400
+		    height     	174
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object UsesView "" @10
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DEB725F02C6"
+		    client     	@8
+		    supplier   	@9
+		    line_style 	0)
+		(object UsesView "" @11
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DEB72740314"
+		    client     	@8
+		    supplier   	@6
+		    line_style 	0)))
+	(object ClassDiagram "1.0 Sync Interface"
+	    quid       	"3DE7137E007B"
+	    title      	"1.0 Sync Interface"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object ClassView "Class" "Logical View::EBPI (PC Interface)::IPIEventSourceInterface" @12
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(520, 240)
+		    label      	(object ItemLabel
+			Parent_View 	@12
+			location   	(150, 100)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	740
+			justify    	0
+			label      	"IPIEventSourceInterface")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DB94D5F02B8"
+		    compartment 	(object Compartment
+			Parent_View 	@12
+			location   	(150, 208)
+			icon_style 	"Icon"
+			fill_color 	16777215
+			anchor     	2
+			nlines     	4
+			max_width  	784)
+		    width      	758
+		    height     	304
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::IMWINS (Microsoft Windows)::UINT" @13
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(509, 1629)
+		    label      	(object ItemLabel
+			Parent_View 	@13
+			location   	(428, 1577)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	162
+			justify    	0
+			label      	"UINT")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"369DEAA80004"
+		    height     	128
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBCO (Core Classes)::CCOSyncObject" @14
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(2207, 1340)
+		    label      	(object ItemLabel
+			Parent_View 	@14
+			location   	(2008, 1265)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	398
+			justify    	0
+			label      	"CCOSyncObject")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3B8D554D00B2"
+		    width      	416
+		    height     	174
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBES (Event Source)::CESEventSourceInterface" @15
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeAttribute 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(518, 915)
+		    label      	(object ItemLabel
+			Parent_View 	@15
+			location   	(164, 609)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	708
+			justify    	0
+			label      	"CESEventSourceInterface")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DE713B402CD"
+		    compartment 	(object Compartment
+			Parent_View 	@15
+			location   	(164, 669)
+			icon_style 	"Icon"
+			fill_color 	16777215
+			anchor     	2
+			nlines     	11
+			max_width  	706)
+		    width      	726
+		    height     	636
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object InheritView "" @16
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DE713C502FC"
+		    client     	@15
+		    supplier   	@12
+		    line_style 	0)
+		(object AssociationViewNew "$UNNAMED$0" @17
+		    location   	(511, 1398)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DE713E00221"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$1" @18
+			    Parent_View 	@17
+			    location   	(-1232, 262)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3DE713E10211"
+			    client     	@17
+			    supplier   	@15
+			    line_style 	0
+			    label      	(object SegLabel @19
+				Parent_View 	@18
+				location   	(462, 1275)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.753709
+				height     	51
+				orientation 	0))
+			(object RoleView "uiID" @20
+			    Parent_View 	@17
+			    location   	(-1232, 262)
+			    label      	(object SegLabel @21
+				Parent_View 	@20
+				location   	(585, 1447)
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	96
+				justify    	0
+				label      	"+uiID"
+				pctDist    	0.295326
+				height     	75
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3DE713E10212"
+			    client     	@17
+			    supplier   	@13
+			    line_style 	0
+			    label      	(object SegLabel @22
+				Parent_View 	@20
+				location   	(462, 1427)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.177142
+				height     	50
+				orientation 	1))))
+		(object ClassView "Class" "Logical View::EBES (Event Source)::CESClient" @23
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1712, 643)
+		    label      	(object ItemLabel
+			Parent_View 	@23
+			location   	(1603, 598)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	218
+			justify    	0
+			label      	"CESClient")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EF31EEE01E4"
+		    width      	236
+		    height     	114
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object AssociationViewNew "$UNNAMED$4" @24
+		    location   	(1948, 976)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3EF31F32003E"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$5" @25
+			    Parent_View 	@24
+			    location   	(-314, -158)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3EF31F320251"
+			    client     	@24
+			    supplier   	@23
+			    line_style 	0
+			    label      	(object SegLabel @26
+				Parent_View 	@25
+				location   	(1744, 830)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.707484
+				height     	83
+				orientation 	0))
+			(object RoleView "pSyncObj" @27
+			    Parent_View 	@24
+			    location   	(-314, -158)
+			    label      	(object SegLabel @28
+				Parent_View 	@27
+				location   	(2076, 1089)
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	204
+				justify    	0
+				label      	"+pSyncObj"
+				pctDist    	0.490991
+				height     	39
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3EF31F320252"
+			    client     	@24
+			    supplier   	@14
+			    line_style 	0
+			    label      	(object SegLabel @29
+				Parent_View 	@27
+				location   	(2082, 1254)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	1))))
+		(object AssociationViewNew "$UNNAMED$6" @30
+		    location   	(1237, 750)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3EF31F730280"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$7" @31
+			    Parent_View 	@30
+			    location   	(-475, 107)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3EF31F75004E"
+			    client     	@30
+			    supplier   	@15
+			    line_style 	0
+			    label      	(object SegLabel @32
+				Parent_View 	@31
+				location   	(929, 876)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	0)
+			    label      	(object SegLabel @33
+				Parent_View 	@31
+				location   	(941, 928)
+				anchor     	3
+				anchor_loc 	1
+				nlines     	1
+				max_width  	158
+				justify    	0
+				label      	"{ordered}"
+				pctDist    	0.900000
+				height     	108
+				orientation 	0)
+			    label      	(object SegLabel @34
+				Parent_View 	@31
+				location   	(992, 831)
+				anchor     	5
+				anchor_loc 	1
+				nlines     	1
+				max_width  	193
+				justify    	0
+				label      	"uiID : UINT"
+				pctDist    	0.703549
+				height     	25
+				orientation 	0))
+			(object RoleView "Clients" @35
+			    Parent_View 	@30
+			    location   	(-475, 107)
+			    label      	(object SegLabel @36
+				Parent_View 	@35
+				location   	(1153, 726)
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	156
+				justify    	0
+				label      	"+Clients"
+				pctDist    	-0.211097
+				height     	43
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3EF31F75004F"
+			    client     	@30
+			    supplier   	@23
+			    line_style 	0
+			    label      	(object SegLabel @37
+				Parent_View 	@35
+				location   	(1569, 730)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	1)
+			    label      	(object SegLabel @38
+				Parent_View 	@35
+				location   	(1581, 782)
+				anchor     	3
+				anchor_loc 	1
+				nlines     	1
+				max_width  	158
+				justify    	0
+				label      	"{ordered}"
+				pctDist    	0.900000
+				height     	108
+				orientation 	1))))
+		(object ClassView "Class" "Logical View::IMWINS (Microsoft Windows)::UINT" @39
+		    location   	(2396, 255)
+		    label      	(object ItemLabel
+			Parent_View 	@39
+			location   	(2315, 203)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	162
+			justify    	0
+			label      	"UINT")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"369DEAA80004"
+		    height     	128
+		    autoResize 	TRUE)
+		(object AssociationViewNew "$UNNAMED$8" @40
+		    location   	(2057, 445)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3EF6AF1F0167"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$9" @41
+			    Parent_View 	@40
+			    location   	(-533, -872)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3EF6AF20006D"
+			    client     	@40
+			    supplier   	@23
+			    line_style 	0
+			    label      	(object SegLabel @42
+				Parent_View 	@41
+				location   	(1788, 531)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.976310
+				height     	59
+				orientation 	1))
+			(object RoleView "uiInputID" @43
+			    Parent_View 	@40
+			    location   	(-533, -872)
+			    label      	(object SegLabel @44
+				Parent_View 	@43
+				location   	(2053, 413)
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	180
+				justify    	0
+				label      	"+uiInputID"
+				pctDist    	0.045944
+				height     	31
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3EF6AF20006E"
+			    client     	@40
+			    supplier   	@39
+			    line_style 	0
+			    label      	(object SegLabel @45
+				Parent_View 	@43
+				location   	(2254, 273)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	0))))))
+	(object ClassDiagram "1.1 Sync Interface Uses"
+	    quid       	"3DEB677F02B7"
+	    title      	"1.1 Sync Interface Uses"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object ClassView "ClassUtility" "Logical View::EBES (Event Source)::ES_IDENTIFIERS" @46
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(1253, 174)
+		    label      	(object ItemLabel
+			Parent_View 	@46
+			location   	(1075, 123)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	356
+			justify    	0
+			label      	"ES_IDENTIFIERS")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DE5F5390091"
+		    width      	374
+		    height     	126
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBES (Event Source)::CESEventSourceInterface" @47
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(409, 620)
+		    label      	(object ItemLabel
+			Parent_View 	@47
+			location   	(161, 568)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	496
+			justify    	0
+			label      	"CESEventSourceInterface")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DE713B402CD"
+		    width      	514
+		    height     	128
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object UsesView "" @48
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DEB67BF017E"
+		    client     	@47
+		    supplier   	@46
+		    line_style 	0)
+		(object ClassView "InstantiatedClass" "Logical View::EBCO (Core Classes)::CCOSyncObjectInt" @49
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1278, 418)
+		    label      	(object ItemLabel
+			Parent_View 	@49
+			location   	(1078, 343)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	400
+			justify    	0
+			label      	"CCOSyncObjectInt")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DAA644F0263"
+		    width      	418
+		    height     	174
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object UsesView "" @50
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DF4B2CA01DF"
+		    client     	@47
+		    supplier   	@49
+		    line_style 	0)
+		(object ClassView "Class" "Logical View::EBHI (Hardware Interface)::EHIOpenEventRegistration" @51
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1359, 678)
+		    label      	(object ItemLabel
+			Parent_View 	@51
+			location   	(1102, 603)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	514
+			justify    	0
+			label      	"EHIOpenEventRegistration")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E880B550242"
+		    width      	532
+		    height     	174
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object UsesView "" @52
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3EF311E402FD"
+		    client     	@47
+		    supplier   	@51
+		    line_style 	0)
+		(object ClassView "Class" "Logical View::EBHI (Hardware Interface)::CHIInterface" @53
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1354, 1259)
+		    label      	(object ItemLabel
+			Parent_View 	@53
+			location   	(1118, 1184)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	472
+			justify    	0
+			label      	"CHIInterface")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E2271DE02EA"
+		    width      	490
+		    height     	174
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object UsesView "" @54
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3EF318D80177"
+		    client     	@47
+		    supplier   	@53
+		    line_style 	0)))
+	(object ClassDiagram "0.2 Creators Uses"
+	    quid       	"3EF2CA140000"
+	    title      	"0.2 Creators Uses"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object ClassView "Class" "Logical View::EBES (Event Source)::CESEventSourceCreatorV0" @55
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(441, 187)
+		    label      	(object ItemLabel
+			Parent_View 	@55
+			location   	(178, 136)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	526
+			justify    	0
+			label      	"CESEventSourceCreatorV0")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DE7107402CD"
+		    width      	544
+		    height     	126
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBES (Event Source)::CESEventSourceInterface" @56
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(425, 659)
+		    label      	(object ItemLabel
+			Parent_View 	@56
+			location   	(177, 608)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	496
+			justify    	0
+			label      	"CESEventSourceInterface")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DE713B402CD"
+		    width      	514
+		    height     	126
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object UsesView "" @57
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3DEB72710259"
+		    client     	@55
+		    supplier   	@56
+		    line_style 	0)))))

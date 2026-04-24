@@ -1,0 +1,7 @@
+Allgemeiner Pfad im Archiv für CE Embedded Code:
+\\buchi.com\dfs\Archive\BHQ_Projects\10_Products\NIRWare
+
+Sourcesave für CE Embedded Code:
+\\buchi.com\dfs\Archive\BHQ_Projects\10_Products\NIRWare\01-CodeMngt\VSS_EB2.05
+
+Gesu / Buem 29.01.2021

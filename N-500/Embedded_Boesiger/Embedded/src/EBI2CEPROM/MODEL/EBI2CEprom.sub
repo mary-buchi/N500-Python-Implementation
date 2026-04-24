@@ -1,0 +1,442 @@
+
+(object Petal
+    version    	42
+    _written   	"Rose 4.5.8163.3"
+    charSet    	0)
+
+(object SubSystem "EBI2CEprom (I2C Eprom Device)"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    attributes 	(list Attribute_Set
+	(object Attribute
+	    tool       	"cg"
+	    name       	"Directory"
+	    value      	"Embedded\\src\\EBI2CEPROM"))
+    quid       	"3EE7363600CB"
+    physical_models 	(list unit_reference_list
+	(object module "EBI2CEPROMident" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBI2CEPROM\\EBI2CEPROMident.h"))
+	    quid       	"3EE7378E001F"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBI2CEPROMintf" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBI2CEPROM\\EBI2CEPROMintf.cpp"))
+	    quid       	"3EE7379A036B"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3EE737C80203"
+		    supplier   	"Component View::EBI2CEprom (I2C Eprom Device)::EBI2CEPROMintf"
+		    quidu      	"3EE737A6001F"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBI2CEPROMintf" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBI2CEPROM\\EBI2CEPROMintf.h"))
+	    quid       	"3EE737A6001F"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBI2CEPROMexcp" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBI2CEPROM\\EBI2CEPROMexcp.cpp"))
+	    quid       	"3EE737B00177"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3EE737CA0203"
+		    supplier   	"Component View::EBI2CEprom (I2C Eprom Device)::EBI2CEPROMexcp"
+		    quidu      	"3EE737BB01C5"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBI2CEPROMexcp" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBI2CEPROM\\EBI2CEPROMexcp.h"))
+	    quid       	"3EE737BB01C5"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBI2CEPROMcrea" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBI2CEPROM\\EBI2CEPROMcrea.cpp"))
+	    quid       	"3FDD88BF001F"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3FDD88DE030D"
+		    supplier   	"Component View::EBI2CEprom (I2C Eprom Device)::EBI2CEPROMcrea"
+		    quidu      	"3FDD88D302BF"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBI2CEPROMcrea" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBI2CEPROM\\EBI2CEPROMcrea.h"))
+	    quid       	"3FDD88D302BF"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBI2CEPROMregy" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBI2CEPROM\\EBI2CEPROMregy.cpp"))
+	    quid       	"3FDD88E0030D"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3FDD8931038A"
+		    supplier   	"Component View::EBI2CEprom (I2C Eprom Device)::EBI2CEPROMregy"
+		    quidu      	"3FDD88F2004E"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBI2CEPROMregy" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBI2CEPROM\\EBI2CEPROMregy.h"))
+	    quid       	"3FDD88F2004E"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBI2CEPROMmain" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBI2CEPROM\\EBI2CEPROMmain.cpp"))
+	    quid       	"3FDD88FA01A5"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3FDD8934003E"
+		    supplier   	"Component View::EBI2CEprom (I2C Eprom Device)::EBI2CEPROMmain"
+		    quidu      	"3FDD89000271"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBI2CEPROMmain" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBI2CEPROM\\EBI2CEPROMmain.h"))
+	    quid       	"3FDD89000271"
+	    stereotype 	"Package Specification"
+	    language   	"C++")
+	(object module "EBI2CEPROMcomd" "PackageType" "Body"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBI2CEPROM\\EBI2CEPROMcomd.cpp"))
+	    quid       	"3FDD891F0186"
+	    stereotype 	"Package Body"
+	    visible_modules 	(list dependency_list
+		(object Dependency_Relationship
+		    quid       	"3FDD89370167"
+		    supplier   	"Component View::EBI2CEprom (I2C Eprom Device)::EBI2CEPROMcomd"
+		    quidu      	"3FDD8925031C"
+		    supplier_is_spec 	TRUE))
+	    language   	"C++")
+	(object module "EBI2CEPROMcomd" "PackageType" "Specification"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"Traversal"
+		    name       	"CodeFile"
+		    value      	"$ROOT\\Embedded\\src\\EBI2CEPROM\\EBI2CEPROMcomd.h"))
+	    quid       	"3FDD8925031C"
+	    stereotype 	"Package Specification"
+	    language   	"C++"))
+    physical_presentations 	(list unit_reference_list
+	(object Module_Diagram "main"
+	    quid       	"3EE73787004E"
+	    title      	"main"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object ModView "Component View::EBI2CEprom (I2C Eprom Device)::EBI2CEPROMident" "PackageType" "Specification" @1
+		    location   	(514, 396)
+		    label      	(object ItemLabel
+			Parent_View 	@1
+			location   	(452, 200)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBI2CEPROMident")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EE7378E001F"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBI2CEprom (I2C Eprom Device)::EBI2CEPROMintf" "PackageType" "Body" @2
+		    location   	(1237, 359)
+		    label      	(object ItemLabel
+			Parent_View 	@2
+			location   	(1175, 163)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBI2CEPROMintf")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EE7379A036B"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBI2CEprom (I2C Eprom Device)::EBI2CEPROMintf" "PackageType" "Specification" @3
+		    location   	(1225, 891)
+		    label      	(object ItemLabel
+			Parent_View 	@3
+			location   	(1163, 695)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBI2CEPROMintf")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EE737A6001F"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBI2CEprom (I2C Eprom Device)::EBI2CEPROMexcp" "PackageType" "Body" @4
+		    location   	(1829, 353)
+		    label      	(object ItemLabel
+			Parent_View 	@4
+			location   	(1767, 157)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBI2CEPROMexcp")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EE737B00177"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBI2CEprom (I2C Eprom Device)::EBI2CEPROMexcp" "PackageType" "Specification" @5
+		    location   	(1837, 884)
+		    label      	(object ItemLabel
+			Parent_View 	@5
+			location   	(1775, 688)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	541
+			label      	"EBI2CEPROMexcp")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EE737BB01C5"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @6
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3EE737C80203"
+		    client     	@2
+		    supplier   	@3
+		    line_style 	0)
+		(object ModVisView "" @7
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3EE737CA0203"
+		    client     	@4
+		    supplier   	@5
+		    line_style 	0)
+		(object ModView "Component View::EBI2CEprom (I2C Eprom Device)::EBI2CEPROMcrea" "PackageType" "Body" @8
+		    location   	(2477, 365)
+		    label      	(object ItemLabel
+			Parent_View 	@8
+			location   	(2415, 169)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	543
+			label      	"EBI2CEPROMcrea")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3FDD88BF001F"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBI2CEprom (I2C Eprom Device)::EBI2CEPROMcrea" "PackageType" "Specification" @9
+		    location   	(2481, 859)
+		    label      	(object ItemLabel
+			Parent_View 	@9
+			location   	(2419, 663)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	543
+			label      	"EBI2CEPROMcrea")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3FDD88D302BF"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @10
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3FDD88DE030D"
+		    client     	@8
+		    supplier   	@9
+		    line_style 	0)
+		(object ModView "Component View::EBI2CEprom (I2C Eprom Device)::EBI2CEPROMregy" "PackageType" "Body" @11
+		    location   	(534, 1412)
+		    label      	(object ItemLabel
+			Parent_View 	@11
+			location   	(472, 1216)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	543
+			label      	"EBI2CEPROMregy")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3FDD88E0030D"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBI2CEprom (I2C Eprom Device)::EBI2CEPROMregy" "PackageType" "Specification" @12
+		    location   	(567, 1946)
+		    label      	(object ItemLabel
+			Parent_View 	@12
+			location   	(505, 1750)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	543
+			label      	"EBI2CEPROMregy")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3FDD88F2004E"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBI2CEprom (I2C Eprom Device)::EBI2CEPROMmain" "PackageType" "Body" @13
+		    location   	(1240, 1400)
+		    label      	(object ItemLabel
+			Parent_View 	@13
+			location   	(1178, 1204)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	543
+			label      	"EBI2CEPROMmain")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3FDD88FA01A5"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBI2CEprom (I2C Eprom Device)::EBI2CEPROMmain" "PackageType" "Specification" @14
+		    location   	(1268, 1921)
+		    label      	(object ItemLabel
+			Parent_View 	@14
+			location   	(1206, 1725)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	543
+			label      	"EBI2CEPROMmain")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3FDD89000271"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBI2CEprom (I2C Eprom Device)::EBI2CEPROMcomd" "PackageType" "Body" @15
+		    location   	(1944, 1421)
+		    label      	(object ItemLabel
+			Parent_View 	@15
+			location   	(1882, 1225)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	543
+			label      	"EBI2CEPROMcomd")
+		    icon       	"Package Body"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3FDD891F0186"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModView "Component View::EBI2CEprom (I2C Eprom Device)::EBI2CEPROMcomd" "PackageType" "Specification" @16
+		    location   	(1976, 1915)
+		    label      	(object ItemLabel
+			Parent_View 	@16
+			location   	(1914, 1719)
+			anchor_loc 	3
+			nlines     	1
+			max_width  	543
+			label      	"EBI2CEPROMcomd")
+		    icon       	"Package Specification"
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3FDD8925031C"
+		    autoResize 	TRUE
+		    width      	282
+		    height     	312)
+		(object ModVisView "" @17
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3FDD8931038A"
+		    client     	@11
+		    supplier   	@12
+		    line_style 	0)
+		(object ModVisView "" @18
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3FDD8934003E"
+		    client     	@13
+		    supplier   	@14
+		    line_style 	0)
+		(object ModVisView "" @19
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3FDD89370167"
+		    client     	@15
+		    supplier   	@16
+		    line_style 	0)))))

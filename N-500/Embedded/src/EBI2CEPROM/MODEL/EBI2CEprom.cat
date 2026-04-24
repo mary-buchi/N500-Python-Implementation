@@ -1,0 +1,2570 @@
+
+(object Petal
+    version    	42
+    _written   	"Rose 4.5.8163.3"
+    charSet    	0)
+
+(object Class_Category "EBI2CEprom (I2C Eprom Device)"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    quid       	"3EE73672030D"
+    exportControl 	"Public"
+    subsystem  	"EBI2CEprom (I2C Eprom Device)"
+    quidu      	"3EE7363600CB"
+    logical_models 	(list unit_reference_list
+	(object Class_Utility "I2CEPROM_IDENTIFIERS"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"cg_style"
+		    value      	"Dummy Class"))
+	    quid       	"3EE82C87006D"
+	    module     	"Component View::EBI2CEprom (I2C Eprom Device)::EBI2CEPROMident (module spec)"
+	    quidu      	"3EE7378E001F"
+	    language   	"C++")
+	(object Class "CI2CEprom24LC515"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"cg_style"
+		    value      	"NoDefContr")
+		(object Attribute
+		    tool       	"MSVC"
+		    name       	"DeclSpec"
+		    value      	"EBI2CEPROM_DLL_DECL"))
+	    quid       	"3EDD9FC402FD"
+	    superclasses 	(list inheritance_relationship_list
+		(object Inheritance_Relationship
+		    quid       	"3EDD9FDA00CB"
+		    supplier   	"Logical View::EBPI (PC Interface)::IPII2CEprom24LC515"
+		    quidu      	"3EDC3C5901B5"))
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    quid       	"3EE830B202BF"
+		    supplier   	"Logical View::EBI2CEprom (I2C Eprom Device)::I2CEPROM_IDENTIFIERS"
+		    quidu      	"3EE82C87006D")
+		(object Uses_Relationship
+		    quid       	"3EE830B50242"
+		    supplier   	"Logical View::EBI2CEprom (I2C Eprom Device)::XI2CEpromExceptionError"
+		    quidu      	"3EDDB7BB0128")
+		(object Uses_Relationship
+		    quid       	"3EE830B703C8"
+		    supplier   	"Logical View::EBI2CSTDLIB (I2C Standard Library)::CI2CSTDLIBConvert"
+		    quidu      	"3EE5975C0138")
+		(object Uses_Relationship
+		    quid       	"3EFBFB54002E"
+		    supplier   	"Logical View::EBI2CSTDLIB (I2C Standard Library)::CI2CSTDLIBCmd"
+		    quidu      	"3EE891A00157")
+		(object Uses_Relationship
+		    quid       	"3EFC0F170119"
+		    supplier   	"Logical View::EBCO (Core Classes)::CCOSyncObject"
+		    quidu      	"3B8D554D00B2")
+		(object Uses_Relationship
+		    quid       	"3F5D710C0148"
+		    supplier   	"Logical View::EBHI (Hardware Interface)::CHIProcessImageParameter"
+		    quidu      	"3EBA10D00128")
+		(object Uses_Relationship
+		    quid       	"3FDDB7F5004E"
+		    supplier   	"Logical View::EBPI (PC Interface)::CPIComponentsState"
+		    quidu      	"3F4235EA0005")
+		(object Uses_Relationship
+		    quid       	"3FDDB80903A9"
+		    supplier   	"Logical View::EBPI (PC Interface)::CPISyncObjI2CDataStream"
+		    quidu      	"3FD82B6701B5")
+		(object Uses_Relationship
+		    quid       	"3FDDB81A0399"
+		    supplier   	"Logical View::EBI2CEprom (I2C Eprom Device)::CI2CEprom24LC515Command"
+		    quidu      	"3FDD8FA5000F")
+		(object Uses_Relationship
+		    quid       	"3FDDB836035B"
+		    supplier   	"Logical View::EBHI (Hardware Interface)::IHIInterface"
+		    quidu      	"3E2271C40106")
+		(object Uses_Relationship
+		    quid       	"3FDDB83E036B"
+		    supplier   	"Logical View::EBHI (Hardware Interface)::CHII2CWorkerThread"
+		    quidu      	"3E227BB3027B"))
+	    operations 	(list Operations
+		(object Operation "CI2CEprom24LC515"
+		    quid       	"3EDDA0750242"
+		    parameters 	(list Parameters
+			(object Parameter "p_uiID"
+			    type       	"UINT"))
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1054707801)
+		(object Operation "Startup"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3EDDA555004E"
+		    documentation 	
+|DESCRIPTION
+|Links the object to the hardware
+|
+|RETURNS
+|async void
+		    
+		    stereotype 	"virtual"
+		    result     	"CCOSyncObject*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1054707810)
+		(object Operation "Shutdown"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3EDDA555005D"
+		    documentation 	
+|DESCRIPTION
+|Detaches the object from the hardware
+|
+|RETURNS
+|async void
+		    
+		    stereotype 	"virtual"
+		    result     	"CCOSyncObject*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1054707811)
+		(object Operation "GetuiID"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3EDEE2B90242"
+		    stereotype 	"virtual"
+		    result     	"UINT"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1054794435)
+		(object Operation "ByteRead"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3EDDA083035B"
+		    documentation 	
+|DESCRIPTION
+|Reads a byte from the specific eprom address
+|
+|RETURNS
+|async int
+		    
+		    stereotype 	"virtual"
+		    parameters 	(list Parameters
+			(object Parameter "p_uiAddress"
+			    type       	"WORD"))
+		    result     	"CCOSyncObjectInt*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1054707802)
+		(object Operation "BlockRead"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3EDDA083036B"
+		    documentation 	
+|DESCRIPTION
+|Reads a number of byte from the specific eprom address
+|
+|RETURNS
+|async void
+		    
+		    stereotype 	"virtual"
+		    parameters 	(list Parameters
+			(object Parameter "p_uiAddress"
+			    type       	"WORD")
+			(object Parameter "p_uiSize"
+			    type       	"UINT"))
+		    result     	"CPISyncObjI2CDataStream*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1054707803)
+		(object Operation "ReadContent"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3EDDA083037A"
+		    documentation 	
+|DESCRIPTION
+|Reads the all contents of the eprom
+|
+|RETURNS
+|void
+		    
+		    stereotype 	"virtual"
+		    result     	"CPISyncObjI2CDataStream*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1054707804)
+		(object Operation "ByteWrite"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3EDDA083038A"
+		    documentation 	
+|DESCRIPTION
+|writes a byte to the specific eprom address
+|
+		    
+		    stereotype 	"virtual"
+		    parameters 	(list Parameters
+			(object Parameter "p_uiAddress"
+			    type       	"WORD")
+			(object Parameter "p_cValue"
+			    type       	"BYTE"))
+		    result     	"CCOSyncObject*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1054707805)
+		(object Operation "PageWrite"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3EDDA0830399"
+		    documentation 	
+|DESCRIPTION
+|writes a page size (max 64 byte) to the specific eprom address
+|
+		    
+		    stereotype 	"virtual"
+		    parameters 	(list Parameters
+			(object Parameter "p_uiAddress"
+			    type       	"WORD")
+			(object Parameter "p_pcValue"
+			    type       	"BYTE*")
+			(object Parameter "p_uiSize"
+			    type       	"UINT"))
+		    result     	"CCOSyncObject*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1054707806)
+		(object Operation "WriteContent"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3EDDA08303A9"
+		    documentation 	
+|DESCRIPTION
+|writes the specified contents to the eprom
+|
+|RETURNS
+|void
+		    
+		    stereotype 	"virtual"
+		    parameters 	(list Parameters
+			(object Parameter "p_pContent"
+			    type       	"BYTE* &")
+			(object Parameter "p_uiDataSize"
+			    type       	"UINT"))
+		    result     	"CCOSyncObject*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1054707807)
+		(object Operation "ConnectionEstablished"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3EF8615300FA"
+		    documentation 	
+|DESCRIPTION
+|The connection to the PC has been established
+|
+|RETURNS
+|async void
+		    
+		    stereotype 	"virtual"
+		    result     	"CCOSyncObject*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1056459656)
+		(object Operation "ConnectionLost"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3EF861530109"
+		    documentation 	
+|DESCRIPTION
+|The connection to the PC has been lost
+|
+|RETURNS
+|async void
+		    
+		    stereotype 	"virtual"
+		    result     	"CCOSyncObject*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1056459657)
+		(object Operation "GetEprom24LC515SizeInByte"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3F4341BE00EA"
+		    documentation 	
+|DESCRIPTION
+|Gets the eprom size in byte
+|
+|RETURNS
+|size in byte
+		    
+		    stereotype 	"virtual"
+		    result     	"UINT"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1061369815)
+		(object Operation "GetEprom24LC515PageSizeInByte"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3F43592800AB"
+		    documentation 	
+|DESCRIPTION
+|Gets the eprom page size in byte
+|
+|RETURNS
+|page size in byte
+		    
+		    stereotype 	"virtual"
+		    result     	"UINT"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1061378414)
+		(object Operation "AcknowledgePolling"
+		    quid       	"420B6B42036B"
+		    stereotype 	"void"
+		    parameters 	(list Parameters
+			(object Parameter "p_cWriteCmd"
+			    type       	"BYTE"))
+		    result     	"bool"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Private"
+		    uid        	1108044741))
+	    class_attributes 	(list class_attribute_list
+		(object ClassAttribute "cMaskE2PROM24LC515"
+		    quid       	"3EF7E9030251"
+		    type       	"DWORD"
+		    initv      	"0x1")
+		(object ClassAttribute "cdwAddressBoundary"
+		    quid       	"3F266367037A"
+		    type       	"DWORD"
+		    initv      	"0x8000")
+		(object ClassAttribute "cWriteControlByte"
+		    quid       	"3EF7F35501A5"
+		    type       	"BYTE"
+		    initv      	"0xA0")
+		(object ClassAttribute "cReadControlByte"
+		    quid       	"3EF7F35501B5"
+		    type       	"BYTE"
+		    initv      	"0xA1")
+		(object ClassAttribute "cnPageSize"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateGetOperation"
+			    value      	TRUE))
+		    quid       	"3EFC302C031C"
+		    type       	"int"
+		    initv      	"64"
+		    exportControl 	"Public"
+		    static     	TRUE)
+		(object ClassAttribute "cBlockSelectBit"
+		    quid       	"3F26346C02EE"
+		    type       	"BYTE"
+		    initv      	"0x08")
+		(object ClassAttribute "cuiEEPROMSizeInByte"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateGetOperation"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetIsConst"
+			    value      	TRUE))
+		    quid       	"3F278BB101D4"
+		    type       	"UINT"
+		    initv      	"65536")
+		(object ClassAttribute "cI2CDeviceAdr"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateGetOperation"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetIsConst"
+			    value      	TRUE))
+		    quid       	"3F5D708C0242"
+		    type       	"BYTE")
+		(object ClassAttribute "cI2CBusNumber"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateGetOperation"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetIsConst"
+			    value      	TRUE))
+		    quid       	"3F5D708C0251"
+		    type       	"BYTE")
+		(object ClassAttribute "cI2CTransferSpeed"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateGetOperation"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetIsConst"
+			    value      	TRUE))
+		    quid       	"3F5D708C0261"
+		    type       	"BYTE")
+		(object ClassAttribute "cI2CDevice"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateGetOperation"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetIsConst"
+			    value      	TRUE))
+		    quid       	"3F5D708C0280"
+		    type       	"BYTE"))
+	    module     	"Component View::EBI2CEprom (I2C Eprom Device)::EBI2CEPROMintf (module body)"
+	    quidu      	"3EE7379A036B"
+	    module     	"Component View::EBI2CEprom (I2C Eprom Device)::EBI2CEPROMintf (module spec)"
+	    quidu      	"3EE737A6001F"
+	    language   	"C++")
+	(object Class "XI2CEpromExceptionError"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"cg_style"
+		    value      	"NoDefContr"))
+	    quid       	"3EDDB7BB0128"
+	    superclasses 	(list inheritance_relationship_list
+		(object Inheritance_Relationship
+		    quid       	"3EDDB7C800FA"
+		    supplier   	"Logical View::EBCO (Core Classes)::XCOExceptionError"
+		    quidu      	"3BA649E20099"))
+	    operations 	(list Operations
+		(object Operation "XI2CEpromExceptionError"
+		    quid       	"3EDDB7EA03C8"
+		    parameters 	(list Parameters
+			(object Parameter "p_sUnitID"
+			    type       	"const CString&")
+			(object Parameter "p_uiExceptionID"
+			    type       	"const UINT")
+			(object Parameter "p_sModuleName"
+			    type       	"const CString&")
+			(object Parameter "p_uiModuleLine"
+			    type       	"const UINT")
+			(object Parameter "p_dwErrorCode"
+			    type       	"const DWORD"))
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1054707812)
+		(object Operation "XI2CEpromExceptionError"
+		    quid       	"3EDDB7EA03D8"
+		    parameters 	(list Parameters
+			(object Parameter "p_pOrigException"
+			    type       	"XCOExceptionError*"))
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1054707813)
+		(object Operation "Throw"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3EDDB7EB0000"
+		    documentation 	
+|DESCRIPTION
+|Re-throws an exception without losing type information.
+|
+		    
+		    stereotype 	"virtual"
+		    result     	"void"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1054707814)
+		(object Operation "Clone"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3EDDB7EB000F"
+		    documentation 	
+|DESCRIPTION
+|Clones the current exception.
+|
+|RETURNS
+|Pointer to clone
+|
+		    
+		    stereotype 	"virtual"
+		    result     	"XCOException*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1054707815))
+	    module     	"Component View::EBI2CEprom (I2C Eprom Device)::EBI2CEPROMexcp (module body)"
+	    quidu      	"3EE737B00177"
+	    module     	"Component View::EBI2CEprom (I2C Eprom Device)::EBI2CEPROMexcp (module spec)"
+	    quidu      	"3EE737BB01C5"
+	    language   	"C++")
+	(object Class_Utility "I2CEPROM_MAIN"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"cg_style"
+		    value      	"Dummy Class"))
+	    quid       	"3FDD86A701A5"
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    quid       	"3FDD8A690213"
+		    supplier   	"Logical View::EBI2CEprom (I2C Eprom Device)::CI2CEpromInterfaceRegistry"
+		    quidu      	"3FDD8A11038A"))
+	    module     	"Component View::EBI2CEprom (I2C Eprom Device)::EBI2CEPROMmain (module body)"
+	    quidu      	"3FDD88FA01A5"
+	    module     	"Component View::EBI2CEprom (I2C Eprom Device)::EBI2CEPROMmain (module spec)"
+	    quidu      	"3FDD89000271"
+	    language   	"C++")
+	(object Class "CI2CEpromInterfaceRegistry"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"cg_style"
+		    value      	"ExtraLean")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"GenerateDefaultConstructor"
+		    value      	("GenerateSet" 206))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"GenerateDestructor"
+		    value      	FALSE)
+		(object Attribute
+		    tool       	"MSVC"
+		    name       	"DeclSpec"
+		    value      	"EBI2CEPROM_DLL_DECL"))
+	    quid       	"3FDD8A11038A"
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    quid       	"3FDD8C870261"
+		    supplier   	"Logical View::EBI2CEprom (I2C Eprom Device)::CI2CEprom24LC515CreatorV0s"
+		    quidu      	"3FDD8BA2002E")
+		(object Uses_Relationship
+		    quid       	"3FDD8DEC031C"
+		    supplier   	"Logical View::EBPI (PC Interface)::CPIObjectFactory"
+		    quidu      	"3DA52FD80189"))
+	    operations 	(list Operations
+		(object Operation "RegisterInterfaces"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 203))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Static"))
+		    quid       	"3FDD8A3D009C"
+		    stereotype 	"static"
+		    result     	"void"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1071483520))
+	    module     	"Component View::EBI2CEprom (I2C Eprom Device)::EBI2CEPROMregy (module body)"
+	    quidu      	"3FDD88E0030D"
+	    module     	"Component View::EBI2CEprom (I2C Eprom Device)::EBI2CEPROMregy (module spec)"
+	    quidu      	"3FDD88F2004E"
+	    language   	"C++")
+	(object Class "CI2CEprom24LC515CreatorV0s"
+	    quid       	"3FDD8BA2002E"
+	    superclasses 	(list inheritance_relationship_list
+		(object Inheritance_Relationship
+		    quid       	"3FDD8BC3038A"
+		    supplier   	"Logical View::EBPI (PC Interface)::CPIObjCreatorI2CEprom24LC515"
+		    quidu      	"3EE6CF8602C7"))
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    quid       	"3FDD8C8003D8"
+		    supplier   	"Logical View::EBI2CEprom (I2C Eprom Device)::CI2CEprom24LC515"
+		    quidu      	"3EDD9FC402FD"))
+	    operations 	(list Operations
+		(object Operation "Create"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3FDD8C4A0203"
+		    stereotype 	"virtual"
+		    parameters 	(list Parameters
+			(object Parameter "p_uiID"
+			    type       	"UINT"))
+		    result     	"IPII2CEprom24LC515*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1071483521))
+	    module     	"Component View::EBI2CEprom (I2C Eprom Device)::EBI2CEPROMcrea (module body)"
+	    quidu      	"3FDD88BF001F"
+	    module     	"Component View::EBI2CEprom (I2C Eprom Device)::EBI2CEPROMcrea (module spec)"
+	    quidu      	"3FDD88D302BF"
+	    language   	"C++")
+	(object Class "CI2CEprom24LC515Command"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"cg_style"
+		    value      	"NoDefContr"))
+	    quid       	"3FDD8FA5000F"
+	    superclasses 	(list inheritance_relationship_list
+		(object Inheritance_Relationship
+		    quid       	"3FDD8FF803D8"
+		    supplier   	"Logical View::EBHI (Hardware Interface)::CHII2CCommand"
+		    quidu      	"3E22999502B9"))
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    quid       	"3FDDB21200CB"
+		    supplier   	"Logical View::EBI2CEprom (I2C Eprom Device)::XI2CEpromExceptionError"
+		    quidu      	"3EDDB7BB0128")
+		(object Uses_Relationship
+		    quid       	"3FDDB2140109"
+		    supplier   	"Logical View::EBI2CEprom (I2C Eprom Device)::I2CEPROM_IDENTIFIERS"
+		    quidu      	"3EE82C87006D")
+		(object Uses_Relationship
+		    quid       	"3FDDB216029F"
+		    supplier   	"Logical View::EBHI (Hardware Interface)::CHII2CParameter"
+		    quidu      	"3FD9C47E033C")
+		(object Uses_Relationship
+		    quid       	"3FDDB21A032C"
+		    supplier   	"Logical View::EBHIT (Hardware Interface Types)::CHITReservedSharedMemory"
+		    quidu      	"3E54992F0148")
+		(object Uses_Relationship
+		    quid       	"3FDDB21D0186"
+		    supplier   	"Logical View::EBHI (Hardware Interface)::IHIInterface"
+		    quidu      	"3E2271C40106")
+		(object Uses_Relationship
+		    quid       	"3FFE575603B9"
+		    supplier   	"Logical View::EBPI (PC Interface)::CPIComponentsState"
+		    quidu      	"3F4235EA0005"))
+	    operations 	(list Operations
+		(object Operation "CI2CEprom24LC515Command"
+		    quid       	"3FDD8FE4007D"
+		    parameters 	(list Parameters
+			(object Parameter "p_pcI2CStream"
+			    type       	"BYTE*")
+			(object Parameter "p_nLength"
+			    type       	"int")
+			(object Parameter "p_dwI2CBusNumber"
+			    type       	"DWORD")
+			(object Parameter "p_dwI2CTransferSpeed"
+			    type       	"DWORD"))
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1071483522)
+		(object Operation "Execute"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3FDD8FE4008C"
+		    documentation 	
+|DESCRIPTION
+|Executes the current command.
+|
+|PARAMETERS
+|-
+|
+|RETURNS
+|true, if the command is finished and the clients sync object may be signalled
+		    
+		    stereotype 	"virtual"
+		    result     	"bool"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1071483523))
+	    class_attributes 	(list class_attribute_list
+		(object ClassAttribute "dwI2CBusNumber"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateGetOperation"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetIsConst"
+			    value      	TRUE))
+		    quid       	"3FFD6127038A"
+		    type       	"DWORD"
+		    initv      	"p_dwI2CBusNumber")
+		(object ClassAttribute "dwI2CTransferSpeed"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateGetOperation"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetIsConst"
+			    value      	TRUE))
+		    quid       	"3FFD612703A9"
+		    type       	"DWORD"
+		    initv      	"p_dwI2CTransferSpeed"))
+	    module     	"Component View::EBI2CEprom (I2C Eprom Device)::EBI2CEPROMcomd (module body)"
+	    quidu      	"3FDD891F0186"
+	    module     	"Component View::EBI2CEprom (I2C Eprom Device)::EBI2CEPROMcomd (module spec)"
+	    quidu      	"3FDD8925031C"
+	    language   	"C++")
+	(object Class "CI2CEpromSimulation"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"cg_style"
+		    value      	"NoDefContr"))
+	    quid       	"3FFE805A03D8"
+	    operations 	(list Operations
+		(object Operation "CI2CEpromSimulation"
+		    quid       	"3FFE808B03B9"
+		    parameters 	(list Parameters
+			(object Parameter "p_uiID"
+			    type       	"const UINT"))
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1073630608)
+		(object Operation "ByteRead"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"4002BB86007D"
+		    documentation 	
+|DESCRIPTION
+|writes a byte to the specific eprom address
+|
+		    
+		    stereotype 	"virtual"
+		    parameters 	(list Parameters
+			(object Parameter "p_uiAddress"
+			    type       	"WORD")
+			(object Parameter "p_cValue"
+			    type       	"BYTE*"))
+		    result     	"void"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1073920700)
+		(object Operation "BlockRead"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3FFE808B03C8"
+		    documentation 	
+|DESCRIPTION
+|Reads a number of byte from the specific eprom address
+|
+|RETURNS
+|async void
+		    
+		    stereotype 	"virtual"
+		    parameters 	(list Parameters
+			(object Parameter "p_uiAddress"
+			    type       	"WORD")
+			(object Parameter "p_cValue"
+			    type       	"BYTE* &")
+			(object Parameter "p_uiSize"
+			    type       	"UINT"))
+		    result     	"void"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1073630609)
+		(object Operation "ReadContent"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3FFE808C0000"
+		    documentation 	
+|DESCRIPTION
+|Reads the all contents of the eprom
+|
+|RETURNS
+|void
+		    
+		    stereotype 	"virtual"
+		    parameters 	(list Parameters
+			(object Parameter "p_pContent"
+			    type       	"BYTE* &")
+			(object Parameter "p_uiDataSize"
+			    type       	"UINT&"))
+		    result     	"void"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1073630610)
+		(object Operation "ByteWrite"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3FFE808C000F"
+		    documentation 	
+|DESCRIPTION
+|writes a byte to the specific eprom address
+|
+		    
+		    stereotype 	"virtual"
+		    parameters 	(list Parameters
+			(object Parameter "p_uiAddress"
+			    type       	"WORD")
+			(object Parameter "p_cValue"
+			    type       	"BYTE"))
+		    result     	"void"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1073630611)
+		(object Operation "PageWrite"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3FFE808C001F"
+		    documentation 	
+|DESCRIPTION
+|writes a page size (max 64 byte) to the specific eprom address
+|
+		    
+		    stereotype 	"virtual"
+		    parameters 	(list Parameters
+			(object Parameter "p_uiAddress"
+			    type       	"WORD")
+			(object Parameter "p_pcValue"
+			    type       	"BYTE*")
+			(object Parameter "p_uiSize"
+			    type       	"UINT"))
+		    result     	"void"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1073630612)
+		(object Operation "WriteContent"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3FFE808C002E"
+		    documentation 	
+|DESCRIPTION
+|writes the specified contents to the eprom
+|
+|RETURNS
+|void
+		    
+		    stereotype 	"virtual"
+		    parameters 	(list Parameters
+			(object Parameter "p_pContent"
+			    type       	"BYTE* &")
+			(object Parameter "p_uiDataSize"
+			    type       	"UINT"))
+		    result     	"void"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1073630613)
+		(object Operation "OpenFile"
+		    quid       	"3FFE808C003E"
+		    result     	"bool"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Private"
+		    uid        	1073630614)
+		(object Operation "CloseFile"
+		    quid       	"3FFE808C005D"
+		    result     	"void"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Private"
+		    uid        	1073630615))
+	    module     	"Component View::EBI2CEprom (I2C Eprom Device)::EBI2CEPROMintf (module body)"
+	    quidu      	"3EE7379A036B"
+	    module     	"Component View::EBI2CEprom (I2C Eprom Device)::EBI2CEPROMintf (module spec)"
+	    quidu      	"3EE737A6001F"
+	    language   	"C++")
+	(object Association "$UNNAMED$0"
+	    quid       	"3EE86D54032C"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$1"
+		    quid       	"3EE86D550119"
+		    supplier   	"Logical View::EBI2CEprom (I2C Eprom Device)::CI2CEprom24LC515"
+		    quidu      	"3EDD9FC402FD"
+		    client_cardinality 	(value cardinality "1..1")
+		    is_aggregate 	TRUE)
+		(object Role "uiID"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"InitialValue"
+			    value      	(value Text "p_uiID")))
+		    quid       	"3EE86D550128"
+		    label      	"uiID"
+		    supplier   	"Logical View::IMWINS (Microsoft Windows)::UINT"
+		    quidu      	"369DEAA80004"
+		    client_cardinality 	(value cardinality "1..1")
+		    Containment 	"By Value"
+		    is_navigable 	TRUE)))
+	(object Association "$UNNAMED$2"
+	    quid       	"3EE86D9B0128"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$3"
+		    quid       	"3EE86D9B038A"
+		    supplier   	"Logical View::EBI2CEprom (I2C Eprom Device)::CI2CEprom24LC515"
+		    quidu      	"3EDD9FC402FD"
+		    client_cardinality 	(value cardinality "1..1")
+		    is_aggregate 	TRUE)
+		(object Role "hFile"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"InitialValue"
+			    value      	(value Text "NULL")))
+		    quid       	"3EE86D9B038B"
+		    label      	"hFile"
+		    supplier   	"Logical View::IMWINS (Microsoft Windows)::HANDLE"
+		    quidu      	"374B9F76036F"
+		    client_cardinality 	(value cardinality "1..1")
+		    Containment 	"By Value"
+		    is_navigable 	TRUE)))
+	(object Association "$UNNAMED$4"
+	    quid       	"3FDDAECC034B"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$5"
+		    quid       	"3FDDAECD0177"
+		    supplier   	"Logical View::EBI2CEprom (I2C Eprom Device)::CI2CEprom24LC515Command"
+		    quidu      	"3FDD8FA5000F"
+		    client_cardinality 	(value cardinality "1..1")
+		    is_aggregate 	TRUE)
+		(object Role "pI2CDataStream"
+		    quid       	"3FDDAECD0178"
+		    label      	"pI2CDataStream"
+		    supplier   	"Logical View::EBPI (PC Interface)::CPII2CDataStream"
+		    quidu      	"3FD8310603B9"
+		    client_cardinality 	(value cardinality "1..1")
+		    Containment 	"By Reference"
+		    is_navigable 	TRUE)))
+	(object Association "$UNNAMED$6"
+	    quid       	"3FDDB90E005D"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$7"
+		    quid       	"3FDDB90E0290"
+		    supplier   	"Logical View::EBI2CEprom (I2C Eprom Device)::CI2CEpromSimulation"
+		    quidu      	"3FFE805A03D8"
+		    client_cardinality 	(value cardinality "1..1")
+		    is_aggregate 	TRUE)
+		(object Role "bSimulationFilePresent"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"InitialValue"
+			    value      	(value Text "false")))
+		    quid       	"3FDDB90E029F"
+		    label      	"bSimulationFilePresent"
+		    supplier   	"Logical View::IMWINS (Microsoft Windows)::bool"
+		    quidu      	"369DEAA80005"
+		    client_cardinality 	(value cardinality "1..1")
+		    Containment 	"By Value"
+		    is_navigable 	TRUE)))
+	(object Association "$UNNAMED$8"
+	    quid       	"3FFE80E1038A"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$9"
+		    quid       	"3FFE80E30271"
+		    supplier   	"Logical View::EBI2CEprom (I2C Eprom Device)::CI2CEpromSimulation"
+		    quidu      	"3FFE805A03D8"
+		    client_cardinality 	(value cardinality "1..1")
+		    is_aggregate 	TRUE)
+		(object Role "sFileName"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"InitialValue"
+			    value      	(value Text 
+|_T("")
+			    )))
+		    quid       	"3FFE80E30272"
+		    label      	"sFileName"
+		    supplier   	"Logical View::IMMFC6 (Microsoft MFC 6)::CString"
+		    quidu      	"3678C81F0009"
+		    client_cardinality 	(value cardinality "1..1")
+		    Containment 	"By Value"
+		    is_navigable 	TRUE)))
+	(object Association "$UNNAMED$10"
+	    quid       	"3FFE81100109"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$11"
+		    quid       	"3FFE8110037A"
+		    supplier   	"Logical View::EBI2CEprom (I2C Eprom Device)::CI2CEpromSimulation"
+		    quidu      	"3FFE805A03D8"
+		    client_cardinality 	(value cardinality "1..1")
+		    is_aggregate 	TRUE)
+		(object Role "File"
+		    quid       	"3FFE8110038A"
+		    label      	"File"
+		    supplier   	"Logical View::IMMFC6 (Microsoft MFC 6)::CFile"
+		    quidu      	"3678C84401C2"
+		    client_cardinality 	(value cardinality "1..1")
+		    Containment 	"By Value"
+		    is_navigable 	TRUE)))
+	(object Association "$UNNAMED$12"
+	    quid       	"3FFE813900FA"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$13"
+		    quid       	"3FFE813902DE"
+		    supplier   	"Logical View::EBI2CEprom (I2C Eprom Device)::CI2CEprom24LC515"
+		    quidu      	"3EDD9FC402FD"
+		    client_cardinality 	(value cardinality "1..1")
+		    is_aggregate 	TRUE)
+		(object Role "pEpromSimulation"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"InitialValue"
+			    value      	(value Text "NULL")))
+		    quid       	"3FFE813902DF"
+		    label      	"pEpromSimulation"
+		    supplier   	"Logical View::EBI2CEprom (I2C Eprom Device)::CI2CEpromSimulation"
+		    quidu      	"3FFE805A03D8"
+		    client_cardinality 	(value cardinality "1..1")
+		    Containment 	"By Reference"
+		    is_navigable 	TRUE)))
+	(object Association "$UNNAMED$14"
+	    quid       	"4002BA9B0138"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$15"
+		    quid       	"4002BA9B032C"
+		    supplier   	"Logical View::EBI2CEprom (I2C Eprom Device)::CI2CEprom24LC515"
+		    quidu      	"3EDD9FC402FD"
+		    client_cardinality 	(value cardinality "1..1")
+		    is_aggregate 	TRUE)
+		(object Role "bHWPresent"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"InitialValue"
+			    value      	(value Text "false")))
+		    quid       	"4002BA9B033C"
+		    label      	"bHWPresent"
+		    supplier   	"Logical View::IMWINS (Microsoft Windows)::bool"
+		    quidu      	"369DEAA80005"
+		    client_cardinality 	(value cardinality "1..1")
+		    Containment 	"By Value"
+		    is_navigable 	TRUE))))
+    logical_presentations 	(list unit_reference_list
+	(object ClassDiagram "0.0 Globals"
+	    quid       	"3EE82C7601A5"
+	    title      	"0.0 Globals"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object ClassView "ClassUtility" "Logical View::EBI2CEprom (I2C Eprom Device)::I2CEPROM_IDENTIFIERS" @1
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(465, 649)
+		    label      	(object ItemLabel
+			Parent_View 	@1
+			location   	(212, 598)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	506
+			justify    	0
+			label      	"I2CEPROM_IDENTIFIERS")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EE82C87006D"
+		    width      	524
+		    height     	126
+		    autoResize 	TRUE)
+		(object ClassView "ClassUtility" "Logical View::EBI2CEprom (I2C Eprom Device)::I2CEPROM_MAIN" @2
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1199, 603)
+		    label      	(object ItemLabel
+			Parent_View 	@2
+			location   	(1020, 552)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	358
+			justify    	0
+			label      	"I2CEPROM_MAIN")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3FDD86A701A5"
+		    width      	376
+		    height     	126
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBI2CEprom (I2C Eprom Device)::CI2CEpromInterfaceRegistry" @3
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1328, 1056)
+		    label      	(object ItemLabel
+			Parent_View 	@3
+			location   	(1060, 1005)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	536
+			justify    	0
+			label      	"CI2CEpromInterfaceRegistry")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3FDD8A11038A"
+		    width      	554
+		    height     	126
+		    autoResize 	TRUE)
+		(object UsesView "" @4
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3FDD8A690213"
+		    client     	@2
+		    supplier   	@3
+		    line_style 	0)))
+	(object ClassDiagram "1.0 Sync Interface"
+	    quid       	"3EE82F2601C5"
+	    title      	"1.0 Sync Interface"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object ClassView "Class" "Logical View::EBPI (PC Interface)::IPII2CEprom24LC515" @5
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1206, 292)
+		    label      	(object ItemLabel
+			Parent_View 	@5
+			location   	(997, 241)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	418
+			justify    	0
+			label      	"IPII2CEprom24LC515")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EDC3C5901B5"
+		    width      	436
+		    height     	126
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::IMWINS (Microsoft Windows)::UINT" @6
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1337, 1851)
+		    label      	(object ItemLabel
+			Parent_View 	@6
+			location   	(1256, 1800)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	162
+			justify    	0
+			label      	"UINT")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"369DEAA80004"
+		    height     	126
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::IMWINS (Microsoft Windows)::HANDLE" @7
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(854, 1773)
+		    label      	(object ItemLabel
+			Parent_View 	@7
+			location   	(758, 1722)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	192
+			justify    	0
+			label      	"HANDLE")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"374B9F76036F"
+		    width      	210
+		    height     	126
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::IMWINS (Microsoft Windows)::bool" @8
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(2324, 1256)
+		    label      	(object ItemLabel
+			Parent_View 	@8
+			location   	(2243, 1205)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	162
+			justify    	0
+			label      	"bool")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"369DEAA80005"
+		    height     	126
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::IMMFC6 (Microsoft MFC 6)::CString" @9
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1178, 2425)
+		    label      	(object ItemLabel
+			Parent_View 	@9
+			location   	(1091, 2374)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	174
+			justify    	0
+			label      	"CString")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3678C81F0009"
+		    width      	192
+		    height     	126
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::IMMFC6 (Microsoft MFC 6)::CFile" @10
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1143, 2178)
+		    label      	(object ItemLabel
+			Parent_View 	@10
+			location   	(1062, 2127)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	162
+			justify    	0
+			label      	"CFile")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3678C84401C2"
+		    height     	126
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBI2CEprom (I2C Eprom Device)::CI2CEprom24LC515" @11
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(1207, 1020)
+		    label      	(object ItemLabel
+			Parent_View 	@11
+			location   	(745, 589)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	924
+			justify    	0
+			label      	"CI2CEprom24LC515")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EDD9FC402FD"
+		    compartment 	(object Compartment
+			Parent_View 	@11
+			location   	(745, 649)
+			icon_style 	"Icon"
+			fill_color 	16777215
+			anchor     	2
+			nlines     	16
+			max_width  	921)
+		    width      	942
+		    height     	886
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object InheritView "" @12
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3EDD9FDA00CB"
+		    client     	@11
+		    supplier   	@5
+		    line_style 	0)
+		(object AssociationViewNew "$UNNAMED$0" @13
+		    location   	(1301, 1625)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3EE86D54032C"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$1" @14
+			    Parent_View 	@13
+			    location   	(-36, -226)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3EE86D550119"
+			    client     	@13
+			    supplier   	@11
+			    line_style 	0
+			    label      	(object SegLabel @15
+				Parent_View 	@14
+				location   	(1332, 1473)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	1))
+			(object RoleView "uiID" @16
+			    Parent_View 	@13
+			    location   	(-36, -226)
+			    label      	(object SegLabel @17
+				Parent_View 	@16
+				location   	(1301, 1651)
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	96
+				justify    	0
+				label      	"+uiID"
+				pctDist    	0.155419
+				height     	5
+				orientation 	1)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3EE86D550128"
+			    client     	@13
+			    supplier   	@6
+			    line_style 	0
+			    label      	(object SegLabel @18
+				Parent_View 	@16
+				location   	(1376, 1763)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	0))))
+		(object AssociationViewNew "$UNNAMED$2" @19
+		    location   	(940, 1586)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3EE86D9B0128"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$3" @20
+			    Parent_View 	@19
+			    location   	(86, -187)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3EE86D9B038A"
+			    client     	@19
+			    supplier   	@11
+			    line_style 	0
+			    label      	(object SegLabel @21
+				Parent_View 	@20
+				location   	(1045, 1493)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.943174
+				height     	55
+				orientation 	1))
+			(object RoleView "hFile" @22
+			    Parent_View 	@19
+			    location   	(86, -187)
+			    label      	(object SegLabel @23
+				Parent_View 	@22
+				location   	(925, 1590)
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	120
+				justify    	0
+				label      	"+hFile"
+				pctDist    	0.072430
+				height     	13
+				orientation 	1)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3EE86D9B038B"
+			    client     	@19
+			    supplier   	@7
+			    line_style 	0
+			    label      	(object SegLabel @24
+				Parent_View 	@22
+				location   	(949, 1680)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.603202
+				height     	49
+				orientation 	0))))
+		(object AssociationViewNew "$UNNAMED$14" @25
+		    location   	(1955, 1177)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"4002BA9B0138"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$15" @26
+			    Parent_View 	@25
+			    location   	(-369, -79)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"4002BA9B032C"
+			    client     	@25
+			    supplier   	@11
+			    line_style 	0
+			    label      	(object SegLabel @27
+				Parent_View 	@26
+				location   	(1696, 1178)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	0))
+			(object RoleView "bHWPresent" @28
+			    Parent_View 	@25
+			    location   	(-369, -79)
+			    label      	(object SegLabel @29
+				Parent_View 	@28
+				location   	(1984, 1173)
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	360
+				justify    	0
+				label      	"+bHWPresent"
+				pctDist    	0.103379
+				height     	11
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"4002BA9B033C"
+			    client     	@25
+			    supplier   	@8
+			    line_style 	0
+			    label      	(object SegLabel @30
+				Parent_View 	@28
+				location   	(2194, 1283)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	1))))
+		(object ClassView "Class" "Logical View::EBI2CEprom (I2C Eprom Device)::CI2CEpromSimulation" @31
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(2124, 2293)
+		    label      	(object ItemLabel
+			Parent_View 	@31
+			location   	(1859, 2012)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	530
+			justify    	0
+			label      	"CI2CEpromSimulation")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3FFE805A03D8"
+		    compartment 	(object Compartment
+			Parent_View 	@31
+			location   	(1859, 2072)
+			icon_style 	"Icon"
+			fill_color 	16777215
+			anchor     	2
+			nlines     	10
+			max_width  	537)
+		    width      	548
+		    height     	586
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object AssociationViewNew "$UNNAMED$8" @32
+		    location   	(1561, 2370)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3FFE80E1038A"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$9" @33
+			    Parent_View 	@32
+			    location   	(383, -55)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3FFE80E30271"
+			    client     	@32
+			    supplier   	@31
+			    line_style 	0
+			    label      	(object SegLabel @34
+				Parent_View 	@33
+				location   	(1828, 2386)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	1))
+			(object RoleView "sFileName" @35
+			    Parent_View 	@32
+			    location   	(383, -55)
+			    label      	(object SegLabel @36
+				Parent_View 	@35
+				location   	(1555, 2375)
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	216
+				justify    	0
+				label      	"+sFileName"
+				pctDist    	0.026307
+				height     	4
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3FFE80E30272"
+			    client     	@32
+			    supplier   	@9
+			    line_style 	0
+			    label      	(object SegLabel @37
+				Parent_View 	@35
+				location   	(1310, 2459)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	0))))
+		(object AssociationViewNew "$UNNAMED$10" @38
+		    location   	(1541, 2223)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3FFE81100109"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$11" @39
+			    Parent_View 	@38
+			    location   	(398, 45)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3FFE8110037A"
+			    client     	@38
+			    supplier   	@31
+			    line_style 	0
+			    label      	(object SegLabel @40
+				Parent_View 	@39
+				location   	(1812, 2309)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	1))
+			(object RoleView "File" @41
+			    Parent_View 	@38
+			    location   	(398, 45)
+			    label      	(object SegLabel @42
+				Parent_View 	@41
+				location   	(1448, 2188)
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	96
+				justify    	0
+				label      	"+File"
+				pctDist    	0.314559
+				height     	25
+				orientation 	1)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3FFE8110038A"
+			    client     	@38
+			    supplier   	@10
+			    line_style 	0
+			    label      	(object SegLabel @43
+				Parent_View 	@41
+				location   	(1260, 2245)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	0))))
+		(object AssociationViewNew "$UNNAMED$12" @44
+		    location   	(1718, 1731)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3FFE813900FA"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$13" @45
+			    Parent_View 	@44
+			    location   	(-406, -562)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3FFE813902DE"
+			    client     	@44
+			    supplier   	@11
+			    line_style 	0
+			    label      	(object SegLabel @46
+				Parent_View 	@45
+				location   	(1589, 1460)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	1))
+			(object RoleView "pEpromSimulation" @47
+			    Parent_View 	@44
+			    location   	(-406, -562)
+			    label      	(object SegLabel @48
+				Parent_View 	@47
+				location   	(1804, 1796)
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	360
+				justify    	0
+				label      	"+pEpromSimulation"
+				pctDist    	0.310716
+				height     	32
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3FFE813902DF"
+			    client     	@44
+			    supplier   	@31
+			    line_style 	0
+			    label      	(object SegLabel @49
+				Parent_View 	@47
+				location   	(1936, 1941)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	0))))
+		(object ClassView "Class" "Logical View::IMWINS (Microsoft Windows)::bool" @50
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(2837, 2537)
+		    label      	(object ItemLabel
+			Parent_View 	@50
+			location   	(2756, 2486)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	162
+			justify    	0
+			label      	"bool")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"369DEAA80005"
+		    height     	126
+		    autoResize 	TRUE)
+		(object AssociationViewNew "$UNNAMED$6" @51
+		    location   	(2572, 2445)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3FDDB90E005D"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$7" @52
+			    Parent_View 	@51
+			    location   	(267, 1496)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3FDDB90E0290"
+			    client     	@51
+			    supplier   	@31
+			    line_style 	0
+			    label      	(object SegLabel @53
+				Parent_View 	@52
+				location   	(2444, 2457)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.648247
+				height     	53
+				orientation 	0))
+			(object RoleView "bSimulationFilePresent" @54
+			    Parent_View 	@51
+			    location   	(267, 1496)
+			    label      	(object SegLabel @55
+				Parent_View 	@54
+				location   	(2641, 2446)
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	444
+				justify    	0
+				label      	"+bSimulationFilePresent"
+				pctDist    	0.357775
+				height     	23
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3FDDB90E029F"
+			    client     	@51
+			    supplier   	@50
+			    line_style 	0
+			    label      	(object SegLabel @56
+				Parent_View 	@54
+				location   	(2712, 2550)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	1))))))
+	(object ClassDiagram "1.1 Sync Interface Uses"
+	    quid       	"3EE82F33030D"
+	    title      	"1.1 Sync Interface Uses"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object ClassView "Class" "Logical View::EBI2CEprom (I2C Eprom Device)::CI2CEprom24LC515" @57
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1059, 1112)
+		    label      	(object ItemLabel
+			Parent_View 	@57
+			location   	(858, 1061)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	402
+			justify    	0
+			label      	"CI2CEprom24LC515")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EDD9FC402FD"
+		    width      	420
+		    height     	126
+		    autoResize 	TRUE)
+		(object ClassView "ClassUtility" "Logical View::EBI2CEprom (I2C Eprom Device)::I2CEPROM_IDENTIFIERS" @58
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(2261, 587)
+		    label      	(object ItemLabel
+			Parent_View 	@58
+			location   	(2008, 536)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	506
+			justify    	0
+			label      	"I2CEPROM_IDENTIFIERS")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EE82C87006D"
+		    width      	524
+		    height     	126
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBI2CSTDLIB (I2C Standard Library)::CI2CSTDLIBConvert" @59
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1275, 2109)
+		    label      	(object ItemLabel
+			Parent_View 	@59
+			location   	(1081, 2058)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	388
+			justify    	0
+			label      	"CI2CSTDLIBConvert")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EE5975C0138"
+		    width      	406
+		    height     	126
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBI2CEprom (I2C Eprom Device)::XI2CEpromExceptionError" @60
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(2319, 1406)
+		    label      	(object ItemLabel
+			Parent_View 	@60
+			location   	(2070, 1355)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	498
+			justify    	0
+			label      	"XI2CEpromExceptionError")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EDDB7BB0128"
+		    width      	516
+		    height     	126
+		    autoResize 	TRUE)
+		(object UsesView "" @61
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3EE830B202BF"
+		    client     	@57
+		    supplier   	@58
+		    line_style 	0)
+		(object UsesView "" @62
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3EE830B50242"
+		    client     	@57
+		    supplier   	@60
+		    line_style 	0)
+		(object UsesView "" @63
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3EE830B703C8"
+		    client     	@57
+		    supplier   	@59
+		    line_style 	0)
+		(object ClassView "Class" "Logical View::EBI2CSTDLIB (I2C Standard Library)::CI2CSTDLIBCmd" @64
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(650, 1968)
+		    label      	(object ItemLabel
+			Parent_View 	@64
+			location   	(479, 1917)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	342
+			justify    	0
+			label      	"CI2CSTDLIBCmd")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EE891A00157"
+		    width      	360
+		    height     	126
+		    autoResize 	TRUE)
+		(object UsesView "" @65
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3EFBFB54002E"
+		    client     	@57
+		    supplier   	@64
+		    line_style 	0)
+		(object ClassView "Class" "Logical View::EBCO (Core Classes)::CCOSyncObject" @66
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1846, 234)
+		    label      	(object ItemLabel
+			Parent_View 	@66
+			location   	(1679, 183)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	334
+			justify    	0
+			label      	"CCOSyncObject")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3B8D554D00B2"
+		    width      	352
+		    height     	126
+		    autoResize 	TRUE)
+		(object UsesView "" @67
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3EFC0F170119"
+		    client     	@57
+		    supplier   	@66
+		    line_style 	0)
+		(object ClassView "Class" "Logical View::EBHI (Hardware Interface)::CHIProcessImageParameter" @68
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(2460, 899)
+		    label      	(object ItemLabel
+			Parent_View 	@68
+			location   	(2186, 848)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	548
+			justify    	0
+			label      	"CHIProcessImageParameter")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EBA10D00128"
+		    width      	566
+		    height     	126
+		    autoResize 	TRUE)
+		(object UsesView "" @69
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3F5D710C0148"
+		    client     	@57
+		    supplier   	@68
+		    line_style 	0)
+		(object ClassView "Class" "Logical View::EBPI (PC Interface)::CPIComponentsState" @70
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(290, 1574)
+		    label      	(object ItemLabel
+			Parent_View 	@70
+			location   	(81, 1523)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	418
+			justify    	0
+			label      	"CPIComponentsState")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F4235EA0005"
+		    width      	436
+		    height     	126
+		    autoResize 	TRUE)
+		(object UsesView "" @71
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3FDDB7F5004E"
+		    client     	@57
+		    supplier   	@70
+		    line_style 	0)
+		(object ClassView "InstantiatedClass" "Logical View::EBPI (PC Interface)::CPISyncObjI2CDataStream" @72
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1969, 2137)
+		    label      	(object ItemLabel
+			Parent_View 	@72
+			location   	(1705, 2086)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	528
+			justify    	0
+			label      	"CPISyncObjI2CDataStream")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3FD82B6701B5"
+		    width      	546
+		    height     	126
+		    autoResize 	TRUE)
+		(object UsesView "" @73
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3FDDB80903A9"
+		    client     	@57
+		    supplier   	@72
+		    line_style 	0)
+		(object ClassView "Class" "Logical View::EBI2CEprom (I2C Eprom Device)::CI2CEprom24LC515Command" @74
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(2277, 1712)
+		    label      	(object ItemLabel
+			Parent_View 	@74
+			location   	(1985, 1661)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	584
+			justify    	0
+			label      	"CI2CEprom24LC515Command")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3FDD8FA5000F"
+		    width      	602
+		    height     	126
+		    autoResize 	TRUE)
+		(object UsesView "" @75
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3FDDB81A0399"
+		    client     	@57
+		    supplier   	@74
+		    line_style 	0)
+		(object ClassView "Class" "Logical View::EBHI (Hardware Interface)::CHII2CWorkerThread" @76
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(2521, 1140)
+		    label      	(object ItemLabel
+			Parent_View 	@76
+			location   	(2318, 1089)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	406
+			justify    	0
+			label      	"CHII2CWorkerThread")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E227BB3027B"
+		    width      	424
+		    height     	126
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBHI (Hardware Interface)::IHIInterface" @77
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1406, 240)
+		    label      	(object ItemLabel
+			Parent_View 	@77
+			location   	(1288, 189)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	236
+			justify    	0
+			label      	"IHIInterface")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E2271C40106"
+		    width      	254
+		    height     	126
+		    autoResize 	TRUE)
+		(object UsesView "" @78
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3FDDB836035B"
+		    client     	@57
+		    supplier   	@77
+		    line_style 	0)
+		(object UsesView "" @79
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3FDDB83E036B"
+		    client     	@57
+		    supplier   	@76
+		    line_style 	0)))
+	(object ClassDiagram "5.0 Exceptions"
+	    quid       	"3EE82F41000F"
+	    title      	"5.0 Exceptions"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object ClassView "Class" "Logical View::EBCO (Core Classes)::XCOExceptionError" @80
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1097, 390)
+		    label      	(object ItemLabel
+			Parent_View 	@80
+			location   	(905, 339)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	384
+			justify    	0
+			label      	"XCOExceptionError")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3BA649E20099"
+		    width      	402
+		    height     	126
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBI2CEprom (I2C Eprom Device)::XI2CEpromExceptionError" @81
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(964, 1131)
+		    label      	(object ItemLabel
+			Parent_View 	@81
+			location   	(715, 975)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	498
+			justify    	0
+			label      	"XI2CEpromExceptionError")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EDDB7BB0128"
+		    width      	516
+		    height     	336
+		    autoResize 	TRUE)
+		(object InheritView "" @82
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3EDDB7C800FA"
+		    client     	@81
+		    supplier   	@80
+		    line_style 	0)))
+	(object ClassDiagram "0.1 Creators / Registry"
+	    quid       	"3FDD8B500251"
+	    title      	"0.1 Creators / Registry"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object ClassView "InstantiatedClass" "Logical View::EBPI (PC Interface)::CPIObjCreatorI2CEprom24LC515" @83
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(703, 346)
+		    label      	(object ItemLabel
+			Parent_View 	@83
+			location   	(391, 271)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	624
+			justify    	0
+			label      	"CPIObjCreatorI2CEprom24LC515")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EE6CF8602C7"
+		    width      	642
+		    height     	174
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBI2CEprom (I2C Eprom Device)::CI2CEprom24LC515CreatorV0s" @84
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(709, 981)
+		    label      	(object ItemLabel
+			Parent_View 	@84
+			location   	(408, 900)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	602
+			justify    	0
+			label      	"CI2CEprom24LC515CreatorV0s")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3FDD8BA2002E"
+		    width      	620
+		    height     	186
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object InheritView "" @85
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3FDD8BC3038A"
+		    client     	@84
+		    supplier   	@83
+		    line_style 	0)
+		(object ClassView "Class" "Logical View::EBI2CEprom (I2C Eprom Device)::CI2CEpromInterfaceRegistry" @86
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1885, 537)
+		    label      	(object ItemLabel
+			Parent_View 	@86
+			location   	(1617, 486)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	536
+			justify    	0
+			label      	"CI2CEpromInterfaceRegistry")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3FDD8A11038A"
+		    width      	554
+		    height     	126
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBI2CEprom (I2C Eprom Device)::CI2CEprom24LC515" @87
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1691, 1015)
+		    label      	(object ItemLabel
+			Parent_View 	@87
+			location   	(1492, 964)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	398
+			justify    	0
+			label      	"CI2CEprom24LC515")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EDD9FC402FD"
+		    width      	416
+		    height     	126
+		    autoResize 	TRUE)
+		(object UsesView "" @88
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3FDD8C8003D8"
+		    client     	@84
+		    supplier   	@87
+		    line_style 	0)
+		(object UsesView "" @89
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3FDD8C870261"
+		    client     	@86
+		    supplier   	@84
+		    line_style 	0)
+		(object ClassView "Class" "Logical View::EBPI (PC Interface)::CPIObjectFactory" @90
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1855, 228)
+		    label      	(object ItemLabel
+			Parent_View 	@90
+			location   	(1677, 177)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	356
+			justify    	0
+			label      	"CPIObjectFactory")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3DA52FD80189"
+		    width      	374
+		    height     	126
+		    autoResize 	TRUE)
+		(object UsesView "" @91
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3FDD8DEC031C"
+		    client     	@86
+		    supplier   	@90
+		    line_style 	0)))
+	(object ClassDiagram "2.0 Async  I2C Commands"
+	    quid       	"3FDD8F1900BB"
+	    title      	"2.0 Async  I2C Commands"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object ClassView "Class" "Logical View::EBHI (Hardware Interface)::CHII2CCommand" @92
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(801, 528)
+		    label      	(object ItemLabel
+			Parent_View 	@92
+			location   	(630, 477)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	342
+			justify    	0
+			label      	"CHII2CCommand")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E22999502B9"
+		    width      	360
+		    height     	126
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBI2CEprom (I2C Eprom Device)::CI2CEprom24LC515Command" @93
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(809, 1025)
+		    label      	(object ItemLabel
+			Parent_View 	@93
+			location   	(495, 919)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	628
+			justify    	0
+			label      	"CI2CEprom24LC515Command")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3FDD8FA5000F"
+		    width      	646
+		    height     	236
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object InheritView "" @94
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3FDD8FF803D8"
+		    client     	@93
+		    supplier   	@92
+		    line_style 	0)
+		(object ClassView "Class" "Logical View::EBPI (PC Interface)::CPII2CDataStream" @95
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1196, 1602)
+		    label      	(object ItemLabel
+			Parent_View 	@95
+			location   	(1007, 1551)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	378
+			justify    	0
+			label      	"CPII2CDataStream")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3FD8310603B9"
+		    width      	396
+		    height     	126
+		    autoResize 	TRUE)
+		(object AssociationViewNew "$UNNAMED$4" @96
+		    location   	(1020, 1340)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3FDDAECC034B"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$5" @97
+			    Parent_View 	@96
+			    location   	(-176, -262)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3FDDAECD0177"
+			    client     	@96
+			    supplier   	@93
+			    line_style 	0
+			    label      	(object SegLabel @98
+				Parent_View 	@97
+				location   	(982, 1176)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.664785
+				height     	60
+				orientation 	1))
+			(object RoleView "pI2CDataStream" @99
+			    Parent_View 	@96
+			    location   	(-176, -262)
+			    label      	(object SegLabel @100
+				Parent_View 	@99
+				location   	(1011, 1288)
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	324
+				justify    	0
+				label      	"+pI2CDataStream"
+				pctDist    	-0.205491
+				height     	22
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3FDDAECD0178"
+			    client     	@96
+			    supplier   	@95
+			    line_style 	0
+			    label      	(object SegLabel @101
+				Parent_View 	@99
+				location   	(1136, 1436)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.598316
+				height     	43
+				orientation 	0))))))
+	(object ClassDiagram "2.1 Async  I2C Commands Uses"
+	    quid       	"3FDD8F260213"
+	    title      	"2.1 Async  I2C Commands Uses"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object ClassView "Class" "Logical View::EBI2CEprom (I2C Eprom Device)::CI2CEprom24LC515Command" @102
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(719, 922)
+		    label      	(object ItemLabel
+			Parent_View 	@102
+			location   	(427, 871)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	584
+			justify    	0
+			label      	"CI2CEprom24LC515Command")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3FDD8FA5000F"
+		    width      	602
+		    height     	126
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBI2CEprom (I2C Eprom Device)::XI2CEpromExceptionError" @103
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1513, 449)
+		    label      	(object ItemLabel
+			Parent_View 	@103
+			location   	(1264, 398)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	498
+			justify    	0
+			label      	"XI2CEpromExceptionError")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EDDB7BB0128"
+		    width      	516
+		    height     	126
+		    autoResize 	TRUE)
+		(object ClassView "ClassUtility" "Logical View::EBI2CEprom (I2C Eprom Device)::I2CEPROM_IDENTIFIERS" @104
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1796, 793)
+		    label      	(object ItemLabel
+			Parent_View 	@104
+			location   	(1543, 742)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	506
+			justify    	0
+			label      	"I2CEPROM_IDENTIFIERS")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EE82C87006D"
+		    width      	524
+		    height     	126
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBHIT (Hardware Interface Types)::CHITReservedSharedMemory" @105
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1880, 1518)
+		    label      	(object ItemLabel
+			Parent_View 	@105
+			location   	(1601, 1467)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	558
+			justify    	0
+			label      	"CHITReservedSharedMemory")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E54992F0148"
+		    width      	576
+		    height     	126
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBHI (Hardware Interface)::CHII2CParameter" @106
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1977, 1112)
+		    label      	(object ItemLabel
+			Parent_View 	@106
+			location   	(1805, 1061)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	344
+			justify    	0
+			label      	"CHII2CParameter")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3FD9C47E033C"
+		    width      	362
+		    height     	126
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBHI (Hardware Interface)::IHIInterface" @107
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1310, 1652)
+		    label      	(object ItemLabel
+			Parent_View 	@107
+			location   	(1192, 1601)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	236
+			justify    	0
+			label      	"IHIInterface")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E2271C40106"
+		    width      	254
+		    height     	126
+		    autoResize 	TRUE)
+		(object UsesView "" @108
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3FDDB21200CB"
+		    client     	@102
+		    supplier   	@103
+		    line_style 	0)
+		(object UsesView "" @109
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3FDDB2140109"
+		    client     	@102
+		    supplier   	@104
+		    line_style 	0)
+		(object UsesView "" @110
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3FDDB216029F"
+		    client     	@102
+		    supplier   	@106
+		    line_style 	0)
+		(object UsesView "" @111
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3FDDB21A032C"
+		    client     	@102
+		    supplier   	@105
+		    line_style 	0)
+		(object UsesView "" @112
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3FDDB21D0186"
+		    client     	@102
+		    supplier   	@107
+		    line_style 	0)
+		(object ClassView "Class" "Logical View::EBPI (PC Interface)::CPIComponentsState" @113
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(506, 1744)
+		    label      	(object ItemLabel
+			Parent_View 	@113
+			location   	(297, 1693)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	418
+			justify    	0
+			label      	"CPIComponentsState")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F4235EA0005"
+		    width      	436
+		    height     	126
+		    autoResize 	TRUE)
+		(object UsesView "" @114
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3FFE575603B9"
+		    client     	@102
+		    supplier   	@113
+		    line_style 	0)))))

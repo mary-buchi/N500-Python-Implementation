@@ -1,0 +1,2048 @@
+
+(object Petal
+    version    	42
+    _written   	"Rose 4.5.8163.3"
+    charSet    	0)
+
+(object Class_Category "EBI2CTemp (I2C Temperature Device)"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    quid       	"3EE73654004E"
+    exportControl 	"Public"
+    subsystem  	"EBI2CTemp (I2C Temperature Device)"
+    quidu      	"3EE7361D0232"
+    logical_models 	(list unit_reference_list
+	(object Class "CI2CTempSensorDS1631Z"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"cg_style"
+		    value      	"NoDefContr")
+		(object Attribute
+		    tool       	"MSVC"
+		    name       	"DeclSpec"
+		    value      	"EBI2CTEMP_DLL_DECL"))
+	    quid       	"3EDD8EC503D8"
+	    superclasses 	(list inheritance_relationship_list
+		(object Inheritance_Relationship
+		    quid       	"3EDD8EDA0280"
+		    supplier   	"Logical View::EBPI (PC Interface)::IPII2CTempSensorDS1631Z"
+		    quidu      	"3EDC3DC60261"))
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    quid       	"3EE818FF037A"
+		    supplier   	"Logical View::EBI2CTemp (I2C Temperature Device)::I2CTEMP_IDENTIFIERS"
+		    quidu      	"3EE8172C03A9")
+		(object Uses_Relationship
+		    quid       	"3EE8226F0177"
+		    supplier   	"Logical View::EBI2CSTDLIB (I2C Standard Library)::CI2CSTDLIBConvert"
+		    quidu      	"3EE5975C0138")
+		(object Uses_Relationship
+		    quid       	"3EE8803402CE"
+		    supplier   	"Logical View::EBI2CTemp (I2C Temperature Device)::XI2CTempExceptionError"
+		    quidu      	"3EE876FF0222")
+		(object Uses_Relationship
+		    quid       	"3EE893C00271"
+		    supplier   	"Logical View::EBI2CSTDLIB (I2C Standard Library)::CI2CSTDLIBCmd"
+		    quidu      	"3EE891A00157")
+		(object Uses_Relationship
+		    quid       	"3F5C688203D8"
+		    supplier   	"Logical View::EBHI (Hardware Interface)::CHIProcessImageParameter"
+		    quidu      	"3EBA10D00128")
+		(object Uses_Relationship
+		    quid       	"3F5DC74B0232"
+		    supplier   	"Logical View::EBHI (Hardware Interface)::IHIInterface"
+		    quidu      	"3E2271C40106")
+		(object Uses_Relationship
+		    quid       	"3FD8217B032C"
+		    supplier   	"Logical View::EBHI (Hardware Interface)::CHII2CWorkerThread"
+		    quidu      	"3E227BB3027B")
+		(object Uses_Relationship
+		    quid       	"3FD8239B005D"
+		    supplier   	"Logical View::EBI2CTemp (I2C Temperature Device)::CI2CTempSensor1631ZCommand"
+		    quidu      	"3FD73DCC00BB")
+		(object Uses_Relationship
+		    quid       	"3FD832D202EE"
+		    supplier   	"Logical View::EBPI (PC Interface)::CPISyncObjI2CDataStream"
+		    quidu      	"3FD82B6701B5")
+		(object Uses_Relationship
+		    quid       	"3FDDB7EB0128"
+		    supplier   	"Logical View::EBPI (PC Interface)::CPIComponentsState"
+		    quidu      	"3F4235EA0005"))
+	    operations 	(list Operations
+		(object Operation "CI2CTempSensorDS1631Z"
+		    quid       	"3EDD8FBC038A"
+		    parameters 	(list Parameters
+			(object Parameter "p_uiID"
+			    type       	"UINT"))
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1054707797)
+		(object Operation "Startup"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3EDDA538033C"
+		    documentation 	
+|DESCRIPTION
+|Links the object to the hardware
+|
+|RETURNS
+|async void
+		    
+		    stereotype 	"virtual"
+		    result     	"CCOSyncObject*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1054707808)
+		(object Operation "Shutdown"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3EDDA538035B"
+		    documentation 	
+|DESCRIPTION
+|Detaches the object from the hardware
+|
+|RETURNS
+|async void
+		    
+		    stereotype 	"virtual"
+		    result     	"CCOSyncObject*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1054707809)
+		(object Operation "GetuiID"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3EDEE2A20109"
+		    stereotype 	"virtual"
+		    result     	"UINT"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1054794434)
+		(object Operation "SetSensorConfig"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3EDD8F8E0167"
+		    documentation 	
+|DESCRIPTION
+|sets the appropriate temperature sensor configuration
+|
+|RETURNS
+|async void
+		    
+		    stereotype 	"virtual"
+		    parameters 	(list Parameters
+			(object Parameter "p_pConfig"
+			    type       	"CPIConfigDS1631Z*"))
+		    result     	"CCOSyncObject*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1054707798)
+		(object Operation "GetSensorConfig"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3EDD8F8E0177"
+		    documentation 	
+|DESCRIPTION
+|gets the appropriate temperature sensor configuration
+|
+|RETURNS
+|async int
+		    
+		    stereotype 	"virtual"
+		    result     	"CCOSyncObjectInt*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1054707799)
+		(object Operation "GetTemperature"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3EDD8F8E0186"
+		    documentation 	
+|DESCRIPTION
+|gets the actual temperature
+|
+|RETURNS
+|async int
+		    
+		    stereotype 	"virtual"
+		    result     	"CCOSyncObjectInt*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1054707800)
+		(object Operation "ConnectionEstablished"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3EF861E9031C"
+		    documentation 	
+|DESCRIPTION
+|The connection to the PC has been established
+|
+|RETURNS
+|async void
+		    
+		    stereotype 	"virtual"
+		    result     	"CCOSyncObject*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1056459658)
+		(object Operation "ConnectionLost"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3EF861E9033C"
+		    documentation 	
+|DESCRIPTION
+|The connection to the PC has been lost
+|
+|RETURNS
+|async void
+		    
+		    stereotype 	"virtual"
+		    result     	"CCOSyncObject*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1056459659)
+		(object Operation "StartTemperatureConvertion"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3EF9367000FA"
+		    documentation 	
+|DESCRIPTION
+|starts the temperature convertion
+|
+|RETURNS
+|async void
+		    
+		    stereotype 	"virtual"
+		    result     	"CCOSyncObject*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Private"
+		    uid        	1056519544)
+		(object Operation "StopTemperatureConvertion"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3EF95E750399"
+		    documentation 	
+|DESCRIPTION
+|stops the temperature convertion
+|
+|RETURNS
+|async void
+		    
+		    stereotype 	"virtual"
+		    result     	"CCOSyncObject*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Private"
+		    uid        	1056519545))
+	    class_attributes 	(list class_attribute_list
+		(object ClassAttribute "cStartConvertT"
+		    quid       	"3EDDEBF202BF"
+		    type       	"BYTE"
+		    initv      	"0x51")
+		(object ClassAttribute "cStopConvertT"
+		    quid       	"3EDDEC4101F4"
+		    type       	"BYTE"
+		    initv      	"0x22")
+		(object ClassAttribute "cReadTemperature"
+		    quid       	"3EDDEC53034B"
+		    type       	"BYTE"
+		    initv      	"0xAA")
+		(object ClassAttribute "cAccessTH"
+		    quid       	"3EDDEC7201D4"
+		    type       	"BYTE"
+		    initv      	"0xA1")
+		(object ClassAttribute "cAccessTL"
+		    quid       	"3EDDEC8A02FD"
+		    type       	"BYTE"
+		    initv      	"0xA2")
+		(object ClassAttribute "cAccessConfig"
+		    quid       	"3EDDEC9A034B"
+		    type       	"BYTE"
+		    initv      	"0xAC")
+		(object ClassAttribute "cSoftwarePOR"
+		    quid       	"3EDDECAE01A5"
+		    type       	"BYTE"
+		    initv      	"0x54")
+		(object ClassAttribute "cWriteControlByte"
+		    quid       	"3EDEFE5B01A5"
+		    type       	"BYTE"
+		    initv      	"0x90")
+		(object ClassAttribute "cReadControlByte"
+		    quid       	"3EDF0EB60138"
+		    type       	"BYTE"
+		    initv      	"0x91")
+		(object ClassAttribute "cMaskTempSensorDS1631Z"
+		    quid       	"3EDDF4F20399"
+		    type       	"BYTE"
+		    initv      	"0x1")
+		(object ClassAttribute "cdwMaskAddressOffset"
+		    quid       	"3EDDF53103B9"
+		    type       	"DWORD"
+		    initv      	"0x00007000")
+		(object ClassAttribute "cbMaskTempResolution"
+		    quid       	"3EE96D60004E"
+		    type       	"BYTE"
+		    initv      	"0xC")
+		(object ClassAttribute "cdwAddressRightShifter"
+		    quid       	"3EDDF574008C"
+		    type       	"DWORD"
+		    initv      	"0xC")
+		(object ClassAttribute "cnTempUnit"
+		    quid       	"3EE9B8C300EA"
+		    documentation 	"Temperature Unit m°C"
+		    type       	"int"
+		    initv      	"1000")
+		(object ClassAttribute "cI2CDeviceAdr"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateGetOperation"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetIsConst"
+			    value      	TRUE))
+		    quid       	"3F5C507D03D8"
+		    type       	"BYTE")
+		(object ClassAttribute "cI2CBusNumber"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateGetOperation"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetIsConst"
+			    value      	TRUE))
+		    quid       	"3F5C51070186"
+		    type       	"BYTE")
+		(object ClassAttribute "cI2CTransferSpeed"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateGetOperation"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetIsConst"
+			    value      	TRUE))
+		    quid       	"3F5C51080109"
+		    type       	"BYTE")
+		(object ClassAttribute "cI2CDevice"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateGetOperation"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetIsConst"
+			    value      	TRUE))
+		    quid       	"3F5C752C00EA"
+		    type       	"BYTE"))
+	    module     	"Component View::EBI2CTemp (I2C Temperature Device)::EBI2CTEMPintf (module body)"
+	    quidu      	"3EE7373A03C8"
+	    module     	"Component View::EBI2CTemp (I2C Temperature Device)::EBI2CTEMPintf (module spec)"
+	    quidu      	"3EE737460186"
+	    language   	"C++")
+	(object Class_Utility "I2CTEMP_IDENTIFIERS"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"cg_style"
+		    value      	"Dummy Class"))
+	    quid       	"3EE8172C03A9"
+	    module     	"Component View::EBI2CTemp (I2C Temperature Device)::EBI2CTEMPident (module spec)"
+	    quidu      	"3EE73726003E"
+	    language   	"C++")
+	(object Class "XI2CTempExceptionError"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"cg_style"
+		    value      	"NoDefContr"))
+	    quid       	"3EE876FF0222"
+	    superclasses 	(list inheritance_relationship_list
+		(object Inheritance_Relationship
+		    quid       	"3EE877120186"
+		    supplier   	"Logical View::EBCO (Core Classes)::XCOExceptionError"
+		    quidu      	"3BA649E20099"))
+	    operations 	(list Operations
+		(object Operation "XI2CTempExceptionError"
+		    quid       	"3EE877330271"
+		    parameters 	(list Parameters
+			(object Parameter "p_sUnitID"
+			    type       	"const CString&")
+			(object Parameter "p_uiExceptionID"
+			    type       	"const UINT")
+			(object Parameter "p_sModuleName"
+			    type       	"const CString&")
+			(object Parameter "p_uiModuleLine"
+			    type       	"const UINT")
+			(object Parameter "p_dwErrorCode"
+			    type       	"const DWORD"))
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1055398085)
+		(object Operation "XI2CTempExceptionError"
+		    quid       	"3EE877330280"
+		    parameters 	(list Parameters
+			(object Parameter "p_pOrigException"
+			    type       	"XCOExceptionError*"))
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1055398086)
+		(object Operation "Throw"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3EE877330290"
+		    documentation 	
+|DESCRIPTION
+|Re-throws an exception without losing type information.
+|
+		    
+		    stereotype 	"virtual"
+		    result     	"void"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1055398087)
+		(object Operation "Clone"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3EE87733029F"
+		    documentation 	
+|DESCRIPTION
+|Clones the current exception.
+|
+|RETURNS
+|Pointer to clone
+|
+		    
+		    stereotype 	"virtual"
+		    result     	"XCOException*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1055398088))
+	    module     	"Component View::EBI2CTemp (I2C Temperature Device)::EBI2CTEMPexcp (module body)"
+	    quidu      	"3EE73756030D"
+	    module     	"Component View::EBI2CTemp (I2C Temperature Device)::EBI2CTEMPexcp (module spec)"
+	    quidu      	"3EE73764002E"
+	    language   	"C++")
+	(object Class "CI2CTempSensorDS1631ZCreatorV0s"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"cg_style"
+		    value      	"default"))
+	    quid       	"3F02C5190135"
+	    superclasses 	(list inheritance_relationship_list
+		(object Inheritance_Relationship
+		    quid       	"3F02C5DA00EF"
+		    supplier   	"Logical View::EBPI (PC Interface)::CPIObjCreatorI2CSensorDS1631Z"
+		    quidu      	"3EE6CF3701DD"))
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    quid       	"3F02C843035D"
+		    supplier   	"Logical View::EBI2CTemp (I2C Temperature Device)::CI2CTempSensorDS1631Z"
+		    quidu      	"3EDD8EC503D8"))
+	    operations 	(list Operations
+		(object Operation "Create"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3F02C5190138"
+		    stereotype 	"virtual"
+		    parameters 	(list Parameters
+			(object Parameter "p_uiID"
+			    type       	"UINT"))
+		    result     	"IPII2CTempSensorDS1631Z*"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1057146616))
+	    module     	"Component View::EBI2CTemp (I2C Temperature Device)::EBI2CTEMPcrea (module body)"
+	    quidu      	"3F02C69A030B"
+	    module     	"Component View::EBI2CTemp (I2C Temperature Device)::EBI2CTEMPcrea (module spec)"
+	    quidu      	"3F02C6AE0166"
+	    language   	"C++")
+	(object Class "CI2CTempInterfaceRegistry"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"MSVC"
+		    name       	"DeclSpec"
+		    value      	"EBI2CTEMP_DLL_DECL")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"cg_style"
+		    value      	"ExtraLean")
+		(object Attribute
+		    tool       	"cg"
+		    name       	"GenerateDefaultConstructor"
+		    value      	("GenerateSet" 206))
+		(object Attribute
+		    tool       	"cg"
+		    name       	"GenerateDestructor"
+		    value      	FALSE))
+	    quid       	"3F02C7C900D7"
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    quid       	"3F02C7C900D8"
+		    supplier   	"Logical View::EBPI (PC Interface)::CPIObjectFactory"
+		    quidu      	"3DA52FD80189")
+		(object Uses_Relationship
+		    quid       	"3F02C7E4031A"
+		    supplier   	"Logical View::EBI2CTemp (I2C Temperature Device)::CI2CTempSensorDS1631ZCreatorV0s"
+		    quidu      	"3F02C5190135"))
+	    operations 	(list Operations
+		(object Operation "RegisterInterfaces"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"OperationKind"
+			    value      	("OperationKindSet" 203))
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Static"))
+		    quid       	"3F02C7C900DB"
+		    stereotype 	"static"
+		    result     	"void"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1057146733))
+	    module     	"Component View::EBI2CTemp (I2C Temperature Device)::EBI2CTEMPregy (module spec)"
+	    quidu      	"3F02C88B016C"
+	    module     	"Component View::EBI2CTemp (I2C Temperature Device)::EBI2CTEMPregy (module body)"
+	    quidu      	"3F02C89603DE"
+	    language   	"C++")
+	(object Class_Utility "I2CTEMP_MAIN"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"cg_style"
+		    value      	"Dummy Class"))
+	    quid       	"3F02C95A0212"
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    quid       	"3F02CCD201FB"
+		    supplier   	"Logical View::EBI2CTemp (I2C Temperature Device)::CI2CTempInterfaceRegistry"
+		    quidu      	"3F02C7C900D7"))
+	    module     	"Component View::EBI2CTemp (I2C Temperature Device)::EBI2CTEMPmain (module spec)"
+	    quidu      	"3F02C8F50152"
+	    module     	"Component View::EBI2CTemp (I2C Temperature Device)::EBI2CTEMPmain (module body)"
+	    quidu      	"3F02C903021D"
+	    language   	"C++")
+	(object Class "CI2CTempSensor1631ZCommand"
+	    attributes 	(list Attribute_Set
+		(object Attribute
+		    tool       	"cg"
+		    name       	"cg_style"
+		    value      	"NoDefContr"))
+	    quid       	"3FD73DCC00BB"
+	    superclasses 	(list inheritance_relationship_list
+		(object Inheritance_Relationship
+		    quid       	"3FD73DFA0290"
+		    supplier   	"Logical View::EBHI (Hardware Interface)::CHII2CCommand"
+		    quidu      	"3E22999502B9"))
+	    used_nodes 	(list uses_relationship_list
+		(object Uses_Relationship
+		    quid       	"3FD998FF0242"
+		    supplier   	"Logical View::EBI2CTemp (I2C Temperature Device)::I2CTEMP_IDENTIFIERS"
+		    quidu      	"3EE8172C03A9")
+		(object Uses_Relationship
+		    quid       	"3FD9DE4F00EA"
+		    supplier   	"Logical View::EBHIT (Hardware Interface Types)::CHITReservedSharedMemory"
+		    quidu      	"3E54992F0148")
+		(object Uses_Relationship
+		    quid       	"3FD9DEA103B9"
+		    supplier   	"Logical View::EBHI (Hardware Interface)::CHII2CParameter"
+		    quidu      	"3FD9C47E033C")
+		(object Uses_Relationship
+		    quid       	"3FD9DEB402FD"
+		    supplier   	"Logical View::EBHI (Hardware Interface)::IHIInterface"
+		    quidu      	"3E2271C40106")
+		(object Uses_Relationship
+		    quid       	"3FDD7BB4035B"
+		    supplier   	"Logical View::EBI2CTemp (I2C Temperature Device)::XI2CTempExceptionError"
+		    quidu      	"3EE876FF0222"))
+	    operations 	(list Operations
+		(object Operation "CI2CTempSensor1631ZCommand"
+		    quid       	"3FD73E1B0157"
+		    parameters 	(list Parameters
+			(object Parameter "p_pcI2CStream"
+			    type       	"BYTE*")
+			(object Parameter "p_nLength"
+			    type       	"int")
+			(object Parameter "p_dwI2CBusNumber"
+			    type       	"DWORD")
+			(object Parameter "p_dwI2CTransferSpeed"
+			    type       	"DWORD"))
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1071063016)
+		(object Operation "Execute"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"cg_style"
+			    value      	"Virtual"))
+		    quid       	"3FD73E20007D"
+		    documentation 	
+|DESCRIPTION
+|Executes the current command.
+|
+|PARAMETERS
+|-
+|
+|RETURNS
+|true, if the command is finished and the clients sync object may be signalled
+		    
+		    stereotype 	"virtual"
+		    result     	"bool"
+		    concurrency 	"Sequential"
+		    opExportControl 	"Public"
+		    uid        	1071063017))
+	    class_attributes 	(list class_attribute_list
+		(object ClassAttribute "dwI2CBusNumber"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateGetOperation"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetIsConst"
+			    value      	TRUE))
+		    quid       	"3FFD6125004E"
+		    type       	"DWORD"
+		    initv      	"p_dwI2CBusNumber")
+		(object ClassAttribute "dwI2CTransferSpeed"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GenerateGetOperation"
+			    value      	TRUE)
+			(object Attribute
+			    tool       	"cg"
+			    name       	"GetIsConst"
+			    value      	TRUE))
+		    quid       	"3FFD6125007D"
+		    type       	"DWORD"
+		    initv      	"p_dwI2CTransferSpeed"))
+	    module     	"Component View::EBI2CTemp (I2C Temperature Device)::EBI2CTEMPcomd (module spec)"
+	    quidu      	"3FD73D82033C"
+	    module     	"Component View::EBI2CTemp (I2C Temperature Device)::EBI2CTEMPcomd (module body)"
+	    quidu      	"3FD73DA90138"
+	    language   	"C++")
+	(object Association "$UNNAMED$0"
+	    quid       	"3EE8760D0280"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$1"
+		    quid       	"3EE8760E0119"
+		    supplier   	"Logical View::EBI2CTemp (I2C Temperature Device)::CI2CTempSensorDS1631Z"
+		    quidu      	"3EDD8EC503D8"
+		    client_cardinality 	(value cardinality "1..1")
+		    is_aggregate 	TRUE)
+		(object Role "hFile"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"InitialValue"
+			    value      	(value Text "NULL")))
+		    quid       	"3EE8760E011A"
+		    label      	"hFile"
+		    supplier   	"Logical View::IMWINS (Microsoft Windows)::HANDLE"
+		    quidu      	"374B9F76036F"
+		    client_cardinality 	(value cardinality "1..1")
+		    Containment 	"By Value"
+		    is_navigable 	TRUE)))
+	(object Association "$UNNAMED$2"
+	    quid       	"3EE87628004E"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$3"
+		    quid       	"3EE87628033C"
+		    supplier   	"Logical View::EBI2CTemp (I2C Temperature Device)::CI2CTempSensorDS1631Z"
+		    quidu      	"3EDD8EC503D8"
+		    client_cardinality 	(value cardinality "1..1")
+		    is_aggregate 	TRUE)
+		(object Role "uiID"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"InitialValue"
+			    value      	(value Text "p_uiID")))
+		    quid       	"3EE87628034B"
+		    label      	"uiID"
+		    supplier   	"Logical View::IMWINS (Microsoft Windows)::UINT"
+		    quidu      	"369DEAA80004"
+		    client_cardinality 	(value cardinality "1..1")
+		    Containment 	"By Value"
+		    is_navigable 	TRUE)))
+	(object Association "$UNNAMED$4"
+	    quid       	"3EE96CDB029F"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$5"
+		    quid       	"3EE96CDC00EA"
+		    supplier   	"Logical View::EBI2CTemp (I2C Temperature Device)::CI2CTempSensorDS1631Z"
+		    quidu      	"3EDD8EC503D8"
+		    client_cardinality 	(value cardinality "1..1")
+		    is_aggregate 	TRUE)
+		(object Role "eTempResolution"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"InitialValue"
+			    value      	(value Text "eHigh")))
+		    quid       	"3EE96CDC00EB"
+		    label      	"eTempResolution"
+		    supplier   	"Logical View::EBPI (PC Interface)::EPIResolutionDS1631Z"
+		    quidu      	"3EE5DF6B0031"
+		    client_cardinality 	(value cardinality "1..1")
+		    Containment 	"By Value"
+		    is_navigable 	TRUE)))
+	(object Association "$UNNAMED$6"
+	    quid       	"3EF956D60177"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$7"
+		    quid       	"3EF956D7002E"
+		    supplier   	"Logical View::EBI2CTemp (I2C Temperature Device)::CI2CTempSensorDS1631Z"
+		    quidu      	"3EDD8EC503D8"
+		    client_cardinality 	(value cardinality "1..1")
+		    is_aggregate 	TRUE)
+		(object Role "eConversionMode"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"InitialValue"
+			    value      	(value Text "eModeOneShot")))
+		    quid       	"3EF956D7003E"
+		    label      	"eConversionMode"
+		    supplier   	"Logical View::EBPI (PC Interface)::EPIModeDS1631Z"
+		    quidu      	"3EE5E02E00CD"
+		    client_cardinality 	(value cardinality "1..1")
+		    Containment 	"By Value"
+		    is_navigable 	TRUE)))
+	(object Association "$UNNAMED$8"
+	    quid       	"3F9FBB7F02F4"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$9"
+		    quid       	"3F9FBB800100"
+		    supplier   	"Logical View::EBI2CTemp (I2C Temperature Device)::CI2CTempSensorDS1631Z"
+		    quidu      	"3EDD8EC503D8"
+		    client_cardinality 	(value cardinality "1..1")
+		    is_aggregate 	TRUE)
+		(object Role "bHWPresent"
+		    attributes 	(list Attribute_Set
+			(object Attribute
+			    tool       	"cg"
+			    name       	"InitialValue"
+			    value      	(value Text "false")))
+		    quid       	"3F9FBB800101"
+		    label      	"bHWPresent"
+		    supplier   	"Logical View::IMWINS (Microsoft Windows)::bool"
+		    quidu      	"369DEAA80005"
+		    client_cardinality 	(value cardinality "1..1")
+		    Containment 	"By Value"
+		    is_navigable 	TRUE)))
+	(object Association "$UNNAMED$10"
+	    quid       	"3FD9828A038A"
+	    roles      	(list role_list
+		(object Role "$UNNAMED$11"
+		    quid       	"3FD9828B01B5"
+		    supplier   	"Logical View::EBI2CTemp (I2C Temperature Device)::CI2CTempSensor1631ZCommand"
+		    quidu      	"3FD73DCC00BB"
+		    client_cardinality 	(value cardinality "1..1")
+		    is_aggregate 	TRUE)
+		(object Role "pI2CDataStream"
+		    quid       	"3FD9828B01B6"
+		    label      	"pI2CDataStream"
+		    supplier   	"Logical View::EBPI (PC Interface)::CPII2CDataStream"
+		    quidu      	"3FD8310603B9"
+		    client_cardinality 	(value cardinality "1..1")
+		    Containment 	"By Reference"
+		    is_navigable 	TRUE))))
+    logical_presentations 	(list unit_reference_list
+	(object ClassDiagram "1.0 Sync Interface"
+	    quid       	"3EE73B9D0290"
+	    title      	"1.0 Sync Interface"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object ClassView "Class" "Logical View::EBPI (PC Interface)::IPII2CTempSensorDS1631Z" @1
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(997, 449)
+		    label      	(object ItemLabel
+			Parent_View 	@1
+			location   	(730, 398)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	534
+			justify    	0
+			label      	"IPII2CTempSensorDS1631Z")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EDC3DC60261"
+		    width      	552
+		    height     	126
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::IMWINS (Microsoft Windows)::HANDLE" @2
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(775, 1943)
+		    label      	(object ItemLabel
+			Parent_View 	@2
+			location   	(679, 1892)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	192
+			justify    	0
+			label      	"HANDLE")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"374B9F76036F"
+		    width      	210
+		    height     	126
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::IMWINS (Microsoft Windows)::UINT" @3
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1315, 1918)
+		    label      	(object ItemLabel
+			Parent_View 	@3
+			location   	(1234, 1867)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	162
+			justify    	0
+			label      	"UINT")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"369DEAA80004"
+		    height     	126
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBPI (PC Interface)::EPIResolutionDS1631Z" @4
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(2315, 1377)
+		    label      	(object ItemLabel
+			Parent_View 	@4
+			location   	(2086, 1326)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	458
+			justify    	0
+			label      	"EPIResolutionDS1631Z")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EE5DF6B0031"
+		    width      	476
+		    height     	126
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBPI (PC Interface)::EPIModeDS1631Z" @5
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(2293, 1781)
+		    label      	(object ItemLabel
+			Parent_View 	@5
+			location   	(2111, 1730)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	364
+			justify    	0
+			label      	"EPIModeDS1631Z")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EE5E02E00CD"
+		    width      	382
+		    height     	126
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBI2CTemp (I2C Temperature Device)::CI2CTempSensorDS1631Z" @6
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(1000, 1240)
+		    label      	(object ItemLabel
+			Parent_View 	@6
+			location   	(628, 909)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	744
+			justify    	0
+			label      	"CI2CTempSensorDS1631Z")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EDD8EC503D8"
+		    compartment 	(object Compartment
+			Parent_View 	@6
+			location   	(628, 969)
+			icon_style 	"Icon"
+			fill_color 	16777215
+			anchor     	2
+			nlines     	12
+			max_width  	750)
+		    width      	762
+		    height     	686
+		    autoResize 	TRUE)
+		(object InheritView "" @7
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3EDD8EDA0280"
+		    client     	@6
+		    supplier   	@1
+		    line_style 	0)
+		(object AssociationViewNew "$UNNAMED$0" @8
+		    location   	(841, 1731)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3EE8760D0280"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$1" @9
+			    Parent_View 	@8
+			    location   	(-12, -221)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3EE8760E0119"
+			    client     	@8
+			    supplier   	@6
+			    line_style 	0
+			    label      	(object SegLabel @10
+				Parent_View 	@9
+				location   	(934, 1615)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	1))
+			(object RoleView "hFile" @11
+			    Parent_View 	@8
+			    location   	(-12, -221)
+			    label      	(object SegLabel @12
+				Parent_View 	@11
+				location   	(813, 1737)
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	120
+				justify    	0
+				label      	"+hFile"
+				pctDist    	0.099674
+				height     	26
+				orientation 	1)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3EE8760E011A"
+			    client     	@8
+			    supplier   	@2
+			    line_style 	0
+			    label      	(object SegLabel @13
+				Parent_View 	@11
+				location   	(850, 1879)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	0))))
+		(object AssociationViewNew "$UNNAMED$2" @14
+		    location   	(1221, 1718)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3EE87628004E"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$3" @15
+			    Parent_View 	@14
+			    location   	(-213, -250)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3EE87628033C"
+			    client     	@14
+			    supplier   	@6
+			    line_style 	0
+			    label      	(object SegLabel @16
+				Parent_View 	@15
+				location   	(1239, 1616)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.575426
+				height     	60
+				orientation 	1))
+			(object RoleView "uiID" @17
+			    Parent_View 	@14
+			    location   	(-213, -250)
+			    label      	(object SegLabel @18
+				Parent_View 	@17
+				location   	(1289, 1727)
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	96
+				justify    	0
+				label      	"+uiID"
+				pctDist    	0.231941
+				height     	58
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3EE87628034B"
+			    client     	@14
+			    supplier   	@3
+			    line_style 	0
+			    label      	(object SegLabel @19
+				Parent_View 	@17
+				location   	(1326, 1818)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	0))))
+		(object AssociationViewNew "$UNNAMED$4" @20
+		    location   	(1728, 1314)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3EE96CDB029F"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$5" @21
+			    Parent_View 	@20
+			    location   	(-222, -535)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3EE96CDC00EA"
+			    client     	@20
+			    supplier   	@6
+			    line_style 	0
+			    label      	(object SegLabel @22
+				Parent_View 	@21
+				location   	(1452, 1338)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.785647
+				height     	52
+				orientation 	0))
+			(object RoleView "eTempResolution" @23
+			    Parent_View 	@20
+			    location   	(-222, -535)
+			    label      	(object SegLabel @24
+				Parent_View 	@23
+				location   	(1799, 1282)
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	336
+				justify    	0
+				label      	"+eTempResolution"
+				pctDist    	0.190413
+				height     	40
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3EE96CDC00EB"
+			    client     	@20
+			    supplier   	@4
+			    line_style 	0
+			    label      	(object SegLabel @25
+				Parent_View 	@23
+				location   	(1977, 1377)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.727104
+				height     	36
+				orientation 	1))))
+		(object AssociationViewNew "$UNNAMED$6" @26
+		    location   	(1761, 1557)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3EF956D60177"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$7" @27
+			    Parent_View 	@26
+			    location   	(-501, -336)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3EF956D7002E"
+			    client     	@26
+			    supplier   	@6
+			    line_style 	0
+			    label      	(object SegLabel @28
+				Parent_View 	@27
+				location   	(1399, 1464)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	0))
+			(object RoleView "eConversionMode" @29
+			    Parent_View 	@26
+			    location   	(-501, -336)
+			    label      	(object SegLabel @30
+				Parent_View 	@29
+				location   	(1844, 1571)
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	348
+				justify    	0
+				label      	"+eConversionMode"
+				pctDist    	0.196808
+				height     	20
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3EF956D7003E"
+			    client     	@26
+			    supplier   	@5
+			    line_style 	0
+			    label      	(object SegLabel @31
+				Parent_View 	@29
+				location   	(2083, 1751)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	1))))
+		(object ClassView "Class" "Logical View::IMWINS (Microsoft Windows)::bool" @32
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(2324, 1012)
+		    label      	(object ItemLabel
+			Parent_View 	@32
+			location   	(2068, 937)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	512
+			justify    	0
+			label      	"bool")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"369DEAA80005"
+		    width      	530
+		    height     	174
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object AssociationViewNew "$UNNAMED$8" @33
+		    location   	(1719, 1114)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3F9FBB7F02F4"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$9" @34
+			    Parent_View 	@33
+			    location   	(-605, 102)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3F9FBB800100"
+			    client     	@33
+			    supplier   	@6
+			    line_style 	0
+			    label      	(object SegLabel @35
+				Parent_View 	@34
+				location   	(1425, 1220)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	0))
+			(object RoleView "bHWPresent" @36
+			    Parent_View 	@33
+			    location   	(-605, 102)
+			    label      	(object SegLabel @37
+				Parent_View 	@36
+				location   	(1811, 1029)
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	264
+				justify    	0
+				label      	"+bHWPresent"
+				pctDist    	0.308704
+				height     	69
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3F9FBB800101"
+			    client     	@33
+			    supplier   	@32
+			    line_style 	0
+			    label      	(object SegLabel @38
+				Parent_View 	@36
+				location   	(2034, 1115)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	1))))))
+	(object ClassDiagram "5.0 Exceptions"
+	    quid       	"3EE73FF601A5"
+	    title      	"5.0 Exceptions"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object ClassView "Class" "Logical View::EBCO (Core Classes)::XCOExceptionError" @39
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(947, 599)
+		    label      	(object ItemLabel
+			Parent_View 	@39
+			location   	(755, 548)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	384
+			justify    	0
+			label      	"XCOExceptionError")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3BA649E20099"
+		    width      	402
+		    height     	126
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBI2CTemp (I2C Temperature Device)::XI2CTempExceptionError" @40
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(947, 1153)
+		    label      	(object ItemLabel
+			Parent_View 	@40
+			location   	(707, 997)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	480
+			justify    	0
+			label      	"XI2CTempExceptionError")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EE876FF0222"
+		    width      	498
+		    height     	336
+		    autoResize 	TRUE)
+		(object InheritView "" @41
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3EE877120186"
+		    client     	@40
+		    supplier   	@39
+		    line_style 	0)))
+	(object ClassDiagram "0.0 Globals"
+	    quid       	"3EE8145301C5"
+	    title      	"0.0 Globals"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object ClassView "ClassUtility" "Logical View::EBI2CTemp (I2C Temperature Device)::I2CTEMP_IDENTIFIERS" @42
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(362, 256)
+		    label      	(object ItemLabel
+			Parent_View 	@42
+			location   	(127, 205)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	470
+			justify    	0
+			label      	"I2CTEMP_IDENTIFIERS")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EE8172C03A9"
+		    width      	488
+		    height     	126
+		    autoResize 	TRUE)
+		(object ClassView "ClassUtility" "Logical View::EBI2CTemp (I2C Temperature Device)::I2CTEMP_MAIN" @43
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1020, 259)
+		    label      	(object ItemLabel
+			Parent_View 	@43
+			location   	(859, 208)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	322
+			justify    	0
+			label      	"I2CTEMP_MAIN")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F02C95A0212"
+		    width      	340
+		    height     	126
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBI2CTemp (I2C Temperature Device)::CI2CTempInterfaceRegistry" @44
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1119, 659)
+		    label      	(object ItemLabel
+			Parent_View 	@44
+			location   	(860, 608)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	518
+			justify    	0
+			label      	"CI2CTempInterfaceRegistry")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F02C7C900D7"
+		    width      	536
+		    height     	126
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object UsesView "" @45
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3F02CCD201FB"
+		    client     	@43
+		    supplier   	@44
+		    line_style 	0)))
+	(object ClassDiagram "1.1 Sync Interface Uses"
+	    quid       	"3EE818770232"
+	    title      	"1.1 Sync Interface Uses"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	91
+	    items      	(list diagram_item_list
+		(object ClassView "ClassUtility" "Logical View::EBI2CTemp (I2C Temperature Device)::I2CTEMP_IDENTIFIERS" @46
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1652, 594)
+		    label      	(object ItemLabel
+			Parent_View 	@46
+			location   	(1417, 543)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	470
+			justify    	0
+			label      	"I2CTEMP_IDENTIFIERS")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EE8172C03A9"
+		    width      	488
+		    height     	126
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBI2CSTDLIB (I2C Standard Library)::CI2CSTDLIBConvert" @47
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(985, 2156)
+		    label      	(object ItemLabel
+			Parent_View 	@47
+			location   	(792, 2105)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	386
+			justify    	0
+			label      	"CI2CSTDLIBConvert")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EE5975C0138"
+		    width      	404
+		    height     	126
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBI2CTemp (I2C Temperature Device)::XI2CTempExceptionError" @48
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(2122, 1315)
+		    label      	(object ItemLabel
+			Parent_View 	@48
+			location   	(1882, 1264)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	480
+			justify    	0
+			label      	"XI2CTempExceptionError")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EE876FF0222"
+		    width      	498
+		    height     	126
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBI2CSTDLIB (I2C Standard Library)::CI2CSTDLIBCmd" @49
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(473, 2040)
+		    label      	(object ItemLabel
+			Parent_View 	@49
+			location   	(302, 1989)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	342
+			justify    	0
+			label      	"CI2CSTDLIBCmd")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EE891A00157"
+		    width      	360
+		    height     	126
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBI2CTemp (I2C Temperature Device)::CI2CTempSensorDS1631Z" @50
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(815, 1158)
+		    label      	(object ItemLabel
+			Parent_View 	@50
+			location   	(555, 1107)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	520
+			justify    	0
+			label      	"CI2CTempSensorDS1631Z")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EDD8EC503D8"
+		    width      	538
+		    height     	126
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBHI (Hardware Interface)::CHIProcessImageParameter" @51
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(2069, 828)
+		    label      	(object ItemLabel
+			Parent_View 	@51
+			location   	(1795, 777)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	548
+			justify    	0
+			label      	"CHIProcessImageParameter")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EBA10D00128"
+		    width      	566
+		    height     	126
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBHI (Hardware Interface)::IHIInterface" @52
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1496, 337)
+		    label      	(object ItemLabel
+			Parent_View 	@52
+			location   	(1378, 286)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	236
+			justify    	0
+			label      	"IHIInterface")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E2271C40106"
+		    width      	254
+		    height     	126
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBPI (PC Interface)::CPIComponentsState" @53
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(318, 1590)
+		    label      	(object ItemLabel
+			Parent_View 	@53
+			location   	(109, 1515)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	418
+			justify    	0
+			label      	"CPIComponentsState")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F4235EA0005"
+		    width      	436
+		    height     	174
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBHI (Hardware Interface)::CHII2CWorkerThread" @54
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1999, 1087)
+		    label      	(object ItemLabel
+			Parent_View 	@54
+			location   	(1796, 1036)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	406
+			justify    	0
+			label      	"CHII2CWorkerThread")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E227BB3027B"
+		    width      	424
+		    height     	126
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBI2CTemp (I2C Temperature Device)::CI2CTempSensor1631ZCommand" @55
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1974, 1618)
+		    label      	(object ItemLabel
+			Parent_View 	@55
+			location   	(1652, 1567)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	644
+			justify    	0
+			label      	"CI2CTempSensor1631ZCommand")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3FD73DCC00BB"
+		    width      	662
+		    height     	126
+		    autoResize 	TRUE)
+		(object ClassView "InstantiatedClass" "Logical View::EBPI (PC Interface)::CPISyncObjI2CDataStream" @56
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1547, 1990)
+		    label      	(object ItemLabel
+			Parent_View 	@56
+			location   	(1283, 1939)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	528
+			justify    	0
+			label      	"CPISyncObjI2CDataStream")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3FD82B6701B5"
+		    width      	546
+		    height     	126
+		    autoResize 	TRUE)
+		(object UsesView "" @57
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3EE818FF037A"
+		    client     	@50
+		    supplier   	@46
+		    line_style 	0)
+		(object UsesView "" @58
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3EE8226F0177"
+		    client     	@50
+		    supplier   	@47
+		    line_style 	0)
+		(object UsesView "" @59
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3EE8803402CE"
+		    client     	@50
+		    supplier   	@48
+		    line_style 	0)
+		(object UsesView "" @60
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3EE893C00271"
+		    client     	@50
+		    supplier   	@49
+		    line_style 	0)
+		(object UsesView "" @61
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3F5C688203D8"
+		    client     	@50
+		    supplier   	@51
+		    line_style 	0)
+		(object UsesView "" @62
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3F5DC74B0232"
+		    client     	@50
+		    supplier   	@52
+		    line_style 	0)
+		(object UsesView "" @63
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3FD8217B032C"
+		    client     	@50
+		    supplier   	@54
+		    line_style 	0)
+		(object UsesView "" @64
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3FD8239B005D"
+		    client     	@50
+		    supplier   	@55
+		    line_style 	0)
+		(object UsesView "" @65
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3FD832D202EE"
+		    client     	@50
+		    supplier   	@56
+		    line_style 	0)
+		(object UsesView "" @66
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3FDDB7EB0128"
+		    client     	@50
+		    supplier   	@53
+		    line_style 	0)))
+	(object ClassDiagram "0.1 Creators / Registry"
+	    quid       	"3F02C45F0246"
+	    title      	"0.1 Creators / Registry"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object ClassView "Class" "Logical View::EBI2CTemp (I2C Temperature Device)::CI2CTempSensorDS1631ZCreatorV0s" @67
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(567, 1064)
+		    label      	(object ItemLabel
+			Parent_View 	@67
+			location   	(209, 983)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	716
+			justify    	0
+			label      	"CI2CTempSensorDS1631ZCreatorV0s")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F02C5190135"
+		    width      	734
+		    height     	186
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object ClassView "InstantiatedClass" "Logical View::EBPI (PC Interface)::CPIObjCreatorI2CSensorDS1631Z" @68
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(563, 452)
+		    label      	(object ItemLabel
+			Parent_View 	@68
+			location   	(241, 377)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	644
+			justify    	0
+			label      	"CPIObjCreatorI2CSensorDS1631Z")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EE6CF3701DD"
+		    width      	662
+		    height     	174
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object InheritView "" @69
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3F02C5DA00EF"
+		    client     	@67
+		    supplier   	@68
+		    line_style 	3
+		    origin_attachment 	(563, 971)
+		    terminal_attachment 	(563, 539))
+		(object ClassView "Class" "Logical View::EBI2CTemp (I2C Temperature Device)::CI2CTempInterfaceRegistry" @70
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(1395, 609)
+		    label      	(object ItemLabel
+			Parent_View 	@70
+			location   	(1087, 528)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	616
+			justify    	0
+			label      	"CI2CTempInterfaceRegistry")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3F02C7C900D7"
+		    width      	634
+		    height     	186
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object UsesView "" @71
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3F02C7E4031A"
+		    client     	@70
+		    supplier   	@67
+		    line_style 	0)
+		(object ClassView "Class" "Logical View::EBI2CTemp (I2C Temperature Device)::CI2CTempSensorDS1631Z" @72
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1506, 1055)
+		    label      	(object ItemLabel
+			Parent_View 	@72
+			location   	(1249, 1004)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	514
+			justify    	0
+			label      	"CI2CTempSensorDS1631Z")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EDD8EC503D8"
+		    width      	532
+		    height     	126
+		    annotation 	8
+		    autoResize 	TRUE)
+		(object UsesView "" @73
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3F02C843035D"
+		    client     	@67
+		    supplier   	@72
+		    line_style 	0)))
+	(object ClassDiagram "2.0 Async  I2C Commands"
+	    quid       	"3FD73CEF00DA"
+	    title      	"2.0 Async  I2C Commands"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object ClassView "Class" "Logical View::EBHI (Hardware Interface)::CHII2CCommand" @74
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(728, 540)
+		    label      	(object ItemLabel
+			Parent_View 	@74
+			location   	(557, 489)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	342
+			justify    	0
+			label      	"CHII2CCommand")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E22999502B9"
+		    width      	360
+		    height     	126
+		    autoResize 	TRUE)
+		(object ClassView "Class" "Logical View::EBI2CTemp (I2C Temperature Device)::CI2CTempSensor1631ZCommand" @75
+		    ShowCompartmentStereotypes 	TRUE
+		    IncludeOperation 	TRUE
+		    location   	(731, 1037)
+		    label      	(object ItemLabel
+			Parent_View 	@75
+			location   	(409, 931)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	644
+			justify    	0
+			label      	"CI2CTempSensor1631ZCommand")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3FD73DCC00BB"
+		    width      	662
+		    height     	236
+		    autoResize 	TRUE)
+		(object InheritView "" @76
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3FD73DFA0290"
+		    client     	@75
+		    supplier   	@74
+		    line_style 	0)
+		(object ClassView "Class" "Logical View::EBPI (PC Interface)::CPII2CDataStream" @77
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1303, 1452)
+		    label      	(object ItemLabel
+			Parent_View 	@77
+			location   	(1114, 1401)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	378
+			justify    	0
+			label      	"CPII2CDataStream")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3FD8310603B9"
+		    width      	396
+		    height     	126
+		    autoResize 	TRUE)
+		(object AssociationViewNew "$UNNAMED$10" @78
+		    location   	(1054, 1271)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3FD9828A038A"
+		    roleview_list 	(list RoleViews
+			(object RoleView "$UNNAMED$11" @79
+			    Parent_View 	@78
+			    location   	(-249, -181)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3FD9828B01B5"
+			    client     	@78
+			    supplier   	@75
+			    line_style 	0
+			    label      	(object SegLabel @80
+				Parent_View 	@79
+				location   	(879, 1211)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.900000
+				height     	54
+				orientation 	0))
+			(object RoleView "pI2CDataStream" @81
+			    Parent_View 	@78
+			    location   	(-249, -181)
+			    label      	(object SegLabel @82
+				Parent_View 	@81
+				location   	(1096, 1279)
+				anchor     	1
+				anchor_loc 	1
+				nlines     	1
+				max_width  	324
+				justify    	0
+				label      	"+pI2CDataStream"
+				pctDist    	0.186950
+				height     	19
+				orientation 	0)
+			    stereotype 	TRUE
+			    line_color 	3342489
+			    quidu      	"3FD9828B01B6"
+			    client     	@78
+			    supplier   	@77
+			    line_style 	0
+			    label      	(object SegLabel @83
+				Parent_View 	@81
+				location   	(1194, 1366)
+				anchor     	2
+				anchor_loc 	1
+				nlines     	1
+				max_width  	15
+				justify    	0
+				label      	"1..1"
+				pctDist    	0.844081
+				height     	6
+				orientation 	0))))))
+	(object ClassDiagram "2.1 Async  I2C Commands Uses"
+	    quid       	"3FD73FD70261"
+	    title      	"2.1 Async  I2C Commands Uses"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object ClassView "Class" "Logical View::EBI2CTemp (I2C Temperature Device)::CI2CTempSensor1631ZCommand" @84
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(659, 849)
+		    label      	(object ItemLabel
+			Parent_View 	@84
+			location   	(337, 798)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	644
+			justify    	0
+			label      	"CI2CTempSensor1631ZCommand")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3FD73DCC00BB"
+		    width      	662
+		    height     	126
+		    autoResize 	TRUE)
+		(object ClassView "ClassUtility" "Logical View::EBI2CTemp (I2C Temperature Device)::I2CTEMP_IDENTIFIERS" @85
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1580, 662)
+		    label      	(object ItemLabel
+			Parent_View 	@85
+			location   	(1345, 611)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	470
+			justify    	0
+			label      	"I2CTEMP_IDENTIFIERS")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EE8172C03A9"
+		    width      	488
+		    height     	126
+		    autoResize 	TRUE)
+		(object UsesView "" @86
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3FD998FF0242"
+		    client     	@84
+		    supplier   	@85
+		    line_style 	0)
+		(object ClassView "Class" "Logical View::EBHIT (Hardware Interface Types)::CHITReservedSharedMemory" @87
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1728, 1472)
+		    label      	(object ItemLabel
+			Parent_View 	@87
+			location   	(1447, 1421)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	562
+			justify    	0
+			label      	"CHITReservedSharedMemory")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E54992F0148"
+		    width      	580
+		    height     	126
+		    autoResize 	TRUE)
+		(object UsesView "" @88
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3FD9DE4F00EA"
+		    client     	@84
+		    supplier   	@87
+		    line_style 	0)
+		(object ClassView "Class" "Logical View::EBHI (Hardware Interface)::CHII2CParameter" @89
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1609, 1078)
+		    label      	(object ItemLabel
+			Parent_View 	@89
+			location   	(1437, 1027)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	344
+			justify    	0
+			label      	"CHII2CParameter")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3FD9C47E033C"
+		    width      	362
+		    height     	126
+		    autoResize 	TRUE)
+		(object UsesView "" @90
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3FD9DEA103B9"
+		    client     	@84
+		    supplier   	@89
+		    line_style 	0)
+		(object ClassView "Class" "Logical View::EBHI (Hardware Interface)::IHIInterface" @91
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(925, 1556)
+		    label      	(object ItemLabel
+			Parent_View 	@91
+			location   	(807, 1505)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	236
+			justify    	0
+			label      	"IHIInterface")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3E2271C40106"
+		    width      	254
+		    height     	126
+		    autoResize 	TRUE)
+		(object UsesView "" @92
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3FD9DEB402FD"
+		    client     	@84
+		    supplier   	@91
+		    line_style 	0)
+		(object ClassView "Class" "Logical View::EBI2CTemp (I2C Temperature Device)::XI2CTempExceptionError" @93
+		    ShowCompartmentStereotypes 	TRUE
+		    location   	(1509, 393)
+		    label      	(object ItemLabel
+			Parent_View 	@93
+			location   	(1269, 342)
+			fill_color 	13434879
+			nlines     	1
+			max_width  	480
+			justify    	0
+			label      	"XI2CTempExceptionError")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"3EE876FF0222"
+		    width      	498
+		    height     	126
+		    autoResize 	TRUE)
+		(object UsesView "" @94
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"3FDD7BB4035B"
+		    client     	@84
+		    supplier   	@93
+		    line_style 	0)))))
